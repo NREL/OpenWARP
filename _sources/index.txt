@@ -24,10 +24,10 @@ OpenWARP installers are available for Mac, Linux, and Windows:
 * `Windows <https://www.dropbox.com/s/n3d06dbgcltov8u/OpenWarp.exe?dl=0>`_
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
