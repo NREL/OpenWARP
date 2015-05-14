@@ -1,0 +1,30 @@
+# The fortran modules provided by this target.
+provides
+ com_var
+ compute_green_fd
+ compute_green_freesurface
+ compute_green_infd
+ compute_mean_drift_forces_fin
+ compute_mean_drift_forces_inf
+ compute_yaw_moment_fin
+ compute_yaw_moment_inf
+ elementary_fns
+ gmres
+ initialization
+ kochin
+ m_solver
+ mbodyconditions
+ menvironment
+ midentification
+ mmesh
+ mresults
+ nemoh
+ output
+ potential_domain
+ prepare_mesh
+ solve_bem
+ solve_bem_fd_direct
+ solve_bem_fd_iterative
+ solve_bem_infd_direct
+ solve_bem_infd_iterative
+ utility

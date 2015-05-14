@@ -1,0 +1,25 @@
+
+# config for non-shell demo
+infile: FlapSingle.stl
+# outfile without extension
+outfile: flap-meshed
+
+# parameter to Ng_Meshing_Parameters
+#   double maxh;                        //!< Maximum global mesh size allowed
+
+#   double minh;                        //!< Minimum global mesh size allowed
+
+# minh, maxh are unitless
+
+#   double fineness;                    //!< Mesh density: 0...1 (0 => coarse; 1 => fine)
+
+#   double grading;                     //!< Mesh grading: 0...1 (0 => uniform mesh; 1 => aggressive local grading)
+maxh: 50
+minh: 0.35
+fineness: 0.4
+grading: 0.1
+
+# set one to use tolerace, otherwise 0
+usetolerance: 0
+# volume tolerance in percent
+tolerance: 1

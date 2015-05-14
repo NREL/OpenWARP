@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="openwarp">
+    <head>
+        <meta charset="UTF-8">
+        <title>OpenWARP</title>
+
+        <!--CSS-->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+		
+        <!--JS LIB-->
+		<script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/ajaxfileupload.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/angular-local-storage.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+
+        <!--JS-->
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+		<script src="js/scripts.js"></script>
+    </head>
+	
+    <body data-ng-controller="init">
+    	<div class="openwarp-app container-fluid">
+			<aside class="left-nav">
+            	<h1 class="logo"><a href="./index.html"><img src="i/logo-openwarp-s.png" width="148" height="30" alt="OpenWARP"></a></h1>
+                <nav>
+                    <ul class="group app-nav">
+                        <li class="link-meshing"><a class="transition" href="screens.html#/meshing" tabindex="1"><i class="transition icomoon icomoon-meshing"></i>MESHING</a></li>
+                        <li class="link-simulation"><a class="transition" href="screens.html#/simulation" tabindex="2"><i class="transition icomoon icomoon-simulation"></i>SIMULATION</a></li>
+                        <li class="link-postprocessing"><a class="transition" href="screens.html#/postprocessing" tabindex="3"><i class="transition icomoon icomoon-postprocessing"></i>POSTPROCESSING</a></li>
+                    </ul>
+                </nav>
+				<img class="energy-logo" alt="" src="i/logo-energy-s.png"/>
+            </aside>
+            <!--end left nav-->
+            
+            <div data-ng-view class="app-screens container-fluid"></div>
+            <!--end ng view-->
+        </div>
+        <div id="single_dialog" style="width:100%">
+            <fieldset>
+                <label id="dialog_label" class="field-label" for="dialog_content"></label>
+                <textarea id="dialog_content" rows="20" cols="100" style="width:100%" disabled="disabled" />
+            </fieldset>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+GFORTRAN module version '10' created from /media/yedtoss/My Passport/Disk/CurProjects/DriftForces/MeanDrift/Nemoh/Solver/Core/Bodyconditions.f90
+MD5:6db0c03c42491939019eaefc5ef2dfdc -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () () () ()
+() () ())
+
+()
+
+(('tbodyconditions' 'mbodyconditions' 2))
+
+()
+
+()
+
+()
+
+(2 'Tbodyconditions' 'mbodyconditions' '' 1 ((DERIVED UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 ALLOC_COMP) (UNKNOWN 0 0 0 0 UNKNOWN ())
+0 0 () () 0 ((3 'nproblems' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (4
+'npanels' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (5 'omega' (REAL 4
+0 0 0 REAL ()) (1 0 DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ())
+(6 'normalvelocity' (COMPLEX 4 0 0 0 COMPLEX ()) (2 0 DEFERRED () () ()
+()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ()) (7 'switch_potential' (
+INTEGER 4 0 0 0 INTEGER ()) (1 0 DEFERRED () ()) (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 ALLOCATABLE DIMENSION)
+UNKNOWN-ACCESS ()) (8 'switch_freesurface' (INTEGER 4 0 0 0 INTEGER ())
+(1 0 DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ()) (9 'switch_kochin'
+(INTEGER 4 0 0 0 INTEGER ()) (1 0 DEFERRED () ()) (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 ALLOCATABLE DIMENSION)
+UNKNOWN-ACCESS ()) (10 'switch_type' (INTEGER 4 0 0 0 INTEGER ()) (1 0
+DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0
+0 24395798)
+11 'copytbodyconditions' 'mbodyconditions' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 12 0 (13 14) () 0 () () () 0 0)
+15 'createtbodyconditions' 'mbodyconditions' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 16 0 (17 18 19) () 0 () () () 0 0)
+20 'deletetbodyconditions' 'mbodyconditions' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 21 0 (22) () 0 () () () 0 0)
+23 'mbodyconditions' 'mbodyconditions' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+24 'readtbodyconditions' 'mbodyconditions' '' 1 ((PROCEDURE
+UNKNOWN-INTENT MODULE-PROC DECL UNKNOWN 0 0 SUBROUTINE) (UNKNOWN 0 0 0 0
+UNKNOWN ()) 25 0 (26 27 28) () 0 () () () 0 0)
+29 'tbodyconditions' 'mbodyconditions' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (REAL 4 0 0 0 REAL ()) 0
+0 () () 0 () () () 0 0)
+13 'bodyconditionstarget' '' '' 12 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0
+() () 0 () () () 0 0)
+14 'bodyconditionssource' '' '' 12 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0
+() () 0 () () () 0 0)
+17 'bodyconditions' '' '' 16 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0 () () 0 () ()
+() 0 0)
+18 'nproblems' '' '' 16 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+19 'npanels' '' '' 16 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+22 'bodyconditions' '' '' 21 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0 () () 0 () ()
+() 0 0)
+26 'bodyconditions' '' '' 25 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 DUMMY) (DERIVED 2 0 0 0 DERIVED ()) 0 0 () () 0 () ()
+() 0 0)
+27 'npanels' '' '' 25 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 DUMMY) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () () () 0 0)
+28 'namefile' '' '' 25 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0 DUMMY) (CHARACTER 1 0 0 0 CHARACTER (())) 0 0 () () 0 () ()
+() 0 0)
+)
+
+('Tbodyconditions' 0 2 'copytbodyconditions' 0 11 'createtbodyconditions'
+0 15 'deletetbodyconditions' 0 20 'mbodyconditions' 0 23
+'readtbodyconditions' 0 24 'tbodyconditions' 0 29)

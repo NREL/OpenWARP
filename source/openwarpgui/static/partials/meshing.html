@@ -1,0 +1,111 @@
+<div class="app-screen app-screen-meshing">
+	<div class="screen-title">
+		<h2>MESHING</h2>
+		<div class="help-wrapper">
+			<a class="help-ico transition" href="javascript:;" tabindex="-1">?</a>
+			<div class="help-dropdown">
+                <div class="inner">
+                    <a class="close-ico transition" href="javascript:;" tabindex="-1">X</a>
+                    <dl>
+                        <dt>Input File</dt>
+                        <dd>Accepted input file format are: igs/step/stl</dd>
+                    </dl>
+                    <dl>
+                        <dt>Output File</dt>
+                        <dd>Output file without extension</dd>
+                    </dl>
+                </div>
+            </div>
+		</div>
+	</div>
+    <!--end .screen-title-->
+	<div class="screen-content">
+		<form action="#" class="group">
+			<fieldset class="col-xs-6 col-md-6 group c-left">
+				<label class="field-label" for="meshing_infile">Input File</label>
+                <div class="file-uploader-wrapper">
+                	<input type="text" class="text ban-storage" readonly="readonly" tabindex="2000"/>
+                    <a href="javascript:;" class="btn btn-pri js-select-file" tabindex="2001">Browse</a>
+					<input type="file" id="meshing_infile_file_selector" name="uploadedFile" class="text-file ban-storage" onchange="uploadFileTrigger(this)"/>
+                    <input type="hidden" id="meshing_infile" value=""/>
+                </div>
+			</fieldset>
+            <fieldset class="col-xs-6 col-md-6 group">
+				<label class="field-label" for="meshing_outfile">Output File</label>
+				<input id="meshing_outfile" type="text" class="text text-filename-without-extension" tabindex="2003" value="{{meshing_outfile}}" maxlength="250" data-default-value="flap-meshed"/>
+			</fieldset>
+            
+            <div class="sep-line"></div>
+            
+            <div class="screen-sub-title f-clear">
+                <h3>Mesh Quality Settings</h3>
+                <div class="help-wrapper">
+                    <a class="help-ico transition" href="javascript:;" tabindex="-1">?</a>
+                    <div class="help-dropdown">
+                        <div class="inner">
+                            <a class="close-ico transition" href="javascript:;" tabindex="-1">X</a>
+                            <dl>
+                                <dt>Maxh</dt>
+                                <dd>Maximum global mesh size allowed</dd>
+                            </dl>
+                            <dl>
+                                <dt>Minh</dt>
+                                <dd>Minimum global mesh size allowed</dd>
+                            </dl>
+                            <dl>
+                                <dt>Use Tolerance</dt>
+                                <dd>set yes to use tolerace, otherwise no</dd>
+                            </dl>
+                            <dl>
+                                <dt>Tolernace</dt>
+                                <dd>Volume tolerance in percent</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            <fieldset class="col-xs-6 col-md-6 group c-left">
+                <label class="field-label" for="meshing_fineness">Fineness</label>
+                <input id="meshing_fineness" type="text" class="text text-num" tabindex="2002" value="{{meshing_fineness}}" data-max-value="1" data-min-value="0" data-default-value="0.4"/>
+            </fieldset>
+            <fieldset class="col-xs-6 col-md-6 group">
+                <label class="field-label" for="meshing_grading">Grading</label>
+                <input id="meshing_grading" type="text" class="text text-num" tabindex="2004" value="{{meshing_grading}}" data-max-value="1" data-min-value="0" data-default-value="0.1"/>
+            </fieldset>
+            <fieldset class="col-xs-6 col-md-6 group c-left">
+                <label class="field-label" for="meshing_maxh">Maxh</label>
+                <input id="meshing_maxh" type="text" class="text text-num" tabindex="2005" value="{{meshing_maxh}}" data-default-value="50"/>
+            </fieldset>
+            <fieldset class="col-xs-6 col-md-6 group">
+                <label class="field-label">Use Tolerance?</label>
+                <div class="radio-wrapper group">
+                    <input id="meshing_usetolerance_no" type="radio" class="radio js-disable-fieldset" data-ctrl-target="group-tolerance" value="0" name="Usetolerance" checked="checked" data-default-value="true"/>
+                    <label class="input-dot radio-dot" for="meshing_usetolerance_no"><a href="javascript:;" tabindex="2006"></a></label>
+                    <label class="radio-label" for="meshing_usetolerance_no">No</label>
+                    <input id="meshing_usetolerance_yes" type="radio" class="radio js-enable-fieldset" data-ctrl-target="group-tolerance" value="1" name="Usetolerance"/>
+                    <label class="input-dot radio-dot" for="meshing_usetolerance_yes"><a href="javascript:;" tabindex="2007"></a></label>
+                    <label class="radio-label" for="meshing_usetolerance_yes">Yes</label>
+                </div>
+            </fieldset>
+            <fieldset class="col-xs-6 col-md-6 group c-left">
+                <label class="field-label" for="meshing_minh">Minh</label>
+                <input id="meshing_minh" type="text" class="text text-num" tabindex="2008" value="{{meshing_minh}}" data-default-value="0.35"/>
+            </fieldset>
+            <div class="group-tolerance">
+                <fieldset class="col-xs-6 col-md-6 group">
+                    <label class="field-label" for="meshing_tolerance">Tolerance</label>
+                    <input id="meshing_tolerance" type="text" class="text text-num" tabindex="2009" value="{{meshing_tolerance}}" data-max-value="100" data-min-value="0" data-default-value="1"/>
+                </fieldset>
+            </div>
+		</form>
+	</div>
+    <!--end .screen-content-->
+	<div class="screen-footer group">
+        <a href="javascript:;" id="application_quit" class="f-left btn btn-quit transition" tabindex="4003">QUIT</a>
+        <a href="javascript:;" id="meshing_execute" class="f-right btn btn-pri transition" tabindex="4002">EXECUTE</a>
+	<!--
+        <a href="javascript:;" id="meshing_visualize" class="f-right btn btn-pri transition" tabindex="4001">VISUALIZE IN PARAVIEW</a>
+	-->
+	</div>
+    <!--end .screen-footer-->
+</div>

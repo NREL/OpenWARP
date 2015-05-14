@@ -1,0 +1,13 @@
+﻿January, 21st 2014	I modified the user manual. Now it explains briefly how to use Nemoh in
+			Matlab. Also it is now specified that the code is supposed to be run in win32
+ 			environment, and there are some words about mesh generation and format.
+		
+											A. Babarit
+
+
+January, 24th 2014	Bug correction in Nemoh.m The input variable dir (wave direction) was
+			overwritten with the directory variable dir. Correction: now the directory 
+			variable is called rep. Bug spotted by Francesco Ferri from Aalborg University 
+			in Denmark.
+ Thanks Francesco.		
+											A. Babarit

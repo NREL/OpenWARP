@@ -1,0 +1,10 @@
+*.obj
+*.htm
+*.mod
+*.dat
+*.bak
+*.suo
+*.u2d
+~*
+*.swp
+*.o

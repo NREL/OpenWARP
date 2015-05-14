@@ -1,0 +1,141 @@
+12/03/2015(Irregular Frequencies Assembly)
+	added:	Nemoh/Solver/Core/SOLVE_BEM_IRREGULAR.f90 (Main implementation file for this contest)
+	added: lib/ contains prebuilt Windows 64 bits dll
+	added: NemohPython/test_files/remove_irregular_frequencies/  Tested files for this contest
+
+	modified:  Nemoh/CMakeLists.txt
+	modified:  Nemoh/Solver/Core/COMMON_TYPE.f90
+	modified:  Nemoh/Solver/Core/SOLVE_BEM.f90
+	modified:  Nemoh/Solver/NEMOH.f90
+	modified:  NemohPython/nemoh/postprocessor.py
+	modified:  NemohPython/nemoh/preprocessor.py
+	modified:  NemohPython/nemoh/requirements.txt
+	modified:  NemohPython/nemoh/settings.py
+	modified:  NemohPython/nemoh/solver.py
+	modified:  NemohPython/nemoh/solver_fortran.c
+	modified:  NemohPython/nemoh/solver_fortran.pyx
+	modified:  NemohPython/nemoh/structure.py
+	modified:  NemohPython/nemoh/utility.py
+
+
+
+
+02/09/2015 (Hydrodynamic Data Exporter Assembly v1.0)
+Updated Files
+Nemoh/Solver/Core/SOLVE_BEM.f90
+Nemoh/Solver/NEMOH.f90
+
+Added Files
+Nemoh/Solver/Core/MESH_STATISTICS.f90
+
+NemohPython/nemoh/settings.py
+NemohPython/nemoh/preprocessor.py
+NemohPython/nemoh/postprocessor.py
+NemohPython/nemoh/structure.py
+NemohPython/nemoh/solver.py
+NemohPython/nemoh/solver_fortran.pyx
+
+
+10/01/2015 (Dipoles Implementation in NEMOH)
+Added files
+	"Nemoh/Solver/Core/SOLVE_BEM_DIPOLES_THIN.f90" this is the main file computing the dipoles implementation
+	"NemohPython/test_files/thin_body_dipoles/" directory for testing dipoles implementation
+
+Main Updated files
+	"Nemoh/Solver/Core/COMMON_TYPE.f90"
+	"Nemoh/Solver/Core/COM_VAR.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM.f90"
+	"Nemoh/Solver/NEMOH.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM_HIGH.f90"
+	"Nemoh/Solver/Core/COMPUTE_GREEN_FD.f90"
+	"Nemoh/Solver/Core/COMPUTE_GREEN_INFD.f90"
+	"Nemoh/Solver/Core/COMPUTE_GREEN_FREESURFACE.f90"
+	"Nemoh/Solver/Core/GREEN_FUNCTION.f90"
+	"Nemoh/Solver/Core/UTILITY.f90"
+	"NemohPython/nemoh/postprocessor.py"
+	"NemohPython/nemoh/preprocessor.py"
+ 	"NemohPython/nemoh/settings.py"
+ 	"NemohPython/nemoh/solver.py"
+ 	"NemohPython/nemoh/structure.py"
+ 	"NemohPython/nemoh/solver_fortran.pyx"
+
+Additional updated files
+	There are lot of additional files updated inside Nemoh/Solver/Core directory. But the update is very minor. It is just to add either switch from
+	ParamsCommon to ParamsCommonInf or to update the identation of the file
+	
+
+
+
+05/01/2015 (Implementation of Higher Order Panel Methods)
+Added files
+	"Nemoh/Solver/Core/SOLVE_BEM_HIGH.f90" this is the main file computing the higher order panel method
+	"Nemoh/Solver/Core/Gaussm3.f90" solving integral using Gauss-Legendre formulas
+	"Nemoh/Solver/Core/GREEN_FUNCTION.f90" to compute green function for any source point and field point as input
+	"NemohPython/test_files/higher_order_panel/" directory for testing higher order panel method
+
+Main Updated Files
+	"Nemoh/Solver/Core/ELEMENTARY_FNS.f90"
+	"Nemoh/Solver/Core/COMMON_TYPE.f90"
+	"Nemoh/Solver/Core/COM_VAR.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM.f90"
+	"Nemoh/Solver/NEMOH.f90"
+	"NemohPython/nemoh/postprocessor.py"
+	"NemohPython/nemoh/preprocessor.py"
+ 	"NemohPython/nemoh/settings.py"
+ 	"NemohPython/nemoh/solver.py"
+ 	"NemohPython/nemoh/structure.py"
+ 	"NemohPython/nemoh/solver_fortran.pyx"
+
+Additional updated files
+	There are lot of additional files updated inside Nemoh/Solver/Core directory. But the update is very minor. It is just to add COMMON_TYPE as a module
+
+
+
+
+29/12/2014 Code Acceleration of the Calculation of Influence Coefficients of Nemoh
+Added files
+	"Nemoh/Solver/Core/COMPUTE_INFLUENCE_ODE.f90" to compute influence coefficients using an ODE
+	"Nemoh/Solver/Core/ODE.f90" to compute influence coefficients using an ODE of order N by Runge-Kutta method of order 4
+	"Nemoh/Solver/Core/COMMON_TYPE.f90" to store common types
+	"NemohPython/test_files/cylinder_ode/" directory for testing influence coefficients using an ODE
+Updated files
+	"Nemoh/Solver/Core/ALLOCATE_DATA.f90"
+	"Nemoh/Solver/Core/COM_VAR.f90"
+	"Nemoh/Solver/Core/DEALLOCATE_DATA.f90"
+	"Nemoh/Solver/Core/INITIALIZATION.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM_INFD_DIRECT.f90"
+	"Nemoh/Solver/Core/SOLVE_BEM_INFD_ITERATIVE.f90"
+ 	"Nemoh/Solver/NEMOH.f90"
+ 	"NemohPython/nemoh/preprocessor.py"
+ 	"NemohPython/nemoh/settings.py"
+ 	"NemohPython/nemoh/solver.py"
+ 	"NemohPython/nemoh/structure.py"
+ 	"NemohPython/nemoh/solver_fortran.pyx"
+
+
+17/12/2014 Drift forces and QTF Implementation of Nemoh
+Added files:
+	"Nemoh/Solver/Core/COMPUTE_MEAN_DRIFT_FORCES_FIN.f90" for the finite depth drift forces computation
+	"Nemoh/Solver/Core/COMPUTE_MEAN_DRIFT_FORCES_INF.f90" for computing the drift forces in the infinite depth case
+	"Nemoh/Solver/Core/COMPUTE_YAW_MOMENT_FIN.f90" to compute the yaw moment in the finite depth case
+	"Nemoh/Solver/Core/COMPUTE_YAW_MOMENT_INF.f90" to compute the yaw moment in the infinite depth case
+	"Nemoh/Solver/Core/UTILITY.f90" for numerical derivation and integration
+
+Updated Files:
+ 	"Nemoh/Solver/Core/SOLVE_BEM.f90"
+ 	"Nemoh/Solver/NEMOH.f90"
+ 	"NemohPython/nemoh/solver.py"
+ 	"NemohPython/nemoh/structure.py"
+ 	"NemohPython/nemoh/solver_fortran.pyx"
+
+
+
+28/11/2014 Refine Tabulation of the Green Function of BEM code
+Changed Files
+
+Nemoh.f90
+
+Core/INITIALIZATION.f90
+Core/ALLOCATE_DATA.f90
+Core/DEALLOCATE_DATA.f90

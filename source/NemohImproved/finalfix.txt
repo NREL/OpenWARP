@@ -1,0 +1,52 @@
+Irregular Frequencies Assembly
+Please read forum for spaces around operators
+
+
+Dipoles Implementation in NEMOH
+Base code is finalfix of Implementation of Higher Order Panel Methods
+I kept and updated the original implementation details for reference.
+
+
+
+
+Implementation of Higher Order Panel Methods
+Base code is the finalfix of Code Acceleration of the Calculation of Influence Coefficients
+
+
+
+Code Acceleration of the Calculation of Influence Coefficients of Nemoh
+1.1.1
+ 	1- As confirmed in http://apps.topcoder.com/forums/?module=Thread&threadID=842512&start=0 and also in the given paper: "The extension of these results to the
+case of finite water depth is still an open challenge." this is not in scope for this challenge
+
+	
+
+1.1.2
+	1. <<Change Log contains files from another challenge not from this one>> I think it is normal for a changelog to contains all changelog. I should not replace old content in changelog.
+	  I should add the new ones. And from the Changelog it is clear what changes have been done for this contest
+
+
+1.2.1 
+	1-<<Why is this change needed in Cmakelist to add heap-array?>>  heap-array is needed for Intel ifort compiler. By default ifort used stack to store Array in Linux. If the array is too big it will
+          surely lead to stack overflow. By using -heap-arrays 1024 we are indicating that array of size greater than 1024 should be declared in the heap
+
+
+    2- << Please do not un-necessarily add new flags (-g) to the CMakeList >> I remove it for the realease build and I keep it by default and in debug build.
+       -g is for debugging purpose and I think it is necessary for testing because it will reveal more memory/other problems if there are any.
+
+
+
+2.2.9
+
+	2- << No comments for changes done in  Compute_Green_Surface >> This file is not changed
+	4- simpson.py is not modified in this contest
+
+
+
+2.5.5
+	<< The codebase contains files form another challenge related to Drift Forces implementation >> As we are in finalfix, this is a plus of the submission.
+	It is the overall goal to combine the modification of the two challenges. So it does not make sense to remove it in finalfix.
+	ChangeLog list modified files in this challenge.
+
+
+

@@ -1,0 +1,9 @@
+VARIABLES="w (rad/s)"
+"abs(F	1	1)" "angle(F	1	1)"
+"abs(F	1	2)" "angle(F	1	2)"
+"abs(F	1	3)" "angle(F	1	3)"
+"abs(F	1	4)" "angle(F	1	4)"
+"abs(F	1	5)" "angle(F	1	5)"
+"abs(F	1	6)" "angle(F	1	6)"
+Zone t="Diffraction force - beta = 0.0 deg",I=	1,F=POINT
+0.1	0.107448	0.091149	0.0599281	-3.12541	0.0528872	2.6544	0.932061	3.11809	0.642285	-2.9511	0.723746	-3.10886	

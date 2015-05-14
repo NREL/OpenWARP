@@ -1,0 +1,47 @@
+GFORTRAN module version '10' created from /media/yedtoss/My Passport/Disk/CurProjects/DriftForces/MeanDrift/Nemoh/Solver/Core/ELEMENTARY_FNS.f90
+MD5:c62c3ed05df0fcf9a0f72520abd68121 -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () () () ()
+() () ())
+
+()
+
+()
+
+()
+
+()
+
+()
+
+(2 'cih' 'elementary_fns' '' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 3 0 (4 5 6) () 2 () ()
+() 0 0)
+7 'elementary_fns' 'elementary_fns' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+8 'gg' 'elementary_fns' '' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC DECL
+UNKNOWN 0 0 FUNCTION) (COMPLEX 4 0 0 0 COMPLEX ()) 9 0 (10 11) () 8 () ()
+() 0 0)
+12 'sih' 'elementary_fns' '' 1 ((PROCEDURE UNKNOWN-INTENT MODULE-PROC
+DECL UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 13 0 (14 15 16) () 12
+() () () 0 0)
+4 'ak' '' '' 3 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+5 'z' '' '' 3 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+6 'h' '' '' 3 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+10 'z' '' '' 9 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DUMMY) (COMPLEX 4 0 0 0 COMPLEX ()) 0 0 () () 0 () () () 0 0)
+11 'cex' '' '' 9 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+0 0 DUMMY) (COMPLEX 4 0 0 0 COMPLEX ()) 0 0 () () 0 () () () 0 0)
+14 'ak' '' '' 13 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+0 0 DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+15 'z' '' '' 13 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+16 'h' '' '' 13 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0
+0 DUMMY) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+)
+
+('cih' 0 2 'elementary_fns' 0 7 'gg' 0 8 'sih' 0 12)

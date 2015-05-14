@@ -1,0 +1,33 @@
+{
+    "sources": [
+        { "name": "AnnotateTime", "label": "Annotate Time" },
+        { "name": "Box" },
+        { "name": "Cone" },
+        { "name": "Cylinder" },
+        { "name": "Plane" },
+        { "name": "Sphere" },
+        { "name": "Wavelet" }
+    ],
+
+    "filters": [
+        { "name": "Calculator" },
+        { "name": "CellDatatoPointData", "label": "Cell Data To Point Data" },
+        { "name": "Clip" },
+        { "name": "Contour" },
+        { "name": "ExtractCTHParts", "label": "Extract CTH Parts" },
+        { "name": "Reflect" },
+        { "name": "Slice" },
+        { "name": "StreamTracer", "label": "Stream Tracer" },
+        { "name": "Threshold" },
+        { "name": "Transform" },
+        { "name": "Tube" },
+        { "name": "Ribbon" },
+        { "name": "WarpByScalar", "label": "Warp By Scalar" },
+        { "name": "ExtractBlock", "label": "Extract Blocks" }
+    ],
+
+    "readers": [
+        { "name": "LegacyVTKReader", "extensions": [ "vtk" ], "method": "FileNames" },
+        { "name": "Xdmf3ReaderS", "extensions": [ "xmf", "xdmf" ] }
+    ]
+}

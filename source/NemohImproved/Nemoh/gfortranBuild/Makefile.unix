@@ -1,0 +1,198 @@
+#######################################################################
+#######################################################################
+# FAST make file for osx and linux					
+#######################################################################
+#######################################################################
+
+#######################################################################
+# Select compilers
+#######################################################################
+#CPP  = /usr/bin/cpp            # Pre-Processor
+#CC   = gcc			# C compiler
+FF   = gfortran			# FORTRAN compiler
+#FF   = gfortran-mp-4.4	        # FORTRAN compiler
+#LD   = f77			# Linker
+#AR   = ar			# Archiver
+
+#######################################################################
+# Select compiler options
+#######################################################################
+#CFLAGS	= -c -g -O2 	# C Compiler Flags
+#LDFLAGS   = -lm	# Linker Flags
+#FFLAGS	= -c -W -Wall -std=f2008 -fall-intrinsics -fopenmp -Wno-unused-variable -Wno-unused-dummy-argument  -Wno-unused-parameter  -fmax-errors=0 
+FFLAGS	= -c -W -Wall -std=f2008 -fopenmp   -fmax-errors=0 -O3
+
+# Fortran Compiler Flags
+#FFLAGS	= -c # Fortran Compiler Flags
+
+#######################################################################
+# Specify objects
+#######################################################################
+nemohObjs =  Bodyconditions.o Environment.o Identification.o Mesh.o Results.o \
+	COM_VAR.o PREPARE_MESH.o INITIALIZATION.o  ALLOCATE_DATA.o DEALLOCATE_DATA.o \
+	ELEMENTARY_FNS.o  \
+	COMPUTE_GREEN_FD.o COMPUTE_GREEN_FREESURFACE.o \
+	COMPUTE_GREEN_INFD.o COMPUTE_KOCHIN.o \
+	COMPUTE_POTENTIAL_DOMAIN.o \
+	M_SOLVER.o OUTPUT.o SOLVE_BEM_FD_DIRECT.o  GMRES.o SOLVE_BEM_INFD_ITERATIVE.o \
+	SOLVE_BEM_FD_ITERATIVE.o SOLVE_BEM_INFD_DIRECT.o SOLVE_BEM.o\
+	NEMOH.o
+	
+meshObjs =  Identification.o MESH_HYDRE.o MESH_NETTING.o \
+	MESH_MESH.o 
+	
+preProcessorObjs = PRE_MESH.o PRE_BODYCONDITIONS.o PRE_INTEGRATION.o PRE_MAIN.o \
+	Environment.o Identification.o 
+	
+postProcessorObjs = POST_COMPUTE_RAOS.o POST_IRF.o POST_MAIN.o POST_PLOT_WAVE_ELEVATION.o \
+	Environment.o Identification.o Results.o
+
+#######################################################################
+# Define file paths
+#######################################################################
+buildLoc = ..
+commonFiles = ../commonFiles
+coreFiles = ../Solver/Core
+nemohFiles = ../Solver
+preProcessorFiles = ../preProcessor
+postProcessorFiles = ../postProcessor
+meshFiles = ../Mesh
+buildLoc = -fopenmp -o ./$@ -J ./ 
+
+#######################################################################
+# Derfine name of fast executible file
+#######################################################################
+version = alpha
+nemohExec = nemoh-$(version)
+meshExec = mesh-$(version)
+preProcessorExec = preProcessor-$(version)
+postProcessorExec = postProcessor-$(version)
+
+#######################################################################
+# Compile fast
+#######################################################################
+
+all: $(nemohExec) $(meshExec) $(preProcessorExec) $(postProcessorExec)
+
+$(nemohExec): $(nemohObjs) 
+	$(FF) -o $(nemohExec) $(nemohObjs) -fopenmp
+
+$(meshExec): $(meshObjs) 
+	$(FF) -o $(meshExec) $(meshObjs) -fopenmp
+	
+$(preProcessorExec): $(preProcessorObjs) 
+	$(FF) -o $(preProcessorExec) $(preProcessorObjs) -fopenmp
+	
+$(postProcessorExec): $(postProcessorObjs) 
+	$(FF) -o $(postProcessorExec) $(postProcessorObjs) -fopenmp
+
+#######################################################################
+# Compile subroutines and functions
+#######################################################################
+# Common Files
+CommonsBodyconditions.o: $(commonFiles)/Bodyconditions.f90
+	$(FF) $(FFLAGS) $(commonFiles)/Bodyconditions.f90 $(buildLoc)
+Environment.o: $(commonFiles)/Environment.f90
+	$(FF) $(FFLAGS) $(commonFiles)/Environment.f90 $(buildLoc)
+Identification.o: $(commonFiles)/Identification.f90
+	$(FF) $(FFLAGS) $(commonFiles)/Identification.f90 $(buildLoc)
+Mesh.o: $(commonFiles)/Mesh.f90
+	$(FF) $(FFLAGS) $(commonFiles)/Mesh.f90 $(buildLoc)
+Results.o: $(commonFiles)/Results.f90
+	$(FF) $(FFLAGS) $(commonFiles)/Results.f90 $(buildLoc)
+
+# Core
+COM_VAR.o: $(coreFiles)/COM_VAR.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COM_VAR.f90 $(buildLoc)
+ALLOCATE_DATA.o: $(coreFiles)/ALLOCATE_DATA.f90
+	$(FF) $(FFLAGS) $(coreFiles)/ALLOCATE_DATA.f90 $(buildLoc)
+DEALLOCATE_DATA.o: $(coreFiles)/DEALLOCATE_DATA.f90
+	$(FF) $(FFLAGS) $(coreFiles)/DEALLOCATE_DATA.f90 $(buildLoc)
+ELEMENTARY_FNS.o: $(coreFiles)/ELEMENTARY_FNS.f90
+	$(FF) $(FFLAGS) $(coreFiles)/ELEMENTARY_FNS.f90 $(buildLoc)
+Bodyconditions.o: $(coreFiles)/Bodyconditions.f90
+	$(FF) $(FFLAGS) $(coreFiles)/Bodyconditions.f90 $(buildLoc)
+COMPUTE_GREEN_FD.o: $(coreFiles)/COMPUTE_GREEN_FD.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COMPUTE_GREEN_FD.f90 $(buildLoc)
+INITILIZATION.o: $(coreFiles)/INITILIZATION.f90
+	$(FF) $(FFLAGS) $(coreFiles)/INITILIZATION.f90 $(buildLoc)
+COMPUTE_GREEN_FREESURFACE.o: $(coreFiles)/COMPUTE_GREEN_FREESURFACE.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COMPUTE_GREEN_FREESURFACE.f90 $(buildLoc)
+COMPUTE_GREEN_INFD.o: $(coreFiles)/COMPUTE_GREEN_INFD.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COMPUTE_GREEN_INFD.f90 $(buildLoc)
+COMPUTE_KOCHIN.o: $(coreFiles)/COMPUTE_KOCHIN.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COMPUTE_KOCHIN.f90 $(buildLoc)
+COMPUTE_POTENTIAL_DOMAIN.o: $(coreFiles)/COMPUTE_POTENTIAL_DOMAIN.f90
+	$(FF) $(FFLAGS) $(coreFiles)/COMPUTE_POTENTIAL_DOMAIN.f90 $(buildLoc)
+INITIALIZATION.o: $(coreFiles)/INITIALIZATION.f90
+	$(FF) $(FFLAGS) $(coreFiles)/INITIALIZATION.f90 $(buildLoc)
+M_SOLVER.o: $(coreFiles)/M_SOLVER.f90
+	$(FF) $(FFLAGS) $(coreFiles)/M_SOLVER.f90 $(buildLoc)
+OUTPUT.o: $(coreFiles)/OUTPUT.f90
+	$(FF) $(FFLAGS) $(coreFiles)/OUTPUT.f90 $(buildLoc)
+PREPARE_MESH.o: $(coreFiles)/PREPARE_MESH.f90
+	$(FF) $(FFLAGS) $(coreFiles)/PREPARE_MESH.f90 $(buildLoc)
+SOLVE_BEM.o: $(coreFiles)/SOLVE_BEM.f90
+	$(FF) $(FFLAGS) $(coreFiles)/SOLVE_BEM.f90 $(buildLoc)
+SOLVE_BEM_FD_DIRECT.o: $(coreFiles)/SOLVE_BEM_FD_DIRECT.f90
+	$(FF) $(FFLAGS) $(coreFiles)/SOLVE_BEM_FD_DIRECT.f90 $(buildLoc)
+SOLVE_BEM_INFD_DIRECT.o: $(coreFiles)/SOLVE_BEM_INFD_DIRECT.f90
+	$(FF) $(FFLAGS) $(coreFiles)/SOLVE_BEM_INFD_DIRECT.f90 $(buildLoc)
+GMRES.o: $(coreFiles)/GMRES.f90
+	$(FF) $(FFLAGS) $(coreFiles)/GMRES.f90 $(buildLoc)
+SOLVE_BEM_INFD_ITERATIVE.o: $(coreFiles)/SOLVE_BEM_INFD_ITERATIVE.f90
+	$(FF) $(FFLAGS) $(coreFiles)/SOLVE_BEM_INFD_ITERATIVE.f90 $(buildLoc)
+SOLVE_BEM_FD_ITERATIVE.o: $(coreFiles)/SOLVE_BEM_FD_ITERATIVE.f90
+	$(FF) $(FFLAGS) $(coreFiles)/SOLVE_BEM_FD_ITERATIVE.f90 $(buildLoc)
+
+# Nemoh files
+NEMOH.o: $(nemohFiles)/NEMOH.f90
+	$(FF) $(FFLAGS) $(nemohFiles)/NEMOH.f90 $(buildLoc)
+	
+# Mesh files
+MESH_CAL_COL.o: $(meshFiles)/calCol.f90
+	$(FF) $(FFLAGS) $(meshFiles)/calCol.f90 $(buildLoc)
+MESH_COQUE.o: $(meshFiles)/coque.f90
+	$(FF) $(FFLAGS) $(meshFiles)/coque.f90 $(buildLoc)
+MESH_EX_MAILLAGE.o: $(meshFiles)/ExMaillage.f90
+	$(FF) $(FFLAGS) $(meshFiles)/ExMaillage.f90 $(buildLoc)
+MESH_HYDRE.o: $(meshFiles)/hydre.f90
+	$(FF) $(FFLAGS) $(meshFiles)/hydre.f90 $(buildLoc)
+MESH_MAILLEUR.o: $(meshFiles)/Mailleur.f90
+	$(FF) $(FFLAGS) $(meshFiles)/Mailleur.f90 $(buildLoc)
+MESH_MESH.o: $(meshFiles)/mesh.f90
+	$(FF) $(FFLAGS) $(meshFiles)/mesh.f90 $(buildLoc)
+MESH_NETTING.o: $(meshFiles)/Netting.f90
+	$(FF) $(FFLAGS) $(meshFiles)/Netting.f90 $(buildLoc)
+	
+	
+# PreProcessor Files
+PRE_BODYCONDITIONS.o: $(preProcessorFiles)/BodyConditions.f90
+	$(FF) $(FFLAGS) $(preProcessorFiles)/BodyConditions.f90 $(buildLoc)
+PRE_INTEGRATION.o: $(preProcessorFiles)/Integration.f90
+	$(FF) $(FFLAGS) $(preProcessorFiles)/Integration.f90 $(buildLoc)
+PRE_MAIN.o: $(preProcessorFiles)/Main.f90
+	$(FF) $(FFLAGS) $(preProcessorFiles)/Main.f90 $(buildLoc)
+PRE_MESH.o: $(preProcessorFiles)/Mesh.f90
+	$(FF) $(FFLAGS) $(preProcessorFiles)/Mesh.f90 $(buildLoc)
+	
+
+# PostProcessor Files
+POST_COMPUTE_RAOS.o: $(postProcessorFiles)/Compute_RAOs.f90
+	$(FF) $(FFLAGS) $(postProcessorFiles)/Compute_RAOs.f90 $(buildLoc)
+POST_IRF.o: $(postProcessorFiles)/IRF.f90
+	$(FF) $(FFLAGS) $(postProcessorFiles)/IRF.f90 $(buildLoc)
+POST_MAIN.o: $(postProcessorFiles)/Main.f90
+	$(FF) $(FFLAGS) $(postProcessorFiles)/Main.f90 $(buildLoc)
+POST_PLOT_WAVE_ELEVATION.o: $(postProcessorFiles)/Plot_WaveElevation.f90
+	$(FF) $(FFLAGS) $(postProcessorFiles)/Plot_WaveElevation.f90 $(buildLoc)
+
+	
+#######################################################################
+# Clean 
+#######################################################################
+
+clean:
+	 rm *.o *.mod $(nemohExec).exe $(preProcessorExec).exe $(postProcessorExec).exe $(meshExec).exe
+clean-objs:
+	 rm  *.o *.mod

@@ -1,0 +1,4 @@
+VARIABLES="X" "Y" "etaI_C" "etaI_S" "etaP_C" "etaC_S" "etaI_C+etaP_C" "etaI_S+etaI_P" "|etaP|" "|etaI+etaP|"
+ZONE t="Wave frequency - w = 0.1",N=	2, E=	0	 , F=FEPOINT,ET=QUADRILATERAL
+nan	-1.0	nan	nan	0.0	0.0	nan	nan	0.0	nan
+nan	1.0	nan	nan	0.0	0.0	nan	nan	0.0	nan

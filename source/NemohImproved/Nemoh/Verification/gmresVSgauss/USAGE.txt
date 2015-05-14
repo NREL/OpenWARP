@@ -1,0 +1,47 @@
+
+This program can only be compiled by using the Intel Fortran Compiler ifort
+
+
+1-  Windows
+
+	a) Compiling
+	
+	   Start the Intel Visual Studio Shell (32 or 64 bits)
+	   Type "ifort .\GMRES.f90 .\M_SOLVER.f90 .\gmresvsgauss.f90 /exe:gmresvsgauss.exe /Qmkl /heap-arrays"
+	       " was used for clarity. All command-line options are required. Specifically If you don't use
+	       /heap-arrays you will most likely receive a stack overflow
+	       
+	       
+	       
+	b)  Usage
+	
+	   Type ".\gmresvsgauss.exe"
+	   " was used for clarity.  This will run gmres and gauss on one random 2000x2000 matrix and gives you the statistics
+	   
+	   Type ".\gmresvsgauss.exe n"
+	   " was used for clarity. Replace n by an integer. It will run gmres and gauss on n different 2000x2000 matrix
+	    and gives you the statistic
+	    
+	    
+	    
+	    
+2-  Linux
+
+   a) Compiling
+	
+	   Start a terminal where you can run ifort
+	   Type "ifort ./GMRES.f90 ./M_SOLVER.f90 ./gmresvsgauss.f90 -o gmresvsgauss -mkl -heap-arrays"
+	       " was used for clarity. All command-line options are required. Specifically If you don't use
+	       -heap-arrays you will most likely receive a stack overflow
+	       
+	       
+	       
+	b)  Usage
+	
+	   Type "./gmresvsgauss"
+	   " was used for clarity.  This will run gmres and gauss on one random 2000x2000 matrix and gives you the statistics
+	   
+	   Type "./gmresvsgauss n"
+	   " was used for clarity. Replace n by an integer. It will run gmres and gauss on n different 2000x2000 matrix
+	    and gives you the statistic
+	   

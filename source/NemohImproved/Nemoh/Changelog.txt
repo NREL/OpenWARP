@@ -1,0 +1,81 @@
+Tab Characters removed after IMPLICIT NONE in all files
+
+Descriptor X is used with the number of characters For example we use WRITE(10, '1X') instead of WRITE(10, 'X')
+
+IMAG Function is replaced by AIMAG obsolete since fortran 95
+
+
+Replace all tab character by space as Tab is not valid fortran 2008 character
+
+
+Remove all Arithmetic IF An example of Arithmetic IF is IF(A-1.) 4,6,4 obsolete since fortran 95
+
+Remove all GO TO instructions obsolete since fortran 95
+
+
+Remove all spaces or tab after the end of an instruction
+
+
+Remove all unused FORMAT
+
+
+Rename variable Type to Integer when appropriate. 
+
+Remove all labels
+
+
+Replace all Do Label by DO END DO
+
+
+Make sure to use standard type COMPLEX(4) instead of Nonstandard type declaration COMPLEX*8
+
+Make sur CHARACTER* are replaced by CHARACTER(*)
+
+
+Remove non standard $ in format descriptor by advance=no.
+For example Write(*,'(A,I5,A,I5,A,$)') is replaced by write(*,'(A,I5,A,I5,A)',advance='NO')
+
+
+Make sure no line exceeds the 132 character maximum in the standard
+
+Replace all LNBLNK by the standard LEN_TRIM
+
+Replace all CHARACTER*(*) by CHARACTER(*)
+
+
+Put the function COMPUTE_KOCHIN in an explicit interface by putting it inside a module  named KOCHIN.
+In other word we create a MODULE named KOCHIN in the file COMPUTE_KOCHIN.f90.
+This module KOCHIN contains the subroutine COMPUTE_KOCHIN
+
+Put the function COMPUTE_POTENTIAL_DOMAIN in an explicit interface by putting it inside a module named KOCHIN.
+In other word we create a MODULE named POTENTIAL_DOMAIN in the file COMPUTE_POTENTIAL_DOMAIN.f90.
+ This module POTENTIAL_DOMAIN contains the subroutine COMPUTE_POTENTIAL_DOMAIN
+
+
+
+Add the Type TempVar to hold temporary computed var to avoid the use of "Common blocks" simulation by module.
+An instance of that type is passed to subroutines needing the temporary variables
+
+
+We move computations involving independent variable per problem from NEMOH.f90 to SOLVE_BEM.f90 to allow 
+running subproblems in parallel
+
+
+Remove all dummy argument
+
+Remove all unused parameters
+
+Remove all unused variables
+
+
+
+
+Make sure Influence matrix is not recomputed for the same period. This means that we will only compute
+the influence matrix once per period
+
+
+Implement GMRES solver which can be enabled by setting Indiq_solver to 1 in input.txt
+
+
+Refactor the code most notably by removing files in Mesh directory and replacing them with other one.
+This was done to put related subroutines inside a module  

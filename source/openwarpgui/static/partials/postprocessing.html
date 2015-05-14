@@ -1,0 +1,137 @@
+<div class="app-screen app-screen-postprocessing">
+	<div class="screen-title">
+		<h2>POSTPROCESSING</h2>
+		<div class="help-wrapper">
+			<a class="help-ico transition" href="javascript:;" tabindex="-1">?</a>
+			<div class="help-dropdown">
+                <div class="inner">
+                    <a class="close-ico transition" href="javascript:;" tabindex="-1">X</a>
+                    <dl>
+                        <dt>IRF</dt>
+                        <dd>IRF calculation (0 for no calculation), time step and duration</dd>
+                    </dl>
+                    <dl>
+                        <dt>Kochin Function</dt>
+                        <dd>Number of directions of calculation (0 for no calculations), Min and Max (degrees)</dd>
+                    </dl>
+                    <dl>
+                        <dt>Free Surface Elevation</dt>
+                        <dd>Number of points in x direction (0 for no calcutions) and y direction and dimensions of domain in x and y direction</dd>
+                    </dl>
+                </div>
+            </div>
+		</div>
+	</div>
+    <!--end .screen-title-->
+	<div class="screen-content">
+		<form action="#" class="group">
+			<fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+				<label class="field-label-top">IRF</label>
+                <div class="radio-wrapper group">
+                    <input id="postprocessing_irf_no" type="radio" class="radio js-disable-fieldset" data-ctrl-target="group-irf" value="0" name="irf"/>
+                    <label class="input-dot radio-dot" for="postprocessing_irf_no"><a href="javascript:;" tabindex="2001"></a></label>
+                    <label class="radio-label" for="postprocessing_irf_no">No</label>
+                    <input id="postprocessing_irf_yes" type="radio" class="radio js-enable-fieldset" data-ctrl-target="group-irf" value="1" name="irf" data-default-value="true"/>
+                    <label class="input-dot radio-dot" for="postprocessing_irf_yes"><a href="javascript:;" tabindex="2002"></a></label>
+                    <label class="radio-label" for="postprocessing_irf_yes">Yes</label>
+                </div>
+			</fieldset>
+            <div class="group-irf">
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+                    <label class="field-label-top" for="postprocessing_time_step">Time Step</label>
+                    <div class="input-wrapper"><input id="postprocessing_time_step" value="{{postprocessing_time_step}}" type="text" class="text text-num" tabindex="2003" data-default-value="0.1"/></div>
+                </fieldset>
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+                    <label class="field-label-top" for="postprocessing_duration">Duration </label>
+                    <div class="input-wrapper"><input id="postprocessing_duration" value="{{postprocessing_duration}}" type="text" class="text text-num" tabindex="2004" data-default-value="10"/></div>
+                </fieldset>
+            </div>
+            <div class="sep-line"></div>
+			<fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+				<label class="field-label-top">Show Pressure</label>
+				<div class="radio-wrapper group">
+                    <input id="postprocessing_show_pressure_no" type="radio" class="radio" value="0" name="showPressure" data-default-value="true"/>
+                    <label class="input-dot radio-dot" for="postprocessing_show_pressure_no"><a href="javascript:;" tabindex="2005"></a></label>
+                    <label class="radio-label" for="postprocessing_show_pressure_no">No</label>
+                    <input id="postprocessing_show_pressure_yes" type="radio" class="radio" value="1" name="showPressure" />
+                    <label class="input-dot radio-dot" for="postprocessing_show_pressure_yes"><a href="javascript:;" tabindex="2006"></a></label>
+                    <label class="radio-label" for="postprocessing_show_pressure_yes">Yes</label>
+                </div>
+			</fieldset>
+			<div class="sep-line"></div>
+            <!--
+            <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+				<label class="field-label-top">Kochin Function</label>
+                <div class="radio-wrapper group">
+                    <input id="postprocessing_kochin_function_no" type="radio" class="radio js-disable-fieldset" data-ctrl-target="group-kochin"  value="0" name="kochinFunction"/>
+                    <label class="input-dot radio-dot" for="postprocessing_kochin_function_no"><a href="javascript:;" tabindex="2007"></a></label>
+                    <label class="radio-label" for="postprocessing_kochin_function_no">No</label>
+                    <input id="postprocessing_kochin_function_yes" type="radio" class="radio js-enable-fieldset" data-ctrl-target="group-kochin"  value="1" name="kochinFunction"/>
+                    <label class="input-dot radio-dot" for="postprocessing_kochin_function_yes"><a href="javascript:;" tabindex="2008"></a></label>
+                    <label class="radio-label" for="postprocessing_kochin_function_yes">Yes</label>
+                </div>
+			</fieldset>
+            -->
+            <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+				<label class="field-label-top" for="postprocessing_kochin_function">Kochin Function</label>
+				<input value="{{postprocessing_kochin_function}}" id="postprocessing_kochin_function" type="text" class="text text-num" tabindex="3084" data-default-value="181"/>
+			</fieldset>
+          	<div class="group-kochin">
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+                    <label class="field-label-top" for="postprocessing_min_angle">Min Angle</label>
+                    <div class="input-wrapper">
+                        <input id="postprocessing_min_angle" value="{{postprocessing_min_angle}}" type="text" class="text text-num text-pr-65" tabindex="2009" data-default-value="0"/>
+                        <span class="unit unit-right">degrees</span>
+                    </div>
+                </fieldset>
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+                    <label class="field-label-top" for="postprocessing_max_angle">Max Angle</label>
+                    <div class="input-wrapper">
+                        <input id="postprocessing_max_angle" value="{{postprocessing_max_angle}}" type="text" class="text text-num text-pr-65" tabindex="2010" data-default-value="180"/>
+                        <span class="unit unit-right">degrees</span>
+                    </div>
+				</fieldset>
+            </div>
+            <div class="sep-line"></div>
+			<fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+				<label class="field-label-top">Free Surface Elevation</label>
+                <!--
+                <div class="radio-wrapper group">
+                    <input id="postprocessing_free_surface_elevation_no" type="radio" class="radio js-disable-fieldset" data-ctrl-target="group-elevation" value="0" name="elevation"/>
+                    <label class="input-dot radio-dot" for="postprocessing_free_surface_elevation_no"><a href="javascript:;" tabindex="2011"></a></label>
+                    <label class="radio-label" for="postprocessing_free_surface_elevation_no">No</label>
+                    <input id="postprocessing_free_surface_elevation_yes" type="radio" class="radio js-enable-fieldset" data-ctrl-target="group-elevation" value="1" name="elevation"/>
+                    <label class="input-dot radio-dot" for="postprocessing_free_surface_elevation_yes"><a href="javascript:;" tabindex="2012"></a></label>
+                    <label class="radio-label" for="postprocessing_free_surface_elevation_yes">Yes</label>
+                </div>
+                -->
+			</fieldset>
+            <div class="group-elevation">
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+                    <label class="field-label-top" for="postprocessing_number_points_x">Number of Points In X Direction</label>
+                    <div class="input-wrapper"><input id="postprocessing_number_points_x" value="{{postprocessing_number_points_x}}" type="text" class="text text-num" tabindex="2013" data-default-value="1"/></div>
+                </fieldset>
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+                    <label class="field-label-top" for="postprocessing_number_points_y">Number of Points In Y Direction</label>
+                    <div class="input-wrapper"><input id="postprocessing_number_points_y" value="{{postprocessing_number_points_y}}" type="text" class="text text-num" tabindex="2014" data-default-value="2"/></div>
+                </fieldset>
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group c-left">
+                    <label class="field-label-top" for="postprocessing_dimensions_x">Dimensions of Domain In X Direction</label>
+                    <div class="input-wrapper"><input id="postprocessing_dimensions_x" value="{{postprocessing_dimensions_x}}" type="text" class="text text-num" tabindex="2015" data-default-value="2"/></div>
+                </fieldset>
+                <fieldset class="field-lable-ontop col-xs-6 col-md-6 group">
+                    <label class="field-label-top" for="postprocessing_dimensions_y">Dimensions of Domain In Y Direction</label>
+                    <div class="input-wrapper"><input id="postprocessing_dimensions_y" value="{{postprocessing_dimensions_y}}" type="text" class="text text-num" tabindex="2016" data-default-value="1000"/></div>
+                </fieldset>
+            </div>
+			<div class="sep-line"></div>
+		</form>
+	</div>
+    <!--end .screen-content-->
+	<div class="screen-footer group">
+        <a href="javascript:;" id="application_quit" class="f-left btn btn-quit transition" tabindex="4003">QUIT</a>
+        <a href="javascript:;" id="visualize_simulation" class="f-right btn btn-pri transition" tabindex="4002">VISUALIZE IN PARAVIEW</a>
+        <a href="javascript:;" id="postprocess_execute" class="f-right btn btn-pri transition" tabindex="4001">SAVE AS TECPLOT</a>
+	</div>
+    <!--end .screen-footer-->
+</div>
