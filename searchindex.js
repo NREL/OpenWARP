@@ -1,0 +1,1 @@
+Search.setIndex({envversion:46,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{avail:0,content:[],github:0,index:0,linux:0,mac:0,modul:0,page:0,search:0,websit:0,window:0},titles:["Welcome to OpenWARP&#8217;s documentation!"],titleterms:{code:0,document:0,download:0,indic:0,instal:0,openwarp:0,sourc:0,tabl:0,welcom:0}})
