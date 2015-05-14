@@ -1,28 +1,33 @@
-.. OpenWARP documentation master file, created by
-   sphinx-quickstart on Thu May 14 12:04:32 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. figure:: _static/OpenWARP.jpg
+   :target: https://github.com/NREL/OpenWARP
 
-Welcome to OpenWARP's documentation!
-====================================
+Welcome to the  OpenWARP webpage
+================================
+OpenWARP is an open source boundary element simulation tool based on the `NEMOH code <http://lheea.ec-nantes.fr/doku.php/emo/nemoh/start>`_ developed by Ecole Centrale de Nantes. OpenWARP and NEMOH provide the ability to determine the frequency dependent added mass, radiation damping, and excitation coefficients that describe the behavior of a floating or submerged body in a wave field. These coefficients are widely used in conjunction with the Cummins equation :cite:`cummins1962` to model the behavior of wave energy conversion devices, ships, offshore platforms, and other floating structures.
+
+The OpenWARP project was a collaboration between the U.S. Department of Energy 
+
+Code overview
+-------------
+
+The OpenWARP project adds a simple meshing capability and graphical user interface to NEMOH (see image below) and also incorporates several feature additions that are described in the :ref:`Documentation` section.
+
+.. figure:: _static/gui.png
 
 .. toctree::
    :maxdepth: 2
 
-Downloading and installing
-==========================
-Source code
------------
-The source code is available on the `OpenWARP GitHub website <https://github.com/NREL/OpenWARP/>`_
+   license.rst
+   acknowledgments.rst
+   down_and_inst.rst
+   doc.rst
+   issues.rst
 
-Installers
-----------
-OpenWARP installers are available for Mac, Linux, and Windows:
+References
+==========
 
-* `Mac <https://www.dropbox.com/s/k2vtuasl78gu8vo/OpenWarp.pkg?dl=0>`_ 
-* `Linux <https://www.dropbox.com/s/14jzx5mftwydau8/OpenWarp.tar.bz2?dl=0>`_
-* `Windows <https://www.dropbox.com/s/n3d06dbgcltov8u/OpenWarp.exe?dl=0>`_
-
+.. bibliography:: OpenWARP.bib
+   :style: plain
 
 .. Indices and tables
 .. ==================
