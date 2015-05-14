@@ -1,0 +1,32 @@
+.. OpenWARP documentation master file, created by
+   sphinx-quickstart on Thu May 14 12:04:32 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to OpenWARP's documentation!
+====================================
+
+.. toctree::
+   :maxdepth: 2
+
+Downloading and installing
+==========================
+Source code
+-----------
+The source code is available on the `OpenWARP GitHub website <https://github.com/NREL/OpenWARP/>`_
+
+Installers
+----------
+OpenWARP installers are available for Mac, Linux, and Windows:
+* `Mac <https://www.dropbox.com/s/k2vtuasl78gu8vo/OpenWarp.pkg?dl=0>`_ 
+* `Linux <https://www.dropbox.com/s/14jzx5mftwydau8/OpenWarp.tar.bz2?dl=0>`_
+* `Windows <https://www.dropbox.com/s/n3d06dbgcltov8u/OpenWarp.exe?dl=0>`_
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
