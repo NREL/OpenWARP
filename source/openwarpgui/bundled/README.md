@@ -1,7 +1,7 @@
 # Paraview requirements
-# Mac
+## Mac
 Install Paraview into a folder in this location called Paraview.app
-# Linux
+## Linux
 Install Paraview into a folder in this location called paraview_linux
-# Windows
+## Windows
 Install Paraview into a folder in this location called paraview
