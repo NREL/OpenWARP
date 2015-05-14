@@ -1,1 +1,0 @@
-from vtkCommonSystemPython import *

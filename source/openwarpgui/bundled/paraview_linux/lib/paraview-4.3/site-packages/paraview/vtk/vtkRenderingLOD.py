@@ -1,1 +1,0 @@
-from vtkRenderingLODPython import *

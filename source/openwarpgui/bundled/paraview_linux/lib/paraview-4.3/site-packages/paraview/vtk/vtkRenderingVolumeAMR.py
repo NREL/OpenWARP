@@ -1,1 +1,0 @@
-from vtkRenderingVolumeAMRPython import *

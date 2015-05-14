@@ -1,1 +1,0 @@
-from vtkIOLSDynaPython import *
