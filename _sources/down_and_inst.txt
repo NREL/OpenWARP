@@ -2,7 +2,7 @@ Downloading and installing
 ==========================
 Source code
 -----------
-The source code is available on the `OpenWARP GitHub website <https://github.com/NREL/OpenWARP/>`_
+The source code is available on the `OpenWARP GitHub website <https://github.com/NREL/OpenWARP/>`_.
 
 Installers
 ----------

@@ -6,6 +6,4 @@ OpenWARP is based on the open source boundary element momentum code `NEMOH <http
 
 U.S. Department of Energy
 -------------------------
-The OpenWARP project is sponsored by the `U.S. Department of Energy’s Water Power Program <http://energy.gov/eere/water/water-power-program>`_. 
-
-OpenWARP code development was a collaboration between the the `TopCoder <http://www.topcoder.com/>`_, the `National Renewable Energy Laboratory <http://www.nrel.gov/water/>`, and the U.S. Department of Energy’s Water Power Program.
+The OpenWARP project was sponsored by the `U.S. Department of Energy’s Water Power Program <http://energy.gov/eere/water/water-power-program>`_ through a contract with NASA's Center of Excellence in Collaborative Innovation.
