@@ -1,4 +1,4 @@
-.. figure:: _static/OpenWARP.jpg
+.. figure:: _static/OpenWARP.png
    :target: https://github.com/NREL/OpenWARP
 
 Welcome to the  OpenWARP website
