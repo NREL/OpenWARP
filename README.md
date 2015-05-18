@@ -1,1 +1,1 @@
-###Please visit the [OpenWARP webpage](http://nrel.github.io/OpenWARP/) for more information.
+Please visit the [OpenWARP website](http://nrel.github.io/OpenWARP/) for more information.
