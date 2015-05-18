@@ -35,6 +35,7 @@ extensions = [
     'sphinx.ext.pngmath',
     'sphinx.ext.viewcode',
     'matplotlib.sphinxext.plot_directive',
+    'sphinxcontrib.bibtex',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'OpenWARP'
-copyright = u'2015, Michael Lawson'
+copyright = u'2015, National Renewable Energy Laboratory'
 author = u'Michael Lawson'
 
 # The version info for the project you're documenting, acts as replacement for
