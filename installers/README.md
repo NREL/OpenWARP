@@ -1,6 +1,6 @@
 #Installers
 OpenWARP installers are available for Mac, Linux, and Windows:
 
-* [Mac](https://www.dropbox.com/s/k2vtuasl78gu8vo/OpenWarp.pkg?dl=0)
-* [Linux](https://www.dropbox.com/s/14jzx5mftwydau8/OpenWarp.tar.bz2?dl=0)
-* [Windows](https://www.dropbox.com/s/n3d06dbgcltov8u/OpenWarp.exe?dl=0)
+* [Mac](https://drive.google.com/file/d/0B56WkDEeFyNHODU5bV9POWMwc1U/view?usp=sharing)
+* [Linux](https://drive.google.com/file/d/0B56WkDEeFyNHd2NRaUJBeWthZTA/view?usp=sharing)
+* [Windows](https://drive.google.com/file/d/0B56WkDEeFyNHZGY2djhjTUw5Z0k/view?usp=sharing)
