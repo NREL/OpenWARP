@@ -9,7 +9,7 @@ U.S. Department of Energy
 
 The OpenWARP project was sponsored by the `U.S. Department of Energy’s Water Power Program <http://energy.gov/eere/water/water-power-program>`_.
 
-Ecole Centrale de Nantes and CRNS
+Ecole Centrale de Nantes and CNRS
 -----------------------------------
 .. figure:: _static/ECN_CNRS.png
    :width: 50%
