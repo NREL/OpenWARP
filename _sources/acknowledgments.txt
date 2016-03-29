@@ -9,6 +9,16 @@ U.S. Department of Energy
 
 The OpenWARP project was sponsored by the `U.S. Department of Energy’s Water Power Program <http://energy.gov/eere/water/water-power-program>`_.
 
-NEMOH
------
-OpenWARP is based on the open source boundary element momentum code `NEMOH <http://lheea.ec-nantes.fr/doku.php/emo/nemoh/start>`_. We would like to thank École centrale de Nantes, Aurélien Babarit, and the other NEMOH developers for making NEMOH freely available under the Apache 2.0 license and for their support during the OpenWARP project.
+Ecole Centrale de Nantes and CRNS
+-----------------------------------
+.. figure:: _static/CENTRALE_NANTES.jpg
+   :width: 50%
+   :align: center
+   :target: http://www.ec-nantes.fr/version-anglaise/
+
+.. figure:: _static/logo_cnrs2.jpg
+      :width: 50%
+      :align: center
+      :target: http://www.cnrs.fr/index.php
+
+OpenWARP is based on the open source boundary element momentum code `NEMOH <http://lheea.ec-nantes.fr/doku.php/emo/nemoh/start>`_. We would like to thank École centrale de Nantes, NCRS, and the other NEMOH developers for making NEMOH freely available under the Apache 2.0 license and for their support during the OpenWARP project.
