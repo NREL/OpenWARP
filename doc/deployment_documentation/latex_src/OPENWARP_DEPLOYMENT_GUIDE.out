@@ -1,0 +1,50 @@
+\BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
+\BOOKMARK [1][-]{section.2}{OVERVIEW}{}% 2
+\BOOKMARK [1][-]{section.3}{NOTATIONS}{}% 3
+\BOOKMARK [1][-]{section.4}{DEPENDENCIES}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Windows}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{OS X}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Linux}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{Building from scratch}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{WINDOWS DEPLOYMENT FROM SCRATCH}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{OS X DEPLOYMENT FROM SCRATCH}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Linux deployment from scratch}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Installing the pre built package}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{OS X}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{Windows}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{Linux}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Deployment from existing package }{}% 16
+\BOOKMARK [2][-]{subsection.7.1}{Windows}{section.7}% 17
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Recompiling NemohFortran and NemohPython}{subsection.7.1}% 18
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Repackaging the installer}{subsection.7.1}% 19
+\BOOKMARK [2][-]{subsection.7.2}{OS X}{section.7}% 20
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Recompiling NemohFortran and NemohPython}{subsection.7.2}% 21
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Packaging the installer}{subsection.7.2}% 22
+\BOOKMARK [2][-]{subsection.7.3}{Linux}{section.7}% 23
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Recompiling NemohFortran and NemohPython}{subsection.7.3}% 24
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Packaging the installer}{subsection.7.3}% 25
+\BOOKMARK [2][-]{subsection.7.4}{General Guide about the installer build/packaging procedure}{section.7}% 26
+\BOOKMARK [1][-]{section.8}{Configuration}{}% 27
+\BOOKMARK [2][-]{subsection.8.1}{Meshing parameters}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.2}{Simulation parameters}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.3}{Postprocessing parameters}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.4}{Other and Logging parameters}{section.8}% 31
+\BOOKMARK [1][-]{section.9}{Usage}{}% 32
+\BOOKMARK [2][-]{subsection.9.1}{Start the application}{section.9}% 33
+\BOOKMARK [2][-]{subsection.9.2}{Start meshing}{section.9}% 34
+\BOOKMARK [2][-]{subsection.9.3}{Execute meshing}{section.9}% 35
+\BOOKMARK [2][-]{subsection.9.4}{View the meshing results}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.5}{Start the simulation}{section.9}% 37
+\BOOKMARK [2][-]{subsection.9.6}{ Execute the simulation}{section.9}% 38
+\BOOKMARK [2][-]{subsection.9.7}{View the simulation results}{section.9}% 39
+\BOOKMARK [2][-]{subsection.9.8}{Postprocessing}{section.9}% 40
+\BOOKMARK [2][-]{subsection.9.9}{Generate TEC outputs}{section.9}% 41
+\BOOKMARK [2][-]{subsection.9.10}{Postprocessing results}{section.9}% 42
+\BOOKMARK [2][-]{subsection.9.11}{Visualize the generated TEC files}{section.9}% 43
+\BOOKMARK [2][-]{subsection.9.12}{Getting help}{section.9}% 44
+\BOOKMARK [2][-]{subsection.9.13}{Logging Support}{section.9}% 45
+\BOOKMARK [1][-]{section.10}{Practical Example}{}% 46
+\BOOKMARK [2][-]{subsection.10.1}{Mesh Generation}{section.10}% 47
+\BOOKMARK [2][-]{subsection.10.2}{Run the simulation}{section.10}% 48
+\BOOKMARK [2][-]{subsection.10.3}{Generate TEC files and run postprocessing}{section.10}% 49
+\BOOKMARK [2][-]{subsection.10.4}{Visualize the generated tec files}{section.10}% 50

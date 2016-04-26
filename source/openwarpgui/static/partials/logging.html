@@ -1,0 +1,77 @@
+<div class="app-screen app-screen-meshing">
+	<div class="screen-title">
+		<h2>APPLICATION LEVEL CONFIGURATION</h2>
+		<div class="help-wrapper">
+			<a class="help-ico transition" href="javascript:;" tabindex="-1">?</a>
+			<div class="help-dropdown">
+                <div class="inner">
+                    <a class="close-ico transition" href="javascript:;" tabindex="-1">X</a>
+                    <dl>
+                        <dt>Info</dt>
+                        <dd>You can configure application level parameter here including logging</dd>
+                    </dl>
+                </div>
+            </div>
+		</div>
+	</div>
+    <!--end .screen-title-->
+
+    <div class="screen-content">
+		<form action="#" class="group">
+
+            <div class="screen-sub-title f-clear">
+				<h3>LOGGING</h3>
+				<div class="help-wrapper">
+					<a class="help-ico transition" href="javascript:;" tabindex="-1">?</a>
+					<div class="help-dropdown">
+                        <div class="inner">
+                            <a class="close-ico transition" href="javascript:;" tabindex="-1">X</a>
+                            <dl>
+                                <dt>Logging level</dt>
+                                <dd>To set the logging level, checked the corresponding checkbox and click Apply Changes</dd>
+                            </dl>
+                            <dl>
+                                <dt>Clearing logs</dt>
+                                <dd>To clear logs, checked the corresponding checkbox and click Apply Changes</dd>
+                            </dl>
+                        </div>
+                    </div>
+				</div>
+			</div>
+
+            <fieldset class="col-xs-6 col-md-6 group">
+                <label class="field-label">Logging level</label>
+                <div class="radio-wrapper group">
+                    <input id="logging_level_debug" type="radio" class="radio" value="10" name="logging_level" checked="checked" data-default-value="true"/>
+                    <label class="input-dot radio-dot" for="logging_level_debug"><a href="javascript:;" tabindex="2010"></a></label>
+                    <label class="radio-label" for="logging_level_debug">Debug</label>
+                    <input id="logging_level_info" type="radio" class="radio" value="20" name="logging_level" />
+                    <label class="input-dot radio-dot" for="logging_level_info"><a href="javascript:;" tabindex="2011"></a></label>
+                  <label class="radio-label" for="logging_level_info">Info</label>
+                </div>            
+            </fieldset>
+            
+
+            <fieldset class="col-xs-6 col-md-6 group">
+                <label class="field-label">Clear old logs?</label>
+                <div class="radio-wrapper group">
+                    <input id="clear_log_flag_false" type="radio" class="radio" value="false" name="clear_log_flag" checked="checked" data-default-value="true"/>
+                    <label class="input-dot radio-dot" for="clear_log_flag_false"><a href="javascript:;" tabindex="2012"></a></label>
+                    <label class="radio-label" for="clear_log_flag_false"> No </label>
+                    <input id="clear_log_flag_true" type="radio" class="radio" value="true" name="clear_log_flag" />
+                    <label class="input-dot radio-dot" for="clear_log_flag_true"><a href="javascript:;" tabindex="2013"></a></label>
+                    <label class="radio-label" for="clear_log_flag_true"> Yes </label>
+                </div>        
+            </fieldset>
+
+        </form>
+    </div>
+
+    <!--end .screen-content-->
+	<div class="screen-footer group">
+        <a href="javascript:;" id="application_quit" class="f-left btn btn-quit transition" tabindex="4003">QUIT</a>
+        <a href="javascript:;" id="apply_configuration_changes" class="f-right btn btn-pri transition" tabindex="4002">APPLY CHANGES</a>
+	</div>
+    <!--end .screen-footer-->
+
+</div>

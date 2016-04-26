@@ -740,5 +740,106 @@ angular.module('openwarp.controllers', [])
         //reset postprocessing page 
         openWARP.app.screenReset("postprocessing");
     } ])
-	
+	// configuration controller
+    .controller('configuration', ['$scope', '$rootScope', '$window', 'localStorageService', function ($scope, $rootScope, $window, localStorageService) {
+
+        //retrieve text input data from local storage
+        $("input.text").each(function () {
+            var id = $(this).attr("id");
+            $scope[id] = localStorageService.get(id);
+
+            if ($(this)[0].hasAttribute("data-default-value")) {
+                if (($scope[id] === null) || ($scope[id] === undefined) || ($scope[id] === "")) {
+                    $scope[id] = $(this).attr("data-default-value"); ;
+                }
+            }
+        });
+
+        //retrieve radio/checkbox data from local storage
+        $("input.radio, input.checkbox").each(function () {
+            var id = $(this).attr("id");
+            $scope[id] = localStorageService.get(id);
+            if ($(this)[0].hasAttribute("data-default-value")) {
+                if (($scope[id] === null) || ($scope[id] === undefined) || ($scope[id] === "")) {
+                    $scope[id] = $(this).attr("data-default-value"); ;
+                }
+            }
+            if ($scope[id] === 'true') {
+                $(this).prop("checked", true);
+            } else {
+                $(this).prop("checked", false);
+            }
+        });
+
+        //save input value into local storage after change
+        $("input.text").change(function () {
+            if (!$(this).hasClass("ban-storage")) {
+                localStorageService.set($(this).attr("id"), $(this).val());
+            }
+        });
+
+        //save radio/checkbox value
+        $("input.radio, input.checkbox").change(function () {
+            var wrapper = $(this).parents(".radio-wrapper").eq(0);
+            $("input.radio, input.checkbox", wrapper).each(function () {
+                var radioStaus;
+                if ($(this).prop("checked")) {
+                    radioStaus = "true";
+                } else {
+                    radioStaus = "false";
+                }
+                localStorageService.set($(this).attr("id"), radioStaus);
+            });
+        });
+
+        // Invoked when the MESHING EXECUTE button was clicked.
+        $("#apply_configuration_changes").click(function () {
+            // Loading label to prevent editing or clicking operations
+            openWARP.app.show_loading();
+            // Collect parameters
+
+            var data_to_post = {}
+            // Logging level
+            data_to_post["logging_level"] = $('input[name="logging_level"]:checked').val();
+            if (!(data_to_post.logging_level === "20")) {
+                data_to_post["logging_level"] = "10";
+            }
+
+	        // Clear log flag
+	        data_to_post["clear_log_flag"] = $('input[name="clear_log_flag"]:checked').val();
+            if (!(data_to_post["clear_log_flag"] === "true")) {
+                data_to_post["clear_log_flag"] = "false";
+            }
+
+            // AJAX send request
+            $.ajax({
+                url: "/apply_configuration",
+                type: "POST",
+                dataType: "json",
+                data: data_to_post,
+                success: function (data) {
+                    // Explicitly hide loading dialog
+                    openWARP.app.hide_loading();
+                    // extract log and display in overlay dialog
+                    var logContent = data.log;
+                    openWARP.app.message_box("Running log in server side:", logContent);
+                },
+                error: function (request, status, error) {
+                    // Explicitly hide loading dialog
+                    openWARP.app.hide_loading();
+                    // notify user
+                    openWARP.app.message_box("Error in server side:", error + "\n\nDetails:\n" + request.responseJSON.error);
+                }
+            });
+        });
+
+        // Quit application
+        $("#application_quit").click(function () {
+            openWARP.app.quit_app();
+        });
+
+        //reset meshing page
+        openWARP.app.screenReset("configuration");
+
+    } ])
 	

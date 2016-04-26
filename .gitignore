@@ -1,0 +1,14 @@
+*.aux
+*.blg
+*.bbl
+*.aux
+*.pyc
+*.DS_Store
+*.idea
+**/*.aux
+**/*.blg
+**/*.bbl
+**/*.aux
+**/*.DS_Store
+**/*.pyc
+**/*.idea

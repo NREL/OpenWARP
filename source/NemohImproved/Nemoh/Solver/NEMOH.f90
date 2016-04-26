@@ -1,6 +1,6 @@
 !--------------------------------------------------------------------------------------
 !
-!Copyright (C) 2014-2015 TopCoder Inc., All Rights Reserved.
+!Copyright (C) 2014-2016 TopCoder Inc., All Rights Reserved.
 !
 !--------------------------------------------------------------------------------------
 
@@ -67,8 +67,12 @@
 !       with the extended integral equations method.  Added additional parameters to
 !       control this implementation.
 !
-!   @author yedtoss, TCSASSEMBLER
-!   @version 1.8
+! Changes in version 1.9 (OpenWarp - Add Logging Functionality version 1.0)
+!       Added support for logging.
+!
+!   @author yedtoss
+!   @version 1.9
+#include "logging.h"
 MODULE NEMOH
 
     IMPLICIT NONE
@@ -85,7 +89,7 @@ MODULE NEMOH
     & yaw_moment, FastInfluence_Switch, higher_panel_method, n_beta, n_radiation, rad_case, &
     & beta, num_panel_higher_order, b_spline_order, is_thin_body, use_dipoles_implementation, &
     & Switch_YAW_MOMENT, Switch_DRIFT_FORCES, center_buoyancy, displacement, waterplane_area, stifness, &
-    & is_interior_domain, remove_irregular_frequencies) BIND(C)
+    & is_interior_domain, remove_irregular_frequencies, log_level) BIND(C)
 
     USE MIdentification
     USE MMesh
@@ -98,6 +102,7 @@ MODULE NEMOH
     USE OMP_LIB
     USE ISO_C_BINDING
     USE MESH_STATISTICS
+    USE FLOGGING
 
     !
 
@@ -150,6 +155,7 @@ MODULE NEMOH
     INTEGER(C_INT) :: bc_Switch_Kochin(Nproblems)
     INTEGER(C_INT) :: bc_Switch_Type(Nproblems)
     INTEGER(C_INT) :: FastInfluence_Switch(Nproblems)
+    INTEGER(C_INT) :: log_level
 
     REAL(C_FLOAT) :: NDS(Nintegration, NBCPanels)
     REAL(C_FLOAT) :: Theta(Ntheta)
@@ -203,14 +209,29 @@ MODULE NEMOH
     INTEGER, DIMENSION(:, :), ALLOCATABLE :: stat_p
     INTEGER:: stat_tmp1, stat_tmp2
 
-    WRITE(0,*) ' Start'
+    ! Enable date output
+    call log_set_default_output_date(.true.)
+
+    ! Set log level
+    call log_set_default_log_level(log_level)
+
+    
+    !log(info,*) "here, have some info"
+
+    !WRITE(0,*) ' Start'
+    if (logp(LOG_INFO)) then
+        write(logu,*) trim(logl(LOG_INFO)), " Simulation started"
+    endif
 
     !
     !   --- Initialisation -------------------------------------------------------------------------------------
     !
     PI=4.*ATAN(1.)
-    WRITE(*,*) ' '
-    WRITE(*,'(A)', advance='NO') '  -> Initialisation '
+    !WRITE(*,*) ' '
+    !WRITE(*,'(A)', advance='NO') '  -> Initialisation '
+    if (logp(LOG_INFO)) then
+        write(logu,*) trim(logl(LOG_INFO)), " -> Initialisation"
+    endif
 
     ! Executing mesh statistics
 
@@ -259,23 +280,36 @@ MODULE NEMOH
     TABULATION_NPINTE = n_points_simpson
 
     IF (TABULATION_NPINTE < 100) THEN
-        WRITE(*,*)'Error: Please choose a number of sub intervals greater than 100'
+        if (logp(LOG_ERROR)) then
+            write(logu,*) trim(logl(LOG_ERROR)), " Please choose a number of sub intervals greater than 100"
+        endif
+        !WRITE(*,*)'Error: Please choose a number of sub intervals greater than 100'
         STOP
     END IF
 
     IF (TABULATION_NPINTE >= 1000000) THEN
-        WRITE(*,*)'Error: Please choose a number of sub intervals less than 1 000 000'
-        WRITE(*,*)'because all surfaces will be thin'
+        !WRITE(*,*)'Error: Please choose a number of sub intervals less than 1 000 000'
+        !WRITE(*,*)'because all surfaces will be thin'
+        if (logp(LOG_ERROR)) then
+            write(logu,*) trim(logl(LOG_ERROR)), " Please choose a number of sub intervals greater than 100"
+            write(logu,*) trim(logl(LOG_ERROR)), " because all surfaces will be thin"
+        endif
         STOP
     END IF
 
     IF (TABULATION_IR < 328) THEN
-        WRITE(*,*)'Error: Please choose a number of points in x direction greater than or equal to 328'
+        !WRITE(*,*)'Error: Please choose a number of points in x direction greater than or equal to 328'
+        if (logp(LOG_ERROR)) then
+            write(logu,*) trim(logl(LOG_ERROR)), " Please choose a number of points in x direction greater than or equal to 328"
+        endif
         STOP
     END IF
 
     IF (TABULATION_JZ < 46) THEN
-        WRITE(*,*)'Error: Please choose a number of points in z direction greater than or equal to  46'
+        !WRITE(*,*)'Error: Please choose a number of points in z direction greater than or equal to  46'
+        if (logp(LOG_ERROR)) then
+            write(logu,*) trim(logl(LOG_ERROR)), " Please choose a number of points in z direction greater than or equal to  46"
+        endif
         STOP
     END IF
 
@@ -313,20 +347,36 @@ MODULE NEMOH
 
     IF(use_dipoles_implementation==1 .and. higher_panel_method == 1) THEN
         higher_panel_method = 0
-        write(*, *) 'Warning: Higher panel method does not support yet the thin dipoles implementation'
-        write(*, *) 'Warning: Falling back to the low order method.'
+        !write(*, *) 'Warning: Higher panel method does not support yet the thin dipoles implementation'
+        !write(*, *) 'Warning: Falling back to the low order method.'
+        if (logp(LOG_WARNING)) then
+            write(logu,*) trim(logl(LOG_WARNING)), " Higher panel method does not support yet", &
+            & "the thin dipoles implementation"
+            write(logu,*) trim(logl(LOG_WARNING)), " Falling back to the low order method."
+        endif
+        
     END IF
 
     IF(remove_irregular_frequencies==1 .and. higher_panel_method == 1) THEN
         higher_panel_method = 0
-        write(*, *) 'Warning: Higher panel method does not support yet the removal of irregular frequencies'
-        write(*, *) 'Warning: Falling back to the low order method.'
+        !write(*, *) 'Warning: Higher panel method does not support yet the removal of irregular frequencies'
+        !write(*, *) 'Warning: Falling back to the low order method.'
+        if (logp(LOG_WARNING)) then
+            write(logu,*) trim(logl(LOG_WARNING)), " Higher panel method does not support yet", &
+            & "the removal of irregular frequencies"
+            write(logu,*) trim(logl(LOG_WARNING)), " Falling back to the low order method."
+        endif
     END IF
 
     IF(use_dipoles_implementation==1 .and. remove_irregular_frequencies == 1) THEN
         use_dipoles_implementation = 0
-        write(*, *) 'Warning: Dipoles Implementation and Irregular Frequencies removal are not compatible'
-        write(*, *) 'Warning: Disabling Dipoles Implementation'
+        !write(*, *) 'Warning: Dipoles Implementation and Irregular Frequencies removal are not compatible'
+        !write(*, *) 'Warning: Disabling Dipoles Implementation'
+        if (logp(LOG_WARNING)) then
+            write(logu,*) trim(logl(LOG_WARNING)), " Dipoles Implementation and Irregular", &
+            & "Frequencies removal are not compatible"
+            write(logu,*) trim(logl(LOG_WARNING)), " Disabling Dipoles Implementation"
+        endif
     END IF
     ! Don't precompute green function tabulation if we want to use ode in the infinite depth case
     ntemp = 0
@@ -346,11 +396,17 @@ MODULE NEMOH
 
     IF ((higher_panel_method == 1 .or. use_dipoles_implementation == 1 &
     & .or. remove_irregular_frequencies == 1) .and. ntemp /= Nproblems) THEN
-        write(*, *) 'Warning: Higher panel method does not support yet the computation'
-        write(*, *) ' of influence coefficients using the ode technique. Falling back to default mode.'
+        !write(*, *) 'Warning: Higher panel method does not support yet the computation'
+        !write(*, *) ' of influence coefficients using the ode technique. Falling back to default mode.'
+        if (logp(LOG_WARNING)) then
+            write(logu,*) trim(logl(LOG_WARNING)), " Higher panel method does not support", &
+            & "yet the computation"
+            write(logu,*) trim(logl(LOG_WARNING)), " of influence coefficients using the ode", &
+            & "technique. Falling back to default mode."
+        endif
     END IF
 
-    WRITE(*,'(A)', advance='NO') '.'
+    !WRITE(*,'(A)', advance='NO') '.'
     !   Initialise Force matrix
 
 
@@ -366,8 +422,11 @@ MODULE NEMOH
     !   Initialise results table
     ALLOCATE(Force(Nintegration,Bodyconditions%Nproblems))
     Force(:,:)=0.
-    WRITE(*,*) '. Done !'
-    WRITE(*,*) ' '
+    !WRITE(*,*) '. Done !'
+    !WRITE(*,*) ' '
+    if (logp(LOG_INFO)) then
+        write(logu,*) trim(logl(LOG_INFO)), " -> Initialisation is done!"
+    endif
     !
 
 
@@ -437,8 +496,11 @@ MODULE NEMOH
 
     !   --- Solve BVPs and calculate forces ---------------------------------------------------------
     !
-    WRITE(*,*) ' -> Solve BVPs and calculate forces '
-    WRITE(*,*) ' '
+    !WRITE(*,*) ' -> Solve BVPs and calculate forces '
+    !WRITE(*,*) ' '
+    if (logp(LOG_INFO)) then
+        write(logu,*) trim(logl(LOG_INFO)), " -> Solving BVPs and calculate forces"
+    endif
 
 
 
@@ -463,7 +525,11 @@ MODULE NEMOH
                 & rad_case, num_panel_higher_order, b_spline_order, is_thin_body, use_dipoles_implementation, &
                 & Switch_DRIFT_FORCES, Switch_YAW_MOMENT, is_interior_domain, remove_irregular_frequencies)
 
-            WRITE(0,'(A,I5,A,I5,A)', advance='YES') ' Problem ',j,' / ',BodyConditions%Nproblems,' ... Done !'
+            !WRITE(0,'(A,I5,A,I5,A)', advance='YES') ' Problem ',j,' / ',BodyConditions%Nproblems,' ... Done !'
+            if (logp(LOG_INFO)) then
+                write(logu, '(A, A,I5,A,I5,A)', advance='YES') trim(logl(LOG_INFO)), ' Problem ',j,' / ', &
+                & BodyConditions%Nproblems,' ... Done !'
+            endif
 
 
 
@@ -493,14 +559,18 @@ MODULE NEMOH
                 & rad_case, num_panel_higher_order, b_spline_order, is_thin_body, use_dipoles_implementation, &
                 & Switch_DRIFT_FORCES, Switch_YAW_MOMENT, is_interior_domain, remove_irregular_frequencies)
 
-            WRITE(0,'(A,I5,A,I5,A)', advance='YES') ' Problem ',j,' / ',BodyConditions%Nproblems,' ... Done !'
+            !WRITE(0,'(A,I5,A,I5,A)', advance='YES') ' Problem ',j,' / ',BodyConditions%Nproblems,' ... Done !'
+            if (logp(LOG_INFO)) then
+                write(logu, '(A, A,I5,A,I5,A)', advance='YES') trim(logl(LOG_INFO)), ' Problem ',j,' / ', &
+                & BodyConditions%Nproblems,' ... Done !'
+            endif
 
         END IF
     END DO
     !$OMP END PARALLEL DO
 
 
-    WRITE(*,*) ' ' 
+    !WRITE(*,*) ' ' 
 
 
     !
@@ -527,7 +597,10 @@ MODULE NEMOH
     DEALLOCATE(CQCache, QQCache, SM1Cache, SM2Cache, SP1Cache, SP2Cache)
     DEALLOCATE(NEXPCache, ARCache, AMBDACache)
     CALL DEALLOCATE_DATA
-    WRITE(0,*) 'NEMOH Solver completed.'
+    !WRITE(0,*) 'NEMOH Solver completed.'
+    if (logp(LOG_INFO)) then
+        write(logu,*) trim(logl(LOG_INFO)), " NEMOH Solver completed."
+    endif
 
     END SUBROUTINE COMPUTE_NEMOH
 
@@ -649,6 +722,7 @@ END SUBROUTINE
 
 SUBROUTINE COFINT(NPINTE,CQT,QQT)
     USE COM_VAR
+    USE FLOGGING
     IMPLICIT NONE
     INTEGER :: J,NPINTE, num_thin
     REAL:: PI,QQT(NPINTE),CQT(NPINTE)
@@ -676,8 +750,14 @@ SUBROUTINE COFINT(NPINTE,CQT,QQT)
     END DO
 
     IF (num_thin > 0) THEN
-        write(*, *) 'Error, there are ', num_thin, ' sub intervals too small. There will make calculations wrong'
-        write(*, *) 'Please choose a smaller value of the number of sub intervals'
+        !write(*, *) 'Error, there are ', num_thin, ' sub intervals too small. There will make calculations wrong'
+        !write(*, *) 'Please choose a smaller value of the number of sub intervals'
+        if (logp(LOG_ERROR)) then
+            write(logu,*) trim(logl(LOG_ERROR)), " there are ', num_thin, ' sub intervals too small.", &
+            & " There will make calculations wrong"
+            write(logu,*) trim(logl(LOG_ERROR)), " Please choose a smaller value of", &
+            & "the number of sub intervals"
+        endif
         STOP
     END IF
 

@@ -33,6 +33,9 @@ Changes in version 1.7 (Irregular Frequencies Assembly)
        removed and if so, the panels which are in the interior of the free surface.
        Applied some bug fixes to allow the shape of hdf5 file dataset 
        to be automatically resized.
+
+Changes in version 1.8 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 
 import solver_fortran
@@ -43,16 +46,26 @@ import utility
 import numpy as np
 import sys
 import h5py
+import logging
+from utility import Silence
+import cStringIO
+from contextlib import contextmanager
+import contextlib
+import os
+import StringIO
+import tempfile
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.6"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.8"
 
 
 def init_data():
     """
     Initialize the data to send to the nemoh fortran wrapper
     """
+
+    # No need to log
 
     d = 2
 
@@ -128,6 +141,12 @@ def write_result(hdf5_data, data):
         hdf5_data: object the hdf5 opened data
         data: the data sent from nemoh fortran
     """
+    signature = __name__ + '.write_result(hdf5_data, data)'
+    logger = logging.getLogger(__name__)
+    # data is too huge for logging
+    utility.log_entrance(logger, signature,
+                        {'hdf5_data': hdf5_data})
+
     dset = utility.require_dataset(hdf5_data, structure.H5_RESULTS_FORCES, data["line"].shape, dtype='f')
     utility.set_hdf5_attributes(dset, structure.H5_RESULTS_FORCES_ATTR)
     dset[:, :] = data["line"].astype(copy=False, dtype='f')
@@ -138,7 +157,7 @@ def write_result(hdf5_data, data):
         if data["bc_switch_potential"][i] != 1:
             temp[i, :] = 0
             count_skip += 1
-    if count_skip ==  data["n_problems"]:
+    if count_skip == data["n_problems"]:
         temp = np.zeros((0, 0), dtype='f')
 
     dset = utility.require_dataset(hdf5_data, structure.H5_RESULTS_POTENTIAL, temp.shape, dtype='f')
@@ -231,8 +250,7 @@ def write_result(hdf5_data, data):
     utility.set_hdf5_attributes(dset, structure.H5_RESULTS_STIFNESS_ATTR)
     dset[:, :, :] = data["stifness"]
 
-
-
+    utility.log_exit(logger, signature, [None])
 
 
 def run(hdf5_data):
@@ -244,13 +262,15 @@ def run(hdf5_data):
         the output of the fortran function as string if successful
     """
 
-    data = init_data()
+    signature = __name__ + '.run(hdf5_data)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                        {'hdf5_data': hdf5_data})
 
-    dset = hdf5_data.get(structure.H5_L10_COUNT)
-    if not dset:
-        print('It looks like your hdf5 file is not correct. Please run ',
-        'the preprocessor before running the solver')
-        sys.exit(1)
+    data = init_data()
+    data["log_level"] = logging.getLogger().getEffectiveLevel()
+
+    dset = utility.get_1d_array(logger, hdf5_data, "H5_L10_COUNT",  expected_dim=4)
 
     offset = 1
 
@@ -260,27 +280,25 @@ def run(hdf5_data):
     n_panels = int(dset[2])
     n_bodies = int(dset[3])
 
-    mesh_cpanel = hdf5_data.get(structure.H5_L10_CPANEL)
-    mesh_xm = hdf5_data.get(structure.H5_L10_XM)
-    mesh_n = hdf5_data.get(structure.H5_L10_N)
-    mesh_a = hdf5_data.get(structure.H5_L10_A)
+    mesh_cpanel = utility.get_dataset(hdf5_data, 'H5_L10_CPANEL')
+    mesh_xm = utility.get_dataset(hdf5_data, 'H5_L10_XM')
+    mesh_n = utility.get_dataset(hdf5_data, 'H5_L10_N')
+    mesh_a = utility.get_dataset(hdf5_data, 'H5_L10_A')
 
 
-    dset = hdf5_data.get(structure.H5_L12_COUNT)
+    dset = utility.get_1d_array(logger, hdf5_data, "H5_L12_COUNT",  expected_dim=2)
 
     i_sym = int(dset[1])
 
     if l10_i_sym != i_sym or int(dset[0]) != 2:
-        print('')
-        print(' The mesh file format is not correct. ')
-        print(' Stopping')
-        sys.exit()
+        raise ValueError('Stopping because the mesh file format is not correct.'
+                         'The symmetry about xoz axis is inconsistent')
 
 
     data["i_sym"] = i_sym
 
-    data["mesh_p"] = np.asarray(hdf5_data.get(structure.H5_L12_P), order='F', dtype='i')
-    data["mesh_x"] = np.asarray(hdf5_data.get(structure.H5_L12_X), order='F', dtype='f')
+    data["mesh_p"] = np.asarray(utility.get_dataset(hdf5_data, 'H5_L12_P'), order='F', dtype='i')
+    data["mesh_x"] = np.asarray(utility.get_dataset(hdf5_data, 'H5_L12_X'), order='F', dtype='f')
 
     data["n_points"] = n_points
     data["n_panels"] = n_panels
@@ -291,60 +309,61 @@ def run(hdf5_data):
     data["mesh_n"] = np.asarray(mesh_n, order='F', dtype='f')
     data["mesh_a"] = np.asarray(mesh_a, order='F', dtype='f')
 
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_W)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_W')
     bc_omega = np.asarray(dset, order='F', dtype='f')
     n_problems = bc_omega.shape[0]
 
     data["bc_omega"] = bc_omega
     data["n_problems"] = n_problems
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_BETA)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_BETA')
     data["bc_switch_type"] = np.asarray(dset, order='F', dtype='i')
 
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_SWITCH_POTENTIAL)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_SWITCH_POTENTIAL')
     data["bc_switch_potential"] = np.asarray(dset, order='F', dtype='i')
 
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_SWITCH_FREE_SURFACE)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_SWITCH_FREE_SURFACE')
     data["bc_switch_freesurface"] = np.asarray(dset, order='F', dtype='i')
 
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_SWITCH_KOCHIN)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_SWITCH_KOCHIN')
     data["bc_switch_kochin"] = np.asarray(dset, order='F', dtype='i')
 
-    dset = hdf5_data.get(structure.H5_NORMAL_VELOCITY_VELOCITIES)
+    dset = utility.get_dataset(hdf5_data, 'H5_NORMAL_VELOCITY_VELOCITIES')
     data["bc_normal_velocity"] = np.asarray(dset, order='F', dtype='F')
     data["nbc_panels"] = data["bc_normal_velocity"].shape[0]
 
-    data["rho"] = hdf5_data.get(structure.H5_ENV_VOLUME)[0]
-    data["g"] = hdf5_data.get(structure.H5_ENV_GRAVITY)[0]
-    data["depth"] = hdf5_data.get(structure.H5_ENV_DEPTH)[0]
-    dset = hdf5_data.get(structure.H5_ENV_WAVE_POINT)
+
+    data["rho"] = utility.get_1d_array(logger, hdf5_data, "H5_ENV_VOLUME",  expected_dim=1)[0]
+    data["g"] = utility.get_1d_array(logger, hdf5_data, "H5_ENV_GRAVITY",  expected_dim=1)[0]
+    data["depth"] = utility.get_1d_array(logger, hdf5_data, "H5_ENV_DEPTH",  expected_dim=1)[0]
+    dset = utility.get_1d_array(logger, hdf5_data, "H5_ENV_WAVE_POINT",  expected_dim=2)
     data["xeff"] = dset[0]
     data["y_eff"] = dset[1]
 
-    data["indiq_solver"] = hdf5_data.get(structure.H5_SOLVER_TYPE)[0]
-    data["max_iterations"] = hdf5_data.get(structure.H5_SOLVER_GMRES_MAX_ITERATIONS)[0]
-    data["restart_param"] = hdf5_data.get(structure.H5_SOLVER_GMRES_RESTART)[0]
-    data["tol_gmres"] = hdf5_data.get(structure.H5_SOLVER_GMRES_STOPPING)[0]
+    data["indiq_solver"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_TYPE",  expected_dim=1)[0]
+    data["max_iterations"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_GMRES_MAX_ITERATIONS", 1)[0]
+    data["restart_param"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_GMRES_RESTART",  expected_dim=1)[0]
+    data["tol_gmres"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_GMRES_STOPPING",  expected_dim=1)[0]
 
-    data["nds"] = np.asarray(hdf5_data.get(structure.H5_MESH_INTEGRATION), order='F', dtype='f')
+
+
+    data["nds"] = np.asarray(utility.get_dataset(hdf5_data, 'H5_MESH_INTEGRATION'), order='F', dtype='f')
     data["n_integration"] = data["nds"].shape[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_USE_HIGHER_ORDER)
-    data["use_higher_order"] = dset[0]
+    data["use_higher_order"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_USE_HIGHER_ORDER", 1)[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_NUM_PANEL_HIGHER_ORDER)
-    data["num_panel_higher_order"] = dset[0]
+    data["num_panel_higher_order"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_NUM_PANEL_HIGHER_ORDER", 1)[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_B_SPLINE_ORDER)
-    data["b_spline_order"] = dset[0]
+    data["b_spline_order"] = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_B_SPLINE_ORDER",  expected_dim=1)[0]
 
-    data["theta"] = np.asarray(hdf5_data.get(structure.H5_MESH_KOCHIN), order='F', dtype='f')
+    data["theta"] = np.asarray(utility.get_dataset(hdf5_data, 'H5_MESH_KOCHIN'), order='F', dtype='f')
     data["n_theta"] = data["theta"].shape[0]
 
 
-    data["meshfs_x"] = np.asarray(hdf5_data.get(structure.H5_MESH_FREE_SURFACE_VECTORS), dtype='f')
+    data["meshfs_x"] = np.asarray(utility.get_2d_array(logger, hdf5_data, "H5_MESH_FREE_SURFACE_VECTORS"), dtype='f')
     data["nfs_points"] = data["meshfs_x"].shape[1]
 
-    data["meshfs_p"] = np.asarray(hdf5_data.get(structure.H5_MESH_FREE_SURFACE_INDEX), order='F', dtype='i') + offset
+    data["meshfs_p"] = np.asarray(utility.get_2d_array(logger, hdf5_data, "H5_MESH_FREE_SURFACE_INDEX"),
+                                  order='F', dtype='i') + offset
     data["nfs_panels"] = data["meshfs_p"].shape[1]
 
     data["out_phi"] = np.zeros((n_problems, 1+data["nfs_points"]), dtype='F', order="F")
@@ -362,57 +381,68 @@ def run(hdf5_data):
     data["out_potential"] = np.zeros((n_problems, n_potentials), dtype='f', order="F")
     data["n_potentials"] = n_potentials
 
-    data["n_tabulatedx"] = int(hdf5_data.get(structure.H5_SOLVER_GREEN_TABULATION_NUMX)[0])
-    data["n_tabulatedz"] = int(hdf5_data.get(structure.H5_SOLVER_GREEN_TABULATION_NUMZ)[0])
-    data["n_points_simpson"] = int(hdf5_data.get(structure.H5_SOLVER_GREEN_TABULATION_SIMPSON_NPOINTS)[0])
+    data["n_tabulatedx"] = int(utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_GREEN_TABULATION_NUMX", 1)[0])
+    data["n_tabulatedz"] = int(utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_GREEN_TABULATION_NUMZ", 1)[0])
+    data["n_points_simpson"] = int(utility.get_1d_array(logger, hdf5_data,
+                                                        "H5_SOLVER_GREEN_TABULATION_SIMPSON_NPOINTS", 1)[0])
 
-    dset = hdf5_data.get(structure.H5_SOLVER_SWITCH_ODE_INFLUENCE)
+    dset = utility.get_dataset(hdf5_data, 'H5_SOLVER_SWITCH_ODE_INFLUENCE')
     data["fast_influence_switch"] = np.asarray(dset, order='F', dtype='i')
 
     data["is_interior_domain"] = np.zeros((n_panels), dtype='i', order="F")
 
-    remove_irregular_frequencies = hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)[0]
+    remove_irregular_frequencies = utility.get_1d_array(logger, hdf5_data,
+                                                        "H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES", 1)[0]
 
     if remove_irregular_frequencies:
-        dset = hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)
+        # Bug??? Previous code used dset = hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)
+        dset = utility.get_dataset(hdf5_data, 'H5_SOLVER_IS_INTERIOR_DOMAIN')
         data["is_interior_domain"] = np.asarray(dset, order='F', dtype='i')
 
 
-    
-
-    dset = hdf5_data.get(structure.H5_RESULTS_CASE_BETA)
+    dset = utility.get_dataset(hdf5_data, 'H5_RESULTS_CASE_BETA')
     data["beta"] = np.asarray(dset, order='F', dtype='f')
     data["n_beta"] = data["beta"].shape[0]
 
-    dset = hdf5_data.get(structure.H5_RESULTS_CASE_RADIATION)
+    dset = utility.get_dataset(hdf5_data, 'H5_RESULTS_CASE_RADIATION')
     data["rad_case"] = np.asarray(dset, order='F', dtype='f')
     data["n_radiation"] = data["rad_case"].shape[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_THIN_PANELS)
+    dset = utility.get_dataset(hdf5_data, 'H5_SOLVER_THIN_PANELS')
     data["is_thin_body"] = np.asarray(dset, order='F', dtype='i')
 
-    dset = hdf5_data.get(structure.H5_SOLVER_USE_DIPOLES_IMPLEMENTATION)
+    dset = utility.get_dataset(hdf5_data, 'H5_SOLVER_USE_DIPOLES_IMPLEMENTATION')
     data["use_dipoles_implementation"] = dset[0]
 
-    data["remove_irregular_frequencies"] = hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)[0]
+    data["remove_irregular_frequencies"] = utility.get_dataset(hdf5_data, 'H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES')[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_COMPUTE_YAW_MOMENT)
+    dset = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_COMPUTE_YAW_MOMENT", 1)
     data["compute_yaw_moment"] = dset[0]
 
-    dset = hdf5_data.get(structure.H5_SOLVER_COMPUTE_DRIFT_FORCES)
+    dset = utility.get_1d_array(logger, hdf5_data, "H5_SOLVER_COMPUTE_DRIFT_FORCES", 1)
     data["compute_drift_forces"] = dset[0]
 
     # Disable kochin, yaw moments and drift forces
     if data["use_higher_order"] == 1 or data["use_dipoles_implementation"] == 1:
         data["n_theta"] = 0
+        logger.info('Disabling koching, yaw monment and drift forces computation as '
+                    'not supported when higher order panel or dipoles implementation is '
+                    'enabled')
 
-    solver_fortran.run_solver(data)
+
+    with Silence(stdout='test1', stderr='test1', mode='w'):
+        solver_fortran.run_solver(data)
+
+    lines = []
+    with open('test1') as f:
+        lines = f.read().splitlines()
+
+    output = ""
+    for line in lines:
+        output += str(line) + "\n"
     write_result(hdf5_data, data)
-    output = 'Start\n  -> Initialisation . . Done ! \n\n'
-    output += ' -> Solve BVPs and calculate forces \n'
-    for j in range(1, n_problems+1):
-        output += ' Problem ' + str(j) + ' / ' +str(n_problems) + ' ... Done !\n'
-    output += '\nNEMOH Solver completed.\n'
+
+    utility.log_exit(logger, signature, [output])
     return output
 
 
@@ -426,10 +456,16 @@ def solve(custom_config):
         the output of the fortran function as string if successful
     """
 
+    signature = __name__ + '.solve(custom_config)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                        {'custom_config': custom_config})
+
     if not custom_config:
         custom_config = {}
 
     hdf5_file = utility.get_setting(settings.HDF5_FILE, custom_config, 'HDF5_FILE')
+    utility.check_is_file(hdf5_file, 'The path to the hdf5 file configured by HDF5_FILE')
 
     n_tabulatedx = utility.get_setting(settings.GREEN_TABULATION_NUMX, custom_config,
                                        'GREEN_TABULATION_NUMX')
@@ -442,7 +478,6 @@ def solve(custom_config):
     n_points_simpson = utility.get_setting(settings.GREEN_TABULATION_SIMPSON_NPOINTS, custom_config,
                                            'GREEN_TABULATION_SIMPSON_NPOINTS')
 
-    utility.validate_file(hdf5_file, 'HDF5_FILE')
     with h5py.File(hdf5_file, "a") as hdf5_db:
         if n_tabulatedx and n_tabulatedx > 0:
             dset = utility.require_dataset(hdf5_db, structure.H5_SOLVER_GREEN_TABULATION_NUMX, (1, ), dtype='i')
@@ -456,10 +491,14 @@ def solve(custom_config):
             dset = utility.require_dataset(hdf5_db, structure.H5_SOLVER_GREEN_TABULATION_SIMPSON_NPOINTS, (1, ), dtype='i')
             dset[:] = n_points_simpson
 
-
-
         return run(hdf5_db)
 
 if __name__ == '__main__':
-    solve({})
+    utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
+    try:
+        solve({})
+    except Exception as e:
+        # exc_info=True means the stack trace will be printed automatically
+        logging.getLogger(__name__).error('Program halted due to a fatal error whose detail is as follow: ',
+                                          exc_info=True)
 

@@ -10,6 +10,9 @@ Changes in version 1.2 (Irregular Frequencies Assembly)
         automatically.
         Applied some bug fixes to allow the shape of hdf5 file dataset 
         to be automatically resized.
+
+Changes in version 1.3 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 import numpy as np
 import sys
@@ -18,11 +21,16 @@ import settings
 import os
 import errno
 from models import TEnvironment
+import inspect
+from collections import namedtuple
+import json
+import logging.config
+import h5py
 
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.2"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.3"
 
 
 EPS = 1e-7
@@ -89,7 +97,10 @@ def require_dataset(hdf5_data, path, shape, dtype, maxshape=(None)):
     Returns:
         The dataset newly created or updated.
     """
-    dset = hdf5_data.get(path, default = None)
+    dset = None
+    path_exists = path in hdf5_data
+    if path_exists:
+        dset = hdf5_data.get(path, default = None)
     # Dataset not existing
     if dset is None:
         maxshape = [None for i in xrange(len(shape))]
@@ -161,23 +172,7 @@ def validate_file(inp, name=''):
     assert (os.path.exists(inp)), name + ' settings with value ' + inp + ' should exist.'
 
 
-def read_environment(hdf5_data):
-    """
-    Read the environment from the hdf5 file
-    Args:
-        hdf5_data: object, the hdf5 opened storage
 
-    Returns:
-        The environment
-    """
-    environment = TEnvironment()
-    environment.rho = hdf5_data.get(structure.H5_ENV_VOLUME)[0]
-    environment.g = hdf5_data.get(structure.H5_ENV_GRAVITY)[0]
-    environment.depth = hdf5_data.get(structure.H5_ENV_DEPTH)[0]
-    wave_point = hdf5_data.get(structure.H5_ENV_WAVE_POINT)
-    environment.x_eff = wave_point[0]
-    environment.y_eff = wave_point[1]
-    return environment
 
 
 def compute_wave_number(w, environment):
@@ -208,8 +203,7 @@ def compute_wave_number(w, environment):
         n_ite = 0
         # Weird this will never happen. is the n_ite = 0 statement correct?
         if n_ite >= n_item_x:
-            print('Error: unable to find the wavenumber')
-            sys.exit()
+            raise ValueError('Unable to find the wavenumber after ' + str(n_ite) + ' iterations')
 
         xc = 0.5*(xd+xg)
 
@@ -222,8 +216,7 @@ def compute_wave_number(w, environment):
             n_ite += 1
 
         if n_ite >= n_item_x:
-            print('Error: unable to find the wavenumber')
-            sys.exit()
+            raise ValueError('Unable to find the wavenumber after ' + str(n_ite) + ' iterations')
 
         wave_number = xc/environment.depth
 
@@ -700,3 +693,593 @@ def convert_calculations(filename, hdf5_data):
     set_hdf5_attributes(dset, structure.H5_FREE_SURFACE_DIMENSION_Y_ATTR)
     dset[0] = float(x2[3])
 
+
+# http://stackoverflow.com/questions/2677185/how-can-i-read-a-functions-signature-including-default-argument-values
+DefaultArgSpec = namedtuple('DefaultArgSpec', 'has_default default_value')
+def _get_default_arg(args, defaults, arg_index):
+    """ Method that determines if an argument has default value or not,
+    and if yes what is the default value for the argument
+
+    :param args: array of arguments, eg: ['first_arg', 'second_arg', 'third_arg']
+    :param defaults: array of default values, eg: (42, 'something')
+    :param arg_index: index of the argument in the argument array for which,
+    this function checks if a default value exists or not. And if default value
+    exists it would return the default value. Example argument: 1
+    :return: Tuple of whether there is a default or not, and if yes the default
+    value, eg: for index 2 i.e. for "second_arg" this function returns (True, 42)
+    """
+    if not defaults:
+        return DefaultArgSpec(False, None)
+
+    args_with_no_defaults = len(args) - len(defaults)
+
+    if arg_index < args_with_no_defaults:
+        return DefaultArgSpec(False, None)
+    else:
+        value = defaults[arg_index - args_with_no_defaults]
+        if (type(value) is str):
+            value = '"%s"' % value
+        return DefaultArgSpec(True, value)
+
+def get_method_sig(method):
+    """ Given a function, it returns a string that pretty much looks how the
+    function signature would be written in python.
+
+    :param method: a python method
+    :return: A string similar describing the pythong method signature.
+    eg: "my_method(first_argArg, second_arg=42, third_arg='something')"
+    """
+
+    # The return value of ArgSpec is a bit weird, as the list of arguments and
+    # list of defaults are returned in separate array.
+    # eg: ArgSpec(args=['first_arg', 'second_arg', 'third_arg'],
+    # varargs=None, keywords=None, defaults=(42, 'something'))
+    argspec = inspect.getargspec(method)
+    arg_index=0
+    args = []
+
+    # Use the args and defaults array returned by argspec and find out
+    # which arguments has default
+    for arg in argspec.args:
+        default_arg = _get_default_arg(argspec.args, argspec.defaults, arg_index)
+        if default_arg.has_default:
+            args.append("%s=%s" % (arg, default_arg.default_value))
+        else:
+            args.append(arg)
+        arg_index += 1
+    return "%s(%s)" % (method.__name__, ", ".join(args))
+
+
+def log_entrance(logger, signature, parasMap):
+    """
+    Logs for entrance into public methods at DEBUG level.
+
+    :param logger: the logger object
+    :param signature: the method signature
+    :param parasMap: the passed parameters
+    """
+    logger.debug('[Entering method ' + signature + ']')
+    if parasMap is not None and len(parasMap.items()) > 0:
+        paraStr = '[Input parameters['
+        for (k,v) in parasMap.items():
+            paraStr += (str(k) + ':' + str(v) + ', ')
+        paraStr += ']]'
+        logger.debug(paraStr)
+
+
+def log_exit(logger, signature, parasList):
+    """
+    Logs for exit from public methods at DEBUG level.
+
+    :param logger: the logger object
+    :param signature: the method signature
+    :param parasList: the objects to return
+    """
+    logger.debug('[Exiting method ' + signature + ']')
+    if parasList is not None and len(parasList) > 0:
+        logger.debug('[Output parameter ' + str(parasList) + ']')
+
+
+def log_exception(logger, signature, e):
+    """
+    Logging exception at ERROR level.
+
+    :param logger: the logger object
+    :param signature: the method signature
+    :param e: the error
+    """
+    # This will log the traceback.
+    logger.error('[Error in method ' + signature + ': Details ' + str(e) + ']', exc_info=True)
+    return e
+
+
+def validate_str(val, allow_none=False, allow_empty=False):
+    """
+    Check if the given value is a string 
+    :param val: the given value to check
+    :param allow_none: whether the string is allowed to be None
+    :param allow_empty: whether the string is allowed to be empty
+    :return False: if val is not of type string and allow_none is False
+    :return False: if val is None or empty string
+    :return True: otherwise
+    """
+
+    if val is None:
+        if not allow_none:
+            return False
+    else:
+
+        if not isinstance(val, str) and not isinstance(val, unicode):
+            return False
+
+        elif len(val.strip()) == 0 and not allow_empty:
+            return False
+
+    return True
+
+
+def check_str(val, name, allow_none=False, allow_empty=False):
+    """
+    Check if the given value is a string 
+    :param val: the given value to check
+    :param name: name of val
+    :param allow_none: whether the string is allowed to be None
+    :param allow_empty: whether the string is allowed to be empty
+    :raise TypeError: if val is not of type string and allow_none is False
+    :raise ValueError: if val is None or empty string
+    """
+
+    if val is None:
+        if not allow_none:
+            raise ValueError(name + ' of value ' + str(val) + ' should not be None.')
+    else:
+
+        if not isinstance(val, str) and not isinstance(val, unicode):
+            raise TypeError(name + ' of value ' + str(val) + ' should be a string.' + ' but is of type ' + type(val).__name__)
+
+        elif len(val.strip()) == 0 and not allow_empty:
+            raise ValueError(name + ' of value ' + str(val) + ' should not empty string.')
+
+
+def check_type_value(val, name, expected_type, allow_none=False, print_value=True, none_msg=''):
+    """
+    Check if the given value is of expected type. And also check if the val is None.
+
+    :param val: the given value to check
+    :param name: name of val
+    :param expected_type: the expected type
+    :param allow_none: whether the val is allowed to be None
+    :param print_value: whether or not to print the value name in case of error
+    :param location: The location of the potential hdf5 value to check
+    :raise TypeError: if val is not of expected type
+    :raise ValueError: if val is None while not allow None
+    """
+    message = name
+
+    if print_value:
+        message += ' of value ' + str(val)
+
+    if val is None and not allow_none:
+        raise ValueError(message + ' should not be None.' + none_msg)
+    if not isinstance(val, expected_type):
+        raise TypeError(message  + ' should be of type ' + str(expected_type) + '.' + ' but is of type ' + type(val).__name__)
+
+    return val
+
+
+def check_group_type(val, name='The hdf5 group', allow_none=False, print_value=True, location=''):
+    """
+    Check if the given value is an hdf5 group. And also check if the val is None.
+
+    :param val: the given value to check
+    :param name: name of val
+    :param print_value: whether or not to print the value name in case of error
+    :param location: The location of the potential hdf5 value to check
+    :param allow_none: whether the val is allowed to be None
+    :raise TypeError: if val is not of expected type
+    :raise ValueError: if val is None while not allow None
+    """
+    none_msg = name + ' was not found in the hdf5 file at its location ' + location
+    return check_type_value(val, name, h5py._hl.group.Group,
+                     allow_none=allow_none, print_value=print_value, none_msg=none_msg)
+
+
+def check_dataset_type(val, name='The hdf5 dataset', allow_none=False, print_value=True, location=''):
+    """
+    Check if the given value is an hdf5 dataset. And also check if the val is None.
+    :param val: the given value to check
+    :param name: name of val
+    :param print_value: whether or not to print the value name in case of error
+    :param location: The location of the potential hdf5 value to check
+    :param allow_none: whether the val is allowed to be None
+    :raise TypeError: if val is not of expected type
+    :raise ValueError: if val is None while not allow None
+    """
+    none_msg = name + ' was not found in the hdf5 file at its location ' + location
+    return check_type_value(val, name, h5py._hl.dataset.Dataset,
+                     allow_none=allow_none, print_value=print_value, none_msg=none_msg)
+
+
+def get_dataset(hdf5_data, path_attribute):
+    """
+    Check if the array exists in the hdf5 structure and return it
+    :param hdf5_data: the hdf5 data
+    :param path_attribute: the attribute explaining the role of the array to check
+    :return: the array
+    :raise ValueError if the array is not found or is not a valid dataset
+    """
+    path = getattr(structure, path_attribute)
+    dset = hdf5_data.get(path)
+    default_name = {
+        "description": path
+    }
+    name = str(getattr(structure, path + "_ATTR", default_name)["description"])
+    check_dataset_type(dset, name=name, location=path)
+    return dset
+
+
+def get_1d_array(logger, hdf5_data, path_attribute,  expected_dim=-1):
+    """
+    Get a 1D hdf5 array after checking it exists in the hdf5 structure.
+    If the path to the array is not found of is not of expected shape, an error is raised
+    Also, if the first dimension of the array does not have the expected number of elements,
+    an error is raised
+    :param logger: the logger
+    :param hdf5_data: the hdf5 data
+    :param path_attribute: the attribute containing the description of the role of the array to check
+    :param expected_dim: the expected number of elements of the first dimension
+    :return: the array if there is no error
+    :raise ValueError if the array is not a 1D array or the first dimension has lower number of elements than expected
+    """
+    path = getattr(structure, path_attribute)
+    dset = hdf5_data.get(path)
+    default_name = {
+        "description": path
+    }
+    name = str(getattr(structure, path + "_ATTR", default_name)["description"])
+    check_dataset_type(dset, name=name, location=path)
+
+    check_array_ndim(dset, name=name, expected_ndim=1)
+
+    if expected_dim > -1:
+        check_array_dim(logger, dset, name=name, expected_dim=expected_dim, dim_idx=0)
+
+    return dset
+
+def get_2d_array(logger, hdf5_data, path_attribute,  expected_dim=-1):
+    """
+    Get a 2D hdf5 array after checking it exists in the hdf5 structure.
+    If the path to the array is not found of is not of expected shape, an error is raised
+    Also, if the second dimension of the array does not have the expected number of elements,
+    an error is raised
+    :param logger: the logger
+    :param hdf5_data: the hdf5 data
+    :param path_attribute: the attribute containing the description of the role of the array to check
+    :param expected_dim: the expected number of elements of the second dimension
+    :return: the array if there is no error
+    :raise ValueError if the array is not a 2D array or the second dimension has lower number of elements than expected
+    """
+    path = getattr(structure, path_attribute)
+    dset = hdf5_data.get(path)
+    default_name = {
+        "description": path
+    }
+    name = str(getattr(structure, path + "_ATTR", default_name)["description"])
+    check_dataset_type(dset, name=name, location=path)
+
+    check_array_ndim(dset, name=name, expected_ndim=2)
+
+    if expected_dim > -1:
+        check_array_dim(logger, dset, name=name, expected_dim=expected_dim, dim_idx=1)
+
+    return dset
+
+
+def check_value(is_valid, error_msg):
+    """
+    This function raises an error is is_valid is False
+    :param is_valid: whether or not to raise and error
+    :param error_msg: the message of the error
+    :return: None
+    :raise ValueError if is_valid is False
+    """
+    if not is_valid:
+        raise ValueError(error_msg)
+
+
+def check_array_ndim(arr, name, expected_ndim=2):
+    """
+    Check that the number of dimensions of a hdf5 array is of expected size
+    :param arr: the array to check
+    :param name: the name of the array in the hdf5 structure
+    :param expected_ndim: the expected number of dimensions
+    :return the array
+    :raise ValueError if the array is not of the expected number of dimensions
+    """
+    # We just need to check that the number of dimensions if equal to expected_ndim
+    ndim = len(arr.shape)
+    check_value(is_valid=(ndim == expected_ndim), error_msg=
+                'The number of dimension of ' + name
+                + ' is ' + str(ndim) + ' but is expected to be ' + str(expected_ndim))
+
+    return arr
+
+
+def check_array_dim(logger, arr, name, expected_dim, dim_idx):
+    """
+    Check that the number of elements of a given dimension of an hdf5 array is of expected size
+    Log a warning in case the number of elements in greater than expected.
+    If the number of elements is lower than expected an error is raised
+    :param logger: the logger
+    :param arr: the array to check
+    :param name: the name of the array in the hdf5 structure
+    :param expected_dim: the expected number of elements
+    :param dim_idx: the dimension to check
+    :param logger: the logger to use
+    :return the array arr if there is no error
+    :raise ValueError if the number of elements is lower than expected_dim
+    """
+    dim = arr.shape[dim_idx]
+    # The second  needs to be equal to expected_dim.
+    # We raise an error if it less than expected_dim
+    dim_msg = str(dim_idx)
+    if dim_idx == 0:
+        dim_msg = 'The first dimension of '
+    elif dim_idx == 1:
+        dim_msg = 'The second dimension of '
+
+    check_value(is_valid=(dim >= expected_dim), error_msg=
+                dim_msg + name + ' is ' + str(dim) + ' but is expected to be ' + str(expected_dim))
+    # If it is greater than expected_dim we warn the user
+    if dim > expected_dim:
+        logger.warn(dim_msg + name + 'is ' + str(dim) + ' but is expected to be ' + str(expected_dim))
+
+    return arr
+
+
+def check_array_shape(logger, arr, name, expected_shape):
+    """
+    This function checks whether or not an hdf5 array is of expected shape
+    :param logger: the logger to use
+    :param arr: the array to check
+    :param name: the name of the array in the hdf5 structure
+    :param expected_shape:
+    :return: the array arr if there is no error
+    """
+    shape = arr.shape
+    check_array_ndim(arr, name, len(expected_shape))
+    for i in range(len(shape)):
+        check_array_dim(logger, arr, name, expected_shape[i], i)
+
+    return arr
+
+
+def check_path_exists(val, name):
+    """
+    Check if the given value is a legal file or directory path.
+
+    @param val: the given value to check
+    @param name: name of val
+    @raise ValueError: if val is not a legal file or directory path
+    """
+    check_str(val, name)
+    if not os.path.exists(val):
+        raise ValueError(name + ' of value ' + val + '" does not exist.')
+
+
+def check_is_directory(val, name):
+    """
+    Check if the given value is a legal directory path.
+
+    @param val: the given value to check
+    @param name: name of val
+    @raise ValueError: if val is not a legal directory path
+    """
+    check_path_exists(val, name)
+    if not os.path.isdir(val):
+        raise ValueError(name + ' of value ' + val + '" is not a legal directory.')
+
+
+def check_is_file(val, name):
+    """
+    Check if the given value is a legal file path.
+
+    @param val: the given value to check
+    @param name: name of val
+    @raise ValueError: if val is not a legal file path
+    """
+    
+    check_path_exists(val, name)
+    if not os.path.isfile(val):
+        raise ValueError(name + ' of value: ' + val + '" is not a legal file.')
+
+
+def setup_logging(
+    default_conf_path='logging.json', 
+    default_level=logging.INFO,
+    env_key='LOG_CFG',
+    logging_path=None
+):
+    """
+    Setup logging configuration.
+    This function reads the logging configuration from a file.
+    It then setup the default logger according to the configuration file
+    If the file does not exist, we will try to get it from the environment variable denoted by env_key
+    :param default_conf_path: the location of the logging configuration file
+    :param default_level: the default logging level to use if no configuration file is found
+    :param env_key:  the environment key where to retrieve the logging configuration
+    :param logging_path: the location where to store the logs
+    :return:
+    """
+    path = default_conf_path
+    value = os.getenv(env_key, None)
+    if value:
+        path = value
+    if os.path.exists(path):
+        print('Found logging configuration file at ' + default_conf_path + '\n')
+        with open(path, 'rt') as f:
+            config = json.load(f)
+
+            if logging_path and 'handlers' in config:
+                logging_path = os.path.abspath(logging_path)
+                print('Writing log at ' + logging_path + '\n')
+                mkdir_p(os.path.abspath(os.path.dirname(logging_path)))
+                for key, value in config['handlers'].iteritems():
+                    if 'filename' in value:
+                        value['filename'] = logging_path
+
+        logging.config.dictConfig(config)
+    else:
+        print('Could not find logging configuration at '+ default_conf_path + '\n')
+        print('Using default logging option on console' + '\n')
+        logging.basicConfig(level=default_level)
+
+    logging.captureWarnings(capture=True)
+
+
+def log_and_print(logger, message):
+    """
+    This function log and prints to the console
+    :param logger:  the logger
+    :param message:  the message to log
+    :return: None
+    """
+    print(message + '\n')
+    logger.info(message)
+
+
+def get_abs(s):
+    """
+    This function return the absolute path of a given relative path
+    :param s: the path
+    :return: the absolute path
+    """
+    return os.path.abspath(s)
+
+
+def read_environment(hdf5_data):
+    """
+    Read the environment from the hdf5 file
+    Args:
+        hdf5_data: object, the hdf5 opened storage
+
+    Returns:
+        The environment
+    """
+
+    signature = __name__ + '.read_environment(hdf5_data)'
+    logger = logging.getLogger(__name__)
+    log_entrance(logger, signature,
+                 {})
+
+    environment = TEnvironment()
+
+    dset = hdf5_data.get(structure.H5_ENV_VOLUME)
+    check_dataset_type(dset, name=str(structure.H5_ENV_VOLUME_ATTR['description']), location=structure.H5_ENV_VOLUME)
+    environment.rho = dset[0]
+
+    dset = hdf5_data.get(structure.H5_ENV_GRAVITY)
+    check_dataset_type(dset, name=str(structure.H5_ENV_GRAVITY_ATTR['description']), location=structure.H5_ENV_GRAVITY)
+    environment.g = dset[0]
+
+    dset = hdf5_data.get(structure.H5_ENV_DEPTH)
+    check_dataset_type(dset, name=str(structure.H5_ENV_DEPTH_ATTR['description']), location=structure.H5_ENV_DEPTH)
+    environment.depth = dset[0]
+
+    wave_point = hdf5_data.get(structure.H5_ENV_WAVE_POINT)
+    name = str(structure.H5_ENV_WAVE_POINT_ATTR['description'])
+    check_dataset_type(wave_point, name=name,
+                       location=structure.H5_ENV_WAVE_POINT)
+    check_array_ndim(wave_point, name=name,
+                     expected_ndim=1)
+    check_array_dim(logger, wave_point, name=name, expected_dim=2, dim_idx=0)
+
+    environment.x_eff = wave_point[0]
+    environment.y_eff = wave_point[1]
+    log_exit(logger, signature, [str(environment)])
+    return environment
+
+# From http://code.activestate.com/recipes/577564-context-manager-for-low-level-redirection-of-stdou/
+class Silence:
+    """
+    Context manager which uses low-level file descriptors to suppress
+    output to stdout/stderr, optionally redirecting to the named file(s).
+
+    Example usage
+     with Silence(stderr='output.txt', mode='a'):
+    ...     # appending to existing file
+    ...     print >> sys.stderr, "Hello from stderr"
+    ...     print "Stdout redirected to os.devnull"
+    === contents of 'output.txt' ===
+
+
+    """
+    def __init__(self, stdout=os.devnull, stderr=os.devnull, mode='w'):
+        """
+        Initialize
+        Args:
+            self: The class itself
+            stdout: the descriptor or file name where to redirect stdout
+            stdout: the descriptor or file name where to redirect stdout
+            mode: the output descriptor or file mode
+        """
+        self.outfiles = stdout, stderr
+        self.combine = (stdout == stderr)
+        self.mode = mode
+
+    def __enter__(self):
+        """
+        Enter the context
+        Args:
+            self: The class itself
+        """
+        import sys
+        self.sys = sys
+        # save previous stdout/stderr
+        self.saved_streams = saved_streams = sys.__stdout__, sys.__stderr__
+        self.fds = fds = [s.fileno() for s in saved_streams]
+        self.saved_fds = map(os.dup, fds)
+        # flush any pending output
+        for s in saved_streams: s.flush()
+
+        # open surrogate files
+        if self.combine:
+            null_streams = [open(self.outfiles[0], self.mode, 0)] * 2
+            if self.outfiles[0] != os.devnull:
+                # disable buffering so output is merged immediately
+                sys.stdout, sys.stderr = map(os.fdopen, fds, ['w']*2, [0]*2)
+        else: null_streams = [open(f, self.mode, 0) for f in self.outfiles]
+        self.null_fds = null_fds = [s.fileno() for s in null_streams]
+        self.null_streams = null_streams
+
+        # overwrite file objects and low-level file descriptors
+        map(os.dup2, null_fds, fds)
+
+    def __exit__(self, *args):
+        """
+        Exit the context
+        Args:
+            self: The class itself
+            args: other arguments
+        """
+        sys = self.sys
+        # flush any pending output
+        for s in self.saved_streams: s.flush()
+        # restore original streams and file descriptors
+        map(os.dup2, self.saved_fds, self.fds)
+        sys.stdout, sys.stderr = self.saved_streams
+        # clean up
+        for s in self.null_streams: s.close()
+        for fd in self.saved_fds: os.close(fd)
+        return False
+
+
+def touch(fname, times=None):
+    """
+    This function changes the access time of a file and create it if it does not exists
+    :param fname: the path to the file
+    :param times: the times to use as access time
+    :return: None
+    """
+    with open(fname, 'a'):
+        os.utime(fname, times)

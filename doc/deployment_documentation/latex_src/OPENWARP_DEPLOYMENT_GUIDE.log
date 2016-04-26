@@ -1,0 +1,1493 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  19 APR 2016 07:40
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**OPENWARP_DEPLOYMENT_GUIDE.tex
+(./OPENWARP_DEPLOYMENT_GUIDE.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@tempdima=\dimen116
+\caption@indent=\dimen117
+\caption@parindent=\dimen118
+\caption@hangindent=\dimen119
+)
+\c@ContinuedFloat=\count91
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen120
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count94
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count95
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen121
+\Fld@menulength=\count96
+\Field@Width=\dimen122
+\Fld@charsize=\dimen123
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count97
+\c@Item=\count98
+\c@Hfootnote=\count99
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count100
+\c@bookmark@seq@number=\count101
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip44
+\f@ncyO@elh=\skip45
+\f@ncyO@erh=\skip46
+\f@ncyO@olh=\skip47
+\f@ncyO@orh=\skip48
+\f@ncyO@elf=\skip49
+\f@ncyO@erf=\skip50
+\f@ncyO@olf=\skip51
+\f@ncyO@orf=\skip52
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(./OPENWARP_DEPLOYMENT_GUIDE.aux)
+\openout1 = `OPENWARP_DEPLOYMENT_GUIDE.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 36.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=18.06749pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen124
+\scratchbox=\box26
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen125
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks17
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box27
+Package hyperref Info: Link coloring OFF on input line 36.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count108
+)
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
+
+(./OPENWARP_DEPLOYMENT_GUIDE.out) (./OPENWARP_DEPLOYMENT_GUIDE.out)
+\@outlinefile=\write3
+\openout3 = `OPENWARP_DEPLOYMENT_GUIDE.out'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 39.
+
+(./OPENWARP_DEPLOYMENT_GUIDE.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+ [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write4
+\openout4 = `OPENWARP_DEPLOYMENT_GUIDE.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] [3]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 80.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+[]\T1/cmr/m/n/12 MinGW $\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8\OM
+L/cmm/m/it/12 :\OT1/cmr/m/n/12 1$ []$\T1/cmtt/m/n/12 http : / / sourceforge . n
+et / projects / MinGWbuilds / files / host -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+[]\T1/cmr/m/n/12 HDFView []$\T1/cmtt/m/n/12 http : / / www . hdfgroup . org / p
+roducts / java / release / download . html$[]
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/cmtt/m/n/12 files / host -[] windows / releases / 4 . 8 . 1 / 64 -[] bit / 
+threads -[] posix / sjlj / x64 -[] 4 . 8 . 1 -[]
+ []
+
+<img/1.png, id=300, 605.26125pt x 359.3425pt>
+File: img/1.png Graphic file (type png)
+ <use img/1.png>
+Package pdftex.def Info: img/1.png used on input line 141.
+(pdftex.def)             Requested size: 453.94481pt x 269.50621pt.
+
+Overfull \hbox (13.56448pt too wide) in paragraph at lines 141--143
+ [][] 
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+[]\T1/cmr/m/n/12 Copy \T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /src/bundled/simulati
+on/libs/libnemoh.dll,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+\T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /src/bundled/simulation/libs/libblas.dll, a
+nd
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 150--152
+[]\T1/cmr/m/n/12 Download and in-stall Ana-conda 2.10 with Python 2.7 for Win-d
+ows (64-bit,
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 150--152
+\T1/cmr/m/n/12 graph-i-cal in-staller) from []$\T1/cmtt/m/n/12 http : / / conti
+nuum . io / downloads$[]\T1/cmr/m/n/12 . If you in-stall it
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 150--152
+\T1/cmr/m/n/12 to C:/Users/bob/Anaconda for ex-am-ple, make sure that you man-u
+-ally add
+ []
+
+<img/2.png, id=310, 600.2425pt x 130.4875pt>
+File: img/2.png Graphic file (type png)
+ <use img/2.png>
+Package pdftex.def Info: img/2.png used on input line 159.
+(pdftex.def)             Requested size: 450.18077pt x 97.86537pt.
+
+Overfull \hbox (9.80045pt too wide) in paragraph at lines 159--161
+ [][] 
+ []
+
+<img/3.png, id=311, 603.25375pt x 118.4425pt>
+File: img/3.png Graphic file (type png)
+ <use img/3.png>
+Package pdftex.def Info: img/3.png used on input line 168.
+(pdftex.def)             Requested size: 452.4392pt x 88.83165pt.
+
+Overfull \hbox (12.05887pt too wide) in paragraph at lines 168--170
+ [][] 
+ []
+
+[6 <./img/1.png> <./img/2.png>] <img/4.png, id=319, 761.84625pt x 339.2675pt>
+File: img/4.png Graphic file (type png)
+
+<use img/4.png>
+Package pdftex.def Info: img/4.png used on input line 177.
+(pdftex.def)             Requested size: 457.11128pt x 203.56206pt.
+
+Overfull \hbox (16.73096pt too wide) in paragraph at lines 177--179
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+[][]\T1/cmr/m/n/12 cmake -DCMAKE_Fortran_COMPILER="gfortran"
+ []
+
+<img/5.png, id=322, 616.3025pt x 211.79124pt>
+File: img/5.png Graphic file (type png)
+ <use img/5.png>
+Package pdftex.def Info: img/5.png used on input line 207.
+(pdftex.def)             Requested size: 462.22574pt x 158.84303pt.
+
+Overfull \hbox (21.84541pt too wide) in paragraph at lines 207--209
+ [][] 
+ []
+
+[7 <./img/3.png> <./img/4.png>] <img/6.png, id=334, 627.34375pt x 406.51875pt>
+File: img/6.png Graphic file (type png)
+
+<use img/6.png>
+Package pdftex.def Info: img/6.png used on input line 216.
+(pdftex.def)             Requested size: 470.50665pt x 304.8883pt.
+
+Overfull \hbox (30.12633pt too wide) in paragraph at lines 216--218
+ [][] 
+ []
+
+<img/7.png, id=335, 612.2875pt x 412.54124pt>
+File: img/7.png Graphic file (type png)
+ <use img/7.png>
+Package pdftex.def Info: img/7.png used on input line 225.
+(pdftex.def)             Requested size: 459.21451pt x 309.40517pt.
+
+Overfull \hbox (18.83418pt too wide) in paragraph at lines 225--227
+ [][] 
+ []
+
+[8 <./img/5.png> <./img/6.png>] <img/8.png, id=342, 615.29875pt x 412.54124pt>
+File: img/8.png Graphic file (type png)
+
+<use img/8.png>
+Package pdftex.def Info: img/8.png used on input line 233.
+(pdftex.def)             Requested size: 461.47293pt x 309.40517pt.
+
+Overfull \hbox (21.0926pt too wide) in paragraph at lines 233--235
+ [][] 
+ []
+
+[9 <./img/7.png> <./img/8.png>] <img/9.png, id=349, 603.25375pt x 80.3pt>
+File: img/9.png Graphic file (type png)
+
+<use img/9.png>
+Package pdftex.def Info: img/9.png used on input line 243.
+(pdftex.def)             Requested size: 452.4392pt x 60.22484pt.
+
+Overfull \hbox (12.05887pt too wide) in paragraph at lines 243--245
+ [][] 
+ []
+
+<img/10.png, id=350, 618.31pt x 404.51125pt>
+File: img/10.png Graphic file (type png)
+ <use img/10.png>
+Package pdftex.def Info: img/10.png used on input line 252.
+(pdftex.def)             Requested size: 463.73135pt x 303.38269pt.
+
+Overfull \hbox (23.35103pt too wide) in paragraph at lines 252--254
+ [][] 
+ []
+
+<img/11.png, id=351, 626.34pt x 412.54124pt>
+File: img/11.png Graphic file (type png)
+ <use img/11.png>
+Package pdftex.def Info: img/11.png used on input line 264.
+(pdftex.def)             Requested size: 469.75383pt x 309.40517pt.
+
+Overfull \hbox (29.3735pt too wide) in paragraph at lines 264--266
+ [][] 
+ []
+
+[10 <./img/9.png> <./img/10.png>]
+<img/12.png, id=358, 613.29124pt x 408.52625pt>
+File: img/12.png Graphic file (type png)
+ <use img/12.png>
+Package pdftex.def Info: img/12.png used on input line 274.
+(pdftex.def)             Requested size: 459.9673pt x 306.39394pt.
+
+Overfull \hbox (19.58698pt too wide) in paragraph at lines 274--276
+ [][] 
+ []
+
+<img/13.png, id=360, 626.34pt x 446.66875pt>
+File: img/13.png Graphic file (type png)
+ <use img/13.png>
+Package pdftex.def Info: img/13.png used on input line 283.
+(pdftex.def)             Requested size: 469.75383pt x 335.00073pt.
+
+Overfull \hbox (29.3735pt too wide) in paragraph at lines 283--285
+ [][] 
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 280--286
+[]\T1/cmr/m/n/12 Download and in-stall Ana-conda for OS X, 64-bit ver-sion with
+ Python
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--286
+\T1/cmr/m/n/12 2.7 and graph-i-cal in-staller, from []$\T1/cmtt/m/n/12 http : /
+ / continuum . io / downloads$[]\T1/cmr/m/n/12 .
+ []
+
+[11 <./img/11.png> <./img/12.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
+[]\T1/cmr/m/n/12 (One line com-mand)  []mv /usr/local/lib/gcc/4.9/libquadmath.0
+.dylib
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
+[]\T1/cmr/m/n/12 (One line com-mand) mv /usr/local/lib/gcc/4.9/libquadmath.dyli
+b
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--313
+[]\T1/cmr/m/n/12 Run this com-mand to com-pile Nemoh For-tran:  []cmake -
+ []
+
+[12 <./img/13.png>] <img/14.png, id=372, 629.35126pt x 418.56375pt>
+File: img/14.png Graphic file (type png)
+
+<use img/14.png>
+Package pdftex.def Info: img/14.png used on input line 316.
+(pdftex.def)             Requested size: 472.01228pt x 313.92203pt.
+
+Overfull \hbox (31.63196pt too wide) in paragraph at lines 316--318
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 322--325
+[]\T1/cmr/m/n/12 Copy lib-nemoh.dylib from \T1/cmr/bx/n/12 $FOR-TRAN_BUILD\T1/c
+mr/m/n/12 to the lib/ di-rec-tory in-side
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 322--325
+\T1/cmr/m/n/12 the Ana-conda in-stal-la-tion root:  []cp \T1/cmr/bx/n/12 $FOR-T
+RAN_BUILD\T1/cmr/m/n/12 /libnemoh.dylib
+ []
+
+<img/15.png, id=374, 630.355pt x 329.23pt>
+File: img/15.png Graphic file (type png)
+ <use img/15.png>
+Package pdftex.def Info: img/15.png used on input line 331.
+(pdftex.def)             Requested size: 472.76509pt x 246.92189pt.
+
+Overfull \hbox (32.38477pt too wide) in paragraph at lines 331--333
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 327--334
+[]\T1/cmr/m/n/12 Download the bi-nary in-staller of Par-aView ver-sion $\OML/cm
+m/m/it/12 >\OT1/cmr/m/n/12 = 4\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1$ \T1/cmr/m/n/
+12 for OS X from
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 327--334
+[]$\T1/cmtt/m/n/12 http : / / www . paraview . org / download/$[] \T1/cmr/m/n/1
+2 and in-stall it. Next, copy the par-
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 327--334
+\T1/cmr/m/n/12 aview.app/ folder from the Par-aView di-rec-tory to \T1/cmr/bx/n
+/12 $ROOT\T1/cmr/m/n/12 /src/bundled/ so
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 327--334
+\T1/cmr/m/n/12 that we can in-voke Par-aView to do vi-su-al-iza-tion. (You may 
+need to use
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 327--334
+\T1/cmr/m/n/12 files un-der \T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /src/bundled/pa
+raview.app/ should be or-ga-nized as be-low:
+ []
+
+[13 <./img/14.png>] <img/16.png, id=381, 606.265pt x 225.84375pt>
+File: img/16.png Graphic file (type png)
+
+<use img/16.png>
+Package pdftex.def Info: img/16.png used on input line 352.
+(pdftex.def)             Requested size: 454.69763pt x 169.38239pt.
+
+Overfull \hbox (14.3173pt too wide) in paragraph at lines 352--354
+ [][] 
+ []
+
+[14 <./img/15.png> <./img/16.png>]
+<img/17.png, id=388, 624.3325pt x 103.38625pt>
+File: img/17.png Graphic file (type png)
+ <use img/17.png>
+Package pdftex.def Info: img/17.png used on input line 369.
+(pdftex.def)             Requested size: 468.24823pt x 77.53949pt.
+
+Overfull \hbox (27.8679pt too wide) in paragraph at lines 369--371
+ [][] 
+ []
+
+<img/18.png, id=389, 627.34375pt x 307.1475pt>
+File: img/18.png Graphic file (type png)
+ <use img/18.png>
+Package pdftex.def Info: img/18.png used on input line 381.
+(pdftex.def)             Requested size: 470.50665pt x 230.36005pt.
+
+Overfull \hbox (30.12633pt too wide) in paragraph at lines 381--383
+ [][] 
+ []
+
+<img/19.png, id=390, 640.3925pt x 339.2675pt>
+File: img/19.png Graphic file (type png)
+ <use img/19.png>
+Package pdftex.def Info: img/19.png used on input line 394.
+(pdftex.def)             Requested size: 480.2932pt x 254.45pt.
+
+Overfull \hbox (39.91287pt too wide) in paragraph at lines 394--396
+ [][] 
+ []
+
+[15 <./img/17.png> <./img/18.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+\T1/cmr/m/n/12 Get the Open-Warp In-staller from []$\T1/cmtt/m/n/12 https : / /
+ drive . google . com / folderview ? id =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+\T1/cmtt/m/n/12 0B56WkDEeFyNHfmRZNmcyZjNWOTFfTzZabGgxZVdsQUg3Y3d6SXloWk8xMXo0bX
+hnSUVTOGM &
+ []
+
+[16 <./img/19.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+[]\T1/cmr/m/n/12 Follow in-struc-tions of sec-tion []5.1[] to build a lo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+\T1/cmr/m/n/12 cal copy. Re-place \T1/cmr/bx/n/12 $NEMOH_FORTRAN\T1/cmr/m/n/12 
+by \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 474--476
+[]\T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /src should be re-placed by \T1/cmr/bx/n/
+12 $IN-STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwargui
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+\T1/cmr/m/n/12 The python ver-sion of nemoh should be \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--476
+\T1/cmr/bx/n/12 STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwargui/nemoh Ana-conda sh
+ould be \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 476--477
+[]\T1/cmr/m/n/12 Now copy the newly gen-er-ated lib-nemoh.dll and lib-nemoh.dll
+.a to \T1/cmr/bx/n/12 $IN-
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
+[]\T1/cmr/m/n/12 Follow in-struc-tions of sec-tion 5.2[] to build a lo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
+\T1/cmr/m/n/12 cal copy. Re-place \T1/cmr/bx/n/12 $NEMOH_FORTRAN\T1/cmr/m/n/12 
+by \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 500--502
+[]\T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /src should be re-placed by \T1/cmr/bx/n/
+12 $IN-STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwargui
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--502
+\T1/cmr/m/n/12 The python ver-sion of nemoh should be \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--502
+\T1/cmr/bx/n/12 STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwargui/nemoh Ana-conda sh
+ould be \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
+[]\T1/cmr/m/n/12 Now copy the newly gen-er-ated lib-nemoh.dylib to \T1/cmr/bx/n
+/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--505
+[]\T1/cmr/m/n/12 Then []VERY IM-POR-TANTLY[] run in a ter-mi-nal []in-stall_nam
+e_tool
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--505
+\T1/cmr/m/n/12 -change "lib-nemoh.dylib" "../ana-conda/lib/libnemoh.dylib" \T1/
+cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--505
+\T1/cmr/bx/n/12 STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwarpgui/nemoh/solver_fort
+ran.so[] from \T1/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 511--512
+[]\T1/cmr/m/n/12 Copy the di-rec-tory src/MAC/installer to \T1/cmr/bx/n/12 $IN-
+STALL_DIR\T1/cmr/m/n/12 such that \T1/cmr/bx/n/12 $IN-
+ []
+
+[18]
+
+LaTeX Warning: Reference `re-deploy-general' on page 19 undefined on input line
+ 520.
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 529--532
+\T1/cmr/m/n/12 OpenWarp is com-posed of three main parts: the For-tran part of 
+Nemoh whose
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
+\T1/cmr/m/n/12 source is avail-able in \T1/cmr/bx/n/12 $IN-STALL_DIR\T1/cmr/m/n
+/12 /OpenWarp/NemohImproved/Nemoh;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
+\T1/cmr/m/n/12 the Python part of Nemoh whose source is avail-able in \T1/cmr/b
+x/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
+\T1/cmr/bx/n/12 STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwarpgui/nemoh and the Ope
+n-Warp GUI part
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 529--532
+\T1/cmr/m/n/12 whose source is avail-able in \T1/cmr/bx/n/12 $IN-STALL_DIR\T1/c
+mr/m/n/12 /OpenWarp/openwarpgui/openwarp.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
+\T1/cmr/m/n/12 If you do not up-date the For-tran part of Nemoh or the file \T1
+/cmr/bx/n/12 $IN-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--532
+\T1/cmr/bx/n/12 STALL_DIR\T1/cmr/m/n/12 /OpenWarp/openwarpgui/nemoh/solver_fort
+ran.pyx then the only
+ []
+
+
+Underfull \hbox (badness 1168) in paragraph at lines 529--532
+\T1/cmr/m/n/12 step you have to do to re-build the in-staller is to pack-age it
+ di-rectly. There is
+ []
+
+[19] [20]
+Underfull \hbox (badness 2213) in paragraph at lines 576--577
+[]\T1/cmr/m/n/12 : Three-dimensional co-or-di-
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+[]\T1/cmr/m/n/12 The log-ging level can also be con-fig-ured us-ing the con-fig
+-u-ra-tion file
+ []
+
+<img/20.png, id=442, 744.7825pt x 556.0775pt>
+File: img/20.png Graphic file (type png)
+ <use img/20.png>
+Package pdftex.def Info: img/20.png used on input line 667.
+(pdftex.def)             Requested size: 446.87296pt x 333.64908pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 665--670
+[]$[]$ 
+ []
+
+[23] <img/21.png, id=448, 737.75626pt x 531.9875pt>
+File: img/21.png Graphic file (type png)
+ <use img/21.png>
+Package pdftex.def Info: img/21.png used on input line 676.
+(pdftex.def)             Requested size: 442.65717pt x 319.19496pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 674--679
+[]$[]$ 
+ []
+
+[24 <./img/20.png>] <img/22.png, id=455, 732.7375pt x 546.04pt>
+File: img/22.png Graphic file (type png)
+
+<use img/22.png>
+Package pdftex.def Info: img/22.png used on input line 686.
+(pdftex.def)             Requested size: 439.64589pt x 327.62653pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 684--689
+[]$[]$ 
+ []
+
+[25 <./img/21.png>] <img/23.png, id=462, 730.73pt x 364.36125pt>
+File: img/23.png Graphic file (type png)
+
+<use img/23.png>
+Package pdftex.def Info: img/23.png used on input line 694.
+(pdftex.def)             Requested size: 438.44138pt x 218.61842pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 692--697
+[]$[]$ 
+ []
+
+[26 <./img/22.png> <./img/23.png>]
+<img/24.png, id=469, 729.72626pt x 436.63126pt>
+File: img/24.png Graphic file (type png)
+ <use img/24.png>
+Package pdftex.def Info: img/24.png used on input line 709.
+(pdftex.def)             Requested size: 437.83914pt x 261.98077pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 707--712
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--729
+[]\T1/cmr/m/n/12 Each file is named OUT-PUT_FILE_NAME.EXTENSION or
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 727--729
+\T1/cmr/m/n/12 OUTPUT_FILE_NAME-quad.EXTENSION, where OUT-PUT_FILE_NAME is the
+ []
+
+<img/25.png, id=470, 728.7225pt x 547.04375pt>
+File: img/25.png Graphic file (type png)
+ <use img/25.png>
+Package pdftex.def Info: img/25.png used on input line 736.
+(pdftex.def)             Requested size: 437.23688pt x 328.22878pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 734--739
+[]$[]$ 
+ []
+
+[27 <./img/24.png>] <img/26.png, id=476, 740.7675pt x 360.34625pt>
+File: img/26.png Graphic file (type png)
+
+<use img/26.png>
+Package pdftex.def Info: img/26.png used on input line 746.
+(pdftex.def)             Requested size: 444.46393pt x 216.20941pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 744--749
+[]$[]$ 
+ []
+
+<img/27.png, id=477, 733.74126pt x 414.54875pt>
+File: img/27.png Graphic file (type png)
+ <use img/27.png>
+Package pdftex.def Info: img/27.png used on input line 753.
+(pdftex.def)             Requested size: 440.24815pt x 248.73116pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 751--756
+[]$[]$ 
+ []
+
+[28 <./img/25.png> <./img/26.png>] <img/28.png, id=484, 730.73pt x 383.4325pt>
+File: img/28.png Graphic file (type png)
+
+<use img/28.png>
+Package pdftex.def Info: img/28.png used on input line 759.
+(pdftex.def)             Requested size: 438.44138pt x 230.06126pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 757--762
+[]$[]$ 
+ []
+
+<img/29.png, id=485, 729.72626pt x 378.41376pt>
+File: img/29.png Graphic file (type png)
+ <use img/29.png>
+Package pdftex.def Info: img/29.png used on input line 769.
+(pdftex.def)             Requested size: 437.83914pt x 227.05pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 767--772
+[]$[]$ 
+ []
+
+[29 <./img/27.png> <./img/28.png>]
+<img/30.png, id=492, 729.72626pt x 502.87875pt>
+File: img/30.png Graphic file (type png)
+ <use img/30.png>
+Package pdftex.def Info: img/30.png used on input line 783.
+(pdftex.def)             Requested size: 437.83914pt x 301.72957pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 781--786
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 788--791
+[]\T1/cmr/m/n/12 The out-put di-rec-tory is \T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12
+ /src/user_data/simulation_TIMESTAMP_HASH
+ []
+
+<img/31.png, id=493, 739.76375pt x 280.04625pt>
+File: img/31.png Graphic file (type png)
+ <use img/31.png>
+Package pdftex.def Info: img/31.png used on input line 795.
+(pdftex.def)             Requested size: 443.86166pt x 168.02904pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 793--798
+[]$[]$ 
+ []
+
+[30 <./img/29.png> <./img/30.png>]
+<img/32.png, id=500, 263.98625pt x 773.89125pt>
+File: img/32.png Graphic file (type png)
+ <use img/32.png>
+Package pdftex.def Info: img/32.png used on input line 805.
+(pdftex.def)             Requested size: 131.9928pt x 386.94467pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 803--808
+[]$[]$ 
+ []
+
+[31 <./img/31.png> <./img/32.png>]
+<img/33.png, id=508, 730.73pt x 543.02875pt>
+File: img/33.png Graphic file (type png)
+ <use img/33.png>
+Package pdftex.def Info: img/33.png used on input line 815.
+(pdftex.def)             Requested size: 365.3641pt x 271.5137pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 813--818
+[]$[]$ 
+ []
+
+<img/34.png, id=509, 731.73375pt x 366.36874pt>
+File: img/34.png Graphic file (type png)
+ <use img/34.png>
+Package pdftex.def Info: img/34.png used on input line 823.
+(pdftex.def)             Requested size: 365.86598pt x 183.18391pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 821--826
+[]$[]$ 
+ []
+
+<img/35.png, id=510, 733.74126pt x 317.185pt>
+File: img/35.png Graphic file (type png)
+ <use img/35.png>
+Package pdftex.def Info: img/35.png used on input line 830.
+(pdftex.def)             Requested size: 366.86974pt x 158.5921pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 828--833
+[]$[]$ 
+ []
+
+[32 <./img/33.png> <./img/34.png>]
+<img/36.png, id=517, 737.75626pt x 318.18875pt>
+File: img/36.png Graphic file (type png)
+ <use img/36.png>
+Package pdftex.def Info: img/36.png used on input line 843.
+(pdftex.def)             Requested size: 368.87723pt x 159.09398pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 841--846
+[]$[]$ 
+ []
+
+[33 <./img/35.png> <./img/36.png>] <img/37.png, id=524, 738.76pt x 321.2pt>
+File: img/37.png Graphic file (type png)
+
+<use img/37.png>
+Package pdftex.def Info: img/37.png used on input line 870.
+(pdftex.def)             Requested size: 369.37909pt x 160.59961pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 868--873
+[]$[]$ 
+ []
+
+<img/38.png, id=525, 412.54124pt x 469.755pt>
+File: img/38.png Graphic file (type png)
+ <use img/38.png>
+Package pdftex.def Info: img/38.png used on input line 881.
+(pdftex.def)             Requested size: 206.27011pt x 234.87692pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 879--884
+[]$[]$ 
+ []
+
+<img/39.png, id=526, 546.04pt x 264.99pt>
+File: img/39.png Graphic file (type png)
+ <use img/39.png>
+Package pdftex.def Info: img/39.png used on input line 893.
+(pdftex.def)             Requested size: 273.01933pt x 132.49467pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 891--896
+[]$[]$ 
+ []
+
+[34 <./img/37.png> <./img/38.png>] <img/39-2.png, id=533, 277.035pt x 562.1pt>
+File: img/39-2.png Graphic file (type png)
+
+<use img/39-2.png>
+Package pdftex.def Info: img/39-2.png used on input line 904.
+(pdftex.def)             Requested size: 138.51715pt x 281.04932pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 902--907
+[]$[]$ 
+ []
+
+<img/40.png, id=534, 842.14626pt x 743.77875pt>
+File: img/40.png Graphic file (type png)
+ <use img/40.png>
+Package pdftex.def Info: img/40.png used on input line 913.
+(pdftex.def)             Requested size: 421.0721pt x 371.88846pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 911--916
+[]$[]$ 
+ []
+
+[35 <./img/39.png> <./img/39-2.png>]
+<img/41.png, id=541, 642.4pt x 467.7475pt>
+File: img/41.png Graphic file (type png)
+ <use img/41.png>
+Package pdftex.def Info: img/41.png used on input line 922.
+(pdftex.def)             Requested size: 321.19922pt x 233.87317pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 920--925
+[]$[]$ 
+ []
+
+[36 <./img/40.png> <./img/41.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
+\T1/cmr/m/n/12 Go to the Mesh-ing page, click on Browse, and choose
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 933--934
+\T1/cmr/bx/n/12 $ROOT\T1/cmr/m/n/12 /test_files/mesh/FlapSingle.stl where \T1/c
+mr/bx/n/12 $ROOT\T1/cmr/m/n/12 is the top-level di-rec-tory of
+ []
+
+<img/42.png, id=548, 729.72626pt x 192.72pt>
+File: img/42.png Graphic file (type png)
+ <use img/42.png>
+Package pdftex.def Info: img/42.png used on input line 938.
+(pdftex.def)             Requested size: 510.8049pt x 134.90306pt.
+
+Overfull \hbox (41.04988pt too wide) in paragraph at lines 938--940
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 936--941
+[]$[]$ 
+ []
+
+<img/43.png, id=549, 730.73pt x 368.37625pt>
+File: img/43.png Graphic file (type png)
+ <use img/43.png>
+Package pdftex.def Info: img/43.png used on input line 947.
+(pdftex.def)             Requested size: 511.5075pt x 257.8616pt.
+
+Overfull \hbox (41.75249pt too wide) in paragraph at lines 947--949
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 945--950
+[]$[]$ 
+ []
+
+<img/44.png, id=550, 739.76375pt x 332.24126pt>
+File: img/44.png Graphic file (type png)
+ <use img/44.png>
+Package pdftex.def Info: img/44.png used on input line 955.
+(pdftex.def)             Requested size: 517.83109pt x 232.56728pt.
+
+Overfull \hbox (48.07607pt too wide) in paragraph at lines 955--957
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 953--958
+[]$[]$ 
+ []
+
+[37 <./img/42.png> <./img/43.png>]
+<img/45.png, id=558, 736.7525pt x 440.64626pt>
+File: img/45.png Graphic file (type png)
+ <use img/45.png>
+Package pdftex.def Info: img/45.png used on input line 964.
+(pdftex.def)             Requested size: 515.72324pt x 308.45027pt.
+
+Overfull \hbox (45.96822pt too wide) in paragraph at lines 964--966
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 962--967
+[]$[]$ 
+ []
+
+<img/46.png, id=559, 735.74875pt x 438.63875pt>
+File: img/46.png Graphic file (type png)
+ <use img/46.png>
+Package pdftex.def Info: img/46.png used on input line 974.
+(pdftex.def)             Requested size: 515.02061pt x 307.04501pt.
+
+Overfull \hbox (45.2656pt too wide) in paragraph at lines 974--976
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 972--977
+[]$[]$ 
+ []
+
+[38 <./img/44.png> <./img/45.png>]
+<img/47.png, id=566, 735.74875pt x 356.33125pt>
+File: img/47.png Graphic file (type png)
+ <use img/47.png>
+Package pdftex.def Info: img/47.png used on input line 987.
+(pdftex.def)             Requested size: 515.02061pt x 249.43016pt.
+
+Overfull \hbox (45.2656pt too wide) in paragraph at lines 987--989
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 985--990
+[]$[]$ 
+ []
+
+[39 <./img/46.png> <./img/47.png>]
+<img/48.png, id=573, 738.76pt x 322.20375pt>
+File: img/48.png Graphic file (type png)
+ <use img/48.png>
+Package pdftex.def Info: img/48.png used on input line 996.
+(pdftex.def)             Requested size: 517.12846pt x 225.54108pt.
+
+Overfull \hbox (47.37344pt too wide) in paragraph at lines 996--998
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 994--999
+[]$[]$ 
+ []
+
+<img/49.png, id=574, 740.7675pt x 326.21875pt>
+File: img/49.png Graphic file (type png)
+ <use img/49.png>
+Package pdftex.def Info: img/49.png used on input line 1004.
+(pdftex.def)             Requested size: 518.5337pt x 228.35156pt.
+
+Overfull \hbox (48.77869pt too wide) in paragraph at lines 1004--1006
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1002--1007
+[]$[]$ 
+ []
+
+<img/50.png, id=575, 738.76pt x 512.91624pt>
+File: img/50.png Graphic file (type png)
+ <use img/50.png>
+Package pdftex.def Info: img/50.png used on input line 1013.
+(pdftex.def)             Requested size: 517.12846pt x 359.03893pt.
+
+Overfull \hbox (47.37344pt too wide) in paragraph at lines 1013--1015
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1011--1016
+[]$[]$ 
+ []
+
+[40 <./img/48.png> <./img/49.png>]
+<img/51.png, id=582, 681.54625pt x 476.78125pt>
+File: img/51.png Graphic file (type png)
+ <use img/51.png>
+Package pdftex.def Info: img/51.png used on input line 1023.
+(pdftex.def)             Requested size: 477.07912pt x 333.74458pt.
+
+Overfull \hbox (7.3241pt too wide) in paragraph at lines 1023--1025
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1021--1026
+[]$[]$ 
+ []
+
+[41 <./img/50.png>]
+Overfull \hbox (27.86218pt too wide) in paragraph at lines 1028--1030
+[]\T1/cmr/m/n/12 The gen-er-ated out-put di-rec-tory is \T1/cmr/bx/n/12 $ROOT\T
+1/cmr/m/n/12 /src/user_data/simulation_TIMESTAMP_HASH
+ []
+
+<img/52.png, id=588, 748.7975pt x 263.98625pt>
+File: img/52.png Graphic file (type png)
+ <use img/52.png>
+Package pdftex.def Info: img/52.png used on input line 1034.
+(pdftex.def)             Requested size: 524.15468pt x 184.78911pt.
+
+Overfull \hbox (54.39966pt too wide) in paragraph at lines 1034--1036
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1032--1037
+[]$[]$ 
+ []
+
+<img/53.png, id=589, 739.76375pt x 476.78125pt>
+File: img/53.png Graphic file (type png)
+ <use img/53.png>
+Package pdftex.def Info: img/53.png used on input line 1046.
+(pdftex.def)             Requested size: 517.83109pt x 333.74458pt.
+
+Overfull \hbox (48.07607pt too wide) in paragraph at lines 1046--1048
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1044--1049
+[]$[]$ 
+ []
+
+[42 <./img/51.png> <./img/52.png>]
+<img/54.png, id=596, 698.61pt x 452.69125pt>
+File: img/54.png Graphic file (type png)
+ <use img/54.png>
+Package pdftex.def Info: img/54.png used on input line 1054.
+(pdftex.def)             Requested size: 489.02367pt x 316.88171pt.
+
+Overfull \hbox (19.26865pt too wide) in paragraph at lines 1054--1056
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1052--1057
+[]$[]$ 
+ []
+
+[43 <./img/53.png>] <img/55.png, id=603, 736.7525pt x 540.0175pt>
+File: img/55.png Graphic file (type png)
+
+<use img/55.png>
+Package pdftex.def Info: img/55.png used on input line 1067.
+(pdftex.def)             Requested size: 515.72324pt x 378.00966pt.
+
+Overfull \hbox (45.96822pt too wide) in paragraph at lines 1067--1069
+ [][] 
+ []
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1065--1070
+[]$[]$ 
+ []
+
+[44 <./img/54.png>] <img/56.png, id=609, 411.5375pt x 463.7325pt>
+File: img/56.png Graphic file (type png)
+
+<use img/56.png>
+Package pdftex.def Info: img/56.png used on input line 1076.
+(pdftex.def)             Requested size: 288.07428pt x 324.61052pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 1074--1079
+[]$[]$ 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1080.
+[45 <./img/55.png>] [46 <./img/56.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1080.
+ (./OPENWARP_DEPLOYMENT_GUIDE.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1080.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1080.
+
+Package rerunfilecheck Info: File `OPENWARP_DEPLOYMENT_GUIDE.out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 81FEF985A312072010AE1AD63C7C8658;3430.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1080.
+ ) 
+Here is how much of TeX's memory you used:
+ 7774 strings out of 493117
+ 117537 string characters out of 6135433
+ 200539 words of memory out of 5000000
+ 11017 multiletter control sequences out of 15000+600000
+ 14160 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,12n,43p,438b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on OPENWARP_DEPLOYMENT_GUIDE.pdf (46 pages, 18345083 bytes).
+PDF statistics:
+ 689 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 686 words of extra memory for PDF output out of 10000 (max. 10000000)
+

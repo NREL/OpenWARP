@@ -8,10 +8,13 @@ Updated since version 1.1:
 
 Updated since version 1.2: Merge Code and Update GUI
     1. Integrate New Nemoh using hdf5 and python.
+
+Updated since version 1.3: OpenWarp - Add Logging Functionality
+    1. Added support for logging
 """
-__author__ = "caoweiquan322, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.2"
+__author__ = "caoweiquan322, yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.3"
 
 import collections
 import uuid
@@ -20,6 +23,7 @@ import os
 import time
 import subprocess
 from multiprocessing import Process, Manager
+import multiprocessing as mp
 import logging
 from openwarp import helper
 from nemoh import utility
@@ -27,6 +31,7 @@ from nemoh import preprocessor
 from nemoh import postprocessor
 from nemoh import solver
 import warnings
+from nemoh.utility import Silence
 
 import fnmatch
 import h5py
@@ -35,6 +40,11 @@ import h5py
 # This class is a subclass of "tuple", and is created using collections.namedtuple factory function.
 MeshingParameters = collections.namedtuple('MeshingParameters',
                                            'infile outfile maxh minh fineness grading usetolerance tolerance')
+
+# This class represents parameters used in configuring the application.
+# This class is a subclass of "tuple", and is created using collections.namedtuple factory function.
+ConfigurationParameters = collections.namedtuple('ConfigurationParameters',
+                                                 'logging_level clear_log_flag')
 
 # This class represents parameters used in the simulation process.
 # This class is a subclass of "tuple", and is created using collections.namedtuple factory function.
@@ -68,15 +78,104 @@ _CONFIG_FILE_NAME = 'config.txt'
 # The pre-defined stdout log file name.
 _LOG_FILE_NAME = 'log.txt'
 
-# The logger object for logging.
-_LOGGER = logging.getLogger(__name__)
-
 class ServiceError(Exception):
     '''
     This exception indicates a service error.
     It will be raised by methods of this module.
     '''
     pass
+
+
+def _set_log_level(log_level):
+        """
+        helper method to change level of logs depending of log_level
+
+        :param log_level: integer or string (10 for DEBUG, 20 for INFO)
+
+        :return: A message indicating success or not
+        """
+        # setting logging level:
+        if log_level and str(log_level) in ["10", "20"]:
+            # Setting the root logger to that level
+            level = int(log_level)
+            logging.getLogger(__name__).info("Setting logging level to " +
+                                             logging.getLevelName(level))
+            logging.getLogger().setLevel(level)
+            out = "Logging successfully set to level " + logging.getLevelName(level)
+            logging.getLogger(__name__).info(out)
+            return out
+
+        else:
+            # nofifying user and setting up loggers to debug by default
+            logger = logging.getLogger(__name__)
+            out = ("Logging level unknown! Should be 10 (DEBUG) or 20 (INFO). Keeping current level of " +
+                   logging.getLevelName(logging.getLogger().getEffectiveLevel()))
+            logger.warning(out)
+
+            return out
+
+
+def _clear_log():
+    """
+    clearing log on server
+    :param None
+    :return A message indicating success or not
+    """
+    num = 1
+    MAX_NUM = 10000
+    while True:
+        path = os.path.join(LOG_FILE, str(num))
+        if num > MAX_NUM:
+            return num-1
+        if os.path.exists(path):
+            os.remove(path)
+            num += 1
+        else:
+            return num-1
+
+    return num-1
+
+
+def apply_configuration(params):
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
+    signature = __name__ + '.apply_configuration(params)'
+    helper.log_entrance(logger, signature,
+                        {'params': params})
+
+
+
+    # Checking parameters
+    helper.check_type_value(params, 'params', ConfigurationParameters, False)
+    helper.check_not_none_nor_empty(params.logging_level, 'params.logging_level')
+    helper.check_not_none_nor_empty(params.clear_log_flag, 'params.clear_log_flag')
+
+    try:
+        output = "\n" + _set_log_level(params.logging_level)
+
+        if params.clear_log_flag == "true":
+            num = _clear_log()
+            out = str(num) + " logs files were successfully cleared"
+            logging.getLogger(__name__).info(out)
+            output += "\n" + out
+        else:
+            out = "clearing logs were not enabled"
+            output += "\n" + out
+            logging.getLogger(__name__).info(out)
+
+        output += ("\n\n" + "The simulation and running time logs are saved in " +
+                   LOG_FILE)
+
+        helper.log_exit(logger, signature, [output])
+
+        return output
+    except Exception as e:
+        # No logging when raising an exception. Another function will log it
+        raise ServiceError('Error occurs when generating mesh. Caused by:\n' + unicode(str(e)))
+
+
+
+
 
 def generate_mesh(meshing_dir, params):
     '''
@@ -90,8 +189,10 @@ def generate_mesh(meshing_dir, params):
                         of valid value
     @raise ServiceError: if error occurs during generating mesh
     '''
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
     signature = __name__ + '.generate_mesh()'
-    helper.log_entrance(_LOGGER, signature,
+    helper.log_entrance(logger, signature,
                         {'meshing_dir': meshing_dir,
                          'params': params})
     # Checking parameters
@@ -118,17 +219,17 @@ def generate_mesh(meshing_dir, params):
 
         # Launch mesh generator
         with open(log_file_path, 'w') as log_file:
-            _LOGGER.debug('Start mesh generator in subprocess.')
+            logger.debug('Start mesh generator in subprocess.')
             subprocess.call(MESH_GENERATOR_BIN, cwd=meshing_dir, stdout=log_file)
-            _LOGGER.debug('End mesh generator in subprocess.')
+            logger.debug('End mesh generator in subprocess.')
         
         # Read and return the log file content
         with open(log_file_path, 'r') as log_file:
-            ret = log_file.read()
-            helper.log_exit(_LOGGER, signature, [ret])
+            ret = log_file.read().splitlines()
+            helper.log_exit(logger, signature, [ret])
             return ret
     except Exception as e:
-        helper.log_exception(_LOGGER, signature, e)
+        helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when generating mesh. Caused by:\n' + unicode(str(e)))
 
 def simulate(simulation_dir, params):
@@ -143,8 +244,10 @@ def simulate(simulation_dir, params):
                         of valid value
     @raise ServiceError: if any other error occurred when launching the simulation
     '''
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
     signature = __name__ + '.simulate()'
-    helper.log_entrance(_LOGGER, signature,
+    helper.log_entrance(logger, signature,
                         {'simulation_dir': simulation_dir,
                          'params': params})
     # Checking parameters
@@ -193,7 +296,10 @@ def simulate(simulation_dir, params):
 
     try:
         # Write the hdf5 inputs according to given parameters
-        with h5py.File(os.path.join(simulation_dir, 'db.hdf5'), "a") as hdf5_data:
+        # Bug solving in old h5py version: Creating the file first
+        hdf5_path = os.path.join(simulation_dir, 'db.hdf5')
+        utility.touch(hdf5_path)
+        with h5py.File(hdf5_path, "a") as hdf5_data:
             utility.write_calculations(params, hdf5_data)
         
         # Launch preProcessor and Solver
@@ -201,7 +307,7 @@ def simulate(simulation_dir, params):
         os.mkdir(os.path.join(simulation_dir, 'results'))
         simulation_log_path = os.path.join(simulation_dir, 'simulation_log.txt')
         custom_config = {
-            'HDF5_FILE': os.path.join(simulation_dir, 'db.hdf5'),
+            'HDF5_FILE': hdf5_path,
             'NEMOH_CALCULATIONS_FILE': None,
             'NEMOH_INPUT_FILE': None,
             'MESH_TEC_FILE': os.path.join(simulation_dir, 'mesh', 'mesh.tec'),
@@ -225,20 +331,25 @@ def simulate(simulation_dir, params):
             'REMOVE_IRREGULAR_FREQUENCIES' : bool(int(params.remove_irregular_frequencies))
         }
 
-        _LOGGER.debug('Start preProcessor function.')
+        logger.debug('Start preProcessor function.')
         run_thread(preprocessor.preprocess, (custom_config,), simulation_log_path)
-        _LOGGER.debug('End preProcessor function.')
-        _LOGGER.debug('Start solver function.')
+
+
+        logger.debug('End preProcessor function.')
+        logger.debug('Start solver function.')
         output = run_thread(solver.solve, (custom_config,), None)
+
+
+
         with open(simulation_log_path, 'a') as log_file:
             log_file.write(output)
-        _LOGGER.debug('End solver function.')
+        logger.debug('End solver function.')
         with open(simulation_log_path, 'r') as log_file:
-            ret = log_file.read()
-            helper.log_exit(_LOGGER, signature, [ret])
+            ret = log_file.read().splitlines()
+            helper.log_exit(logger, signature, [ret])
             return ret
     except Exception as e:
-        helper.log_exception(_LOGGER, signature, e)
+        helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when doing simulation. Caused by:\n' + unicode(str(e)))
 
 def postprocess(simulation_dir, params):
@@ -253,8 +364,10 @@ def postprocess(simulation_dir, params):
                         of valid value
     @raise ServiceError: if error occurs during launching the post-processing
     '''
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
     signature = __name__ + '.postprocess()'
-    helper.log_entrance(_LOGGER, signature,
+    helper.log_entrance(logger, signature,
                         {'simulation_dir': simulation_dir,
                          'params': params})
     # Checking parameters
@@ -302,16 +415,16 @@ def postprocess(simulation_dir, params):
             'COMPUTE_YAW_MOMENT': False,
             'REMOVE_IRREGULAR_FREQUENCIES' : False
         }
-        _LOGGER.debug('Start postProcessor function.')
+        logger.debug('Start postProcessor function.')
         run_thread(postprocessor.postprocess, (custom_config,), postprocessing_log_path)
-        _LOGGER.debug('End postProcessor in subprocess.')
+        logger.debug('End postProcessor in subprocess.')
 
         with open(postprocessing_log_path, 'r') as log_file:
-            ret = log_file.read()
-            helper.log_exit(_LOGGER, signature, [ret])
+            ret = log_file.read().splitlines()
+            helper.log_exit(logger, signature, [ret])
             return ret
     except Exception as e:
-        helper.log_exception(_LOGGER, signature, e)
+        helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when running postprocess. Caused by:\n' + unicode(str(e)))
 
 
@@ -324,8 +437,10 @@ def visualize(simulation_dir):
     @raise ValueError: if any input parameter is None/empty
     @raise ServiceError: if error occurs during launching the ParaView
     '''
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
     signature = __name__ + '.visualize()'
-    helper.log_entrance(_LOGGER, signature, {'simulation_dir': simulation_dir})
+    helper.log_entrance(logger, signature, {'simulation_dir': simulation_dir})
     # Checking parameters
     helper.check_not_none_nor_empty(simulation_dir, 'simulation_dir')
     helper.check_is_directory(simulation_dir, 'simulation_dir')
@@ -341,20 +456,20 @@ def visualize(simulation_dir):
         # Check if there's tec/vtk/stl file to visualize
         if len(files) == 0:
             raise ServiceError('There is no accepted file to visualize.')
-        _LOGGER.debug('List of files to load:')
-        _LOGGER.debug(str(files))
+        logger.debug('List of files to load:')
+        logger.debug(str(files))
 
         # Prepare script to run by ParaView
         paraview_script = os.path.join(os.path.join(simulation_dir, 'results'), 'load_data.py')
         prepare_paraview_script(paraview_script, files)
 
         # Launch ParaView without waiting for the ParaView to exit
-        _LOGGER.debug('Start launching ParaView in subprocess.')
+        logger.debug('Start launching ParaView in subprocess.')
         subprocess.Popen([PARAVIEW_BIN, '--script=' + paraview_script + ''])
-        _LOGGER.debug('End launching ParaView in subprocess.')
-        helper.log_exit(_LOGGER, signature, None)
+        logger.debug('End launching ParaView in subprocess.')
+        helper.log_exit(logger, signature, None)
     except Exception as e:
-        helper.log_exception(_LOGGER, signature, e)
+        helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when launching the ParaView. Caused by:\n' + unicode(str(e)))
 
 def prepare_paraview_script(script_path, files):
@@ -370,81 +485,6 @@ def prepare_paraview_script(script_path, files):
         with open(script_path, 'w') as fout:
             for line in fin.readlines():
                 fout.write(line.rstrip().replace('<parameter_files>', str(files)) + '\n')
-
-
-# From http://code.activestate.com/recipes/577564-context-manager-for-low-level-redirection-of-stdou/
-class Silence:
-    """
-    Context manager which uses low-level file descriptors to suppress
-    output to stdout/stderr, optionally redirecting to the named file(s).
-
-    Example usage
-     with Silence(stderr='output.txt', mode='a'):
-    ...     # appending to existing file
-    ...     print >> sys.stderr, "Hello from stderr"
-    ...     print "Stdout redirected to os.devnull"
-    === contents of 'output.txt' ===
-
-
-    """
-    def __init__(self, stdout=os.devnull, stderr=os.devnull, mode='w'):
-        """
-        Initialize
-        Args:
-            self: The class itself
-            stdout: the descriptor or file name where to redirect stdout
-            stdout: the descriptor or file name where to redirect stdout
-            mode: the output descriptor or file mode
-        """
-        self.outfiles = stdout, stderr
-        self.combine = (stdout == stderr)
-        self.mode = mode
-
-    def __enter__(self):
-        """
-        Enter the context
-        Args:
-            self: The class itself
-        """
-        import sys
-        self.sys = sys
-        # save previous stdout/stderr
-        self.saved_streams = saved_streams = sys.__stdout__, sys.__stderr__
-        self.fds = fds = [s.fileno() for s in saved_streams]
-        self.saved_fds = map(os.dup, fds)
-        # flush any pending output
-        for s in saved_streams: s.flush()
-
-        # open surrogate files
-        if self.combine:
-            null_streams = [open(self.outfiles[0], self.mode, 0)] * 2
-            if self.outfiles[0] != os.devnull:
-                # disable buffering so output is merged immediately
-                sys.stdout, sys.stderr = map(os.fdopen, fds, ['w']*2, [0]*2)
-        else: null_streams = [open(f, self.mode, 0) for f in self.outfiles]
-        self.null_fds = null_fds = [s.fileno() for s in null_streams]
-        self.null_streams = null_streams
-
-        # overwrite file objects and low-level file descriptors
-        map(os.dup2, null_fds, fds)
-
-    def __exit__(self, *args):
-        """
-        Exit the context
-        Args:
-            self: The class itself
-            args: other arguments
-        """
-        sys = self.sys
-        # flush any pending output
-        for s in self.saved_streams: s.flush()
-        # restore original streams and file descriptors
-        map(os.dup2, self.saved_fds, self.fds)
-        sys.stdout, sys.stderr = self.saved_streams
-        # clean up
-        for s in self.null_streams: s.close()
-        for fd in self.saved_fds: os.close(fd)
-        return False
 
 
 def wrapper_io(func, fd, args, return_dict):
@@ -487,6 +527,7 @@ def run_thread(func, args, fd):
     return return_dict["output"]
 
 
+
 def writeline_if_not_none(fout, data):
     '''
     Write one line to the specified file if data is not None.
@@ -509,8 +550,10 @@ def prepare_dir(prefix):
     @raise ValueError: if any input parameter is None/empty
     @raise ServiceError: if any error occurred when preparing the directory
     '''
+    # The logger object for logging.
+    logger = logging.getLogger(__name__)
     signature = __name__ + '.prepare_dir()'
-    helper.log_entrance(_LOGGER, signature, {'prefix': prefix})
+    helper.log_entrance(logger, signature, {'prefix': prefix})
     # Checking parameters
     helper.check_not_none_nor_empty(prefix, 'prefix')
     
@@ -519,8 +562,8 @@ def prepare_dir(prefix):
         # We should consider adding some more uuid suffix to allow more concurrent requests within 1 SINGLE second.
         run_dir = os.path.join(USER_DATA_DIRECTORY, prefix + time.strftime('%Y%m%d%H%M%S') + '_' + uuid.uuid1().hex)
         os.makedirs(run_dir)
-        helper.log_exit(_LOGGER, signature, [run_dir])
+        helper.log_exit(logger, signature, [run_dir])
         return run_dir
     except Exception as e:
-        helper.log_exception(_LOGGER, signature, e)
+        helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when preparing the directory. Caused by:\n' + unicode(str(e)))

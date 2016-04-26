@@ -21,6 +21,10 @@ openwarp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'partials/postprocessing.html',
             controller: 'postprocessing'
         })
+        .when('/configuration', {
+            templateUrl: 'partials/logging.html',
+            controller: 'configuration'
+        })
         .otherwise({
             redirectTo: '/meshing'
         });

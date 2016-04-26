@@ -16,21 +16,32 @@ Changes in version 1.4 (Hydrodynamic Data Exporter Assembly v1.0)
 
 Changes in version 1.5 (Irregular Frequencies Assembly)
        Added parameters to remove irregular frequencies or not.
+
+Changes in version 1.6 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.5"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.6"
 
-HDF5_FILE = '../test_files/remove_irregular_frequencies/db.hdf5'
+import os
+
+import numpy as np
+np.set_printoptions(threshold=10)
+
+
+BASE_TEST_DIR = os.path.join('..', 'test_files', 'remove_irregular_frequencies')
+
+HDF5_FILE = os.path.join(BASE_TEST_DIR, 'db.hdf5')
 """
 The path to the hdf5 file.
 String, non-empty, not null
 Required.
 """
 
-NEMOH_CALCULATIONS_FILE = '../test_files/remove_irregular_frequencies/Nemoh.cal'
+NEMOH_CALCULATIONS_FILE = os.path.join(BASE_TEST_DIR, 'Nemoh.cal')
 """
 The path to the nemoh calculations.
 String.
@@ -38,7 +49,7 @@ Not Required.
 If present a conversion from this nemoh file to the hdf5 file is performed
 """
 
-NEMOH_INPUT_FILE = '../test_files/remove_irregular_frequencies/input.txt'
+NEMOH_INPUT_FILE = os.path.join(BASE_TEST_DIR, 'input.txt')
 """
 The path to the nemoh input.
 String.
@@ -47,7 +58,7 @@ If present a conversion from this nemoh file to the hdf5 file is performed
 """
 
 
-MESH_TEC_FILE = '../test_files/remove_irregular_frequencies/mesh/mesh.tec'
+MESH_TEC_FILE = os.path.join(BASE_TEST_DIR, 'mesh', 'mesh.tec')
 """
 The path to the mesh data in tec format
 String.
@@ -55,7 +66,7 @@ Not Required
 If not present no export is performed
 """
 
-FK_FORCE_TEC_FILE = '../test_files/remove_irregular_frequencies/results/fkforce.tec'
+FK_FORCE_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'fkforce.tec')
 """
 The path to the froudkrylov force data in tec format
 String.
@@ -63,7 +74,7 @@ Not Required
 If not present no export is performed
 """
 
-RADIATION_COEFFICIENTS_TEC_FILE = '../test_files/remove_irregular_frequencies/results/radiationcoefficients.tec'
+RADIATION_COEFFICIENTS_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'radiationcoefficients.tec')
 """
 The path to the file where to save the added mass and damping forces for the radiation problems
 in tec format.
@@ -72,7 +83,7 @@ Not Required
 If not present no export is performed
 """
 
-DIFFRACTION_FORCE_TEC_FILE = '../test_files/remove_irregular_frequencies/results/diffractionforce.tec'
+DIFFRACTION_FORCE_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'diffractionforce.tec')
 """
 The path to the file where to save the diffraction force for the diffraction problems
 in tec format.
@@ -81,7 +92,7 @@ Not Required
 If not present no export is performed
 """
 
-EXCITATION_FORCE_TEC_FILE = '../test_files/remove_irregular_frequencies/results/excitationforce.tec'
+EXCITATION_FORCE_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'excitationforce.tec')
 """
 The path to the file where to save the the excitation force for the diffraction problems
 in tec format.
@@ -90,7 +101,7 @@ Not Required
 If not present no export is performed
 """
 
-IRF_TEC_FILE = '../test_files/remove_irregular_frequencies/results/irf.tec'
+IRF_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'irf.tec')
 """
 The path to the file where to save the the irf in tec format.
 String.
@@ -99,7 +110,7 @@ If not present no export is performed
 """
 
 
-WAVE_FIELD_TEC_FILE = '../test_files/remove_irregular_frequencies/results/WaveField.tec'
+WAVE_FIELD_TEC_FILE = os.path.join(BASE_TEST_DIR, 'results', 'WaveField.tec')
 """
 The path to the file where to save the the wave field in tec format.
 String.
@@ -224,3 +235,7 @@ Wether or not to remove the irregular frequencies.
 Set to None not to use it
 Corresponding setting in hdf5 file is required
 """
+
+LOGGING_CONFIGURATION_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'logging.json')
+
+LOG_FILE = os.path.join(BASE_TEST_DIR, 'logs', 'logs.log')

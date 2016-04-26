@@ -5,11 +5,14 @@ This Python module contains configurations(aka settings) of the application.
 Updated since version 1.1:
     1. Added path to paraview script template file.
 
+Updated since version 1.2 (OpenWarp - Add Logging Functionality):
+    1. Added support for logging.
+
 """
 
-__author__ = "caoweiquan322"
-__copyright__ = "Copyright (C) 2014 TopCoder Inc. All rights reserved."
-__version__ = "1.1"
+__author__ = "caoweiquan322, yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.2"
 
 import sys
 import os
@@ -72,3 +75,7 @@ VISUALIZATION_FILE_EXTENSIONS = ['stl', 'vtk', 'tec']
 # Represents the web server port.
 # Required. It must be a positive integer in range of [0, 65535].
 WEB_SERVER_PORT = 8386
+
+LOG_DIR = os.path.join(user_home, 'logs')
+
+LOG_FILE = os.path.join(LOG_DIR, 'logs.log')

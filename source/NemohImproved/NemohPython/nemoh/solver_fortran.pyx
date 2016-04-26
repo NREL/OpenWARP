@@ -17,6 +17,9 @@ Changes in version 1.4 (Irregular Frequencies Assembly)
        Added logic to send handle additionnal variables to be sent to Nemoh Fortran.
        Those additional variables determine whether or not Irregular frequencies should be
        removed and if so, the panels which are in the interior of the free surface.
+
+Changes in version 1.5 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 
 from numpy import ndarray
@@ -24,10 +27,12 @@ from numpy cimport ndarray
 import numpy as np
 cimport numpy as np
 import sys
+from ctypes import byref
+from ctypes import c_char_p
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.4"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.5"
 
 
 cdef extern:
@@ -47,7 +52,7 @@ cdef extern:
     int* n_beta, int* n_radiation, float** rad_case, float* beta, int* num_panel_higher_order, int* b_spline_order, 
     int* is_thin_body, int*use_dipoles_implementation, int* compute_yaw_moment, int* compute_drift_forces,
     float** center_buoyancy, float* displacement, float* waterplane_area, float***stifness, 
-    int* is_interior_domain, int*remove_irregular_frequencies)
+    int* is_interior_domain, int*remove_irregular_frequencies, int*log_level)
 
 
 
@@ -124,6 +129,7 @@ def run_solver(data):
     cdef int compute_yaw_moment = data["compute_yaw_moment"]
     cdef int compute_drift_forces = data["compute_drift_forces"]
     cdef int remove_irregular_frequencies = data["remove_irregular_frequencies"]
+    cdef int log_level = data["log_level"]
     
     
 
@@ -139,7 +145,7 @@ def run_solver(data):
         &use_higher_order, &n_beta, &n_radiation, <float**> rad_case.data, <float*> beta.data, &num_panel_higher_order, &b_spline_order, 
         <int*> is_thin_body.data, &use_dipoles_implementation, &compute_yaw_moment, &compute_drift_forces,
         <float**>center_buoyancy.data, <float*>displacement.data, <float*>waterplane_area.data,
-        <float***>stifness.data, <int*>is_interior_domain.data, &remove_irregular_frequencies)
+        <float***>stifness.data, <int*>is_interior_domain.data, &remove_irregular_frequencies, &log_level)
 
     return 0
 

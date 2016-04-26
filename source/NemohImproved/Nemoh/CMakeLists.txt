@@ -10,6 +10,12 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 SET(NEMOH_LIB_TYPE "SHARED")
 
+#set_source_files_properties("Solver/logging/logging.h" PROPERTIES COMPILE_FLAGS -cpp)
+
+#set_source_files_properties("Solver/logging/flogging.f90" PROPERTIES COMPILE_FLAGS -cpp)
+
+
+
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	set(CMAKE_MACOSX_RPATH ON)
 	SET(CMAKE_SKIP_RPATH  TRUE)
@@ -75,7 +81,8 @@ set(CMAKE_EXE_LINKER_FLAGS "")
 add_library(nemoh ${NEMOH_LIB_TYPE} "Solver/NEMOH.f90" "Solver/Core/ALLOCATE_DATA.f90" "Solver/Core/Bodyconditions.f90" "Solver/Core/COMPUTE_GREEN_FD.f90" "Solver/Core/COMPUTE_GREEN_FREESURFACE.f90" "Solver/Core/COMPUTE_GREEN_INFD.f90" "Solver/Core/COMPUTE_KOCHIN.f90" "Solver/Core/COMPUTE_POTENTIAL_DOMAIN.f90" "Solver/Core/COM_VAR.f90" "Solver/Core/DEALLOCATE_DATA.f90" "Solver/Core/ELEMENTARY_FNS.f90" "Solver/Core/INITIALIZATION.f90" "Solver/Core/M_SOLVER.f90" "Solver/Core/OUTPUT.f90" "Solver/Core/PREPARE_MESH.f90" "Solver/Core/SOLVE_BEM.f90" "Solver/Core/SOLVE_BEM_FD_DIRECT.f90"  "Solver/Core/SOLVE_BEM_INFD_DIRECT.f90"  "Solver/Core/GMRES.f90" "Solver/Core/SOLVE_BEM_INFD_ITERATIVE.f90"  "Solver/Core/SOLVE_BEM_FD_ITERATIVE.f90" "commonFiles/Environment.f90" "commonFiles/Identification.f90" "commonFiles/Results.f90" "commonFiles/Mesh.f90" "Solver/Core/UTILITY.f90" "Solver/Core/COMPUTE_MEAN_DRIFT_FORCES_FIN.f90" "Solver/Core/COMPUTE_MEAN_DRIFT_FORCES_INF.f90"
 "Solver/Core/COMPUTE_YAW_MOMENT_FIN.f90" "Solver/Core/COMPUTE_YAW_MOMENT_INF.f90" "Solver/Core/COMMON_TYPE.f90" "Solver/Core/ODE.f90" "Solver/Core/COMPUTE_INFLUENCE_ODE.f90" "Solver/Core/Gaussm3.f90" 
 "Solver/Core/GREEN_FUNCTION.f90" "Solver/Core/SOLVE_BEM_HIGH.f90" "Solver/Core/SOLVE_BEM_DIPOLES_THIN.f90" "Solver/Core/MESH_STATISTICS.f90"
-"Mesh/hydre.f90" "Solver/Core/SOLVE_BEM_IRREGULAR.f90")
+"Mesh/hydre.f90" "Solver/Core/SOLVE_BEM_IRREGULAR.f90"
+"Solver/logging/flogging.F90" "Solver/logging/vt100.F90" "Solver/logging/logging.h")
 #add_executable(preProcessor "preProcessor/Main.f90" "commonFiles/Environment.f90" "commonFiles/Identification.f90" "preProcessor/Mesh.f90" "preProcessor/BodyConditions.f90" "preProcessor/Integration.f90" )
 
 #add_executable(postProcessor "postProcessor/Main.f90" "commonFiles/Identification.f90" "commonFiles/Environment.f90" "commonFiles/Results.f90" "postProcessor/IRF.f90" "postProcessor/Plot_WaveElevation.f90" "postProcessor/Compute_RAOs.f90" )

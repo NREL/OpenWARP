@@ -34,6 +34,9 @@ Changes in version 1.5 (Irregular Frequencies Assembly)
        removed.
        Applied some bug fixes to allow the shape of hdf5 file dataset 
        to be automatically resized.
+
+Changes in version 1.6 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 
 import utility
@@ -45,6 +48,7 @@ import settings
 import os
 from utility import cih
 from utility import sih
+import logging
 
 import preprocessor
 
@@ -52,9 +56,9 @@ import preprocessor
 from models import TResult
 from models import TIRF
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.5"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.6"
 
 
 def get_irf(hdf5_data, result):
@@ -67,9 +71,30 @@ def get_irf(hdf5_data, result):
         the irf
     """
 
-    switch = hdf5_data.get(structure.H5_COMPUTE_IRF)[0]
-    time_step = hdf5_data.get(structure.H5_IRF_TIME_STEP)[0]
-    duration = hdf5_data.get(structure.H5_IRF_DURATION)[0]
+    signature = __name__ + '.get_irf(hdf5_data, result)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"hdf5_data": str(hdf5_data), 'result': str(result)})
+
+    dset = hdf5_data.get(structure.H5_COMPUTE_IRF)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_COMPUTE_IRF_ATTR['description']),
+                               location=structure.H5_COMPUTE_IRF)
+    switch = dset[0]
+
+    dset = hdf5_data.get(structure.H5_IRF_TIME_STEP)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_IRF_TIME_STEP_ATTR['description']),
+                               location=structure.H5_IRF_TIME_STEP)
+    time_step = dset[0]
+
+
+    dset = hdf5_data.get(structure.H5_IRF_DURATION)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_IRF_DURATION_ATTR['description']),
+                               location=structure.H5_IRF_DURATION)
+    duration = dset[0]
+
     irf = TIRF()
 
     if switch == 1:
@@ -77,6 +102,8 @@ def get_irf(hdf5_data, result):
         for i in range(irf.n_time):
             irf.time[i] = i*time_step
     irf.switch = switch
+
+    utility.log_exit(logger, signature, [str(irf)])
 
     return irf
 
@@ -90,6 +117,12 @@ def compute_irf(result, irf):
     Returns:
         the irf with the froude krylov forces computed.
     """
+    signature = __name__ + '.compute_irf(result, irf)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"irf": str(irf), 'result': str(result)})
+
+    logger.info('Computing the froude krylov forces for the given irf')
     for i in range(irf.n_time):
         for j in range(result.n_radiation):
             for k in range(result.n_integration):
@@ -104,6 +137,7 @@ def compute_irf(result, irf):
 
 
 
+    logger.info('Computing the added mass for the given irf')
     cm = np.zeros(result.n_w)
     for j in range(result.n_radiation):
         for k in range(result.n_integration):
@@ -117,6 +151,8 @@ def compute_irf(result, irf):
                 irf.added_mass[j,k]=irf.added_mass[j,k] +cm[l]
             irf.added_mass[j,k] = irf.added_mass[j,k]/result.n_w
 
+    utility.log_exit(logger, signature, [str(irf)])
+
     return irf
 
 
@@ -127,6 +163,11 @@ def save_irf(irf, filename):
         irf: object, the irf
         filename: string, The path to the file where to save the irf
     """
+    signature = __name__ + '.save_irf(irf, filename)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"irf": str(irf),
+                          'filename': str(filename)})
     utility.mkdir_p(os.path.abspath(os.path.dirname(filename)))
     with open(filename, 'w') as inp:
         inp.write('VARIABLES="Time (s)"\n')
@@ -141,6 +182,9 @@ def save_irf(irf, filename):
                     s += ' ' + str(irf.added_mass[j, k]) + ' ' + ' ' + str(irf.k[i, j, k]) + ' '
                 inp.write(s + '\n')
 
+    utility.log_and_print(logger, utility.get_abs(filename) + ' contains the irf in tec format.')
+    utility.log_exit(logger, signature, [None])
+
 
 def read_results(hdf5_data):
     """
@@ -150,16 +194,33 @@ def read_results(hdf5_data):
     Returns:
         the hydrodynamic coefficients cases
     """
+    signature = __name__ + '.read_results(hdf5_data)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"hdf5_data": str(hdf5_data)})
+
     idx_force = hdf5_data.get(structure.H5_RESULTS_CASE_FORCE)
+    utility.check_dataset_type(idx_force,
+                               name=str(structure.H5_RESULTS_CASE_FORCE_ATTR['description']),
+                               location=structure.H5_RESULTS_CASE_FORCE)
     n_integration = idx_force.shape[0]
 
     idx_radiation = hdf5_data.get(structure.H5_RESULTS_CASE_MOTION)
+    utility.check_dataset_type(idx_radiation,
+                               name=str(structure.H5_RESULTS_CASE_MOTION_ATTR['description']),
+                               location=structure.H5_RESULTS_CASE_MOTION)
     n_radiation = idx_radiation.shape[0]
 
     beta = hdf5_data.get(structure.H5_RESULTS_CASE_BETA)
+    utility.check_dataset_type(beta,
+                               name=str(structure.H5_RESULTS_CASE_BETA_ATTR['description']),
+                               location=structure.H5_RESULTS_CASE_BETA)
     n_beta = beta.shape[0]
 
     w = hdf5_data.get(structure.H5_RESULTS_CASE_W)
+    utility.check_dataset_type(beta,
+                               name=str(structure.H5_RESULTS_CASE_W_ATTR['description']),
+                               location=structure.H5_RESULTS_CASE_W)
     n_w = w.shape[0]
 
     theta = hdf5_data.get(structure.H5_RESULTS_CASE_THETA)
@@ -186,6 +247,7 @@ def read_results(hdf5_data):
 
     result.froudkrylov_force = hdf5_data.get(structure.H5_RESULTS_FK_FORCES_RAW)
 
+    utility.log_exit(logger, signature, [str(result)])
     return result
 
 
@@ -196,6 +258,12 @@ def save_radiation_coefficients(result, filename):
         result: object, the hydrodynamic coefficients cases
         filename: The path to the file where to save
     """
+    signature = __name__ + '.save_radiation_coefficients(result, filename)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"result": str(result),
+                          'filename': str(filename)})
+
     utility.mkdir_p(os.path.abspath(os.path.dirname(filename)))
     with open(filename, 'w') as inp:
 
@@ -216,6 +284,9 @@ def save_radiation_coefficients(result, filename):
                     s += str(result.added_mass[i, j, k]) + '\t' + str(result.radiation_damping[i, j, k]) + '\t'
                 inp.write(s + '\n')
 
+    utility.log_and_print(logger, utility.get_abs(filename) + ' contains the radiation coefficients in tec format.')
+    utility.log_exit(logger, signature, [None])
+
 
 def save_diffraction_force(result, filename):
     """
@@ -224,6 +295,11 @@ def save_diffraction_force(result, filename):
         result: object, the hydrodynamic coefficients cases
         filename: The path to the file where to save
     """
+    signature = __name__ + '.save_diffraction_force(result, filename)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"result": str(result),
+                          'filename': str(filename)})
     utility.mkdir_p(os.path.abspath(os.path.dirname(filename)))
     with open(filename, 'w') as inp:
         inp.write('VARIABLES="w (rad/s)"\n')
@@ -244,6 +320,9 @@ def save_diffraction_force(result, filename):
                         i, j, k]))) + '\t'
                 inp.write(s + '\n')
 
+    utility.log_and_print(logger, utility.get_abs(filename) + ' contains the diffraction forces in tec format.')
+    utility.log_exit(logger, signature, [None])
+
 
 def save_excitation_force(result, filename):
     """
@@ -252,6 +331,11 @@ def save_excitation_force(result, filename):
         result: object, the hydrodynamic coefficients cases
         filename: The path to the file where to save
     """
+    signature = __name__ + '.save_excitation_force(result, filename)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"result": str(result),
+                          'filename': str(filename)})
     utility.mkdir_p(os.path.abspath(os.path.dirname(filename)))
     with open(filename, 'w') as inp:
         inp.write('VARIABLES="w (rad/s)"\n')
@@ -272,6 +356,9 @@ def save_excitation_force(result, filename):
                     s += str(np.abs(temp)) + '\t'
                     s += str(np.arctan2(np.imag(temp), np.real(temp))) + '\t'
                 inp.write(s + '\n')
+
+    utility.log_and_print(logger, utility.get_abs(filename) + ' contains the excitation forces in tec format.')
+    utility.log_exit(logger, signature, [None])
 
 
 def compute_raos(raos, result):
@@ -301,10 +388,35 @@ def compute_wave_elevation(hdf5_data, environment, iw, ibeta, raos, result):
         A dictionary containing the wave elevation variables
     """
 
-    nx = hdf5_data.get(structure.H5_FREE_SURFACE_POINTS_X)[0]
-    ny = hdf5_data.get(structure.H5_FREE_SURFACE_POINTS_Y)[0]
-    lx = hdf5_data.get(structure.H5_FREE_SURFACE_DIMENSION_X)[0]
-    ly = hdf5_data.get(structure.H5_FREE_SURFACE_DIMENSION_Y)[0]
+    signature = __name__ + '.compute_wave_elevation(hdf5_data, environment, iw, ibeta, raos, result)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"hdf5_data": str(hdf5_data),
+                          "environment": str(environment),
+                          "iw": str(iw),
+                          "ibeta": str(ibeta),
+                          "raos": str(raos),
+                          "result": str(result)})
+
+    dset = hdf5_data.get(structure.H5_FREE_SURFACE_POINTS_X)
+    utility.check_dataset_type(dset, name=str(structure.H5_FREE_SURFACE_POINTS_X_ATTR['description']),
+                               location=structure.H5_FREE_SURFACE_POINTS_X)
+    nx = dset[0]
+
+    dset = hdf5_data.get(structure.H5_FREE_SURFACE_POINTS_Y)
+    utility.check_dataset_type(dset, name=str(structure.H5_FREE_SURFACE_POINTS_Y_ATTR['description']),
+                               location=structure.H5_FREE_SURFACE_POINTS_Y)
+    ny = dset[0]
+
+    dset = hdf5_data.get(structure.H5_FREE_SURFACE_DIMENSION_X)
+    utility.check_dataset_type(dset, name=str(structure.H5_FREE_SURFACE_DIMENSION_X_ATTR['description']),
+                               location=structure.H5_FREE_SURFACE_DIMENSION_X)
+    lx = dset[0]
+
+    dset = hdf5_data.get(structure.H5_FREE_SURFACE_DIMENSION_Y)
+    utility.check_dataset_type(dset, name=str(structure.H5_FREE_SURFACE_DIMENSION_Y_ATTR['description']),
+     location=structure.H5_FREE_SURFACE_DIMENSION_Y)
+    ly = dset[0]
 
     x = np.zeros(nx, dtype='f')
     y = np.zeros(ny, dtype='f')
@@ -319,7 +431,9 @@ def compute_wave_elevation(hdf5_data, environment, iw, ibeta, raos, result):
         y[i] = -0.5*ly+ly*(i)/(ny-1)
 
     w = result.w[iw]
+    logger.info('Computing the wave number ...')
     kwave = utility.compute_wave_number(w, environment)
+    logger.info('Wave number computed is ' + str(kwave))
 
     for i in range(nx):
         for j in range(ny):
@@ -329,8 +443,7 @@ def compute_wave_elevation(hdf5_data, environment, iw, ibeta, raos, result):
             while (k < result.n_theta -1) and (result.theta[k+1] < theta):
                 k += 1
             if k == result.n_theta:
-                print(' Error: range of theta in Kochin coefficients is too small')
-                sys.exit(1)
+                raise ValueError(' Error: range of theta in Kochin coefficients is too small')
 
             coord = np.array([x[i], y[i], 0])
             one_wave = preprocessor.compute_one_wave(kwave, w, result.beta[ibeta], coord, environment)
@@ -353,7 +466,9 @@ def compute_wave_elevation(hdf5_data, environment, iw, ibeta, raos, result):
             etap[i,j]=-utility.II*1./environment.g*utility.II*w*potential
             eta[i,j]=etai[i,j]+etap[i,j]
 
-    return {"w": w, "x": x, "y": y, "eta": eta, "etai": etai, "etap": etap}
+    rep = {"w": w, "x": x, "y": y, "eta": eta, "etai": etai, "etap": etap}
+    utility.log_exit(logger, signature, [rep])
+    return rep
 
 
 def save_wave_elevation(w, etai, etap, eta, x, y, filename):
@@ -368,6 +483,17 @@ def save_wave_elevation(w, etai, etap, eta, x, y, filename):
         y: 1D array, a wave elevation variable
         filename: string, the path to the file where to save
     """
+    signature = __name__ + '.save_wave_elevation(w, etai, etap, eta, x, y, filename)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                         {"w": w,
+                          "etai": etai,
+                          "etap": etap,
+                          "eta": eta,
+                          "x": x,
+                          "y": y,
+                          "filename": filename})
+
     nx = len(x)
     ny = len(y)
     utility.mkdir_p(os.path.abspath(os.path.dirname(filename)))
@@ -393,6 +519,9 @@ def save_wave_elevation(w, etai, etap, eta, x, y, filename):
                 s = str(j+1+i*ny) + '\t' + str(j+1+(i+1)*ny) + '\t' + str(j+2+ i*ny) + '\n'
                 inp.write(s)
 
+    utility.log_and_print(logger, utility.get_abs(filename) + ' contains the wave elevation in tec format.')
+    utility.log_exit(logger, signature, [None])
+
 
 def run(hdf5_data, custom_config):
     """
@@ -401,58 +530,80 @@ def run(hdf5_data, custom_config):
         hdf5_data: object, the hdf5 opened file
         custom_config, dict The custom configuration dictionary
     """
-    print('\n  -> Initialisation ...')
 
-    try:
-        environment = utility.read_environment(hdf5_data)
-    except Exception as e:
-        print('It looks like your hdf5 file is not correct. Please run ',
-        'the preprocessor and the solver before running the postprocessor')
-        sys.exit(1)
+    logger = logging.getLogger(__name__)
+    signature = __name__ + '.run(hdf5_data, custom_config)'
+    # No need to log the parameter of the method here as it will only be duplicate.
+    # This function is never called directly by the user and always call from the postprocess function
+    # which already logs the configuration.
+    utility.log_entrance(logger, signature,
+                         {})
 
+    logger.info('Initialisation the post processing steps')
+
+    logger.info('Reading environment data ...')
+    environment = utility.read_environment(hdf5_data)
+    logger.info('Read environment data' + str(environment))
+
+    logger.info('Reading simulation results')
     result = read_results(hdf5_data)
+    logger.info('Read solver result ' + str(result))
 
-    print('. Initialisation Done !\n')
+    logger.info('Post processing initialisation done !')
 
     # Saving to hdf5 file
     dset = utility.require_dataset(hdf5_data, structure.H5_RESULTS_ADDED_MASS, result.added_mass.shape, dtype='f')
     utility.set_hdf5_attributes(dset, structure.H5_RESULTS_ADDED_MASS_ATTR)
     dset[:, :, :] = result.added_mass
+    logger.info('Saved ' + str(structure.H5_RESULTS_ADDED_MASS_ATTR['description']) +
+                ' at ' + structure.H5_RESULTS_ADDED_MASS + ' with characteristics ' +
+                str(dset))
 
     dset = utility.require_dataset(hdf5_data, structure.H5_RESULTS_RADIATION_DAMPING, result.radiation_damping.shape, dtype='f')
     utility.set_hdf5_attributes(dset, structure.H5_RESULTS_RADIATION_DAMPING_ATTR)
     dset[:, :, :] = result.radiation_damping
+    logger.info('Saved ' + str(structure.H5_RESULTS_RADIATION_DAMPING_ATTR['description']) +
+                ' at ' + structure.H5_RESULTS_RADIATION_DAMPING + ' with characteristics ' +
+                str(dset))
 
     excitation_forces = result.diffraction_force + result.froudkrylov_force
     dset = utility.require_dataset(hdf5_data, structure.H5_RESULTS_EXCITATION_FORCES, excitation_forces.shape, dtype='F')
     utility.set_hdf5_attributes(dset, structure.H5_RESULTS_EXCITATION_FORCES_ATTR)
     dset[:, :, :] = excitation_forces
-    
+    logger.info('Saved ' + str(structure.H5_RESULTS_EXCITATION_FORCES_ATTR['description']) +
+                ' at ' + structure.H5_RESULTS_EXCITATION_FORCES + ' with characteristics ' +
+                str(dset))
 
     tec_file = utility.get_setting(settings.RADIATION_COEFFICIENTS_TEC_FILE, custom_config,
                                    'RADIATION_COEFFICIENTS_TEC_FILE')
     if tec_file:
         save_radiation_coefficients(result, tec_file)
-        print('Radiation coefficients successfully saved.\n')
+        logger.info('Radiation coefficients successfully saved in tecplot format at ' +
+                    str(tec_file))
+    else:
+        logger.info('Radiation coefficients tecplot format generation is disabled')
 
     tec_file = utility.get_setting(settings.DIFFRACTION_FORCE_TEC_FILE, custom_config,
                                    'DIFFRACTION_FORCE_TEC_FILE')
+
     if tec_file:
         save_diffraction_force(result, tec_file)
-        print('Diffraction forces successfully saved.\n')
+        logger.info('Diffraction forces successfully saved in tecplot format at ' +
+                    str(tec_file))
+    else:
+        logger.info('Diffraction forces tecplot format generation is disabled')
 
     tec_file = utility.get_setting(settings.EXCITATION_FORCE_TEC_FILE, custom_config,
                                    'EXCITATION_FORCE_TEC_FILE')
     if tec_file:
         save_excitation_force(result, tec_file)
-        print('Excitation forces successfully saved.\n')
+        logger.info('Excitation forces successfully saved in tecplot format at ' +
+                    str(tec_file))
+    else:
+        logger.info('Excitation forces tecplot format generation is disabled')
 
-    
     irf = get_irf(hdf5_data, result)
-    if not irf:
-        print('It looks like your hdf5 file is not correct. Please run ',
-        'the preprocessor and the solver before running the postprocessor')
-        sys.exit(1)
+
     if irf.switch == 1:
         irf = compute_irf(result, irf)
         # Saving to hdf5 file
@@ -464,22 +615,52 @@ def run(hdf5_data, custom_config):
                                        'IRF_TEC_FILE')
         if tec_file:
             save_irf(irf, tec_file)
-            print('IRF successfully saved.\n')
+            logger.info('IRF successfully saved in tecplot format at ' +
+                        str(tec_file))
+        else:
+            logger.info('IRF tecplot format generation is disabled')
+    else:
+        logger.info('IRF computation is disabled')
 
     raos = np.zeros((result.n_integration, result.n_w, result.n_beta), dtype='F')
     raos = compute_raos(raos, result)
 
-    
-
     tec_file = utility.get_setting(settings.WAVE_FIELD_TEC_FILE, custom_config,
                                    'WAVE_FIELD_TEC_FILE')
-    if tec_file and hdf5_data.get(structure.H5_SOLVER_USE_HIGHER_ORDER)[0] != 1 and hdf5_data.get(structure.H5_SOLVER_USE_DIPOLES_IMPLEMENTATION)[0] != 1 and hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)[0] != 1:
-        res = compute_wave_elevation(hdf5_data, environment, 0, 0, raos, result)
-        save_wave_elevation(res['w'], res['etai'], res["etap"], res["eta"], res["x"], res["y"],
-                            tec_file)
-        print('Wave elevation successfully saved.\n')
 
-    print(' -> All results successfully saved.\n')
+    dset = hdf5_data.get(structure.H5_SOLVER_USE_HIGHER_ORDER)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_SOLVER_USE_HIGHER_ORDER_ATTR['description']),
+                               location=structure.H5_SOLVER_USE_HIGHER_ORDER)
+    use_higher_order = dset[0]
+
+    dset = hdf5_data.get(structure.H5_SOLVER_USE_DIPOLES_IMPLEMENTATION)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_SOLVER_USE_DIPOLES_IMPLEMENTATION_ATTR['description']),
+                               location=structure.H5_SOLVER_USE_DIPOLES_IMPLEMENTATION)
+    use_dipoles_implementation = dset[0]
+
+    dset = hdf5_data.get(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)
+    utility.check_dataset_type(dset,
+                               name=str(structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES_ATTR['description']),
+                               location=structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)
+    remove_irregular_frequencies = dset[0]
+
+    if tec_file:
+        if use_higher_order != 1 and use_dipoles_implementation != 1 and remove_irregular_frequencies != 1:
+            res = compute_wave_elevation(hdf5_data, environment, 0, 0, raos, result)
+            save_wave_elevation(res['w'], res['etai'], res["etap"], res["eta"], res["x"], res["y"],
+                            tec_file)
+            logger.info('Wave elevation successfully saved in tecplot format at ' +
+                        str(tec_file))
+        else:
+            logger.info('Wave elevation computation is not supported when higher order panel, ' +
+                        'used diplome implementation or remove irregular frequencies are enabled.' +
+                        ' Disabling it.')
+    else:
+        logger.info('Wave elevation tecplot format generation is disabled')
+
+    #print(' -> All results successfully saved.\n')
 
 
 def postprocess(custom_config):
@@ -489,15 +670,33 @@ def postprocess(custom_config):
     Args:
         custom_config, dict The custom configuration dictionary
     """
+    signature = __name__ + '.postprocess(custom_config)'
+    logger = logging.getLogger(__name__)
+    utility.log_entrance(logger, signature,
+                        {'custom_config': custom_config})
 
     if not custom_config:
         custom_config = {}
 
     hdf5_file = utility.get_setting(settings.HDF5_FILE, custom_config, 'HDF5_FILE')
+    utility.check_is_file(hdf5_file, 'The path to the hdf5 file configured by HDF5_FILE')
 
-    utility.validate_file(hdf5_file, 'HDF5_FILE')
+    #utility.validate_file(hdf5_file, 'HDF5_FILE')
     with h5py.File(hdf5_file, "a") as hdf5_db:
         run(hdf5_db, custom_config)
 
+    utility.log_and_print(logger, 'The post processing results are saved in the hdf5 file '
+                          + utility.get_abs(hdf5_file))
+
+    utility.log_exit(logging.getLogger(__name__), signature, [None])
+
 if __name__ == '__main__':
-    postprocess({})
+    utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
+    try:
+        postprocess({})
+        print('Post processing successfully completed.' + '\n')
+    except Exception as e:
+        print('There was an error when running the application. Check the log file for more details' + '\n')
+        # exc_info=True means the stack trace will be printed automatically
+        logging.getLogger(__name__).error('Program halted due to a fatal error whose detail is as follow: ',
+                                          exc_info=True)

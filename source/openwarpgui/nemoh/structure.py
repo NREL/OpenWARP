@@ -24,13 +24,16 @@ Changes in version 1.6 (Irregular Frequencies Assembly)
        Added parameters to remove irregular frequencies or not: H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES
        and another controlling if a panel is in the body domain or interior free surface domain:
        H5_SOLVER_IS_INTERIOR_DOMAIN.
+
+Changes in version 1.7 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 
 import numpy as np
 
-__author__ = "yedtoss, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014-2015 TopCoder Inc. All rights reserved."
-__version__ = "1.6"
+__author__ = "yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.7"
 
 
 #
@@ -790,28 +793,28 @@ Line 32, 3rd number of previous nemoh.cal with only 1 body
 """
 
 H5_FREE_SURFACE_POINTS_X_ATTR = {
-    "description": np.string_("Free surface elevation, Number of points in x direction (0 for no calcutions)")
+    "description": np.string_("The free surface elevation, Number of points in x direction (0 for no calcutions)")
 }
 """
 Free surface elevation, Number of points in x direction (0 for no calcutions)
 Line 33, 1st number of previous nemoh.cal with only 1 body
 """
 H5_FREE_SURFACE_POINTS_Y_ATTR = {
-    "description": np.string_("Free surface elevation, Number of points in y direction (0 for no calcutions)")
+    "description": np.string_("The free surface elevation, Number of points in y direction (0 for no calcutions)")
 }
 """
 Free surface elevation, Number of points in y direction (0 for no calcutions)
 Line 33, 2nd number of previous nemoh.cal with only 1 body
 """
 H5_FREE_SURFACE_DIMENSION_X_ATTR = {
-    "description": np.string_("Free surface elevation, dimensions of domain in x direction")
+    "description": np.string_("The free surface elevation, dimensions of domain in x direction")
 }
 """
 Free surface elevation, dimensions of domain in x direction
 Line 33, 3rd number of previous nemoh.cal with only 1 body
 """
 H5_FREE_SURFACE_DIMENSION_Y_ATTR = {
-    "description": np.string_("Free surface elevation, dimensions of domain in y direction")
+    "description": np.string_("The free surface elevation, dimensions of domain in y direction")
 }
 """
 Free surface elevation, dimensions of domain in y direction
