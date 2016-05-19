@@ -28,6 +28,13 @@ Changes in version 1.6 (Irregular Frequencies Assembly)
 
 Changes in version 1.7 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.8 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Corrected the fact that we were computing the normal velocities beta
+    using the wrong shape.
+
+    2. Changed the way we do logging from this module when it is run
+    as a child process.
 """
 
 import utility
@@ -49,7 +56,7 @@ import logging
 
 __author__ = "yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.7"
+__version__ = "1.8"
 
 
 def read_mesh(hdf5_data, custom_config):
@@ -268,6 +275,7 @@ def write_mesh_l12(mesh, hdf5_data):
     dset = utility.require_dataset(hdf5_data, structure.H5_L12_COUNT, (2, ), dtype='i')
     utility.set_hdf5_attributes(dset, structure.H5_L12_COUNT_ATTR)
     dset[0] = 2
+    dset[1] = int(mesh.i_sym)
 
     dset = utility.require_dataset(hdf5_data, structure.H5_L12_X, mesh.x.shape, dtype='f')
     utility.set_hdf5_attributes(dset, structure.H5_L12_X_ATTR)
@@ -893,8 +901,10 @@ def run(hdf5_data, custom_config):
     dset[:] = bc_omega
     
 
-    bc_switch_type = -np.ones(n_problems, dtype='f')
-    bc_switch_type[0:bc_switch_type.shape[0]:n_beta + n_radiation] = beta
+    bc_switch_type = -np.ones(n_problems, dtype='f') # Set the whole array to -1
+    # Set the first n_beta values to beta, skip the next n_radiation and so on until the end of the array
+    for i in xrange(0, n_problems, n_beta + n_radiation):
+        bc_switch_type[i:i + n_beta] = beta
     dset = utility.require_dataset(hdf5_data, structure.H5_NORMAL_VELOCITY_BETA, bc_switch_type.shape, dtype='f')
     utility.set_hdf5_attributes(dset, structure.H5_NORMAL_VELOCITY_BETA_ATTR)
     dset[:] = bc_switch_type
@@ -1231,6 +1241,11 @@ def preprocess(custom_config):
     utility.log_exit(logging.getLogger(__name__), signature, [None])
 
 
+def run_as_process(custom_config, queue):
+    utility.setup_subprocess_logging(queue, logging.getLogger())
+    return preprocess(custom_config)
+
+
 if __name__ == '__main__':
     utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
 
@@ -1242,5 +1257,3 @@ if __name__ == '__main__':
         print('There was an error when running the application. Check the log file for more details \n')
         logging.getLogger(__name__).error('Program halted due to a fatal error whose detail is as follow: ',
                                           exc_info=True)
-
-

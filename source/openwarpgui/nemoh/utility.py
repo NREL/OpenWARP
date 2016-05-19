@@ -13,6 +13,12 @@ Changes in version 1.2 (Irregular Frequencies Assembly)
 
 Changes in version 1.3 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.4 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Removed the class handling the logic to capture the output from a child
+       process 
+    (taken from http://code.activestate.com/recipes/577564-context-manager-for-low-level-redirection-of-stdou/).
+     Using now the capturer module
 """
 import numpy as np
 import sys
@@ -26,11 +32,13 @@ from collections import namedtuple
 import json
 import logging.config
 import h5py
+from logutils.queue import QueueHandler
+import logging
 
 
-__author__ = "yedtoss"
+__author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.3"
+__version__ = "1.4"
 
 
 EPS = 1e-7
@@ -1199,80 +1207,6 @@ def read_environment(hdf5_data):
     log_exit(logger, signature, [str(environment)])
     return environment
 
-# From http://code.activestate.com/recipes/577564-context-manager-for-low-level-redirection-of-stdou/
-class Silence:
-    """
-    Context manager which uses low-level file descriptors to suppress
-    output to stdout/stderr, optionally redirecting to the named file(s).
-
-    Example usage
-     with Silence(stderr='output.txt', mode='a'):
-    ...     # appending to existing file
-    ...     print >> sys.stderr, "Hello from stderr"
-    ...     print "Stdout redirected to os.devnull"
-    === contents of 'output.txt' ===
-
-
-    """
-    def __init__(self, stdout=os.devnull, stderr=os.devnull, mode='w'):
-        """
-        Initialize
-        Args:
-            self: The class itself
-            stdout: the descriptor or file name where to redirect stdout
-            stdout: the descriptor or file name where to redirect stdout
-            mode: the output descriptor or file mode
-        """
-        self.outfiles = stdout, stderr
-        self.combine = (stdout == stderr)
-        self.mode = mode
-
-    def __enter__(self):
-        """
-        Enter the context
-        Args:
-            self: The class itself
-        """
-        import sys
-        self.sys = sys
-        # save previous stdout/stderr
-        self.saved_streams = saved_streams = sys.__stdout__, sys.__stderr__
-        self.fds = fds = [s.fileno() for s in saved_streams]
-        self.saved_fds = map(os.dup, fds)
-        # flush any pending output
-        for s in saved_streams: s.flush()
-
-        # open surrogate files
-        if self.combine:
-            null_streams = [open(self.outfiles[0], self.mode, 0)] * 2
-            if self.outfiles[0] != os.devnull:
-                # disable buffering so output is merged immediately
-                sys.stdout, sys.stderr = map(os.fdopen, fds, ['w']*2, [0]*2)
-        else: null_streams = [open(f, self.mode, 0) for f in self.outfiles]
-        self.null_fds = null_fds = [s.fileno() for s in null_streams]
-        self.null_streams = null_streams
-
-        # overwrite file objects and low-level file descriptors
-        map(os.dup2, null_fds, fds)
-
-    def __exit__(self, *args):
-        """
-        Exit the context
-        Args:
-            self: The class itself
-            args: other arguments
-        """
-        sys = self.sys
-        # flush any pending output
-        for s in self.saved_streams: s.flush()
-        # restore original streams and file descriptors
-        map(os.dup2, self.saved_fds, self.fds)
-        sys.stdout, sys.stderr = self.saved_streams
-        # clean up
-        for s in self.null_streams: s.close()
-        for fd in self.saved_fds: os.close(fd)
-        return False
-
 
 def touch(fname, times=None):
     """
@@ -1283,3 +1217,17 @@ def touch(fname, times=None):
     """
     with open(fname, 'a'):
         os.utime(fname, times)
+
+def setup_subprocess_logging(queue, logger):
+    """
+    This function setup a sub process to log into a queue listened
+    by the calling process
+    :param queue: the queue to log into
+    :param logger: the logger to set up
+    """
+    # Let's setup a queue handler for the log
+    h = QueueHandler(queue) # Just the one handler needed
+    logger.handlers = []
+    logger.addHandler(h)
+    logger.setLevel(logging.DEBUG) # Accepting all logs here, parent process will filter them out
+    logging.captureWarnings(capture=True)

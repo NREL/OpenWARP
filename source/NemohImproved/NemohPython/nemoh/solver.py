@@ -36,6 +36,10 @@ Changes in version 1.7 (Irregular Frequencies Assembly)
 
 Changes in version 1.8 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.9 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Changed the way we do logging from this module when it is run
+    as a child process. Using the capturer module now.
 """
 
 import solver_fortran
@@ -47,17 +51,17 @@ import numpy as np
 import sys
 import h5py
 import logging
-from utility import Silence
 import cStringIO
 from contextlib import contextmanager
 import contextlib
 import os
 import StringIO
 import tempfile
+import json
 
 __author__ = "yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.8"
+__version__ = "1.9"
 
 
 def init_data():
@@ -430,20 +434,10 @@ def run(hdf5_data):
                     'enabled')
 
 
-    with Silence(stdout='test1', stderr='test1', mode='w'):
-        solver_fortran.run_solver(data)
-
-    lines = []
-    with open('test1') as f:
-        lines = f.read().splitlines()
-
-    output = ""
-    for line in lines:
-        output += str(line) + "\n"
+    #with CaptureOutput() as capturer:
+    solver_fortran.run_solver(data)
     write_result(hdf5_data, data)
-
-    utility.log_exit(logger, signature, [output])
-    return output
+    
 
 
 def solve(custom_config):
@@ -493,12 +487,23 @@ def solve(custom_config):
 
         return run(hdf5_db)
 
+
+def run_as_process(custom_config, queue):
+    utility.setup_subprocess_logging(queue, logging.getLogger())
+    return solve(custom_config)
+
 if __name__ == '__main__':
-    utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
+    custom_config = {}
+    # Allow custom configuration to be passed from command line
+    if len(sys.argv) > 1:
+        custom_config = json.loads(sys.argv[1])
+
+    # Allow logging setup to be disabled from command line
+    if len(sys.argv) < 3:
+        utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
     try:
         solve({})
     except Exception as e:
         # exc_info=True means the stack trace will be printed automatically
         logging.getLogger(__name__).error('Program halted due to a fatal error whose detail is as follow: ',
                                           exc_info=True)
-

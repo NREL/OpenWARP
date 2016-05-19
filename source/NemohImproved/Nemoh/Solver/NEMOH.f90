@@ -70,8 +70,11 @@
 ! Changes in version 1.9 (OpenWarp - Add Logging Functionality version 1.0)
 !       Added support for logging.
 !
-!   @author yedtoss
-!   @version 1.9
+! Changes in version 2.0 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG)
+!       Fixed the fact that the connectivity matrix was left unitialized.
+!
+!   @author yedtoss, TCSASSEMBLER
+!   @version 2.0
 #include "logging.h"
 MODULE NEMOH
 
@@ -242,6 +245,12 @@ MODULE NEMOH
         stat_xg = rad_case(6*I, 6)
         stat_nface = count(mesh_cPanel == I)
         stat_np = 4*stat_nface
+
+        ! Solve mesh reallocation issues in case of more than 1 body
+        IF (I > 1) THEN
+            DEALLOCATE(stat_x, stat_y, stat_z, stat_p)
+        END IF
+
         ALLOCATE(stat_x(stat_np), stat_y(stat_np), stat_z(stat_np), stat_p(stat_nface, 4))
 
         stat_tmp1 =   0
@@ -259,8 +268,8 @@ MODULE NEMOH
                 END DO
                 stat_p(stat_tmp1, 1) = stat_tmp2
                 stat_p(stat_tmp1, 2) = stat_tmp2 + 1
-                stat_p(stat_tmp1, 1) = stat_tmp2 + 2
-                stat_p(stat_tmp1, 2) = stat_tmp2 + 3
+                stat_p(stat_tmp1, 3) = stat_tmp2 + 2  ! Setting the 3rd and 4th dimension of the matrix p
+                stat_p(stat_tmp1, 4) = stat_tmp2 + 3
                 stat_tmp2 = stat_tmp2 + 4
             END IF
 

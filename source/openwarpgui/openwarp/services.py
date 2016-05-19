@@ -11,10 +11,17 @@ Updated since version 1.2: Merge Code and Update GUI
 
 Updated since version 1.3: OpenWarp - Add Logging Functionality
     1. Added support for logging
+
+Changes in version 1.4 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Changed the way we capture the output of the child process started.
+    This is solving the fact that output from child process get lost sometimes.
+
+    2. During the simulation, we don't run the solver if they was an error in the
+    preprocessing step.
 """
 __author__ = "caoweiquan322, yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.3"
+__version__ = "1.4"
 
 import collections
 import uuid
@@ -31,10 +38,10 @@ from nemoh import preprocessor
 from nemoh import postprocessor
 from nemoh import solver
 import warnings
-from nemoh.utility import Silence
-
+from capturer import CaptureOutput
 import fnmatch
 import h5py
+import json
 
 # This class represents parameters used in the meshing process.
 # This class is a subclass of "tuple", and is created using collections.namedtuple factory function.
@@ -232,7 +239,7 @@ def generate_mesh(meshing_dir, params):
         helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when generating mesh. Caused by:\n' + unicode(str(e)))
 
-def simulate(simulation_dir, params):
+def simulate(simulation_dir, params, queue):
     '''
     Run simulation.
 
@@ -332,27 +339,37 @@ def simulate(simulation_dir, params):
         }
 
         logger.debug('Start preProcessor function.')
-        run_thread(preprocessor.preprocess, (custom_config,), simulation_log_path)
+
+        ret = run_thread(preprocessor.run_as_process, (custom_config, queue), simulation_log_path)
+        output = ret["log"]
+        if ret["exitcode"] != 0:
+            logger.error('An error happened when running the preprocessor. The exit code is ' + str(ret["exitcode"]))
+
+        else:
+            logger.debug('Preprocessor successfully run')
 
 
-        logger.debug('End preProcessor function.')
-        logger.debug('Start solver function.')
-        output = run_thread(solver.solve, (custom_config,), None)
+            logger.debug('End preProcessor function.')
+            logger.debug('Start solver function.')
 
+            ret = run_thread(solver.run_as_process, (custom_config, queue), simulation_log_path)
 
+            output += ret["log"]
 
-        with open(simulation_log_path, 'a') as log_file:
-            log_file.write(output)
-        logger.debug('End solver function.')
-        with open(simulation_log_path, 'r') as log_file:
-            ret = log_file.read().splitlines()
-            helper.log_exit(logger, signature, [ret])
-            return ret
+            if ret["exitcode"] != 0:
+                logger.error('An error happened when running the solver. The exit code is ' + str(ret["exitcode"]))
+
+            else:
+                logger.debug('Solver successfully run')     
+                logger.debug('End solver function.')
+
+        helper.log_exit(logger, signature, output)
+        return output
     except Exception as e:
         helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when doing simulation. Caused by:\n' + unicode(str(e)))
 
-def postprocess(simulation_dir, params):
+def postprocess(simulation_dir, params, queue):
     '''
     Run post-processing.
 
@@ -416,13 +433,17 @@ def postprocess(simulation_dir, params):
             'REMOVE_IRREGULAR_FREQUENCIES' : False
         }
         logger.debug('Start postProcessor function.')
-        run_thread(postprocessor.postprocess, (custom_config,), postprocessing_log_path)
-        logger.debug('End postProcessor in subprocess.')
+        ret = run_thread(postprocessor.run_as_process, (custom_config, queue), postprocessing_log_path)
 
-        with open(postprocessing_log_path, 'r') as log_file:
-            ret = log_file.read().splitlines()
-            helper.log_exit(logger, signature, [ret])
-            return ret
+        if ret["exitcode"] != 0:
+            logger.error('An error happened when running the postprocessor. The exit code is ' + str(ret["exitcode"]))
+
+        else:
+            logger.debug('postProcessor successfully run')
+            logger.debug('End postProcessor in subprocess.')
+
+        helper.log_exit(logger, signature, ret["log"])
+        return ret["log"]
     except Exception as e:
         helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when running postprocess. Caused by:\n' + unicode(str(e)))
@@ -507,7 +528,7 @@ def wrapper_io(func, fd, args, return_dict):
             return_dict["output"] = func(*args)
 
 
-def run_thread(func, args, fd):
+def run_thread(func, args, log_path):
     """
     Run a python function in a thread and wait for it to complete.
     Redirect its output to fd
@@ -517,14 +538,18 @@ def run_thread(func, args, fd):
         fd: a file descriptor
     """
 
-    manager = Manager()
-    return_dict = manager.dict()
+    with CaptureOutput() as capturer:
 
-    p = Process(target=wrapper_io, args=(func, fd, args, return_dict))
-    p.start()
-    p.join()
+        p = Process(target=func, args=args)
+        p.daemon = True
+        p.start()
+        p.join()
+        output = capturer.get_lines()
+        if log_path is not None:
+            with open(log_path, 'a') as log_file:
+                log_file.write(capturer.get_text())
 
-    return return_dict["output"]
+    return {"exitcode": p.exitcode, "log": output}
 
 
 

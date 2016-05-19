@@ -59,8 +59,7 @@ if (UNIX)
 		#set(CMAKE_Fortran_FLAGS "-stand -openmp -mkl -fast")
 		
 	elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU")
-		set(CMAKE_Fortran_FLAGS "-W -Wall -std=f2008 -fopenmp   -fmax-errors=0  -O3 -w -g ")
-		set(CMAKE_Fortran_FLAGS_DEBUG "-W -Wall -std=f2008 -fopenmp   -fmax-errors=0  -O3 -w -g   ")
+		set(CMAKE_Fortran_FLAGS_DEBUG "-Wall  -std=f2008 -fopenmp   -O0  -g  -Wextra -fimplicit-none -fbounds-check -fbacktrace ")		
 		set(CMAKE_Fortran_FLAGS_RELEASE "-W -Wall -std=f2008 -fopenmp   -fmax-errors=0 -O3 -w  ")
 	
 	else()

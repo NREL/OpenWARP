@@ -20,6 +20,11 @@ Changes in version 1.4 (Irregular Frequencies Assembly)
 
 Changes in version 1.5 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.6 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Releasing the python GIL before running the fortran subroutine.
+       Done to avoid polluting python in case there is segmentation fault from
+       the fortran subroutine
 """
 
 from numpy import ndarray
@@ -32,7 +37,7 @@ from ctypes import c_char_p
 
 __author__ = "yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.5"
+__version__ = "1.6"
 
 
 cdef extern:
@@ -52,7 +57,7 @@ cdef extern:
     int* n_beta, int* n_radiation, float** rad_case, float* beta, int* num_panel_higher_order, int* b_spline_order, 
     int* is_thin_body, int*use_dipoles_implementation, int* compute_yaw_moment, int* compute_drift_forces,
     float** center_buoyancy, float* displacement, float* waterplane_area, float***stifness, 
-    int* is_interior_domain, int*remove_irregular_frequencies, int*log_level)
+    int* is_interior_domain, int*remove_irregular_frequencies, int*log_level) nogil
 
 
 
@@ -133,7 +138,8 @@ def run_solver(data):
     
     
 
-    compute_nemoh(&rho, &g, &depth, &xeff, &yeff, &zeff,
+    with nogil:
+        compute_nemoh(&rho, &g, &depth, &xeff, &yeff, &zeff,
         &indiq_solver, &max_iterations, &restart_param, &tol_gmres,
         <int**>mesh_p.data, <float**>mesh_x.data, <int*>mesh_cpanel.data, <float**>mesh_xm.data, <float**>mesh_n.data, <float*>mesh_a.data, &i_sym, &n_points,
         &n_panels, &n_bodies, &n_problems, &nbc_panels,
@@ -148,4 +154,3 @@ def run_solver(data):
         <float***>stifness.data, <int*>is_interior_domain.data, &remove_irregular_frequencies, &log_level)
 
     return 0
-

@@ -8,43 +8,43 @@
 \contentsline {section}{\numberline {5}Building from scratch}{5}{section.5}
 \contentsline {subsection}{\numberline {5.1}WINDOWS DEPLOYMENT FROM SCRATCH}{5}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}OS X DEPLOYMENT FROM SCRATCH}{7}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Linux deployment from scratch}{16}{subsection.5.3}
-\contentsline {section}{\numberline {6}Installing the pre built package}{16}{section.6}
-\contentsline {subsection}{\numberline {6.1}OS X}{16}{subsection.6.1}
+\contentsline {subsection}{\numberline {5.3}Linux deployment from scratch}{17}{subsection.5.3}
+\contentsline {section}{\numberline {6}Installing the pre built package}{17}{section.6}
+\contentsline {subsection}{\numberline {6.1}OS X}{17}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Windows}{17}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Linux}{17}{subsection.6.3}
-\contentsline {section}{\numberline {7}Deployment from existing package }{17}{section.7}
-\contentsline {subsection}{\numberline {7.1}Windows}{17}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{17}{subsubsection.7.1.1}
+\contentsline {section}{\numberline {7}Deployment from existing package }{18}{section.7}
+\contentsline {subsection}{\numberline {7.1}Windows}{18}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{18}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Repackaging the installer}{18}{subsubsection.7.1.2}
-\contentsline {subsection}{\numberline {7.2}OS X}{18}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{18}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{18}{subsubsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2}OS X}{19}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{19}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{19}{subsubsection.7.2.2}
 \contentsline {subsection}{\numberline {7.3}Linux}{19}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Recompiling NemohFortran and NemohPython}{19}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{19}{subsubsection.7.3.2}
-\contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{19}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{20}{subsubsection.7.3.2}
+\contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{20}{subsection.7.4}
 \contentsline {section}{\numberline {8}Configuration}{20}{section.8}
 \contentsline {subsection}{\numberline {8.1}Meshing parameters}{20}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simulation parameters}{20}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Postprocessing parameters}{22}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.2}Simulation parameters}{21}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Postprocessing parameters}{23}{subsection.8.3}
 \contentsline {subsection}{\numberline {8.4}Other and Logging parameters}{23}{subsection.8.4}
 \contentsline {section}{\numberline {9}Usage}{23}{section.9}
 \contentsline {subsection}{\numberline {9.1}Start the application}{23}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}Start meshing}{25}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Execute meshing}{26}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.3}Execute meshing}{27}{subsection.9.3}
 \contentsline {subsection}{\numberline {9.4}View the meshing results}{27}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Start the simulation}{27}{subsection.9.5}
-\contentsline {subsection}{\numberline {9.6} Execute the simulation}{29}{subsection.9.6}
-\contentsline {subsection}{\numberline {9.7}View the simulation results}{30}{subsection.9.7}
-\contentsline {subsection}{\numberline {9.8}Postprocessing}{32}{subsection.9.8}
-\contentsline {subsection}{\numberline {9.9}Generate TEC outputs}{33}{subsection.9.9}
-\contentsline {subsection}{\numberline {9.10}Postprocessing results}{33}{subsection.9.10}
-\contentsline {subsection}{\numberline {9.11}Visualize the generated TEC files}{34}{subsection.9.11}
-\contentsline {subsection}{\numberline {9.12}Getting help}{34}{subsection.9.12}
-\contentsline {subsection}{\numberline {9.13}Logging Support}{35}{subsection.9.13}
-\contentsline {section}{\numberline {10}Practical Example}{37}{section.10}
-\contentsline {subsection}{\numberline {10.1}Mesh Generation}{37}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Run the simulation}{39}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Generate TEC files and run postprocessing}{42}{subsection.10.3}
-\contentsline {subsection}{\numberline {10.4}Visualize the generated tec files}{44}{subsection.10.4}
+\contentsline {subsection}{\numberline {9.5}Start the simulation}{28}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6} Execute the simulation}{30}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.7}View the simulation results}{31}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.8}Postprocessing}{33}{subsection.9.8}
+\contentsline {subsection}{\numberline {9.9}Generate TEC outputs}{35}{subsection.9.9}
+\contentsline {subsection}{\numberline {9.10}Postprocessing results}{36}{subsection.9.10}
+\contentsline {subsection}{\numberline {9.11}Visualize the generated TEC files}{36}{subsection.9.11}
+\contentsline {subsection}{\numberline {9.12}Getting help}{37}{subsection.9.12}
+\contentsline {subsection}{\numberline {9.13}Logging Support}{37}{subsection.9.13}
+\contentsline {section}{\numberline {10}Practical Example}{40}{section.10}
+\contentsline {subsection}{\numberline {10.1}Mesh Generation}{40}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Run the simulation}{42}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Generate TEC files and run postprocessing}{46}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Visualize the generated tec files}{47}{subsection.10.4}

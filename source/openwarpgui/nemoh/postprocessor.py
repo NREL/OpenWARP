@@ -37,6 +37,11 @@ Changes in version 1.5 (Irregular Frequencies Assembly)
 
 Changes in version 1.6 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.7 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    1. Changed the way we do logging from this module when it is run
+    as a child process.
+
 """
 
 import utility
@@ -49,7 +54,6 @@ import os
 from utility import cih
 from utility import sih
 import logging
-
 import preprocessor
 
 
@@ -58,7 +62,7 @@ from models import TIRF
 
 __author__ = "yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.6"
+__version__ = "1.7"
 
 
 def get_irf(hdf5_data, result):
@@ -689,6 +693,11 @@ def postprocess(custom_config):
                           + utility.get_abs(hdf5_file))
 
     utility.log_exit(logging.getLogger(__name__), signature, [None])
+
+
+def run_as_process(custom_config, queue):
+    utility.setup_subprocess_logging(queue, logging.getLogger())
+    return postprocess(custom_config)
 
 if __name__ == '__main__':
     utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)

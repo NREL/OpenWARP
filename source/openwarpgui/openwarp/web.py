@@ -8,11 +8,17 @@ Updated since version 1.1:
 
 Updated since version 1.2 (OpenWarp - Add Logging Functionality):
     Added support for logging
+
+Updated since version 1.3 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
+    Allow logging handling using a listener/client based model.
+    The listener is started here and will listen to a Queue for new logging from
+    child process. This is done to avoid undefined behaviour due to concurrent
+    writing to log file from python standard logging.
 """
 
 __author__ = "caoweiquan322, yedtoss"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.2"
+__version__ = "1.3"
 
 import cherrypy
 from openwarp import services
@@ -22,6 +28,8 @@ import threading
 import json
 import logging
 import helper
+from logutils.queue import QueueListener
+import multiprocessing
 
 class WebController:
     '''
@@ -30,6 +38,19 @@ class WebController:
 
     def __init__(self):
         self.logger = logging.getLogger(__name__ + '.WebController')
+        cherrypy.engine.subscribe('start', self.start)
+        cherrypy.engine.subscribe('stop', self.stop)
+        self.queue = None
+        self.ql = None
+
+    def start(self):
+        self.queue = multiprocessing.Queue(-1)
+        # Solve this problem? http://stackoverflow.com/questions/25585518/python-logging-logutils-with-queuehandler-and-queuelistener
+        self.ql = QueueListener(self.queue, *logging.getLogger().handlers)
+        self.ql.start()
+
+    def stop(self):
+        self.ql.stop()
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
@@ -132,7 +153,7 @@ class WebController:
             cherrypy.session['simulation_done'] = False
             # Call simulate service
             ret = {
-                'log' : services.simulate(simulation_dir, self.construct_simulation_parameters(json_str))
+                'log' : services.simulate(simulation_dir, self.construct_simulation_parameters(json_str), self.queue)
             }
             cherrypy.session['simulation_done'] = True
             # Set postprocess flag to False if a new simulation has been done successfully.
@@ -230,7 +251,7 @@ class WebController:
                 # Call post-processing service
                 ret = {
                     'log' : services.postprocess(cherrypy.session['simulation_dir'],
-                                                 self.construct_postprocess_parameters(json_str))
+                                                 self.construct_postprocess_parameters(json_str), self.queue)
                 }
                 cherrypy.session['postprocess_done'] = True
                 helper.log_exit(self.logger, signature, [ret])
@@ -369,4 +390,3 @@ class WebController:
         if not succeed:
             raise Exception('Zero line 2 not found.')
         return zero_line1 - 1, zero_line2 - 1
-            

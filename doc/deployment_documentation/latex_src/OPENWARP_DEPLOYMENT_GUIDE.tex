@@ -136,11 +136,13 @@ To deploy the application on Windows, perform the following steps:
 	
 	\item Add \MINGWROOT{}\textbackslash{}bin and \MINGWROOT{}\textbackslash{}lib to the beginning of your Windows PATH by opening the System control panel and editing Properties $\rightarrow$ Advanced System Settings  $\rightarrow$ Advanced tab  $\rightarrow$ Environment Variables  $\rightarrow$ Path as shown in this screenshot:
 	
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[scale=0.75]{img/1}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
+	\vspace{\belowdisplayskip}
 	
 	\item Copy \ROOT{}/src/bundled/simulation/libs/libnemoh.dll,  \ROOT{}/src/bundled/simulation/libs/libnemoh.dll.a, \\
 	 \ROOT{}/src/bundled/simulation/libs/libblas.dll, and
@@ -154,29 +156,34 @@ To deploy the application on Windows, perform the following steps:
 	\item Once the preceding steps are done, start PowerShell and install the CherryPy dependencies by executing this command in the \ROOT{}/src/ directory:
 {\color{blue}pip install -r requirements.txt}
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.75]{img/2}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
  \item Start the server by executing this in the src/ directory:
  \textcolor{blue}{python main.py}
  
+ \vspace{\abovedisplayskip}
  \begin{minipage}{\linewidth}
  	\centering
  	\includegraphics[scale=0.75]{img/3}
  	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
  \end{minipage}
- 
+ \vspace{\belowdisplayskip}
  
  \item Optionally, download the .zip version of ParaView from \url{http://www.paraview.org/download/}  and copy it to src/bundled/paraview so that src/bundled/paraview/bin exists. This is only needed for testing the visualization of the results in ParaView.
  
+ \vspace{\abovedisplayskip}
   \begin{minipage}{\linewidth}
   	\centering
   	\includegraphics[scale=0.6]{img/4}
   	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
   \end{minipage}
+  \vspace{\belowdisplayskip}
   
   \item If the provided libnemoh.dll and libnemoh.dll.a do not work, you can generate them manually by  doing the following:
   
@@ -202,87 +209,100 @@ To deploy the application in OS X, perform the following step:
 \begin{itemize}
 	\item Install brew: {ruby -e \color{blue} "\$(curl -fsSL \url{https://raw.githubusercontent.com/Homebrew/install/master/install})}".
 	
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[scale=0.75]{img/5}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
-	
+	\vspace{\belowdisplayskip}
 	
 	\item If you do not have the Xcode command-line tools, you will be prompted to install them as shown below.
 	
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[scale=0.75]{img/6}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
-	
+	\vspace{\belowdisplayskip}
 	
 	\item Install the software and make sure the installation is successful as shown below.
 	
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
 		\includegraphics[scale=0.75]{img/7}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
-	
+	\vspace{\belowdisplayskip}
 	
 	\item Press any key. It is possible that you will see an error about the active developer path:
+	
+	\vspace{\abovedisplayskip}
 		\begin{minipage}{\linewidth}
 			\centering
 			\includegraphics[scale=0.75]{img/8}
 			%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 		\end{minipage}
-		
+		\vspace{\belowdisplayskip}
 		
 		\item If you do get that error, you can correct it by specifying the version of Xcode to use:
 		{ \color{blue} sudo xcode-select --switch /Applications/Xcode.app}
 		
+		\vspace{\abovedisplayskip}
 		\begin{minipage}{\linewidth}
 			\centering
 			\includegraphics[scale=0.75]{img/9}
 			%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 		\end{minipage}
+		\vspace{\belowdisplayskip}
 		
 		\item Now run this command:
 			{ \color{blue} brew doctor}
 			
+			\vspace{\abovedisplayskip}
 			\begin{minipage}{\linewidth}
 				\centering
 				\includegraphics[scale=0.75]{img/10}
 				%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 			\end{minipage}
-			
+			\vspace{\belowdisplayskip}
 			
 			\item Ignore any warnings that may appear.
 			Install GCC and GFortran:
 				{ \color{blue} brew install gcc}
 			You can ignore warnings about multilib.
 			
+				\vspace{\abovedisplayskip}
 				\begin{minipage}{\linewidth}
 					\centering
 					\includegraphics[scale=0.75]{img/11}
 					%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 				\end{minipage}
-				
+				\vspace{\belowdisplayskip}
 				
 				\item Install CMake:
 					{ \color{blue} brew install cmake}
 					
+						\vspace{\abovedisplayskip}
 						\begin{minipage}{\linewidth}
 							\centering
 							\includegraphics[scale=0.75]{img/12}
 							%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 						\end{minipage}
-					
+					\vspace{\belowdisplayskip}
 					
 					\item 
 					Download and install Anaconda for OS X, 64-bit version with Python 2.7 and graphical installer, from \url{http://continuum.io/downloads}.  
+					
+					\vspace{\abovedisplayskip}
 						\begin{minipage}{\linewidth}
 							\centering
 							\includegraphics[scale=0.75]{img/13}
 							%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 						\end{minipage}
+					\vspace{\belowdisplayskip}
 					
 					\item Now we are going to compile Nemoh Fortran in order to generate the libraries used by the OpenWarp web application. In the following, \NEMOHFORTRAN is the directory NemohMerged/Nemoh/ within the top-level OpenWarp directory.
 					\item Create a new directory different from \NEMOHFORTRAN. Let's call this directory \FORTRANBUILD.
@@ -311,12 +331,13 @@ To deploy the application in OS X, perform the following step:
 					make
 					This causes libnemoh.dylib to be created.
 					
+						\vspace{\abovedisplayskip}
 						\begin{minipage}{\linewidth}
 							\centering
 							\includegraphics[scale=0.75]{img/14}
 							%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 						\end{minipage}
-					
+					\vspace{\belowdisplayskip}
 					
 					
 					\item  Copy libnemoh.dylib from \FORTRANBUILD to the lib/ directory inside the Anaconda installation root:
@@ -326,12 +347,14 @@ To deploy the application in OS X, perform the following step:
 					
 					\item Download the binary installer of ParaView version $>=4.1$ for OS X from \url{http://www.paraview.org/download/}  and install it.
 					Next, copy the paraview.app/ folder from the ParaView directory to \ROOT/src/bundled/ so that we can invoke ParaView to do visualization.  (You may need to use sudo if you are performing the copy operation on the command line.) The files under \ROOT/src/bundled/paraview.app/ should be organized as below:
+					
+					\vspace{\abovedisplayskip}
 					\begin{minipage}{\linewidth}
 						\centering
 						\includegraphics[scale=0.75]{img/15}
 						%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 					\end{minipage}
-					
+					\vspace{\belowdisplayskip}
 					
 					
 					\item We have to start the OpenWarp server before using the web application. To start the server:
@@ -347,11 +370,13 @@ To deploy the application in OS X, perform the following step:
 						{\color{blue}(test -e /Users/bob/anaconda/lib/libnemoh.dylib \&\& echo 'Success' ) \texttt{||} echo 'Error: Nemoh library not found'}.
 						(As before, replace "bob" with your own user name.)
 						
+						\vspace{\abovedisplayskip}
 						\begin{minipage}{\linewidth}
 							\centering
 							\includegraphics[scale=0.75]{img/16}
 							%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 						\end{minipage}
+						\vspace{\belowdisplayskip}
 						
 						If you get an error message here, it means you did not correctly set up the path to the Nemoh library.
 						
@@ -364,24 +389,26 @@ To deploy the application in OS X, perform the following step:
 						
 							{\color{blue}python update{\_}dylib.py}
 							
+								\vspace{\abovedisplayskip}
 								\begin{minipage}{\linewidth}
 									\centering
 									\includegraphics[scale=0.75]{img/17}
 									%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 								\end{minipage}
-							
+							\vspace{\belowdisplayskip}
 							
 						\item
 						Install the remaining Python dependencies by going to \ROOT/src/ and running:
 						{\color{blue}pip install -r requirements.txt}
 						This step is required before running the OpenWarp server for the first time. You can skip it when running the server on subsequent occasions.
 						
+							\vspace{\abovedisplayskip}
 							\begin{minipage}{\linewidth}
 								\centering
 								\includegraphics[scale=0.75]{img/18}
 								%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 							\end{minipage}
-							
+							\vspace{\belowdisplayskip}
 							
 							
 							\item
@@ -389,12 +416,13 @@ To deploy the application in OS X, perform the following step:
 								{\color{blue} sudo python main.py}
 							If you get an error, make sure that port 80 is not being used by another process.
 							
+						\vspace{\abovedisplayskip}
 						\begin{minipage}{\linewidth}
 							\centering
 							\includegraphics[scale=0.75]{img/19}
 							%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 						\end{minipage}
-						
+						\vspace{\belowdisplayskip}
 						
 						If you get an error message reading "library not found for -lnemoh" or "No module named solver{\_}fortran", make sure you have correctly exported the path to Nemoh in the current terminal session as explained earlier.
 						
@@ -412,7 +440,8 @@ To deploy the application in OS X, perform the following step:
 
 \subsection{Linux deployment from scratch}
 
-It is enough to run the script install.sh inside \ROOT while being connected to the Internet. Only tested on Ubuntu 14.04 64 bits.
+It is enough to run the script install.sh inside \ROOT{} while being connected to the Internet. Note that you are supposed to use that script from the pre-built package of Linux as explained in \ref{prebuilt-linux}; otherwise you should download and install Paraview yourself before running the script.
+Only tested on Ubuntu 14.04 64 bits.
 
 
 \section{Installing the pre built package}
@@ -422,8 +451,8 @@ It is enough to run the script install.sh inside \ROOT while being connected to 
 Get the OpenWarp Installer from
 \url{https://drive.google.com/folderview?id=0B56WkDEeFyNHfmRZNmcyZjNWOTFfTzZabGgxZVdsQUg3Y3d 6SXloWk8xMXo0bXhnSUVTOGM&usp=sharing}
 
-The windows one is in the Windows directory The MAC one is in the MAC directory
-The Linux one is in the Linux directory
+The windows one is in the Windows directory. The MAC one is in the MAC directory. Note that those two installers are outdated.
+The Linux one is in the Linux directory.
 \subsection{OS X}
 
 \begin{itemize}
@@ -444,7 +473,7 @@ If you get a cookie error open the url in private navigation
 
 
 \subsection{Linux}
-
+ \label{prebuilt-linux}
 \begin{itemize}
 	\item The Linux installation is a little different from other OS. You need to make sure you are connected to Internet the first time you want to install it at least.
 \item Extract the OpenWarp GUI in a folder and in a terminal run "bash installer.sh". (You can double-click to install if you extracted it to an ext4 file system). You will be asked for your sudo password. Make sure to enter it.
@@ -662,38 +691,45 @@ You will see the following.
 	You can then access the GUI using the url http://127.0.0.0.1:8386/index.html
 \end{itemize}
 
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[scale=0.6]{img/20}
+		\includegraphics[scale=0.4]{img/20}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
-	
+	\vspace{\belowdisplayskip}
 	
 	You can quit the application by clicking the orange Quit button. Quitting results in:
 	
+		\vspace{\abovedisplayskip}
 		\begin{minipage}{\linewidth}
 			\centering
-			\includegraphics[scale=0.6]{img/21}
+			\includegraphics[scale=0.5]{img/21}
 			%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 		\end{minipage}
+		\vspace{\belowdisplayskip}
 		
 		You must restart the Python server before using the application again.
 		\subsection{Start meshing}
 		Click the Meshing button:
 		
+			\vspace{\abovedisplayskip}
 			\begin{minipage}{\linewidth}
 				\centering
-				\includegraphics[scale=0.6]{img/22}
+				\includegraphics[scale=0.4]{img/22}
 				%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 			\end{minipage}
+			\vspace{\belowdisplayskip}
 			
 			This is the meshing page:
 			
+				\vspace{\abovedisplayskip}
 				\begin{minipage}{\linewidth}
 					\centering
-					\includegraphics[scale=0.6]{img/23}
+					\includegraphics[scale=0.4]{img/23}
 					%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 				\end{minipage}
+				\vspace{\belowdisplayskip}
 				
 				Select the input file by clicking Browse and selecting a file. Set the other parameters according to your needs.
 				
@@ -704,11 +740,13 @@ You will see the following.
 	\subsection{View the meshing results}
 	Once meshing is complete, you will see a popup displaying a log:
 	
+	\vspace{\abovedisplayskip}
 	\begin{minipage}{\linewidth}
 		\centering
-		\includegraphics[scale=0.6]{img/24}
+		\includegraphics[scale=0.4]{img/24}
 		%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 	\end{minipage}
+	\vspace{\belowdisplayskip}
 	
 	The meshing converts the input file to all formats recognised by the application. It salso convert the input file to a mesh containing only quadrilateral elements without any triangle.
 The output directory is \ROOT/src/user_data/meshing_TIMESTAMP_HASH where 
@@ -731,45 +769,50 @@ For each pair of files, the "quad" version contains only quadrilateral elements.
 \subsection{Start the simulation}
 Click the Simulation button:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/25}
+	\includegraphics[scale=0.4]{img/25}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 This is the resulting page:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/26}
+	\includegraphics[scale=0.4]{img/26}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/27}
+	\includegraphics[scale=0.4]{img/27}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/28}
+	\includegraphics[scale=0.4]{img/28}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{ Execute the simulation}
 Click the Execute button at the bottom right of the page.
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/29}
+	\includegraphics[scale=0.4]{img/29}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 
 
@@ -777,57 +820,58 @@ Click the Execute button at the bottom right of the page.
 \subsection{View the simulation results}
 Once the simulation has completed, you will see a popup containing the calculation log:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.6]{img/30}
+	\includegraphics[scale=0.4]{img/30}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 The output directory is \ROOT/src/user_data/simulation_TIMESTAMP_HASH where \ROOT is the top-level directory of the OpenWarp package.
 The timestamp is in the format YYYYMMDDHHMM. Navigate to the directory with the latest timestamp.
 The main result at this step is the db.hdf5 file inside that directory. You can open it with HDFView:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.6]{img/31}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 You will see that it contains three main groups: the input group, the output group containing intermediate results generated by the application, and the results group containing final results. In each group, you can see datasets with their description as shown in the figure below.
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{img/32}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Postprocessing}
 Click the Postprocessing button:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/33}
+	\includegraphics[scale=0.4]{img/33}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
 You should see the following:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/34}
+	\includegraphics[scale=0.4]{img/34}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
-
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/35}
+	\includegraphics[scale=0.4]{img/35}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
 
@@ -837,13 +881,13 @@ You should see the following:
 
 Generate the TEC file by clicking on "SAVE AS TECPLOT". Note that before generating a TEC file, you must have executed a simulation in the current session.
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/36}
+	\includegraphics[scale=0.4]{img/36}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Postprocessing results}
 Once the postprocessing is done, you can manually examine the results in the output directory \ROOT/src/user_data/simulation_TIMESTAMP_HASH where \ROOT is the top-level directory of the OpenWarp package.
@@ -865,64 +909,69 @@ The timestamp is in the format YYYYMMDDHHMM. Navigate to the directory with the 
 
 Instead of manually viewing the postprocessing output files, you can visualize them with ParaView. After generating the TEC files, click on "VISUALIZE IN PARAVIEW":
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/37}
+	\includegraphics[scale=0.4]{img/37}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 ParaView will start and you will find the resulting forces on the left side:
 
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{img/38}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Getting help}
 
 You can click on the Help icons displayed on each page:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.5]{img/39}
+	\includegraphics[scale=0.4]{img/39}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Logging Support}
 
 To configure the logging click on the CONFIGURATION screen as shown below:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{img/39-2}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
 After setting the configuration as your wish, you should click on
 "APPLY CHANGES" to make sure your changes are taken into account.
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{img/40}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 Once done, you will get a status of the change request as well as the location where the logs are saved.
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{img/41}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \section{Practical Example}
 
@@ -930,130 +979,141 @@ We are going to use the FlapSingle example available in \ROOT/test_files where \
 First, we will generate the mesh of the body. Next, we will run the simulation. Finally, we will generate the TEC files and visualize them.
 
 \subsection{Mesh Generation}
-Go to the Meshing page, click on Browse, and choose \ROOT/test_files/mesh/FlapSingle.stl where \ROOT is the top-level directory of the OpenWarp package.
+Go to the Meshing page, click on Browse, and choose \ROOT/test_files/mesh/FlapSingle.stl where \ROOT is the top-level directory of the OpenWarp package and Execute the meshing:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/42}
+	\includegraphics[scale=0.5]{img/42}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
-Execute the meshing:
 
 
+%\begin{minipage}{\linewidth}
+%	\centering
+%	\includegraphics[scale=0.7]{img/43}
+%	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
+%\end{minipage}
+
+You will see the results shown like this :
+
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/43}
+	\includegraphics[scale=0.5]{img/45}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
-You will see:
-
-\begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.7]{img/44}
-	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
-\end{minipage}
+\vspace{\belowdisplayskip}
 
 
-The results are shown like this:
 
-\begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.7]{img/45}
-	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
-\end{minipage}
+%\begin{minipage}{\linewidth}
+%	\centering
+%	\includegraphics[scale=0.7]{img/45}
+%	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
+%\end{minipage}
 
 
 Click the button in the corner of the popup to close it:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/46}
+	\includegraphics[scale=0.5]{img/46}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Run the simulation}
 
 Go to the simulation page and click on Browse to load the generated mesh file.
-The generated mesh file is inside the \ROOT/src/user_data/meshing_TIMESTAMP_HASH where
-\ROOT is the top-level directory of the OpenWarp package. Go to the directory with the latest timestamp.
+The generated mesh file is inside the \$HOME/OpenWarpFiles/user{\_}data/meshing_TIMESTAMP_HASH where
+\$HOME is your home directory. Go to the directory with the latest timestamp.
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/47}
+	\includegraphics[scale=0.5]{img/47}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
-Look for a .dat file. It is named test09-meshed-quad.dat in our case.
+Look for a .dat file. It is named flap-meshed-quad.dat in our case.
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/48}
+	\includegraphics[scale=0.5]{img/48}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
-Run the simulation. You should see this:
+Run the simulation by clicking on "EXECUTE". You should see this:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/49}
+	\includegraphics[scale=0.5]{img/49}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
-When the simulation is done, the results are summarized in a popup:
+When the simulation is done (You should be patient as it will take a few minutes), the results are summarized in a popup:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/50}
+	\includegraphics[scale=0.5]{img/50}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 Close the popup:
 
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/51}
+	\includegraphics[scale=0.5]{img/51}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
+Inside the directory \$HOME/OpenWarpFiles/user{\_}data/simulation{\_}TIMESTAMP{\_}HASH, you will see the generated simulation results where \$HOME is the home directory of the current user.
+Find db.hdf5 inside the directory with the latest timestamp; it contains the results.
 
-The generated output directory is \ROOT/src/user_data/simulation_TIMESTAMP_HASH where \ROOT is the top-level directory of the OpenWarp package.
-Find db.hdf5 inside the directory with the latest timestamp.
-
-
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/52}
+	\includegraphics[scale=0.5]{img/52}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 \subsection{Generate TEC files and run postprocessing}
 
 Open the postprocessing page.
 Leave the default values. Generate the TEC files by clicking "Save as TECPLOT". When postprocessing is done, you get a popup:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/53}
+	\includegraphics[scale=0.5]{img/53}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
 Close it.
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/54}
+	\includegraphics[scale=0.5]{img/54}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
+
 
 
 
@@ -1062,19 +1122,22 @@ Close it.
 Click on "VISUALIZE IN PARAVIEW".
 You will see this while ParaView opens:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
-	\includegraphics[scale=0.7]{img/55}
+	\includegraphics[scale=0.5]{img/55}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
-
+\vspace{\belowdisplayskip}
 
 Once ParaView is open, you will see the generated forces on the left:
 
+\vspace{\abovedisplayskip}
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.7]{img/56}
 	%\captionof{figure}{Transfer from R1 to R2 whenK1=1}
 \end{minipage}
+\vspace{\belowdisplayskip}
 
 \end{document}
