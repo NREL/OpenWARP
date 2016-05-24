@@ -798,7 +798,7 @@ def run(hdf5_data, custom_config):
             case.i_case = freedom_degree[i, 0]
             case.direction = np.array(freedom_degree[i, 1:4])
             case.axis = np.array(freedom_degree[i, 4:7])
-            case.i_body = c
+            case.body = c
             case.mode = i
             rad_case[j_rad + i] = case
         j_rad += m
@@ -818,7 +818,7 @@ def run(hdf5_data, custom_config):
             case.i_case = generalised_forces[i, 0]
             case.direction = np.array(generalised_forces[i, 1:4])
             case.axis = np.array(generalised_forces[i, 4:7])
-            case.i_body = c
+            case.body = c
             case.mode = i
             int_case[j_int + i] = case
 

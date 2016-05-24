@@ -650,6 +650,12 @@ def run(hdf5_data, custom_config):
                                location=structure.H5_SOLVER_REMOVE_IRREGULAR_FREQUENCIES)
     remove_irregular_frequencies = dset[0]
 
+    # Wave Elevation computation and tec generation
+    if result.n_theta < 1:
+        tec_file = None
+        logger.info('Wave elevation tecplot format generation is disabled because there is no directions (Kochin)')
+
+
     if tec_file:
         if use_higher_order != 1 and use_dipoles_implementation != 1 and remove_irregular_frequencies != 1:
             res = compute_wave_elevation(hdf5_data, environment, 0, 0, raos, result)
