@@ -42,13 +42,16 @@ Changes in version 1.7 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
     1. Changed the way we do logging from this module when it is run
     as a child process.
 
+Changes in version 1.8 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Using the newly refactored structure.
+
 """
 
 import utility
 import numpy as np
 import sys
 import h5py
-import structure
+from nemoh.structure import H5_STRUCTURE
 import settings
 import os
 from utility import cih
@@ -60,9 +63,12 @@ import preprocessor
 from models import TResult
 from models import TIRF
 
-__author__ = "yedtoss"
+__author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.7"
+__version__ = "1.8"
+
+# The HDF5 structure
+structure = H5_STRUCTURE()
 
 
 def get_irf(hdf5_data, result):

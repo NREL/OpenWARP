@@ -4,13 +4,17 @@ This module defines nemoh custom types or models.
 
 Changes in version 1.1 (OpenWarp - Add Logging Functionality)
        Added support for logging.
+
+Changes in version 1.2 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Added models for Mesh Format.
 """
 
 import numpy as np
+import os
 
-__author__ = "yedtoss"
+__author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.1"
+__version__ = "1.2"
 
 
 class TCase:
@@ -153,3 +157,32 @@ class TIRF:
     def __str__(self):
         return ('IRF with ' + str(self.n_time) + ' time steps'
                 )
+
+
+class MeshFormat:
+    """
+    This class provides some static method and member for the mesh format
+    """
+    DAT = '.dat'
+    STL = '.stl'
+    IGS = '.igs'
+    STEP = '.step'
+
+    @staticmethod
+    def is_mesh_file(filename, mesh_format):
+        """
+        Check if a given file is of the expected mesh format
+        :param filename the filename
+        :param mesh_format the mesh format
+        :return True if the file is of the expected mesh format
+        """
+        return os.path.splitext(filename)[1] == mesh_format
+
+    @staticmethod
+    def is_dat_file(filename):
+        """
+        Check if a given file is of the dat mesh format
+        :param filename the filename
+        :return True if the file is of the dat mesh format
+        """
+        return MeshFormat.is_mesh_file(filename, MeshFormat.DAT)

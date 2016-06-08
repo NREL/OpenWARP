@@ -18,10 +18,13 @@ Changes in version 1.4 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
 
     2. During the simulation, we don't run the solver if they was an error in the
     preprocessing step.
+
+Changes in version 1.5 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Added some functions to reuse them in the cli interface.
 """
-__author__ = "caoweiquan322, yedtoss"
+__author__ = "caoweiquan322, yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.4"
+__version__ = "1.5"
 
 import collections
 import uuid
@@ -29,8 +32,7 @@ from settings import *
 import os
 import time
 import subprocess
-from multiprocessing import Process, Manager
-import multiprocessing as mp
+from multiprocessing import Process
 import logging
 from openwarp import helper
 from nemoh import utility
@@ -311,7 +313,7 @@ def simulate(simulation_dir, params, queue):
         
         # Launch preProcessor and Solver
         # A prepared 'results' folder is necessary for the Nemoh software suite
-        os.mkdir(os.path.join(simulation_dir, 'results'))
+        utility.mkdir_p(os.path.join(simulation_dir, 'results'))
         simulation_log_path = os.path.join(simulation_dir, 'simulation_log.txt')
         custom_config = {
             'HDF5_FILE': hdf5_path,
@@ -592,3 +594,30 @@ def prepare_dir(prefix):
     except Exception as e:
         helper.log_exception(logger, signature, e)
         raise ServiceError('Error occurs when preparing the directory. Caused by:\n' + unicode(str(e)))
+
+def construct_postprocess_parameters(json_str):
+        # Since this is a internal method. The parameters won't be logged.
+        json_obj = json_str
+        if isinstance(json_obj, basestring):
+            json_obj = json.JSONDecoder().decode(json_str)
+        para = PostprocessingParameters(**json_obj)
+        return para
+
+def construct_simulation_parameters(json_str):
+        '''
+        Construct the simulation parameters from json string or object.
+        @param json_str: the json string or object to parse
+        @return: the parsed SimulationParameters object
+        '''
+        # Since this is a internal method. The parameters won't be logged.
+        json_obj = json_str
+        if isinstance(json_obj, basestring):
+            json_obj = json.JSONDecoder().decode(json_str)
+        para = SimulationParameters(**json_obj)
+        if para.floating_bodies is not None:
+            new_bodies = []
+            for body in para.floating_bodies:
+                new_bodies.append(FloatingBody(**body))
+            del para.floating_bodies[:]
+            para.floating_bodies.extend(new_bodies)
+        return para

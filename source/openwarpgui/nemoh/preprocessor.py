@@ -35,6 +35,9 @@ Changes in version 1.8 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
 
     2. Changed the way we do logging from this module when it is run
     as a child process.
+
+Changes in version 1.9 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Using the newly refactored structure.
 """
 
 import utility
@@ -42,7 +45,7 @@ import numpy as np
 import math
 import sys
 import h5py
-import structure
+from nemoh.structure import H5_STRUCTURE
 
 from models import TMesh
 from models import TCase
@@ -54,9 +57,12 @@ from scipy.spatial import Delaunay
 import logging
 
 
-__author__ = "yedtoss"
+__author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.8"
+__version__ = "1.9"
+
+# The HDF5 structure
+structure = H5_STRUCTURE()
 
 
 def read_mesh(hdf5_data, custom_config):

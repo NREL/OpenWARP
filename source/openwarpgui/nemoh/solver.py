@@ -40,10 +40,13 @@ Changes in version 1.8 (OpenWarp - Add Logging Functionality)
 Changes in version 1.9 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
     1. Changed the way we do logging from this module when it is run
     as a child process. Using the capturer module now.
+
+Changes in version 2.0 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Using the newly refactored structure.
 """
 
 import solver_fortran
-import structure
+from nemoh.structure import H5_STRUCTURE
 import settings
 import utility
 
@@ -59,9 +62,12 @@ import StringIO
 import tempfile
 import json
 
-__author__ = "yedtoss"
+__author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.9"
+__version__ = "2.0"
+
+# The HDF5 structure
+structure = H5_STRUCTURE()
 
 
 def init_data():

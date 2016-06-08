@@ -22,7 +22,7 @@ Changes in version 1.4 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG):
 """
 import numpy as np
 import sys
-import structure
+from nemoh.structure import H5_STRUCTURE
 import settings
 import os
 import errno
@@ -40,6 +40,9 @@ __author__ = "yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
 __version__ = "1.4"
 
+
+# The HDF5 structure
+structure = H5_STRUCTURE()
 
 EPS = 1e-7
 """
@@ -1117,8 +1120,9 @@ def setup_logging(
     :param default_level: the default logging level to use if no configuration file is found
     :param env_key:  the environment key where to retrieve the logging configuration
     :param logging_path: the location where to store the logs
-    :return:
+    :return: True if a logging file was found, false otherwise
     """
+    path_found = False
     path = default_conf_path
     value = os.getenv(env_key, None)
     if value:
@@ -1135,6 +1139,7 @@ def setup_logging(
                 for key, value in config['handlers'].iteritems():
                     if 'filename' in value:
                         value['filename'] = logging_path
+                        path_found = True
 
         logging.config.dictConfig(config)
     else:
@@ -1143,6 +1148,7 @@ def setup_logging(
         logging.basicConfig(level=default_level)
 
     logging.captureWarnings(capture=True)
+    return path_found
 
 
 def log_and_print(logger, message):
@@ -1231,3 +1237,34 @@ def setup_subprocess_logging(queue, logger):
     logger.addHandler(h)
     logger.setLevel(logging.DEBUG) # Accepting all logs here, parent process will filter them out
     logging.captureWarnings(capture=True)
+
+def determine_points_panels(dat_file):
+        '''
+        Determines the number of points and panels of a mesh file.
+
+        @param dat_file: the mesh file to parse
+        @return: the number of points and panels of a mesh file
+        @raise Exception: if the file is not expected format
+        '''
+        # Since this is a internal method. The parameters won't be logged.
+        lines = dat_file.readlines()
+        zero_line1 = 0
+        zero_line2 = 0
+        succeed = False
+        for line in lines[1:]:
+            if len(line.strip()) > 0:
+                zero_line1 = zero_line1 + 1
+                if line.strip().startswith('0'):
+                    succeed = True
+                    break
+        if not succeed:
+            raise Exception('Zero line 1 not found.')
+        for line in lines[(zero_line1 + 1):]:
+            if len(line.strip()) > 0:
+                zero_line2 = zero_line2 + 1
+                if line.strip().startswith('0'):
+                    succeed = True
+                    break
+        if not succeed:
+            raise Exception('Zero line 2 not found.')
+        return zero_line1 - 1, zero_line2 - 1

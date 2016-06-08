@@ -14,22 +14,25 @@ Updated since version 1.3 (OPENWARP - FIX WAVE FREQUENCY AND DIRECTION CRASH BUG
     The listener is started here and will listen to a Queue for new logging from
     child process. This is done to avoid undefined behaviour due to concurrent
     writing to log file from python standard logging.
+
+Changes in version 1.4 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Removed some functions to the service to reuse them in the cli interface.
 """
 
-__author__ = "caoweiquan322, yedtoss"
+__author__ = "caoweiquan322, yedtoss, TCSASSEMBLER"
 __copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
-__version__ = "1.3"
+__version__ = "1.4"
 
 import cherrypy
 from openwarp import services
 from openwarp.services import *
 import os
 import threading
-import json
 import logging
 import helper
 from logutils.queue import QueueListener
 import multiprocessing
+from nemoh import utility 
 
 class WebController:
     '''
@@ -153,7 +156,7 @@ class WebController:
             cherrypy.session['simulation_done'] = False
             # Call simulate service
             ret = {
-                'log' : services.simulate(simulation_dir, self.construct_simulation_parameters(json_str), self.queue)
+                'log' : services.simulate(simulation_dir, services.construct_simulation_parameters(json_str), self.queue)
             }
             cherrypy.session['simulation_done'] = True
             # Set postprocess flag to False if a new simulation has been done successfully.
@@ -204,7 +207,7 @@ class WebController:
                         break
             try:
                 with open(filepath, 'r') as input:
-                    points, panels = self.determine_points_panels(input)
+                    points, panels = utility.determine_points_panels(input)
                     ret = {
                         'filepath' : filepath,
                         'points' : points,
@@ -251,7 +254,7 @@ class WebController:
                 # Call post-processing service
                 ret = {
                     'log' : services.postprocess(cherrypy.session['simulation_dir'],
-                                                 self.construct_postprocess_parameters(json_str), self.queue)
+                                                 services.construct_postprocess_parameters(json_str), self.queue)
                 }
                 cherrypy.session['postprocess_done'] = True
                 helper.log_exit(self.logger, signature, [ret])
@@ -332,61 +335,3 @@ class WebController:
         threading.Timer(2, lambda: os._exit(0)).start()
         helper.log_exit(self.logger, signature, None)
         return {}
-    
-    def construct_simulation_parameters(self, json_str):
-        '''
-        Construct the simulation parameters from json string.
-
-        @param self: the class instance itself
-        @param json_str: the json string to parse
-        @return: the parsed SimulationParameters object
-        '''
-        # Since this is a internal method. The parameters won't be logged.
-        json_obj = json.JSONDecoder().decode(json_str)
-        para = SimulationParameters(**json_obj)
-        if para.floating_bodies is not None:
-            new_bodies = []
-            for body in para.floating_bodies:
-                new_bodies.append(FloatingBody(**body))
-            del para.floating_bodies[:]
-            para.floating_bodies.extend(new_bodies)
-        return para
-
-    def construct_postprocess_parameters(self, json_str):
-        # Since this is a internal method. The parameters won't be logged.
-        json_obj = json.JSONDecoder().decode(json_str)
-        para = PostprocessingParameters(**json_obj)
-        return para
-
-    def determine_points_panels(self, dat_file):
-        '''
-        Determines the number of points and panels of a mesh file.
-
-        @param self: the class instance itself
-        @param dat_file: the mesh file to parse
-        @return: the number of points and panels of a mesh file
-        @raise Exception: if the file is not expected format
-        '''
-        # Since this is a internal method. The parameters won't be logged.
-        lines = dat_file.readlines()
-        num_lines = 0
-        zero_line1 = 0
-        zero_line2 = 0
-        succeed = False
-        for line in lines[1:]:
-            if len(line.strip()) > 0:
-                zero_line1 = zero_line1 + 1
-                if line.strip().startswith('0'):
-                    succeed = True
-                    break
-        if not succeed:
-            raise Exception('Zero line 1 not found.')
-        for line in lines[(zero_line1 + 1):]:
-            if len(line.strip()) > 0:
-                zero_line2 = zero_line2 + 1
-                if line.strip().startswith('0'):
-                    succeed = True
-                    break
-        if not succeed:
-            raise Exception('Zero line 2 not found.')
-        return zero_line1 - 1, zero_line2 - 1
