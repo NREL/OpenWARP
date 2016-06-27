@@ -43,8 +43,10 @@
 \BOOKMARK [2][-]{subsection.9.11}{Visualize the generated TEC files}{section.9}% 43
 \BOOKMARK [2][-]{subsection.9.12}{Getting help}{section.9}% 44
 \BOOKMARK [2][-]{subsection.9.13}{Logging Support}{section.9}% 45
-\BOOKMARK [1][-]{section.10}{Practical Example}{}% 46
-\BOOKMARK [2][-]{subsection.10.1}{Mesh Generation}{section.10}% 47
-\BOOKMARK [2][-]{subsection.10.2}{Run the simulation}{section.10}% 48
-\BOOKMARK [2][-]{subsection.10.3}{Generate TEC files and run postprocessing}{section.10}% 49
-\BOOKMARK [2][-]{subsection.10.4}{Visualize the generated tec files}{section.10}% 50
+\BOOKMARK [1][-]{section.10}{Python CLI}{}% 46
+\BOOKMARK [2][-]{subsection.10.1}{CLI Verification}{section.10}% 47
+\BOOKMARK [1][-]{section.11}{Practical Example}{}% 48
+\BOOKMARK [2][-]{subsection.11.1}{Mesh Generation}{section.11}% 49
+\BOOKMARK [2][-]{subsection.11.2}{Run the simulation}{section.11}% 50
+\BOOKMARK [2][-]{subsection.11.3}{Generate TEC files and run postprocessing}{section.11}% 51
+\BOOKMARK [2][-]{subsection.11.4}{Visualize the generated tec files}{section.11}% 52

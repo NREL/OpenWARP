@@ -973,6 +973,59 @@ Once done, you will get a status of the change request as well as the location w
 \end{minipage}
 \vspace{\belowdisplayskip}
 
+\section{Python CLI}
+In order to run the application through the command line instead of through the GUI, the application also provides a command line interface that is suitable to be used when running batch jobs.
+
+You can find this in the source/openwarpgui/ directory. The filename is openwarp_cli.py
+
+Before being able to run the CLI, you should setup your environment library to contain the Nemoh Fortran library directory.
+
+Note that the setup of the environment variables was done in the one-click installers in the script run.sh run.command and run.bat respectively for linux, OS X and Windows. Those files are available from the installers. And they run directly the GUI after setting up the environment variables.
+
+We suggest that when the one-click installers are rebuilt, they include such facility scripts for running the CLI too. In the meantime, one can source the existing script to run the GUI and then quit them using Control + C before starting the CLI. To source the script use:
+source run.sh ; source run.command ; call run.bat respectively for Linux, OS X and Windows
+
+To use the openwork cli, simply run: python openwarp_cli.py configuration1 ... where configuration* is the path to the configuration file or a JSON string The configuration fields follow an intuitive name easy to identify and comparable to the one in the GUI screens.
+
+There is a "phase field". Set it to "MESHING" to only do the meshing step.
+Set it to "POSTPROCESSING" to only do the postprocessing step, set it to "SIMULATION" to only do the simulation step. When set to None or empty array, all the steps are automatically done.
+
+You can define multiple simulations in the configurations by specifying a different ID for each one. To avoid repeating the same settings, you can specify common settings in the simulations with id "default". Similarly, within in each simulation, you can defined multiple bodies with different ID for each one. Common bodies settings can be defined with the body with id "default".
+
+You can specify which simulations to run by configuring the field: "simulations_to_run". It should an array of simulations ID. Note that the "default" ID is reserved and is not run. It is only used to provide default parameters. If you set "simulations_to_run" to None or empty array, all
+simulations are run. You can set the "verbosity" setting to 0 to disable most logging output from the terminal screen. Note that all logs would still be added to the logging file. Set the "verbosity" to any integer higher than 0 to show all output also on screen.
+
+\subsection{CLI Verification}
+For all test cases cross checked that at least the input values inside the db.hdf5 match the configuration given in the JSON file. The db.hdf5 file will be located inside the tested simulation directory. All simulation directories are sub-directory of source/openwarpgui/test_files/cli_results
+Following have been executed in the OSX environment but it should be possible to replicate in others too.
+
+\begin{enumerate}
+\item Basic Testing
+Run python openwarp_cli.py test_files/configs/cylinder.json
+This test is just to make sure that all the configurations are working correctly
+
+\item shell_step.json
+This test is to make sure that the command line will automatically generate a mesh file in the dat format without the user needing to specify it. Indeed, Nemoh only support DAT_FILE. And in the GUI, one can use the MESHING screen to convert a file in (shell, stl, igs) to dat file before giving
+it as input in the SIMULATION SCREEN. The command line interface simplify this and make do this conversion when needed.
+After a successful run of this test you should see a directory meshing inside the simulation directory with the dat created and used.
+
+\item multiple_sim_same_mesh.json
+This is to test that we can run multiple different simulations with the same mesh file. 
+Make sure the simulations defined here are generated
+
+\item same_conf_diff_geometry.json
+This is to test that we can run multiple different simulations with the same configurations on different geometry.
+
+\item flapsingle_igs.json
+This is to test the flapsingle geometry.
+This will take an awfully lot of time (More that 10h) to complete and require a lot of memory.
+
+\item Error Message
+When the configuration is invalid or the command misused an appropriate error message is shown
+
+\end{enumerate}
+
+
 \section{Practical Example}
 
 We are going to use the FlapSingle example available in \ROOT/test_files where \ROOT is the top-level directory of the OpenWarp package. It is also available in \INSTALLDIR/OpenWarp/test_files
