@@ -591,8 +591,8 @@ MODULE NEMOH
                 line(c, 2*j-1)=ABS(Force(c,j))
                 line(c, 2*j)=ATAN2(AIMAG(Force(c,j)),REAL(Force(c,j)))
             ELSE
-                line(c, 2*j-1)=-AIMAG(Force(c,j))/BodyConditions%Omega(j)
-                line(c, 2*j)=REAL(Force(c,j))
+                line(c, 2*j-1)=AIMAG(Force(c,j))/BodyConditions%Omega(j)
+                line(c, 2*j)=-REAL(Force(c,j))
             END IF
         END DO
     END DO

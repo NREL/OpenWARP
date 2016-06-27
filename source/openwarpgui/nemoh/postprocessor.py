@@ -139,7 +139,7 @@ def compute_irf(result, irf):
                 irf.k[i,j,k] = 0.
                 for l in range(result.n_w -1):
 
-                    irf.k[i, j, k] += - 0.5* (result.w[l+1]-result.w[l]) * (result.radiation_damping[l,
+                    irf.k[i, j, k] += 0.5* (result.w[l+1]-result.w[l]) * (result.radiation_damping[l,
                                                                                                                    j,
                      k]*np.cos(result.w[l]*irf.time[i]) + result.radiation_damping[l+1, j, k]*np.cos(result.w[l+1]*irf.time[i]))
 
@@ -157,7 +157,7 @@ def compute_irf(result, irf):
                 for i in range(irf.n_time-1):
                     cm[l] += 0.5*(irf.time[i+1]-irf.time[i])*(irf.k[i,j,k]*np.sin(result.w[l]*irf.time[i]) +
                                                                      irf.k[i+1, j, k]*np.sin(result.w[l]*irf.time[i+1]))
-                cm[l]=(result.added_mass[l,j,k] + cm[l])/result.w[l]
+                cm[l]=result.added_mass[l,j,k] + cm[l]/result.w[l]
                 irf.added_mass[j,k]=irf.added_mass[j,k] +cm[l]
             irf.added_mass[j,k] = irf.added_mass[j,k]/result.n_w
 
@@ -357,7 +357,7 @@ def save_excitation_force(result, filename):
 
         for j in range(result.n_beta):
             s = 'Zone t="Diffraction force - beta = ' + str(result.beta[j]*180./(4.*np.arctan(1.0)))
-            s += ' deg",I=' + str(result.n_w) + ',F=POINT\n'
+            s += ' deg",I=  ' + str(result.n_w) + ',F=POINT\n'
             inp.write(s)
             for i in range(result.n_w):
                 s = str(result.w[i]) + '\t'

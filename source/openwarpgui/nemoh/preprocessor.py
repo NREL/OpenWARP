@@ -447,14 +447,14 @@ def compute_nds(mesh, c, i_case, direction, axis):
         for i in range(mesh.n_panels):
             if mesh.c_panel[i] == c:
                 #vel = np.copy(direction[0:3])
-                nds[i] = - mesh.a[i] * (mesh.n[0, i] *vel[0] + mesh.n[1, i] *vel[1] + mesh.n[2, i] *vel[2])
+                nds[i] = mesh.a[i] * (mesh.n[0, i] *vel[0] + mesh.n[1, i] *vel[1] + mesh.n[2, i] *vel[2])
             else:
                 nds[i]=0.
 
             if mesh.i_sym == 1:
                 if mesh.c_panel[i] == c:
                     #vel = np.copy(direction[0:3])
-                    nds[i+ mesh.n_panels] = -mesh.a[i]*(mesh.n[0, i]*vel[0]-mesh.n[1, i]*vel[1] + mesh.n[2, i]*vel[2])
+                    nds[i+ mesh.n_panels] = mesh.a[i]*(mesh.n[0, i]*vel[0]-mesh.n[1, i]*vel[1] + mesh.n[2, i]*vel[2])
                 else:
                     nds[i+ mesh.n_panels] = 0.
 
@@ -464,7 +464,7 @@ def compute_nds(mesh, c, i_case, direction, axis):
                 vel[0] = direction[1]*(mesh.xm[2, i] - axis[2]) - direction[2]*(mesh.xm[1, i] - axis[1])
                 vel[1] = direction[2]*(mesh.xm[0, i] - axis[0]) - direction[0]*(mesh.xm[2, i] - axis[2])
                 vel[2] = direction[0]*(mesh.xm[1, i] - axis[1]) - direction[1]*(mesh.xm[0, i] - axis[0])
-                nds[i] = - mesh.a[i] * (mesh.n[0, i] *vel[0] + mesh.n[1, i] *vel[1] + mesh.n[2, i] *vel[2])
+                nds[i] = mesh.a[i] * (mesh.n[0, i] *vel[0] + mesh.n[1, i] *vel[1] + mesh.n[2, i] *vel[2])
             else:
                 nds[i]=0.
 
@@ -473,7 +473,7 @@ def compute_nds(mesh, c, i_case, direction, axis):
                     vel[0] = direction[1]*(mesh.xm[2, i] - axis[2]) - direction[2]*(-mesh.xm[1, i] - axis[1])
                     vel[1] = direction[2]*(mesh.xm[0, i] - axis[0]) - direction[0]*(mesh.xm[2, i] - axis[2])
                     vel[2] = direction[0]*(-mesh.xm[1, i] - axis[1]) - direction[1]*(mesh.xm[0, i] - axis[0])
-                    nds[i+ mesh.n_panels] = -mesh.a[i]*(mesh.n[0, i]*vel[0] - mesh.n[1, i]*vel[1] + mesh.n[2, i]*vel[2])
+                    nds[i+ mesh.n_panels] = mesh.a[i]*(mesh.n[0, i]*vel[0] - mesh.n[1, i]*vel[1] + mesh.n[2, i]*vel[2])
                 else:
                     nds[i+ mesh.n_panels] = 0.
 
@@ -573,11 +573,11 @@ def compute_one_wave(k, w, beta, wt, environment):
     z = wt[2]
 
     w_bar = (x-environment.x_eff)*np.cos(beta)+(y-environment.y_eff)*np.sin(beta)
-    phi = -environment.g/w*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
-    p = -environment.rho*environment.g*utility.II*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
-    vx = -environment.g/w*utility.II*k*np.cos(beta)*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
-    vy = -environment.g/w*utility.II*k*np.sin(beta)*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
-    vz = -environment.g/w*k*sih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
+    phi = -utility.II*environment.g/w*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
+    p = environment.rho*environment.g*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
+    vx = environment.g/w*k*np.cos(beta)*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
+    vy = environment.g/w*k*np.sin(beta)*cih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
+    vz = -utility.II*environment.g/w*k*sih(k, z, environment.depth)*np.exp(utility.II*k*w_bar)
 
     return {"phi": phi, "p": p, "vx": vx, "vy": vy, "vz": vz, "v": np.array([vx, vy, vz])}
 
@@ -604,28 +604,28 @@ def compute_wave(mesh, w, beta, environment):
 
     for i in range(2**mesh.i_sym*mesh.n_panels):
         if i < mesh.n_panels:
-            wbar = (mesh.xm[0, i] - environment.x_eff)*np.cos(beta) + (mesh.xm[1, i] - environment.y_eff)*np.sin(beta)
+            #wbar = (mesh.xm[0, i] - environment.x_eff)*np.cos(beta) + (mesh.xm[1, i] - environment.y_eff)*np.sin(beta)
 
-            pressure[i] = -environment.g/w*np.exp(utility.II*k_wave*wbar)
+            #pressure[i] = -environment.g/w*np.exp(utility.II*k_wave*wbar)
 
-            n_vel[i] = pressure[i]*(utility.II*k_wave*(np.cos(beta)*mesh.n[0,i]+ \
-                    np.sin(beta)*mesh.n[1,i])*cih(k_wave,mesh.xm[2, i], environment.depth)+ \
-                    k_wave*mesh.n[2,i]*sih(k_wave,mesh.xm[2,i],environment.depth))
-            pressure[i] *= cih(k_wave,mesh.xm[2,i], environment.depth)
+            #n_vel[i] = pressure[i]*(utility.II*k_wave*(np.cos(beta)*mesh.n[0,i]+ \
+            #        np.sin(beta)*mesh.n[1,i])*cih(k_wave,mesh.xm[2, i], environment.depth)+ \
+            #        k_wave*mesh.n[2,i]*sih(k_wave,mesh.xm[2,i],environment.depth))
+            #pressure[i] *= cih(k_wave,mesh.xm[2,i], environment.depth)
             one_wave = compute_one_wave(k_wave, w, beta, mesh.xm[0:3, i], environment)
             # This makes previous pressure[i] statement useless
             pressure[i] = one_wave["p"]
-            n_vel[i] = np.sum(one_wave["v"].flatten()*mesh.n[:, i].flatten())
+            n_vel[i] = -np.sum(one_wave["v"].flatten()*mesh.n[:, i].flatten())
 
         else:
-            wbar=(mesh.xm[0, i-mesh.n_panels]-environment.x_eff)*np.cos(beta)+ \
-                    (-mesh.xm[1, i-mesh.n_panels]-environment.y_eff)*np.sin(beta)
-            pressure[i] = -environment.g/w*np.exp(utility.II*k_wave*wbar)
-            n_vel[i] = pressure[i]*(utility.II*k_wave*(np.cos(beta)*mesh.n[0,i-mesh.n_panels]+\
-                    np.sin(beta)*(-1.*mesh.n[1,i-mesh.n_panels]))*cih(k_wave, mesh.xm[2, i-mesh.n_panels],\
-                    environment.depth)+k_wave*mesh.n[2,i-mesh.n_panels]*sih(k_wave,mesh.xm[2,i-mesh.n_panels],\
-                    environment.depth))
-            pressure[i] *= cih(k_wave, mesh.xm[2, i-mesh.n_panels], environment.depth)
+            #wbar=(mesh.xm[0, i-mesh.n_panels]-environment.x_eff)*np.cos(beta)+ \
+            #        (-mesh.xm[1, i-mesh.n_panels]-environment.y_eff)*np.sin(beta)
+            #pressure[i] = -environment.g/w*np.exp(utility.II*k_wave*wbar)
+            #n_vel[i] = pressure[i]*(utility.II*k_wave*(np.cos(beta)*mesh.n[0,i-mesh.n_panels]+\
+            #        np.sin(beta)*(-1.*mesh.n[1,i-mesh.n_panels]))*cih(k_wave, mesh.xm[2, i-mesh.n_panels],\
+            #        environment.depth)+k_wave*mesh.n[2,i-mesh.n_panels]*sih(k_wave,mesh.xm[2,i-mesh.n_panels],\
+            #        environment.depth))
+            #pressure[i] *= cih(k_wave, mesh.xm[2, i-mesh.n_panels], environment.depth)
             #one_wave = compute_one_wave(k_wave, w, beta, mesh.xm[0:3, i-mesh.n_panels], environment)
             #xm = mesh.xm[0:3, i-mesh.n_panels]
             #xm[1] = - xm[1]
@@ -638,7 +638,7 @@ def compute_wave(mesh, w, beta, environment):
             vx = one_wave["v"][0]
             vy = one_wave["v"][1]
             vz = one_wave["v"][2]
-            n_vel[i] = vx*mesh.n[0, i-mesh.n_panels] - vy*mesh.n[1, i-mesh.n_panels] + vz*mesh.n[2, i-mesh.n_panels]
+            n_vel[i] = -(vx*mesh.n[0, i-mesh.n_panels] - vy*mesh.n[1, i-mesh.n_panels] + vz*mesh.n[2, i-mesh.n_panels])
 
     return {"n_vel": n_vel, "pressure": pressure}
 
@@ -891,7 +891,7 @@ def run(hdf5_data, custom_config):
                 #for c in range(mesh.n_panels*2**mesh.i_sym):
                     #fk_force[i, j, k] +=  pressure[c]*fnds[k, c]
 
-                fk_force[i, j, k] = np.sum(pressure.flatten()*fnds[k, :].flatten())
+                fk_force[i, j, k] = -np.sum(pressure.flatten()*fnds[k, :].flatten())
 
         for j in range(n_radiation):
             n_vel = compute_radiation_condition(mesh, rad_case[j].body, rad_case[j].i_case, rad_case[j].direction,
