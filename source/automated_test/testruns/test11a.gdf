@@ -1,0 +1,7 @@
+TEST11a cylinder R=1 T=0.5 -- analytic geometry (npatch=2)
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+2  -1       NPATCH  IGDEF
+ 2
+1.0 0.5     RADIUS, DRAFT
+0           UNIFORM MAPPING

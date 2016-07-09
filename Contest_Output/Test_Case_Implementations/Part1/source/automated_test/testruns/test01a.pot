@@ -1,0 +1,11 @@
+TEST01A.POT -- cylinder R=1, T=0.5, trimmed waterline
+ -1.       HBOT
+   1   1                          IRAD,IDIFF
+ 3                            NPER (array PER follows)
+ 8.971402 2.006403 1.003033   PER
+ 1                            NBETA (array BETA follows)
+ 0.                           BETA
+   1                          NBODY
+ test01.gdf
+ 0. 0. 0. 0.                HBOT, XBODY(1-4)
+  1  1  1  1  1  1               IMODE(1-6)

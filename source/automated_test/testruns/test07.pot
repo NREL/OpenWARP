@@ -1,0 +1,11 @@
+ TEST07.POT  ISSC TLP -- ILOWHI=0, fine discretization
+ 450.       HBOT
+   0   0                          IRAD,IDIFF
+ 3
+ 5. 10. 15.
+ 1
+ 0.
+   1                          NBODY
+ test07.gdf
+ 0. 0. 0. 0.
+  1  0  1  0  1  0

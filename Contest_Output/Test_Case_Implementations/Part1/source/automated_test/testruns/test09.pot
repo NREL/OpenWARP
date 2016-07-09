@@ -1,0 +1,11 @@
+TEST09.POT (Spar with three strakes)
+ -1.       HBOT
+   1   1                          IRAD,IDIFF
+ 3                              NPER (array PER follows)
+ 0.1 0.5 1.0
+ 2                              NBETA (array BETA follows)
+ 0.0 45.                        (end of file)
+   1                          NBODY
+ test09.gdf
+ 0. 0. 0. 0.                HBOT, XBODY(1-4)
+  1  1  1  1  1  1               IMODE(1-6)

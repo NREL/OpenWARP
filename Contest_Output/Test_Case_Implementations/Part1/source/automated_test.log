@@ -1,0 +1,780 @@
+-------------------------starting Test1--------------------------------
+Using Bemio
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test01.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test01.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test01.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test02.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test02.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test02.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test03.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test03.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test03.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test04.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test04.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test04.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test05.gdf
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test05a.gdf
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test06.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test06.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test06.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test07.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test07.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test07.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test08.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test08.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test08.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test09.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test09.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test09.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test09a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test09a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test09a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11b.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11b.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11b.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11c.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11c.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11c.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test13ac.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test13ac.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test14.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test14.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test14.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test15.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test15.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test15.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test16.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test16.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test16.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test16a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test16a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test16a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17c.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17c.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17c.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test18.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test18.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test18.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test19.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test19.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test19.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test20.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test20.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test20.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test21.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test21.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test21.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test22.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test22.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test22.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test22a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test22a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test22a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test23.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test23.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test23.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test24.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test24.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test24.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test25.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test25.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test25.dat
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+Starting OpenWarp GUI Server
+running build_ext
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test08.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test16.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test16a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17b.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test23.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test24.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test25.out file
+/home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source
+/home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp
+---------------------------finishing Test2--------------------------------
+-------------Start of Test 7 -----------------------------
+-------------End of Test 7 -----------------------------
+-------------Start of Test 8 -----------------------------
+-------------End of Test 8 -----------------------------
+-------------Start of Test 9 -----------------------------
+-------------End of Test 9 -----------------------------
+-------------Start of Test 10 -----------------------------
+-------------End of Test 10 -----------------------------
+-------------Start of Test 11 -----------------------------
+-------------End of Test 11 -----------------------------
+1467295314235	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+1467295314599	addons.update-checker	WARN	Update manifest for ubufox@ubuntu.com did not contain an updates property
+1467295315381	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+1467295317506	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+-------------------------starting Test1--------------------------------
+Using Bemio
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test01.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test01.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test01.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test02.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test02.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test02.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test03.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test03.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test03.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test04.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test04.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test04.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test05.gdf
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test05a.gdf
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test06.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test06.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test06.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test07.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test07.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test07.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test08.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test08.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test08.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test09.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test09.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test09.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test09a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test09a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test09a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11b.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11b.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11b.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test11c.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test11c.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test11c.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test13ac.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test13ac.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test14.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test14.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test14.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test15.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test15.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test15.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test16.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test16.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test16.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test16a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test16a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test16a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test17c.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test17c.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test17c.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test18.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test18.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test18.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test19.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test19.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test19.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test20.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test20.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test20.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test21.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test21.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test21.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test22.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test22.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test22.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test22a.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test22a.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test22a.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test23.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test23.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test23.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test24.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test24.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test24.dat
+The VTK Python module is required for a significant amnount of functionality in this module. Many functions will not be available for use.
+Reading mesh file: automated_test/testruns/test25.gdf
+Successfully read mesh file: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/test25.gdf
+Wrote NEMOH mesh to: /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/openwarp/test25.dat
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+Starting OpenWarp GUI Server
+running build_ext
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test08.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test16.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test16a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17a.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17b.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test23.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test24.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/OpenWarp/OpenWARP-master/OpenWARP-master/source/automated_test/testruns/out/test25.out file
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+---------------------------finishing Test6--------------------------------
+-------------Start of Test 7 -----------------------------
+-------------End of Test 7 -----------------------------
+-------------Start of Test 8 -----------------------------
+-------------End of Test 8 -----------------------------
+-------------Start of Test 9 -----------------------------
+-------------End of Test 9 -----------------------------
+-------------Start of Test 10 -----------------------------
+-------------End of Test 10 -----------------------------
+-------------Start of Test 11 -----------------------------
+-------------End of Test 11 -----------------------------

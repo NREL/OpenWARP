@@ -1,0 +1,11 @@
+TEST18.POT -- bending of vertical column at resonance, 200m depth
+      200.0       HBOT
+   0   0                          IRAD,IDIFF
+           1
+           6.5
+           1
+           0.0
+   1                          NBODY
+ test18.gdf
+  0.0  0.0  0.0  0.0
+        0   0   0   0   0   0

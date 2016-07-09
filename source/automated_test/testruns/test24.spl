@@ -1,0 +1,5 @@
+TEST24 segmented vessel with 7 segments
+ 4 2      NU NV   mid cylinder
+ 4 4              next cylinder
+ 4 2              outer cylinder
+ 4 4              spheroidal end

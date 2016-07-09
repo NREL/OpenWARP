@@ -1,0 +1,188 @@
+MultiSurf 1.44 
+// Barge model for WAMIT
+// J. S. Letcher and Robert W. Page,  AeroHydro, Inc. 10/4/2011 
+Units: m MT
+Symmetry:  y
+Extents:  -50.000 -10.000 -4.800 50.000 10.000 3.200
+View:  -30.00 60.00 0
+Places: 3
+Layers: FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF
+DivMult: 1
+Attribute: RGKListCount INTEGER  SYSTEM
+Attribute: RGKListSize0 INTEGER  SYSTEM
+Attribute: CurrentLayer INTEGER  SYSTEM(0)
+Attribute: SnapInc0 DOUBLE  SYSTEM(0.01)
+Attribute: SnapInc1 DOUBLE  SYSTEM(0.01)
+Attribute: SnapInc2 DOUBLE  SYSTEM(0.01)
+Attribute: SnapInc3 DOUBLE  SYSTEM(0.001)
+Attribute: SnapInc4 DOUBLE  SYSTEM(0.001)
+Attribute: SnapInc5 DOUBLE  SYSTEM(0.001)
+Attribute: ahi_HomeTwist DOUBLE  SYSTEM(0)
+Attribute: ahi_IsViewShaded INTEGER  SYSTEM(0)
+Attribute: __Nudge DOUBLE  SYSTEM(0.10000000000000001)
+Attribute: __WAMIT_Version70 INTEGER  SYSTEM(1)
+Attribute: WAMIT_POT_HEADER STRING  SYSTEM("Barge model for WAMIT")
+BeginModel;
+Variable LOA / 100.0 L ;
+Formula half_length / { LOA / 2 } L ;
+Variable Draft / 4.8 L ( 0.0, 10.0 ) ;
+FramePoint p4 14 1 / 3 * * -half_length 0.0 -Draft ;
+Variable Beam / 20.0 L ;
+Formula half_beam / { Beam / 2 } L ;
+Variable H / 8.0 L ( 0.0, 15.0 ) ;
+FramePoint p1 14 1 / 3 * p4 0.0 half_beam H ;
+MirrPoint p0 11 1 / p1 *X=0 ;
+Line l0 6 1 1x1 / * p1 p0 ;
+AbsBead e0 15 1 / l0 0.25 ;
+AbsBead e1 15 1 / l0 0.7 ;
+ProjPoint p2 11 1 / p1 *Y=0 ;
+ProjPoint p6 11 1 / p0 *Y=0 ;
+MirrPoint p5 11 1 / p4 *X=0 ;
+Line l1 6 1 1x1 / * p6 p5 ;
+AbsBead e2 15 1 / l1 0.5 ;
+RPYFrame frame1 15 1 /   0 p4 * 0.0 0.0 0.0 ;
+ProjPoint p3 11 1 / p1 frame1 ;
+Line l2 6 1 1x1 / * p1 p3 ;
+Line l3 6 1 1x1 / * p3 p4 ;
+AbsBead e3 15 1 / l3 0.25 ;
+IntBead e4 10 1 / l2 p3 e3 ;
+Arc c0 11 1 8x4 / * 4 e4 p3 e3 ;
+Line l4 7 1 1x1 / * p1 e4 ;
+Line l5 7 1 1x1 / * e3 p4 ;
+PolyCurve2 c1 10 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / *
+    { l4 c0 l5 } ;
+CopyCurve c2 10 1 8x4 / * c1 p1 e0 1.0 1.0 1.0 ;
+CopyCurve c3 10 1 8x4 / * c1 p1 e1 1.0 1.0 1.0 ;
+Line l6 7 1 1x1 / * p1 e0 ;
+AbsBead e5 15 1 / l6 0.261 ;
+CopyCurve c4 10 1 8x4 / * c1 p1 e5 1.0 1.0 1.0 ;
+Line l7 7 1 1x1 / * e1 p0 ;
+AbsBead e6 15 1 / l7 0.2 ;
+CopyCurve c5 10 1 8x4 / * c1 p1 e6 1.0 1.0 1.0 ;
+AbsBead e7 10 1 / c5 1.0 ;
+Line l8 7 1 1x1 / * e7 e2 ;
+PolyCurve2 c8 14 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(2) / *
+    { c0 l5 } ;
+CopyCurve c6 10 1 8x4 / * c8 p4 e2 1.0 1.0 1.0 ;
+AbsBead e8 10 1 / l8 0.75 ;
+CopyCurve c7 10 1 8x4 / * c8 p4 e8 1.0 1.0 1.0 ;
+BLoftSurf s0 2 3 8x4 8x4 0
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / * 2
+    { p2 c4 c2 } ;
+AbsBead e9 10 1 / l8 0.4 ;
+CopyCurve c9 10 1 8x4 / * c8 p4 e9 1.0 1.0 1.0 ;
+AbsBead e10 10 1 / c9 0.0 ;
+AbsBead e11 10 1 / c7 0.0 ;
+AbsBead e12 10 1 / c6 0.0 ;
+RPYFrame frame2 15 1 /   0 p1 * 0.0 0.0 0.0 ;
+ProjPoint p7 11 1 / e10 frame2 ;
+ProjPoint p8 11 1 / e11 frame2 ;
+Line l9 7 1 1x1 / * p7 e10 ;
+Line l10 7 1 1x1 / * p8 e11 ;
+Line l11 7 1 1x1 / * p0 e12 ;
+PolyCurve2 c10 14 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(2) / *
+    { l9 c9 } ;
+PolyCurve2 c11 14 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(2) / *
+    { l10 c7 } ;
+PolyCurve2 c12 14 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(2) / *
+    { l11 c6 } ;
+BLoftSurf s1 2 3 8x4 8x4 0
+    A:RGKListCount(1)
+    A:RGKListSize0(5) / * 2
+    { c3 c5 c10 c11 c12 } ;
+RuledSurf s2 2 3 8x4 8x4 0 / * c2 c3 ;
+AbsMagnet m0 12 1 / s0 0.876 0.136 ;
+IntSnake n0 13 1 8x4 / * m0 *Z=0 * ;
+AbsMagnet m1 12 1 / s2 0.136 0.027 ;
+IntSnake n1 13 1 8x4 / * m1 *Z=0 * ;
+AbsMagnet m2 12 1 / s1 0.148 0.023 ;
+Relabel v0
+    A:RGKListCount(1)
+    A:RGKListSize0(5) / 2
+    { 0.0 0.2 0.6 1.0 1.0 } ;
+IntSnake n2 13 1 8x4 / v0 m2 *Z=0 * ;
+AbsRing r0 13 1 / n0 0.0 ;
+AbsMagnet m3 12 1 / s0 1.0 1.0 ;
+LineSnake n3 13 1 8x4 / * r0 m3 ;
+EdgeSnake n4 13 1 8x4 / * 2 s2 ;
+EdgeSnake n5 13 1 8x4 / v0 2 s1 ;
+SubSurf s3 14 3 8x4 8x4 0
+    A:RGKListCount(1)
+    A:RGKListSize0(2) /
+    { n0 n3 } ;
+SubSurf s4 14 3 8x4 8x4 0
+    A:RGKListCount(1)
+    A:RGKListSize0(2) /
+    { n1 n4 } ;
+SubSurf s5 14 3 8x4 8x4 0
+    A:RGKListCount(1)
+    A:RGKListSize0(2) /
+    { n2 n5 } ;
+RuledSurf s6 2 3 8x4 4x4 0 / * p6 c12 ;
+AbsMagnet m4 12 1 / s6 0.47 0.946 ;
+IntSnake n6 13 1 8x4 / * m4 *Z=0 * ;
+AbsBead e16 10 1 / c12 0.229 ;
+XYZBead e14 10 1 / 3 e16 * * 0.0 ;
+AbsBead e15 10 1 / c12 1.0 ;
+BSubCurve c13 11 1 8x4
+    A:RGKListCount(1)
+    A:RGKListSize0(2) / * 1
+    { e14 e15 } ;
+Relabel v1
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / 2
+    { 0.0 0.0 1.0 } ;
+RuledSurf s7 14 3 8x4 2x4 1 / v1 c13 n6 ;
+ObjectList wetted_surfs
+    A:RGKListCount(1)
+    A:RGKListSize0(4) /
+    { s3 s4 s5 s7 } ;
+ObjectList DIMS
+    A:RGKListCount(1)
+    A:RGKListSize0(4) /
+    { LOA Beam Draft H } ;
+RealList _WAMIT_XBODY L:255
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / 1 0 0 0
+    { 0.0 0.0 0.0 } ;
+Variable _WAMIT_XBODY4 L:255 / 0.0 ;
+Variable _WAMIT_IRR L:255 / 0.0 ;
+Variable _WAMIT_HBOT L:255 / -1.0 L ;
+Variable _WAMIT_IRAD L:255 / 1.0 ;
+Variable _WAMIT_IDIFF L:255 / 1.0 ;
+RealList _WAMIT_MODE L:255
+    A:RGKListCount(1)
+    A:RGKListSize0(6) / 0 0 0 0
+    { 1.0 1.0 1.0 1.0 1.0 1.0 } ;
+Variable _WAMIT_IALTPOT L:255 / 2.0 ;
+Variable _WAMIT_IPERIO L:255 / 1.0 ;
+RealList _WAMIT_PER L:255
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / 0 0 0 0
+    { 6.0 9.0 12.0 } ;
+RealList _WAMIT_BETA L:255
+    A:RGKListCount(1)
+    A:RGKListSize0(3) / 0 0 0 0
+    { 180.0 135.0 90.0 } ;
+Pathname _WAMIT_GDF L:255 / "TEST20-B.gdf" ;
+Pathname _WAMIT_USERID L:255 / "C:\wamitv6\userid.wam" ;
+Variable _WAMIT_NEWMDS L:255 / 0.0 ;
+Variable _WAMIT_ILOWHI L:255 / 1.0 ;
+Variable _WAMIT_ISOR L:255 / 0.0 ;
+Variable _WAMIT_NCPU L:255 / 2.0 ;
+Variable _WAMIT_RAMGBMAX L:255 / 3.15 ;
+Variable _WAMIT_TOLGAPWL L:255 / 0.001 L ;
+Variable _WAMIT_VMAXOPT9 L:255 / 0.0 L T^-1 ;
+EndModel;
+

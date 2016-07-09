@@ -1,0 +1,23 @@
+ test15.csf  semi sub, outer box 150*60*40
+1   ILOWHICSF
+1  1        ISX  ISY
+0   0  10. NPATCH  ICDEF  PSZCSF   (1st two indicate this is automatic)
+ 0.0  40.0    RADIUS, DRAFT of outer box 
+  4   NPART
+  3   nv0
+  150.0   0.0
+  150.0  60.0
+    0.0  60.0   end of partition line 0 (outer boundary of control surface)
+  3   nv1
+   0.0  0.0
+  30.0  0.0
+  30.0  50.0
+  4   nv2
+  30.0  50.0
+  30.0  0.0
+  90.0  0.0
+  90.0  50.0
+  3   nv3
+  90.0  50.0
+  90.0  0.0
+  150.0  0.0   end of partition line column 3

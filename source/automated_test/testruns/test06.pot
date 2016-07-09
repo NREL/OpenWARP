@@ -1,0 +1,11 @@
+TEST06.POT -- ISSC TLP, coarse discretization
+ 450.       HBOT
+   0   0                          IRAD,IDIFF
+ 3
+ 5. 10. 15.
+ 1
+ 0.
+   1                          NBODY
+ test06.gdf
+ 0. 0. 0. 0.
+  1  0  1  0  1  0

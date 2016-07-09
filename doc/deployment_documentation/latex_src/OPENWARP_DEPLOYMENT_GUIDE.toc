@@ -45,8 +45,9 @@
 \contentsline {subsection}{\numberline {9.13}Logging Support}{34}{subsection.9.13}
 \contentsline {section}{\numberline {10}Python CLI}{37}{section.10}
 \contentsline {subsection}{\numberline {10.1}CLI Verification}{37}{subsection.10.1}
-\contentsline {section}{\numberline {11}Practical Example}{38}{section.11}
-\contentsline {subsection}{\numberline {11.1}Mesh Generation}{38}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Run the simulation}{39}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Generate TEC files and run postprocessing}{42}{subsection.11.3}
-\contentsline {subsection}{\numberline {11.4}Visualize the generated tec files}{43}{subsection.11.4}
+\contentsline {section}{\numberline {11}Steps to update OW from Nemoh 2014 to Nemoh 2016}{38}{section.11}
+\contentsline {section}{\numberline {12}Practical Example}{39}{section.12}
+\contentsline {subsection}{\numberline {12.1}Mesh Generation}{39}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Run the simulation}{40}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Generate TEC files and run postprocessing}{42}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Visualize the generated tec files}{43}{subsection.12.4}

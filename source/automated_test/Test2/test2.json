@@ -1,0 +1,443 @@
+{
+  "configuration": {
+    "log_level": "DEBUG",
+    "clear_old_logs": false
+  },
+  "phase": [],
+  "simulations_to_run": [
+    "test01",
+    "test01a",
+    "test02",
+    "test03",
+    "test04",
+    "test05",
+    "test05a",
+    "test06",
+    "test07",
+    "test08",
+    "test09",
+    "test09a",
+    "test11",
+    "test11a",
+    "test12",
+    "test13",
+    "test13a",
+    "test14",
+    "test14a",
+    "test15",
+    "test16",
+    "test16a",
+    "test17",
+    "test17a",
+    "test17b",
+    "test17c",
+    "test18",
+    "test19",
+    "test20",
+    "test21",
+    "test22",
+    "test22a",
+    "test23",
+    "test24",
+    "test25",
+  ],
+  "verbosity": 0,
+  "simulations": {
+    "test01": {
+      "simulation_dir": "automated_test/Test2/cli_results/test01",
+      "floating_bodies": {
+        "test01.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test01.dat"
+        }
+      }
+    },
+    "test01": {
+      "simulation_dir": "automated_test/Test2/cli_results/test01",
+      "floating_bodies": {
+        "test01.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test01.dat"
+        }
+      }
+    },
+    "test01a": {
+      "simulation_dir": "automated_test/Test2/cli_results/test01a",
+      "floating_bodies": {
+        "test01a.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test01a.dat"
+        }
+      }
+    },
+    "test02": {
+      "simulation_dir": "automated_test/Test2/cli_results/test02",
+      "floating_bodies": {
+        "test02.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test02.dat"
+        }
+      }
+    },
+    "test03": {
+      "simulation_dir": "automated_test/Test2/cli_results/test03",
+      "floating_bodies": {
+        "test03.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test03.dat"
+        }
+      }
+    },
+    "test04": {
+      "simulation_dir": "automated_test/Test2/cli_results/test04",
+      "floating_bodies": {
+        "test04.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test04.dat"
+        }
+      }
+    },
+    "test05": {
+      "simulation_dir": "automated_test/Test2/cli_results/test05",
+      "floating_bodies": {
+        "test05.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test05.dat"
+        }
+      }
+    },
+    "test06": {
+      "simulation_dir": "automated_test/Test2/cli_results/test06",
+      "floating_bodies": {
+        "test06.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test06.dat"
+        }
+      }
+    },
+    "test07": {
+      "simulation_dir": "automated_test/Test2/cli_results/test07",
+      "floating_bodies": {
+        "test07.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test07.dat"
+        }
+      }
+    },
+    "test08": {
+      "simulation_dir": "automated_test/Test2/cli_results/test08",
+      "floating_bodies": {
+        "test08.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test08.dat"
+        }
+      }
+    },
+    "test09": {
+      "simulation_dir": "automated_test/Test2/cli_results/test09",
+      "floating_bodies": {
+        "test09.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test09.dat"
+        }
+      }
+    },
+    "test11": {
+      "simulation_dir": "automated_test/Test2/cli_results/test11",
+      "floating_bodies": {
+        "test11.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test11.dat"
+        }
+      }
+    },
+    "test11a": {
+      "simulation_dir": "automated_test/Test2/cli_results/test11a",
+      "floating_bodies": {
+        "test11a.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test11a.dat"
+        }
+      }
+    },
+    "test11b": {
+      "simulation_dir": "automated_test/Test2/cli_results/test11b",
+      "floating_bodies": {
+        "test11b.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test11b.dat"
+        }
+      }
+    },
+    "test11c": {
+      "simulation_dir": "automated_test/Test2/cli_results/test11c",
+      "floating_bodies": {
+        "test11c.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test11c.dat"
+        }
+      }
+    },
+    "test12": {
+      "simulation_dir": "automated_test/Test2/cli_results/test12",
+      "floating_bodies": {
+        "test12.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test12.dat"
+        }
+      }
+    },
+    "test13": {
+      "simulation_dir": "automated_test/Test2/cli_results/test13",
+      "floating_bodies": {
+        "test13.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test13.dat"
+        }
+      }
+    },
+    "test14": {
+      "simulation_dir": "automated_test/Test2/cli_results/test14",
+      "floating_bodies": {
+        "test14.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test14.dat"
+        }
+      }
+    },
+    "test14a": {
+      "simulation_dir": "automated_test/Test2/cli_results/test14a",
+      "floating_bodies": {
+        "test14a.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test14a.dat"
+        }
+      }
+    },
+    "test15": {
+      "simulation_dir": "automated_test/Test2/cli_results/test15",
+      "floating_bodies": {
+        "test15.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test15.dat"
+        }
+      }
+    },
+    "test16": {
+      "simulation_dir": "automated_test/Test2/cli_results/test16",
+      "floating_bodies": {
+        "test16.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test16.dat"
+        }
+      }
+    },
+    "test17": {
+      "simulation_dir": "automated_test/Test2/cli_results/test17",
+      "floating_bodies": {
+        "test17.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test17.dat"
+        }
+      }
+    },
+    "test17a": {
+      "simulation_dir": "automated_test/Test2/cli_results/test17a",
+      "floating_bodies": {
+        "test17a.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test17a.dat"
+        }
+      }
+    },
+    "test17b": {
+      "simulation_dir": "automated_test/Test2/cli_results/test17b",
+      "floating_bodies": {
+        "test17b.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test17b.dat"
+        }
+      }
+    },
+    "test17c": {
+      "simulation_dir": "automated_test/Test2/cli_results/test17c",
+      "floating_bodies": {
+        "test17c.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test17c.dat"
+        }
+      }
+    },
+    "test18": {
+      "simulation_dir": "automated_test/Test2/cli_results/test18",
+      "floating_bodies": {
+        "test18.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test18.dat"
+        }
+      }
+    },
+    "test19": {
+      "simulation_dir": "automated_test/Test2/cli_results/test19",
+      "floating_bodies": {
+        "test19.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test19.dat"
+        }
+      }
+    },
+    "test20": {
+      "simulation_dir": "automated_test/Test2/cli_results/test20",
+      "floating_bodies": {
+        "test20.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test20.dat"
+        }
+      }
+    },
+    "test21": {
+      "simulation_dir": "automated_test/Test2/cli_results/test21",
+      "floating_bodies": {
+        "test21.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test21.dat"
+        }
+      }
+    },
+    "test22": {
+      "simulation_dir": "automated_test/Test2/cli_results/test22",
+      "floating_bodies": {
+        "test22.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test22.dat"
+        }
+      }
+    },
+    "test22a": {
+      "simulation_dir": "automated_test/Test2/cli_results/test22a",
+      "floating_bodies": {
+        "test22a.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test22a.dat"
+        }
+      }
+    },
+    "test23": {
+      "simulation_dir": "automated_test/Test2/cli_results/test23",
+      "floating_bodies": {
+        "test23.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test23.dat"
+        }
+      }
+    },
+    "test24": {
+      "simulation_dir": "automated_test/Test2/cli_results/test24",
+      "floating_bodies": {
+        "test24.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test24.dat"
+        }
+      }
+    },
+    "test25": {
+      "simulation_dir": "automated_test/Test2/cli_results/test25",
+      "floating_bodies": {
+        "test25.dat": {
+          "mesh_file": "automated_test/testruns/openwarp/test25.dat"
+        }
+      }
+    },
+    "default": {
+      "environment": {
+        "fluid_mass_volumic": 1000.0,
+        "gravity": 9.81,
+        "fluid_depth": 0.0,
+        "wave_measurement_point": [
+          0.0,
+          0.0
+        ]
+      },
+      "floating_bodies": {
+        "default": {
+          "surge": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sway": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "heave": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "roll": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "pitch": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "yaw": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "force_in_x_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_y_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_z_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "moment_in_x_direction": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "moment_in_y_direction": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "moment_in_z_direction": [
+            0.0,
+            0.0,
+            -7.5
+          ],
+          "meshing": {
+            "fineness": 0.4,
+            "grading": 0.1,
+            "maxh": 50,
+            "minh": 0.35,
+            "use_tolerance": false,
+            "tolerance": 0
+          }
+        }
+      },
+      "load_cases": {
+        "num_wave_frequencies": 6,
+        "min_wave_frequencies": 0.1,
+        "max_wave_frequencies": 2.0,
+        "num_wave_directions": 1,
+        "min_wave_directions": 0,
+        "max_wave_directions": 0
+      },
+      "postprocessing": {
+        "compute_irf": true,
+        "irf_time_step": 0.1,
+        "irf_duration": 10,
+        "show_pressure": true,
+        "kochin_num_directions": 18,
+        "kochin_min_directions": 0,
+        "kochin_max_directions": 180,
+        "free_surface_num_points_x": 1,
+        "free_surface_num_points_y": 2,
+        "free_surface_dimension_x": 100,
+        "free_surface_dimension_y": 2
+      },
+      "calculation": {
+        "solver_type": 0,
+        "gmres_restart": 20,
+        "gmres_stopping": 5.0E-7,
+        "gmres_max_iterations": 100,
+        "green_tabulation_numx": 328,
+        "green_tabulation_numz": 46,
+        "green_tabulation_simpson_npoints": 251,
+        "use_ode_influence_coefficients": false,
+        "use_higher_order": false,
+        "num_panel_higher_order": 1,
+        "b_spline_order": 1,
+        "use_dipoles_implementation": false,
+        "thin_panels": [
+          -1
+        ],
+        "compute_drift_forces": false,
+        "compute_yaw_moment": false,
+        "remove_irregular_frequencies": false
+      }
+    }
+  }
+}

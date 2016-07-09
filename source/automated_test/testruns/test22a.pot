@@ -1,0 +1,11 @@
+TEST22a.POT  fpso with 2 interior tanks, trimmed waterline
+ -1.0
+   1         1               IRAD, IDIFF
+     3
+ 2.0 2.5 3.0
+ 1                            NBETA (array BETA follows)
+ 90.
+ 1                            NBODY
+ test22a.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  1  1  1  1  1             IMODE(1-6)

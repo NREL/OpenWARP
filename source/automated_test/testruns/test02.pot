@@ -1,0 +1,11 @@
+ TEST02.POT -- Circular cylinder, ILOWHI=0, IRR=3
+ -1.       HBOT
+   1   1                          IRAD,IDIFF
+ 2
+ 1.182288    1.003025
+ 1
+ 0.0
+   1                          NBODY
+ test02.gdf
+  0.0  0.0  0.0  0.0
+  1  1  1  1  1  1

@@ -1,0 +1,10 @@
+TEST21 SPAR2 with three strakes IGDEF=-12
+18. 9.80665  ULEN GRAV
+0  0        ISX  ISY
+7  -12       NPATCH  IGDEF
+5
+18. 200.              RADIUS, DRAFT
+3.7 0. 1. 3           WIDTH, THICKNESS, TWIST, NSTRAKE
+0                     IRRFRQ
+0  0.                 IMOONPOOL, RADIUSMP
+0                     IMPGEN

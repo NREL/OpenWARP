@@ -1,0 +1,17 @@
+TEST14 -- ISSC TLP (ILOWHI=1, IALTFRC=2)
+ 1  1  1 -2  0  0  0  1  1  IOPTN (IOPTN(4)<0 signifies fixed modes)
+ 6                          NDFR
+ 1 1 0 0 0 1                IMODE
+ 1.                         RHO
+ 0. 0. 3.0                  XCG
+ 1                          IMASS
+    53066.4      0.        0.        0.     159199.2         0.
+        0.   53066.4       0.  -159199.2         0.          0.
+        0.       0.    53066.4       0.          0.          0.
+        0. -159199.2       0.  8.0201552E7       0.          0.
+   159199.2      0.        0.        0.   8.0201552E7        0.
+        0.       0.        0.        0.          0.  9.54906731E7
+ 0                          IDAMP
+ 0                          ISTIFF
+ 0                          NBETAH
+ 0                          NFIELD

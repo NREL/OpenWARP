@@ -1,0 +1,11 @@
+TEST17c.FRC cylinder with surface pressure in moonpool, fixed mode 7
+ 1    1    1    -1    0    0  0  0 0     IOPTN(1-9)
+ 7
+ 1    1    1   1    1    1   0
+ 0.000000                                    VCG
+ 0.500000      .0000000      .0000000
+ .0000000      0.500000      .0000000
+ .0000000      .0000000      0.500000        XPRDCT
+ 0                                           NBETAH
+ 0                                           NFIELD
+

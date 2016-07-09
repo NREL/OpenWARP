@@ -1025,6 +1025,18 @@ When the configuration is invalid or the command misused an appropriate error me
 
 \end{enumerate}
 
+\section{Steps to update OW from Nemoh 2014 to Nemoh 2016}
+When OW was created, we used Nemoh version 2014. At the time of writing this document, the version of Nemoh is 2016. Thus, the following outlines the steps to follow when including the updates carried out in Nemoh 2016 into OpenWarp.
+
+\begin{enumerate}
+\item First, look for the new code implemented in Nemoh using mercurial diff tool
+\item Next, check if they were implemented in the python package or the Fortran part of OW. Preprocessor and postprocessor code in Nemoh are in python part of OW whereas most of the Solver code is in Fortran part of OW. After this step, one should have identified the file and lines where it is implemented / needs to be implemented in OW.
+\item Check if the fixed / new code is relevant to OW. Most of the Solver related code in Nemoh is relevant to OW. Preprocessor and postprocessor code are not always relevant.
+\item We also need to keep in mind the new features implemented in OW. For example, OW Fortran solver does not write / save to files and as such code changes should be ignored in such aspects. Also, keep in mind Fortran code in OW used Fortran 2003 and uses standard functions instead of vendor specific functions as much as possible. As a result, before changing a function, make sure that OW was not using an equivalent standard function. OW also replaced some functions with their recommended 2003 equivalent. Watch out for these and ignore them. Finally, OW avoids the use of GOTO statement and such changes can also be ignored.
+\item As a general rule of thumb, the only fixes to add are the ones that change the computation, not the ones that are doing the same computation using a different approach / style of coding.
+\item After all the assessment has been carried out and the changes to carry out have been conclusively determined, apply the changes.
+\end{enumerate}
+
 
 \section{Practical Example}
 

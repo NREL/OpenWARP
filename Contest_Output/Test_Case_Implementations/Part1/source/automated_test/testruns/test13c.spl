@@ -1,0 +1,3 @@
+TEST13C cylinder R=1 T=2 -- analytic geometry (npatch=2)
+ 8  8        NU NV (side)
+ 8  4        NU NV (bottom)

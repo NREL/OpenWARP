@@ -1,0 +1,4 @@
+TEST12.spl - cylinder R=1 T=0.5 -- analytic geometry (npatch=3)
+4  2        NU NV (Patch 1, side   u azimuthal v vertical)
+4  2        NU NV (Parch 2, bottom u azimuthal v radial)
+4  4        NU NV (Parch 3, interior free surface)  RESET NV=2 FOR STANDARD

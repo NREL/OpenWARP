@@ -1,0 +1,11 @@
+TEST03.POT  Cylinder, R=T=1, ILOWHI=0, ISOR=1
+    7.14       HBOT
+   1   1                          IRAD,IDIFF
+    4
+    2.837491 2.398118 2.006409 1.638226
+    1
+    0.0
+   1                          NBODY
+ test03.gdf
+  0.0  0.0  -0.515 0.0
+     1  1  1  1  1  1

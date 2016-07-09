@@ -1,0 +1,6 @@
+TEST13S spheroid  a=2, b=c=0.25 -- igdef=-4
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+1  -4       NPATCH  IGDEF
+1           NLINES
+2.0 0.25 0.25    A, B, C

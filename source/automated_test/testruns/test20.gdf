@@ -1,0 +1,8 @@
+Test run for barge modelled with MultiSurf
+ 1.000000  9.80665  ULEN, GRAV
+  0  1  ISX, ISY
+  0   2  NPATCH, IGDEF
+  3  NLINES
+test20.ms2
+wetted_surfs
+0  0  0 FAST,DivMult, outward normals

@@ -1,0 +1,9 @@
+ TEST05.GDF -- GGDF file for use with IGDFPOT_OPTIONS=0
+ -1. 9.80665
+ 2
+ test05c.gdf
+  0.0 1.25 0.0 0.0
+ 1   1   1   1   1   1
+ test05s.gdf
+  0.0 -0.5 0.0 0.0
+ 1   1   1   1   1   1

@@ -1,0 +1,11 @@
+TEST19.POT -- Catamaran barge, same geometry as TEST04
+ -1.       HBOT
+   0   0                          IRAD,IDIFF
+ 3
+ 6.  7.  8.
+ 1
+ 0.0
+   1                          NBODY
+ test19.gdf
+ 0. 0. 0. 0.
+  1  0  1  0  1  0

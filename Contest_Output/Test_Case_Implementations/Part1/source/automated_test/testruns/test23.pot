@@ -1,0 +1,11 @@
+TEST23.POT -- 8 wavemaker segments in wall x=0
+ 4.	fluid depth
+ 0           -1               IRAD, IDIFF
+ 2                            NPER (array PER follows)
+ 2. 4.
+ 1                            NBETA (array BETA follows)
+ 0.0
+  1                            NBODY
+test23.gdf
+ 0. 0. 0. 0.                  XBODY
+ 0  0  0  0  0  0             IMODE(1-6)

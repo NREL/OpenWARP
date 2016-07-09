@@ -1,0 +1,6 @@
+test13as.gdf -- untrimmed spheroid with interior fs IRR=1
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+2  -4       NPATCH  IGDEF
+1           NLINES
+2.0 0.25 0.25    A, B, C

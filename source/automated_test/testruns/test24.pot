@@ -1,0 +1,11 @@
+TEST24 segmented vessel with 7 segments and 4 hinge modes
+ -1.
+ 0           0               IRAD, IDIFF
+ 2                            NPER (array PER follows)
+ 3. 5.
+  1                             NBETA (array BETA follows)
+ 180.
+ 1                            NBODY
+test24.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  0  1  0  1  0             IMODE(1-6)

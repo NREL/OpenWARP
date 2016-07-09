@@ -1,0 +1,9 @@
+test19.fdf  file for partition line between catamaran barge hulls
+  60.0      PARTR
+  -1  10.0   NPF, PANEL SIZE ON FREE SURFACE
+   0        (line is ignored, may have NAL,DELR,NCIRE,NGSP)
+  1   NWL
+  3   nv1
+  0.0  1.0
+  0.0  0.0   
+  1.0  0.0   end of partition line (on planes of symmetry)

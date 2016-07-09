@@ -1,0 +1,10 @@
+ TEST01A.FRC  Circular cylinder, trimmed waterline
+   1   1   1   1   0   3   0   2   0
+ 0.000000                                    VCG
+ 1.000000      .0000000      .0000000
+ .0000000      1.000000      .0000000
+ .0000000      .0000000      1.000000        XPRDCT
+ 0                                           NBETAH
+ 2                                           NFIELD
+ 1.5  0.  0.
+ 1.5  0. -0.5                                XFIELD

@@ -1,0 +1,11 @@
+TEST04.POT -- Barge near wall, ILOWHI=0
+ -1.       HBOT
+   0   0                          IRAD,IDIFF
+ 3
+ 6.  7.  8.
+ 1
+ 0.0
+   1                          NBODY
+ test04.gdf
+ 0. 12. 0. 0.
+  1  0  1  0  1  0

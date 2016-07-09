@@ -1,0 +1,14 @@
+ TEST13.POT -- Cylinder + spheroid, ILOWHI=1
+ -1.
+ 1           1               IRAD, IDIFF
+ 2                           NPER (array PER follows)
+ 1.5  2.0		     PER
+ 1                           NBETA (array BETA follows)
+ 0.                          BETA
+ 2                           NBODY
+ test13c.gdf
+ 1.25 0.0 0.0 0.0            XBODY
+ 1  1  1  1  1  1            IMODE(1-6)
+ test13s.gdf
+ -0.5 0.0 0.0 90.0           XBODY
+ 1  1  1  1  1  1            IMODE(1-6)

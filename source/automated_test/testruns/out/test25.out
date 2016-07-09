@@ -1,0 +1,501 @@
+ -----------------------------------------------------------------------
+
+                        WAMIT  Version 7.0(x64)        
+
+     Copyright (c) 1999-2011 WAMIT Incorporated                        
+     Copyright (c) 1998 Massachusetts Institute of Technology          
+
+ -----------------------------------------------------------------------
+
+     The WAMIT software performs computations of wave interactions with
+     floating or submerged vessels.  WAMIT is a registered trademark of
+     WAMIT Incorporated.  This copy of the WAMIT software is licensed to 
+
+            WAMIT INC                                       
+            822 Boylston Street, Suite 202                  
+            Chestnut Hill, MA 02467-2504                    
+            HTTP://WWW.WAMIT.COM                            
+             
+     for end use at the above location.    Release date: 14 Nov 2011
+
+ -----------------------------------------------------------------------
+
+
+ High-order panel method (ILOWHI=1)          Panel_Size =        1.00000
+                                                                        
+ Input from Geometric Data File:         test25.gdf                     
+ TEST25 ACV (air-cushion vehicle) with 2 air chambers - igdef=0         
+                                                                        
+ Input from Potential Control File:      test25.pot                     
+ TEST25 ACV (air-cushion vehicle) with 2 air chambers                   
+                                                                        
+                                                                        
+ POTEN run date and starting time:        15-Nov-2011  --  08:41:13     
+   Period       Time           RAD      DIFF  (max iterations)          
+    5.0000    08:41:19          -1      -1                              
+    6.0000    08:41:19          -1      -1                              
+    7.0000    08:41:19          -1      -1                              
+    8.0000    08:41:19          -1      -1                              
+    9.0000    08:41:19          -1      -1                              
+   10.0000    08:41:19          -1      -1                              
+
+ Gravity:     9.80665                Length scale:        1.00000
+ Water depth:        infinite                                    
+ Logarithmic singularity index:              ILOG =     0
+ Source formulation index:                   ISOR =     0
+ Diffraction/scattering formulation index: ISCATT =     0
+ Number of blocks used in linear system:   ISOLVE =     1
+ Number of unknowns in linear system:        NEQN =   367
+ Irregular frequency index: IRR = 0
+
+ BODY PARAMETERS:
+
+ NPATCH:     9               IGDEF:    0          Symmetries:  X=0,Y=0    
+
+            Patch   NU  NV    KU  KV   IQUI IQVI
+               1     6   3     3   3     4    4
+               2    11   3     3   3     4    4
+               3     1   6     3   3     4    4
+               4     8   2     3   3     4    4
+               5     2   6     3   3     4    4
+               6     5   2     3   3     4    4
+               7     8   2     3   3     4    4
+               8     5   2     3   3     4    4
+               9     8   5     3   3     4    4
+
+ XBODY =    0.0000 YBODY =    0.0000 ZBODY =    0.0000 PHIBODY =   0.0
+ Volumes (VOLX,VOLY,VOLZ):           260.001      260.000      260.000    
+ Center of Buoyancy (Xb,Yb,Zb):     0.000000     0.000000    -0.743588
+ Hydrostatic and gravitational restoring coefficients: 
+ C(3,3),C(3,4),C(3,5):   80.000       0.0000       0.0000    
+ C(4,4),C(4,5),C(4,6):                833.33       0.0000       0.0000    
+        C(5,5),C(5,6):                             3743.3       0.0000    
+ Center of Gravity  (Xg,Yg,Zg):     0.000000     0.000000     0.000000
+ Radii of gyration:     2.500000     0.000000     0.000000
+                        0.000000     5.000000     0.000000
+                        0.000000     0.000000     5.000000
+
+
+ ------------------------------------------------------------------------
+                            Output from  WAMIT
+ ------------------------------------------------------------------------
+ FORCE run date and starting time:                15-Nov-2011 -- 08:41:19
+ ------------------------------------------------------------------------
+ I/O Filenames:  test25.frc          test25.p2f          test25.out          
+ TEST25.FRC  ACV (air-cushion vehicle) with 2 air chambers               
+
+ 
+ ************************************************************************
+
+ Wave period (sec) =  5.000000E+00        Wavenumber (kL) =  1.610271E-01
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   1.003565E+02   2.524796E+01
+     1     5   2.837274E+02   2.788828E+02
+     1     7  -2.273641E+01  -5.247561E+01
+     3     3   7.277549E+01   1.206642E+02
+     3     8   1.327295E+02   2.960979E+02
+     5     1   2.837224E+02   2.788799E+02
+     5     5   5.405290E+03   3.099667E+03
+     5     7  -9.579227E+02  -5.864404E+02
+     7     1  -2.273821E+01  -5.247215E+01
+     7     5  -9.577952E+02  -5.864075E+02
+     7     7   7.983393E+02   1.114721E+02
+     8     3   1.327126E+02   2.960872E+02
+     8     8   9.958837E+02   7.468953E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.102490E+01            -79
+     3   2.300108E+01             28
+     5   2.562174E+02            -80
+     7   5.225340E+01            100
+     8   7.916052E+01             19
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.102562E+01            -79
+     3   2.300143E+01             28
+     5   2.562246E+02            -80
+     7   5.225157E+01            100
+     8   7.915958E+01             19
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    1.59146E-01             90
+     3    5.70386E+00           -101
+     5    5.13300E-01             89
+     7    3.32046E+00             89
+     8    1.72920E+00             82
+
+
+ ************************************************************************
+
+ Wave period (sec) =  6.000000E+00        Wavenumber (kL) =  1.118244E-01
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   1.046059E+02   1.714917E+01
+     1     5   3.706955E+02   1.868413E+02
+     1     7  -3.408525E+01  -2.970732E+01
+     3     3   1.049038E+02   1.218315E+02
+     3     8   1.696948E+02   2.394028E+02
+     5     1   3.706929E+02   1.868393E+02
+     5     5   6.056553E+03   2.037356E+03
+     5     7  -8.838719E+02  -3.241771E+02
+     7     1  -3.408594E+01  -2.970570E+01
+     7     5  -8.837757E+02  -3.241619E+02
+     7     7   6.260699E+02   5.161505E+01
+     8     3   1.696825E+02   2.393961E+02
+     8     8   8.487375E+02   4.732518E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.321305E+01            -88
+     3   3.903600E+01             17
+     5   2.610399E+02            -88
+     7   4.268984E+01             92
+     8   8.690457E+01             15
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.321333E+01            -88
+     3   3.903627E+01             17
+     5   2.610466E+02            -88
+     7   4.268871E+01             92
+     8   8.690321E+01             15
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    6.07876E-01             91
+     3    2.71304E+00           -168
+     5    3.05180E-02             91
+     7    7.46953E-01             91
+     8    1.44199E+00             13
+
+
+ ************************************************************************
+
+ Wave period (sec) =  7.000000E+00        Wavenumber (kL) =  8.215670E-02
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   1.038981E+02   9.778131E+00
+     1     5   3.841696E+02   1.069261E+02
+     1     7  -3.389970E+01  -1.578385E+01
+     3     3   1.312363E+02   1.168729E+02
+     3     8   1.974850E+02   2.072623E+02
+     5     1   3.841648E+02   1.069252E+02
+     5     5   6.089821E+03   1.169475E+03
+     5     7  -8.077193E+02  -1.726597E+02
+     7     1  -3.390038E+01  -1.578314E+01
+     7     5  -8.076332E+02  -1.726528E+02
+     7     7   5.488986E+02   2.549438E+01
+     8     3   1.974736E+02   2.072591E+02
+     8     8   7.979186E+02   3.681147E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.115009E+01            -90
+     3   4.906059E+01             11
+     5   2.346069E+02            -90
+     7   3.508028E+01             90
+     8   9.231207E+01             10
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   2.115050E+01            -90
+     3   4.906096E+01             11
+     5   2.346102E+02            -90
+     7   3.507953E+01             90
+     8   9.231078E+01             10
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    7.54131E-01             90
+     3    1.60475E+00           -176
+     5    4.98767E-03            -90
+     7    4.44715E-01             90
+     8    1.21035E+00              4
+
+
+ ************************************************************************
+
+ Wave period (sec) =  8.000000E+00        Wavenumber (kL) =  6.290123E-02
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   1.014276E+02   5.314437E+00
+     1     5   3.703293E+02   5.850554E+01
+     1     7  -3.073067E+01  -8.308010E+00
+     3     3   1.511142E+02   1.078906E+02
+     3     8   2.181777E+02   1.812794E+02
+     5     1   3.703228E+02   5.850510E+01
+     5     5   5.885924E+03   6.441138E+02
+     5     7  -7.362579E+02  -9.147103E+01
+     7     1  -3.073138E+01  -8.307714E+00
+     7     5  -7.361846E+02  -9.146815E+01
+     7     7   5.041795E+02   1.299005E+01
+     8     3   2.181678E+02   1.812743E+02
+     8     8   7.778592E+02   3.047302E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.806951E+01            -90
+     3   5.594541E+01              7
+     5   2.004598E+02            -90
+     7   2.866411E+01             90
+     8   9.706097E+01              7
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.806970E+01            -90
+     3   5.594555E+01              7
+     5   2.004623E+02            -90
+     7   2.866360E+01             90
+     8   9.705939E+01              7
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    8.33846E-01             90
+     3    1.19090E+00           -178
+     5    1.21450E-02            -90
+     7    3.12784E-01             90
+     8    1.13117E+00              2
+
+
+ ************************************************************************
+
+ Wave period (sec) =  9.000000E+00        Wavenumber (kL) =  4.969973E-02
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   9.900832E+01   2.920176E+00
+     1     5   3.524780E+02   3.235634E+01
+     1     7  -2.759316E+01  -4.491903E+00
+     3     3   1.653942E+02   9.741205E+01
+     3     8   2.327779E+02   1.585964E+02
+     5     1   3.524691E+02   3.235591E+01
+     5     5   5.660437E+03   3.585164E+02
+     5     7  -6.802691E+02  -4.977282E+01
+     7     1  -2.759325E+01  -4.491745E+00
+     7     5  -6.802015E+02  -4.977152E+01
+     7     7   4.756995E+02   6.909841E+00
+     8     3   2.327686E+02   1.585929E+02
+     8     8   7.679915E+02   2.582445E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.517154E+01            -90
+     3   6.090267E+01              5
+     5   1.688794E+02            -90
+     7   2.354189E+01             90
+     8   1.010496E+02              5
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.517176E+01            -90
+     3   6.090320E+01              5
+     5   1.688805E+02            -90
+     7   2.354148E+01             90
+     8   1.010481E+02              5
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    8.81247E-01             90
+     3    9.82115E-01           -179
+     5    1.30283E-02            -90
+     7    2.36346E-01             90
+     8    1.09366E+00              1
+
+
+ ************************************************************************
+
+ Wave period (sec) =  1.000000E+01        Wavenumber (kL) =  4.025679E-02
+ ------------------------------------------------------------------------
+
+
+    ADDED-MASS AND DAMPING COEFFICIENTS
+     I     J         A(I,J)         B(I,J)
+
+     1     1   9.708467E+01   1.656999E+00
+     1     5   3.373078E+02   1.846144E+01
+     1     7  -2.513245E+01  -2.526523E+00
+     3     3   1.753330E+02   8.694803E+01
+     3     8   2.425894E+02   1.387641E+02
+     5     1   3.372975E+02   1.846140E+01
+     5     5   5.474333E+03   2.056914E+02
+     5     7  -6.392017E+02  -2.814978E+01
+     7     1  -2.513298E+01  -2.526431E+00
+     7     5  -6.391382E+02  -2.814909E+01
+     7     7   4.565517E+02   3.852327E+00
+     8     3   2.425780E+02   1.387616E+02
+     8     8   7.614086E+02   2.214721E+02
+
+
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.274544E+01            -90
+     3   6.456628E+01              3
+     5   1.424239E+02            -90
+     7   1.954246E+01             90
+     8   1.042816E+02              3
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :    180
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.274560E+01            -90
+     3   6.456613E+01              3
+     5   1.424246E+02            -90
+     7   1.954222E+01             90
+     8   1.042805E+02              3
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :    180
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    9.11277E-01             90
+     3    8.59166E-01           -179
+     5    1.22092E-02            -90
+     7    1.86327E-01             90
+     8    1.07203E+00              1
+
+
