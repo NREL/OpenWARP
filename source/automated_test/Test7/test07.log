@@ -1,1 +1,671 @@
-h5diff: <automated_test/Test7/flap-meshed-quad_true/simulation/db.hdf5>: unable to open file
+
+file1     file2
+---------------------------------------
+    x      x    /              
+    x      x    /input         
+    x      x    /input/calculations
+    x      x    /input/calculations/bodies
+    x      x    /input/calculations/bodies/body1
+    x      x    /input/calculations/bodies/body1/env_num_panels
+    x      x    /input/calculations/bodies/body1/env_num_points
+    x      x    /input/calculations/bodies/body1/freedom_degree
+    x      x    /input/calculations/bodies/body1/generalised_forces
+    x      x    /input/calculations/bodies/body1/mesh
+    x      x    /input/calculations/environment
+    x      x    /input/calculations/environment/compute_irf
+    x      x    /input/calculations/environment/fluid_depth
+    x      x    /input/calculations/environment/fluid_mass_volumic
+    x      x    /input/calculations/environment/free_surface_dimension_x
+    x      x    /input/calculations/environment/free_surface_dimension_y
+    x      x    /input/calculations/environment/free_surface_num_points_x
+    x      x    /input/calculations/environment/free_surface_num_points_y
+    x      x    /input/calculations/environment/gravity
+    x      x    /input/calculations/environment/irf_duration
+    x      x    /input/calculations/environment/irf_time_step
+    x      x    /input/calculations/environment/kochin_max_directions
+    x      x    /input/calculations/environment/kochin_min_directions
+    x      x    /input/calculations/environment/kochin_num_directions
+    x      x    /input/calculations/environment/max_wave_directions
+    x      x    /input/calculations/environment/max_wave_frequencies
+    x      x    /input/calculations/environment/min_wave_directions
+    x      x    /input/calculations/environment/min_wave_frequencies
+    x      x    /input/calculations/environment/num_wave_directions
+    x      x    /input/calculations/environment/num_wave_frequencies
+    x      x    /input/calculations/environment/show_pressure
+    x      x    /input/calculations/environment/wave_measurement_point
+    x      x    /input/solver  
+    x      x    /input/solver/b_spline_order
+    x      x    /input/solver/compute_drift_forces
+    x      x    /input/solver/compute_yaw_moment
+    x      x    /input/solver/gmres_max_iterations
+    x      x    /input/solver/gmres_restart
+    x      x    /input/solver/gmres_stopping
+    x      x    /input/solver/green_tabulation_numx
+    x      x    /input/solver/green_tabulation_numz
+    x      x    /input/solver/green_tabulation_simpson_npoints
+    x      x    /input/solver/num_panel_higher_order
+    x      x    /input/solver/remove_irregular_frequencies
+    x      x    /input/solver/solver_type
+    x      x    /input/solver/thin_panels
+    x      x    /input/solver/use_dipoles_implementation
+    x      x    /input/solver/use_higher_order
+    x      x    /input/solver/use_ode_influence_coefficients
+    x      x    /output        
+    x      x    /output/mesh   
+    x      x    /output/mesh/free_surface
+    x      x    /output/mesh/free_surface/index
+    x      x    /output/mesh/free_surface/vectors
+    x      x    /output/mesh/integration
+    x      x    /output/mesh/kochin
+    x      x    /output/mesh/l10
+    x      x    /output/mesh/l10/a
+    x      x    /output/mesh/l10/c_panel
+    x      x    /output/mesh/l10/n
+    x      x    /output/mesh/l10/param
+    x      x    /output/mesh/l10/xm
+    x      x    /output/mesh/l12
+    x      x    /output/mesh/l12/p
+    x      x    /output/mesh/l12/params
+    x      x    /output/mesh/l12/x
+    x      x    /output/normal_velocity
+    x      x    /output/normal_velocity/beta
+    x      x    /output/normal_velocity/switch_free_surface
+    x      x    /output/normal_velocity/switch_kochin
+    x      x    /output/normal_velocity/switch_potential
+    x      x    /output/normal_velocity/velocities
+    x      x    /output/normal_velocity/w
+    x      x    /results       
+    x      x    /results/case  
+    x      x    /results/case/beta
+    x      x    /results/case/force
+    x      x    /results/case/motion
+    x      x    /results/case/radiation
+    x      x    /results/case/theta
+    x      x    /results/case/w
+    x      x    /results/fk_forces
+    x      x    /results/fk_forces_raw
+
+group  : </> and </>
+0 differences found
+group  : </input> and </input>
+0 differences found
+group  : </input/calculations> and </input/calculations>
+0 differences found
+group  : </input/calculations/bodies> and </input/calculations/bodies>
+0 differences found
+group  : </input/calculations/bodies/body1> and </input/calculations/bodies/body1>
+0 differences found
+dataset: </input/calculations/bodies/body1/env_num_panels> and </input/calculations/bodies/body1/env_num_panels>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/env_num_panels>> and <description of </input/calculations/bodies/body1/env_num_panels>>
+0 differences found
+dataset: </input/calculations/bodies/body1/env_num_points> and </input/calculations/bodies/body1/env_num_points>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/env_num_points>> and <description of </input/calculations/bodies/body1/env_num_points>>
+0 differences found
+dataset: </input/calculations/bodies/body1/freedom_degree> and </input/calculations/bodies/body1/freedom_degree>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/freedom_degree>> and <description of </input/calculations/bodies/body1/freedom_degree>>
+0 differences found
+dataset: </input/calculations/bodies/body1/generalised_forces> and </input/calculations/bodies/body1/generalised_forces>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/generalised_forces>> and <description of </input/calculations/bodies/body1/generalised_forces>>
+0 differences found
+dataset: </input/calculations/bodies/body1/mesh> and </input/calculations/bodies/body1/mesh>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/mesh>> and <description of </input/calculations/bodies/body1/mesh>>
+0 differences found
+group  : </input/calculations/environment> and </input/calculations/environment>
+0 differences found
+dataset: </input/calculations/environment/compute_irf> and </input/calculations/environment/compute_irf>
+0 differences found
+attribute: <description of </input/calculations/environment/compute_irf>> and <description of </input/calculations/environment/compute_irf>>
+0 differences found
+dataset: </input/calculations/environment/fluid_depth> and </input/calculations/environment/fluid_depth>
+0 differences found
+attribute: <description of </input/calculations/environment/fluid_depth>> and <description of </input/calculations/environment/fluid_depth>>
+0 differences found
+dataset: </input/calculations/environment/fluid_mass_volumic> and </input/calculations/environment/fluid_mass_volumic>
+0 differences found
+attribute: <description of </input/calculations/environment/fluid_mass_volumic>> and <description of </input/calculations/environment/fluid_mass_volumic>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_dimension_x> and </input/calculations/environment/free_surface_dimension_x>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_dimension_x>> and <description of </input/calculations/environment/free_surface_dimension_x>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_dimension_y> and </input/calculations/environment/free_surface_dimension_y>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_dimension_y>> and <description of </input/calculations/environment/free_surface_dimension_y>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_num_points_x> and </input/calculations/environment/free_surface_num_points_x>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_num_points_x>> and <description of </input/calculations/environment/free_surface_num_points_x>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_num_points_y> and </input/calculations/environment/free_surface_num_points_y>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_num_points_y>> and <description of </input/calculations/environment/free_surface_num_points_y>>
+0 differences found
+dataset: </input/calculations/environment/gravity> and </input/calculations/environment/gravity>
+0 differences found
+attribute: <description of </input/calculations/environment/gravity>> and <description of </input/calculations/environment/gravity>>
+0 differences found
+dataset: </input/calculations/environment/irf_duration> and </input/calculations/environment/irf_duration>
+0 differences found
+attribute: <description of </input/calculations/environment/irf_duration>> and <description of </input/calculations/environment/irf_duration>>
+0 differences found
+dataset: </input/calculations/environment/irf_time_step> and </input/calculations/environment/irf_time_step>
+0 differences found
+attribute: <description of </input/calculations/environment/irf_time_step>> and <description of </input/calculations/environment/irf_time_step>>
+0 differences found
+dataset: </input/calculations/environment/kochin_max_directions> and </input/calculations/environment/kochin_max_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_max_directions>> and <description of </input/calculations/environment/kochin_max_directions>>
+0 differences found
+dataset: </input/calculations/environment/kochin_min_directions> and </input/calculations/environment/kochin_min_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_min_directions>> and <description of </input/calculations/environment/kochin_min_directions>>
+0 differences found
+dataset: </input/calculations/environment/kochin_num_directions> and </input/calculations/environment/kochin_num_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_num_directions>> and <description of </input/calculations/environment/kochin_num_directions>>
+0 differences found
+dataset: </input/calculations/environment/max_wave_directions> and </input/calculations/environment/max_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/max_wave_directions>> and <description of </input/calculations/environment/max_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/max_wave_frequencies> and </input/calculations/environment/max_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/max_wave_frequencies>> and <description of </input/calculations/environment/max_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/min_wave_directions> and </input/calculations/environment/min_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/min_wave_directions>> and <description of </input/calculations/environment/min_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/min_wave_frequencies> and </input/calculations/environment/min_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/min_wave_frequencies>> and <description of </input/calculations/environment/min_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/num_wave_directions> and </input/calculations/environment/num_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/num_wave_directions>> and <description of </input/calculations/environment/num_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/num_wave_frequencies> and </input/calculations/environment/num_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/num_wave_frequencies>> and <description of </input/calculations/environment/num_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/show_pressure> and </input/calculations/environment/show_pressure>
+0 differences found
+attribute: <description of </input/calculations/environment/show_pressure>> and <description of </input/calculations/environment/show_pressure>>
+0 differences found
+dataset: </input/calculations/environment/wave_measurement_point> and </input/calculations/environment/wave_measurement_point>
+0 differences found
+attribute: <description of </input/calculations/environment/wave_measurement_point>> and <description of </input/calculations/environment/wave_measurement_point>>
+0 differences found
+group  : </input/solver> and </input/solver>
+0 differences found
+dataset: </input/solver/b_spline_order> and </input/solver/b_spline_order>
+0 differences found
+attribute: <description of </input/solver/b_spline_order>> and <description of </input/solver/b_spline_order>>
+0 differences found
+dataset: </input/solver/compute_drift_forces> and </input/solver/compute_drift_forces>
+0 differences found
+attribute: <description of </input/solver/compute_drift_forces>> and <description of </input/solver/compute_drift_forces>>
+0 differences found
+dataset: </input/solver/compute_yaw_moment> and </input/solver/compute_yaw_moment>
+0 differences found
+attribute: <description of </input/solver/compute_yaw_moment>> and <description of </input/solver/compute_yaw_moment>>
+0 differences found
+dataset: </input/solver/gmres_max_iterations> and </input/solver/gmres_max_iterations>
+0 differences found
+attribute: <description of </input/solver/gmres_max_iterations>> and <description of </input/solver/gmres_max_iterations>>
+0 differences found
+dataset: </input/solver/gmres_restart> and </input/solver/gmres_restart>
+0 differences found
+attribute: <description of </input/solver/gmres_restart>> and <description of </input/solver/gmres_restart>>
+0 differences found
+dataset: </input/solver/gmres_stopping> and </input/solver/gmres_stopping>
+0 differences found
+attribute: <description of </input/solver/gmres_stopping>> and <description of </input/solver/gmres_stopping>>
+0 differences found
+dataset: </input/solver/green_tabulation_numx> and </input/solver/green_tabulation_numx>
+0 differences found
+dataset: </input/solver/green_tabulation_numz> and </input/solver/green_tabulation_numz>
+0 differences found
+dataset: </input/solver/green_tabulation_simpson_npoints> and </input/solver/green_tabulation_simpson_npoints>
+0 differences found
+dataset: </input/solver/num_panel_higher_order> and </input/solver/num_panel_higher_order>
+0 differences found
+attribute: <description of </input/solver/num_panel_higher_order>> and <description of </input/solver/num_panel_higher_order>>
+0 differences found
+dataset: </input/solver/remove_irregular_frequencies> and </input/solver/remove_irregular_frequencies>
+0 differences found
+attribute: <description of </input/solver/remove_irregular_frequencies>> and <description of </input/solver/remove_irregular_frequencies>>
+0 differences found
+dataset: </input/solver/solver_type> and </input/solver/solver_type>
+0 differences found
+attribute: <description of </input/solver/solver_type>> and <description of </input/solver/solver_type>>
+0 differences found
+dataset: </input/solver/thin_panels> and </input/solver/thin_panels>
+0 differences found
+attribute: <description of </input/solver/thin_panels>> and <description of </input/solver/thin_panels>>
+0 differences found
+dataset: </input/solver/use_dipoles_implementation> and </input/solver/use_dipoles_implementation>
+0 differences found
+attribute: <description of </input/solver/use_dipoles_implementation>> and <description of </input/solver/use_dipoles_implementation>>
+0 differences found
+dataset: </input/solver/use_higher_order> and </input/solver/use_higher_order>
+0 differences found
+attribute: <description of </input/solver/use_higher_order>> and <description of </input/solver/use_higher_order>>
+0 differences found
+dataset: </input/solver/use_ode_influence_coefficients> and </input/solver/use_ode_influence_coefficients>
+size:           [280]           [280]
+position        use_ode_influence_coefficients use_ode_influence_coefficients difference          
+------------------------------------------------------------
+[ 0 ]          1               0               1              
+[ 1 ]          1               0               1              
+[ 2 ]          1               0               1              
+[ 3 ]          1               0               1              
+[ 4 ]          1               0               1              
+[ 5 ]          1               0               1              
+[ 6 ]          1               0               1              
+[ 7 ]          1               0               1              
+[ 8 ]          1               0               1              
+[ 9 ]          1               0               1              
+[ 10 ]          1               0               1              
+[ 11 ]          1               0               1              
+[ 12 ]          1               0               1              
+[ 13 ]          1               0               1              
+[ 14 ]          1               0               1              
+[ 15 ]          1               0               1              
+[ 16 ]          1               0               1              
+[ 17 ]          1               0               1              
+[ 18 ]          1               0               1              
+[ 19 ]          1               0               1              
+[ 20 ]          1               0               1              
+[ 21 ]          1               0               1              
+[ 22 ]          1               0               1              
+[ 23 ]          1               0               1              
+[ 24 ]          1               0               1              
+[ 25 ]          1               0               1              
+[ 26 ]          1               0               1              
+[ 27 ]          1               0               1              
+[ 28 ]          1               0               1              
+[ 29 ]          1               0               1              
+[ 30 ]          1               0               1              
+[ 31 ]          1               0               1              
+[ 32 ]          1               0               1              
+[ 33 ]          1               0               1              
+[ 34 ]          1               0               1              
+[ 35 ]          1               0               1              
+[ 36 ]          1               0               1              
+[ 37 ]          1               0               1              
+[ 38 ]          1               0               1              
+[ 39 ]          1               0               1              
+[ 40 ]          1               0               1              
+[ 41 ]          1               0               1              
+[ 42 ]          1               0               1              
+[ 43 ]          1               0               1              
+[ 44 ]          1               0               1              
+[ 45 ]          1               0               1              
+[ 46 ]          1               0               1              
+[ 47 ]          1               0               1              
+[ 48 ]          1               0               1              
+[ 49 ]          1               0               1              
+[ 50 ]          1               0               1              
+[ 51 ]          1               0               1              
+[ 52 ]          1               0               1              
+[ 53 ]          1               0               1              
+[ 54 ]          1               0               1              
+[ 55 ]          1               0               1              
+[ 56 ]          1               0               1              
+[ 57 ]          1               0               1              
+[ 58 ]          1               0               1              
+[ 59 ]          1               0               1              
+[ 60 ]          1               0               1              
+[ 61 ]          1               0               1              
+[ 62 ]          1               0               1              
+[ 63 ]          1               0               1              
+[ 64 ]          1               0               1              
+[ 65 ]          1               0               1              
+[ 66 ]          1               0               1              
+[ 67 ]          1               0               1              
+[ 68 ]          1               0               1              
+[ 69 ]          1               0               1              
+[ 70 ]          1               0               1              
+[ 71 ]          1               0               1              
+[ 72 ]          1               0               1              
+[ 73 ]          1               0               1              
+[ 74 ]          1               0               1              
+[ 75 ]          1               0               1              
+[ 76 ]          1               0               1              
+[ 77 ]          1               0               1              
+[ 78 ]          1               0               1              
+[ 79 ]          1               0               1              
+[ 80 ]          1               0               1              
+[ 81 ]          1               0               1              
+[ 82 ]          1               0               1              
+[ 83 ]          1               0               1              
+[ 84 ]          1               0               1              
+[ 85 ]          1               0               1              
+[ 86 ]          1               0               1              
+[ 87 ]          1               0               1              
+[ 88 ]          1               0               1              
+[ 89 ]          1               0               1              
+[ 90 ]          1               0               1              
+[ 91 ]          1               0               1              
+[ 92 ]          1               0               1              
+[ 93 ]          1               0               1              
+[ 94 ]          1               0               1              
+[ 95 ]          1               0               1              
+[ 96 ]          1               0               1              
+[ 97 ]          1               0               1              
+[ 98 ]          1               0               1              
+[ 99 ]          1               0               1              
+[ 100 ]          1               0               1              
+[ 101 ]          1               0               1              
+[ 102 ]          1               0               1              
+[ 103 ]          1               0               1              
+[ 104 ]          1               0               1              
+[ 105 ]          1               0               1              
+[ 106 ]          1               0               1              
+[ 107 ]          1               0               1              
+[ 108 ]          1               0               1              
+[ 109 ]          1               0               1              
+[ 110 ]          1               0               1              
+[ 111 ]          1               0               1              
+[ 112 ]          1               0               1              
+[ 113 ]          1               0               1              
+[ 114 ]          1               0               1              
+[ 115 ]          1               0               1              
+[ 116 ]          1               0               1              
+[ 117 ]          1               0               1              
+[ 118 ]          1               0               1              
+[ 119 ]          1               0               1              
+[ 120 ]          1               0               1              
+[ 121 ]          1               0               1              
+[ 122 ]          1               0               1              
+[ 123 ]          1               0               1              
+[ 124 ]          1               0               1              
+[ 125 ]          1               0               1              
+[ 126 ]          1               0               1              
+[ 127 ]          1               0               1              
+[ 128 ]          1               0               1              
+[ 129 ]          1               0               1              
+[ 130 ]          1               0               1              
+[ 131 ]          1               0               1              
+[ 132 ]          1               0               1              
+[ 133 ]          1               0               1              
+[ 134 ]          1               0               1              
+[ 135 ]          1               0               1              
+[ 136 ]          1               0               1              
+[ 137 ]          1               0               1              
+[ 138 ]          1               0               1              
+[ 139 ]          1               0               1              
+[ 140 ]          1               0               1              
+[ 141 ]          1               0               1              
+[ 142 ]          1               0               1              
+[ 143 ]          1               0               1              
+[ 144 ]          1               0               1              
+[ 145 ]          1               0               1              
+[ 146 ]          1               0               1              
+[ 147 ]          1               0               1              
+[ 148 ]          1               0               1              
+[ 149 ]          1               0               1              
+[ 150 ]          1               0               1              
+[ 151 ]          1               0               1              
+[ 152 ]          1               0               1              
+[ 153 ]          1               0               1              
+[ 154 ]          1               0               1              
+[ 155 ]          1               0               1              
+[ 156 ]          1               0               1              
+[ 157 ]          1               0               1              
+[ 158 ]          1               0               1              
+[ 159 ]          1               0               1              
+[ 160 ]          1               0               1              
+[ 161 ]          1               0               1              
+[ 162 ]          1               0               1              
+[ 163 ]          1               0               1              
+[ 164 ]          1               0               1              
+[ 165 ]          1               0               1              
+[ 166 ]          1               0               1              
+[ 167 ]          1               0               1              
+[ 168 ]          1               0               1              
+[ 169 ]          1               0               1              
+[ 170 ]          1               0               1              
+[ 171 ]          1               0               1              
+[ 172 ]          1               0               1              
+[ 173 ]          1               0               1              
+[ 174 ]          1               0               1              
+[ 175 ]          1               0               1              
+[ 176 ]          1               0               1              
+[ 177 ]          1               0               1              
+[ 178 ]          1               0               1              
+[ 179 ]          1               0               1              
+[ 180 ]          1               0               1              
+[ 181 ]          1               0               1              
+[ 182 ]          1               0               1              
+[ 183 ]          1               0               1              
+[ 184 ]          1               0               1              
+[ 185 ]          1               0               1              
+[ 186 ]          1               0               1              
+[ 187 ]          1               0               1              
+[ 188 ]          1               0               1              
+[ 189 ]          1               0               1              
+[ 190 ]          1               0               1              
+[ 191 ]          1               0               1              
+[ 192 ]          1               0               1              
+[ 193 ]          1               0               1              
+[ 194 ]          1               0               1              
+[ 195 ]          1               0               1              
+[ 196 ]          1               0               1              
+[ 197 ]          1               0               1              
+[ 198 ]          1               0               1              
+[ 199 ]          1               0               1              
+[ 200 ]          1               0               1              
+[ 201 ]          1               0               1              
+[ 202 ]          1               0               1              
+[ 203 ]          1               0               1              
+[ 204 ]          1               0               1              
+[ 205 ]          1               0               1              
+[ 206 ]          1               0               1              
+[ 207 ]          1               0               1              
+[ 208 ]          1               0               1              
+[ 209 ]          1               0               1              
+[ 210 ]          1               0               1              
+[ 211 ]          1               0               1              
+[ 212 ]          1               0               1              
+[ 213 ]          1               0               1              
+[ 214 ]          1               0               1              
+[ 215 ]          1               0               1              
+[ 216 ]          1               0               1              
+[ 217 ]          1               0               1              
+[ 218 ]          1               0               1              
+[ 219 ]          1               0               1              
+[ 220 ]          1               0               1              
+[ 221 ]          1               0               1              
+[ 222 ]          1               0               1              
+[ 223 ]          1               0               1              
+[ 224 ]          1               0               1              
+[ 225 ]          1               0               1              
+[ 226 ]          1               0               1              
+[ 227 ]          1               0               1              
+[ 228 ]          1               0               1              
+[ 229 ]          1               0               1              
+[ 230 ]          1               0               1              
+[ 231 ]          1               0               1              
+[ 232 ]          1               0               1              
+[ 233 ]          1               0               1              
+[ 234 ]          1               0               1              
+[ 235 ]          1               0               1              
+[ 236 ]          1               0               1              
+[ 237 ]          1               0               1              
+[ 238 ]          1               0               1              
+[ 239 ]          1               0               1              
+[ 240 ]          1               0               1              
+[ 241 ]          1               0               1              
+[ 242 ]          1               0               1              
+[ 243 ]          1               0               1              
+[ 244 ]          1               0               1              
+[ 245 ]          1               0               1              
+[ 246 ]          1               0               1              
+[ 247 ]          1               0               1              
+[ 248 ]          1               0               1              
+[ 249 ]          1               0               1              
+[ 250 ]          1               0               1              
+[ 251 ]          1               0               1              
+[ 252 ]          1               0               1              
+[ 253 ]          1               0               1              
+[ 254 ]          1               0               1              
+[ 255 ]          1               0               1              
+[ 256 ]          1               0               1              
+[ 257 ]          1               0               1              
+[ 258 ]          1               0               1              
+[ 259 ]          1               0               1              
+[ 260 ]          1               0               1              
+[ 261 ]          1               0               1              
+[ 262 ]          1               0               1              
+[ 263 ]          1               0               1              
+[ 264 ]          1               0               1              
+[ 265 ]          1               0               1              
+[ 266 ]          1               0               1              
+[ 267 ]          1               0               1              
+[ 268 ]          1               0               1              
+[ 269 ]          1               0               1              
+[ 270 ]          1               0               1              
+[ 271 ]          1               0               1              
+[ 272 ]          1               0               1              
+[ 273 ]          1               0               1              
+[ 274 ]          1               0               1              
+[ 275 ]          1               0               1              
+[ 276 ]          1               0               1              
+[ 277 ]          1               0               1              
+[ 278 ]          1               0               1              
+[ 279 ]          1               0               1              
+280 differences found
+attribute: <description of </input/solver/use_ode_influence_coefficients>> and <description of </input/solver/use_ode_influence_coefficients>>
+0 differences found
+group  : </output> and </output>
+0 differences found
+group  : </output/mesh> and </output/mesh>
+0 differences found
+group  : </output/mesh/free_surface> and </output/mesh/free_surface>
+0 differences found
+dataset: </output/mesh/free_surface/index> and </output/mesh/free_surface/index>
+Not comparable: </output/mesh/free_surface/index> or </output/mesh/free_surface/index> is an empty dataset
+0 differences found
+attribute: <description of </output/mesh/free_surface/index>> and <description of </output/mesh/free_surface/index>>
+0 differences found
+dataset: </output/mesh/free_surface/vectors> and </output/mesh/free_surface/vectors>
+0 differences found
+attribute: <description of </output/mesh/free_surface/vectors>> and <description of </output/mesh/free_surface/vectors>>
+0 differences found
+dataset: </output/mesh/integration> and </output/mesh/integration>
+0 differences found
+attribute: <description of </output/mesh/integration>> and <description of </output/mesh/integration>>
+0 differences found
+dataset: </output/mesh/kochin> and </output/mesh/kochin>
+0 differences found
+attribute: <description of </output/mesh/kochin>> and <description of </output/mesh/kochin>>
+0 differences found
+group  : </output/mesh/l10> and </output/mesh/l10>
+0 differences found
+dataset: </output/mesh/l10/a> and </output/mesh/l10/a>
+0 differences found
+attribute: <description of </output/mesh/l10/a>> and <description of </output/mesh/l10/a>>
+0 differences found
+dataset: </output/mesh/l10/c_panel> and </output/mesh/l10/c_panel>
+0 differences found
+attribute: <description of </output/mesh/l10/c_panel>> and <description of </output/mesh/l10/c_panel>>
+0 differences found
+dataset: </output/mesh/l10/n> and </output/mesh/l10/n>
+0 differences found
+attribute: <description of </output/mesh/l10/n>> and <description of </output/mesh/l10/n>>
+0 differences found
+dataset: </output/mesh/l10/param> and </output/mesh/l10/param>
+0 differences found
+attribute: <description of </output/mesh/l10/param>> and <description of </output/mesh/l10/param>>
+0 differences found
+dataset: </output/mesh/l10/xm> and </output/mesh/l10/xm>
+0 differences found
+attribute: <description of </output/mesh/l10/xm>> and <description of </output/mesh/l10/xm>>
+0 differences found
+group  : </output/mesh/l12> and </output/mesh/l12>
+0 differences found
+dataset: </output/mesh/l12/p> and </output/mesh/l12/p>
+0 differences found
+attribute: <description of </output/mesh/l12/p>> and <description of </output/mesh/l12/p>>
+0 differences found
+dataset: </output/mesh/l12/params> and </output/mesh/l12/params>
+0 differences found
+attribute: <description of </output/mesh/l12/params>> and <description of </output/mesh/l12/params>>
+0 differences found
+dataset: </output/mesh/l12/x> and </output/mesh/l12/x>
+0 differences found
+attribute: <description of </output/mesh/l12/x>> and <description of </output/mesh/l12/x>>
+0 differences found
+group  : </output/normal_velocity> and </output/normal_velocity>
+0 differences found
+dataset: </output/normal_velocity/beta> and </output/normal_velocity/beta>
+0 differences found
+attribute: <description of </output/normal_velocity/beta>> and <description of </output/normal_velocity/beta>>
+0 differences found
+dataset: </output/normal_velocity/switch_free_surface> and </output/normal_velocity/switch_free_surface>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_free_surface>> and <description of </output/normal_velocity/switch_free_surface>>
+0 differences found
+dataset: </output/normal_velocity/switch_kochin> and </output/normal_velocity/switch_kochin>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_kochin>> and <description of </output/normal_velocity/switch_kochin>>
+0 differences found
+dataset: </output/normal_velocity/switch_potential> and </output/normal_velocity/switch_potential>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_potential>> and <description of </output/normal_velocity/switch_potential>>
+0 differences found
+dataset: </output/normal_velocity/velocities> and </output/normal_velocity/velocities>
+0 differences found
+attribute: <description of </output/normal_velocity/velocities>> and <description of </output/normal_velocity/velocities>>
+0 differences found
+dataset: </output/normal_velocity/w> and </output/normal_velocity/w>
+0 differences found
+attribute: <description of </output/normal_velocity/w>> and <description of </output/normal_velocity/w>>
+0 differences found
+group  : </results> and </results>
+0 differences found
+group  : </results/case> and </results/case>
+0 differences found
+dataset: </results/case/beta> and </results/case/beta>
+0 differences found
+attribute: <description of </results/case/beta>> and <description of </results/case/beta>>
+0 differences found
+dataset: </results/case/force> and </results/case/force>
+0 differences found
+attribute: <description of </results/case/force>> and <description of </results/case/force>>
+0 differences found
+dataset: </results/case/motion> and </results/case/motion>
+0 differences found
+attribute: <description of </results/case/motion>> and <description of </results/case/motion>>
+0 differences found
+dataset: </results/case/radiation> and </results/case/radiation>
+0 differences found
+attribute: <description of </results/case/radiation>> and <description of </results/case/radiation>>
+0 differences found
+dataset: </results/case/theta> and </results/case/theta>
+0 differences found
+attribute: <description of </results/case/theta>> and <description of </results/case/theta>>
+0 differences found
+dataset: </results/case/w> and </results/case/w>
+0 differences found
+attribute: <description of </results/case/w>> and <description of </results/case/w>>
+0 differences found
+dataset: </results/fk_forces> and </results/fk_forces>
+0 differences found
+attribute: <description of </results/fk_forces>> and <description of </results/fk_forces>>
+0 differences found
+dataset: </results/fk_forces_raw> and </results/fk_forces_raw>
+0 differences found
+attribute: <description of </results/fk_forces_raw>> and <description of </results/fk_forces_raw>>
+0 differences found
+--------------------------------
+Some objects are not comparable
+--------------------------------
+Use -c for a list of objects without details of differences.

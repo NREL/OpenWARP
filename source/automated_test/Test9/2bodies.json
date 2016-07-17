@@ -29,7 +29,7 @@
 
         "Cube.dat": {
           "mesh_file": "automated_test/Test9/2Bodies/Cube.dat"
-	   "surge": [
+	     "surge": [
             0.0,
             0.0,
             0.0
