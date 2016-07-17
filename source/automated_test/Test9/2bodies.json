@@ -7,14 +7,14 @@
 
   },
 
-  "phase" : ["SIMULATION","POSTPROCESSING"],
+  "phase" : [],
 
-  "simulations_to_run": ["2bodies"],
+  "simulations_to_run": ["2Bodies"],
 
   "verbosity": 1,
 
   "simulations": {
-    "2bodies": {
+    "2Bodies": {
       "simulation_dir": "automated_test/Test9/2Bodies",
       "environment": {
         "fluid_mass_volumic": 1000.0,
@@ -28,7 +28,7 @@
       "floating_bodies": {
 
         "Cube.dat": {
-          "mesh_file": "automated_test/Test9/2Bodies/Cube.dat"
+          "mesh_file": "automated_test/Test9/2Bodies/Cube.dat",
 	     "surge": [
             0.0,
             0.0,
@@ -100,7 +100,7 @@
         },
 
         "Rotated_cube.dat":{
-          "mesh_file": "automated_test/Test9/2Bodies/Rotated_cube.dat"
+          "mesh_file": "automated_test/Test9/2Bodies/Rotated_cube.dat",
 	     "surge": [
             0.0,
             0.0,
