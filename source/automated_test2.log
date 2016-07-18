@@ -1,0 +1,150 @@
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
+running build_ext
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7 finished successfully 
+----------------------
+--> Starting Test 8 -
+----------------------
+running build_ext
+--> Testing Green function, tabulation with null values  
+running build_ext
+--> Testing Green function, tabulation with default values 
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test8test08.log
+--> Test 8 finished successfully 
+----------------------
+--> Starting Test 9 -
+----------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test9/2bodies.json
+
+
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
+running build_ext
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7 finished successfully 
+----------------------
+--> Starting Test 8 -
+----------------------
+running build_ext
+--> Testing Green function, tabulation with null values  
+running build_ext
+--> Testing Green function, tabulation with default values 
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test8test08.log
+--> Test 8 finished successfully 
+----------------------
+--> Starting Test 9 -
+----------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test9/2bodies.json
+
+
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
+running build_ext
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7 finished successfully 
+----------------------
+--> Starting Test 8 -
+----------------------
+running build_ext
+--> Testing Green function, tabulation with null values  
+running build_ext
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
+running build_ext
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7 finished successfully 
+----------------------
+--> Starting Test 8 -
+----------------------
+running build_ext
+--> Testing Green function, tabulation with null values  
+running build_ext
+--> Testing Green function, tabulation with default values 
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test8/test08.log
+--> Test 8 finished successfully 
+----------------------
+--> Starting Test 9 -
+----------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test9/2bodies.json
+
+
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+Starting Test Script 2 
+------------------------
+-->Starting Test 7 -
+------------------------
+running build_ext
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
+running build_ext
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7 finished successfully 
+----------------------
+--> Starting Test 8 -
+----------------------
+running build_ext
+--> Testing Green function, tabulation with null values  
+running build_ext
+--> Testing Green function, tabulation with default values 
+--> Comparing both the outputs ..
+--> H5DIFF Log at: /automated_test/Test8/test08.log
+--> Test 8 finished successfully 
+----------------------
+--> Starting Test 9 -
+----------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test9/2bodies.json
+
+

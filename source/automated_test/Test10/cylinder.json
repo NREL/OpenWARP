@@ -7,14 +7,14 @@
 
   },
 
-  "phase" : ["SIMULATION","POSTPROCESSING"],
+  "phase" : [],
 
-  "simulations_to_run": ["cylinder"],
+  "simulations_to_run": ["Cylinder"],
 
   "verbosity": 1,
 
   "simulations": {
-    "cylinder": {
+    "Cylinder": {
       "simulation_dir": "automated_test/Test10/Cylinder",
       "environment": {
         "fluid_mass_volumic": 1000.0,

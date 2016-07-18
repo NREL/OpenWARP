@@ -31,6 +31,9 @@ sudo apt-get --yes --force-yes install libnglib-4.9.13 netgen netgen-headers lib
 echo "Installing OpenCASCADE Community Edition"
 sudo apt-get --yes --force-yes install liboce-foundation-dev liboce-modeling-dev  liboce-ocaf-dev liboce-ocaf-lite-dev liboce-visualization-dev oce-draw
 
+echo "Installing HDF5-tools"
+sudo apt-get --yes --force-yes install hdf5-tools
+
 echo "Installing vtk"
 sudo apt-get --yes --force-yes install libvtk5-dev
 

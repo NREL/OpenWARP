@@ -371,8 +371,10 @@ if __name__ == '__main__':
      logging_path=openwarp_settings.LOG_FILE)
     # Compile python module if it was not compiled.
     # This should always output to the terminal no matter the verbosity level
-    subprocess.call(['python', 'setup.py', 'build_ext', '--inplace'], cwd='nemoh')
-
+    if os.path.isdir('./openwarpgui/nemoh'):
+	subprocess.call(['python', 'setup.py', 'build_ext', '--inplace'], cwd='openwarpgui/nemoh')
+    else :
+	subprocess.call(['python', 'setup.py', 'build_ext', '--inplace'], cwd='nemoh')	
     logger = logging.getLogger(__name__)
 
     if len(sys.argv) <= 1:
