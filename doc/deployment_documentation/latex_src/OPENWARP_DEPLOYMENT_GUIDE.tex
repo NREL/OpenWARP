@@ -546,7 +546,7 @@ The python version of nemoh should be \INSTALLDIR/OpenWarp/openwargui/nemoh Anac
 
 \subsection{Linux}
 
-Here the file installer.sh is taking care of everything. In most cases you don't have to do anything extras in case the code is updated. Read section \ref{re-deploy-general} to see the cases where you might need to update this file. In any case just make sure installer.sh and run.sh are accurate and can be used to install and run the new code in a clean system.
+Here the file installer.sh is taking care of everything. In most cases you don't have to do anything extras in case the code is updated. In any case just make sure installer.sh and run.sh are accurate and can be used to install and run the new code in a clean system.
 
 \subsubsection{Recompiling NemohFortran and NemohPython}
 Not needed as the installer.sh take care of that automatically.
@@ -1024,6 +1024,136 @@ This will take an awfully lot of time (More that 10h) to complete and require a 
 When the configuration is invalid or the command misused an appropriate error message is shown
 
 \end{enumerate}
+
+\section{Automated TestScript}
+
+Under source/automated test folder, there are  11 test cases implemented. Refer theory documentation for details on each Test.
+
+\subsection{Repository}
+\begin{itemize}
+\item source/installer.sh – Install all the pre-requisite software required
+\item source/testscript.sh – Script to trigger all the test from test1 to test6
+\item source/testscript2.sh - Script to trigger all the test from test7 to test11
+\item source/automated test/ - Directory contains workspace  for each tests. All the output results gets created here.
+\item source/automated_test.log - log file for testscript
+\item source/automated_test2.log - log file for testscrpt2
+\item doc/deployment_guide.pdf – Deployment guide to start OpenWarp in general.
+\end{itemize}
+
+\subsection{Dependencies}
+All the prerequisite software and there installations are listed above under dependencies.Following modules are dependent to tests:
+\begin{itemize}
+\item 1.	openwarp_cli.py – All test, except test1 uses openwarp_cli.py. For details informations, refer Python CLI section in this doc or under Contest_Output/PythonCLI. Testscript.sh source run.sh to set the environment variables and dependencies. Testscript2.sh also set environment variables to succesfully run openwarp_cli.py
+\item 2.	Bemio - Test are written in such a way that, it has merged only the subpart of Bemio here and there according to individual test requirement.
+\item 3.	H5DIFF- H5DIFF utility comes with HDF5-TOOLS set. To install in ubuntu ,sudo apt-get install hdf5-tools command can be used. although it covered in installer.sh
+\item 4.	Wamit’s testruns -  Wamit testruns directory to make use of Wamit's test and its output to compare with OpenWarp output.
+\end{itemize}
+
+Following sections briefly describe each test case:
+\subsection{Test 1: Converting GDF to OpenWarp Format}
+\subsubsection{Objective of Test case}
+To convert Wamit' GDF file to DAT file to make it compatible with OpenWarp.
+\subsubsection{Steps to execute the test}
+Run testscript.sh
+\subsubsection{Output}
+All the subsequent GDF files of Wamit are convert to .DAT format under automated_test/testruns/openwarp/**.dat
+Outputlog: automated_test.log
+
+\subsection{Test 2: Wamit Test Input and Output} 
+\subsubsection{Objective of Test case}
+To convert Wamit's output in H5 format.
+To run Wamit's GDF files(by convert to DAT from test 1)
+To compare Wamit's Ouput to new OpenWarp output
+\subsubsection{Steps to execute the test}
+Run testscript.sh, it will automatically run Test2 after executing test1 cases.
+\subsubsection{Output and Comparison}
+.H5 files under testruns/ db.hdf5 
+db.hdf5 files under automated_test/testruns/openwarp/openwarpH5
+test*.log under Test2 (it contains comparison against all 11 types of outputs). The comparison is done objects by objects using H5DIFF tool.
+Outputlog: automated_test.log
+
+
+\subsection{Test 3: Testing HigherOrder Implementation in OpenWarp}
+\subsubsection{Objective of Test case}
+To test difference in output for B_SPLINE Order under higher order implementation.
+\subsubsection{Steps to execute the test}
+Run testscript.sh, it will automatically run Test3 to create an output by using Wamit's test11 to test25
+\subsubsection{Output and Comparison}
+testlogs under test3.log
+Outputlog: automated_test.log
+
+\subsection{Test 4: Testing the Dipoles/Thin Panels implementation in OpenWarp}
+\subsubsection{Objective of Test case}
+To test differences in output while dipoles and thin panels implementation
+\subsubsection{Steps to execute the test}
+Run testscript.sh
+\subsubsection{Output and Comparison}
+testlogs under test4.log
+Outputlog: automated_test.log
+
+\subsection{Test 5: Testing Irregular Frequency Removal in OpenWarp}
+\subsubsection{Objective of Test case}
+To test difference in values of objects with irregular frequency in higher as well as lower order implementation
+\subsubsection{Steps to execute the test}
+Run testscript.sh
+\subsubsection{Output and Comparison}
+testlogs under test5.log
+Outputlog: automated_test.log
+
+\subsection{Test 6: Testing Mean Drift Forces and Yaw moment Implementation in OpenWarp}
+\subsubsection{Objective of Test case}
+To test difference in values in horizontal drift forces and mean yaw moment by momentum integration.
+\subsubsection{Steps to execute the test}
+Run testscript.sh
+\subsubsection{Output and Comparison}
+testlogs under automated_Test/Test6
+Outputlog: automated_test.log
+
+\subsection{Test 7: Computation of the Green Function using ordinary differential equation in OpenWarp}
+\subsubsection{Objective of Test case}
+To determine the difference in values of Green Function when ODE method is used to calculate influence coefficients.
+\subsubsection{Steps to execute the test}
+Run testscript2.sh
+\subsubsection{Output and Comparison}
+testlogs under automated_test/Test7
+Outputlog: automated_test2.log
+
+\subsection{Test 8: Testing Green Function Tabulation Implementation}
+\subsubsection{Objective of Test case}
+To see the difference in tabulated data makes under Green function
+\subsubsection{Steps to execute the test}
+Run testscript2.sh
+\subsubsection{Output and Comparison}
+testlogs under automated_test/Test8
+Outputlog: automated_test2.log
+
+\subsection{Test 9: 2Bodies}
+\subsubsection{Objective of Test case}
+To execute simulation and postprocessing for common values and multiple simulation case.
+\subsubsection{Steps to execute the test}
+Run testscript2.sh. automated_test/Test9/2bodies.json has the updated values from Nemoh.cal
+\subsubsection{Output and Comparison}
+testlogs under automated_test/Test9
+Outputlog: automated_test2.log
+
+\subsection{Test 10: Cylinder}
+\subsubsection{Objective of Test case}
+To execute simulation and postprocessing for cylinderical geometry.
+\subsubsection{Steps to execute the test}
+Run testscript2.sh, automated_test/Test10/cylinder.json has the updated values from Nemoh.cal
+\subsubsection{Output and Comparison}
+testlogs under automated_test/Test10
+Outputlog: automated_test2.log
+
+\subsection{Test 11: NonSymmetrical}
+\subsubsection{Objective of Test case}
+To execute simulation and postprocessing for NonSymmetrical geomerty
+\subsubsection{Steps to execute the test}
+Run testscript2.sh, automated_test/Test11/nonsymmetrical.json has the updated values from Nemoh.cal 
+\subsubsection{Output and Comparison}
+testlogs under automated_test/Test11
+Outputlog: automated_test2.log
+
 
 \section{Steps to update OW from Nemoh 2014 to Nemoh 2016}
 When OW was created, we used Nemoh version 2014. At the time of writing this document, the version of Nemoh is 2016. Thus, the following outlines the steps to follow when including the updates carried out in Nemoh 2016 into OpenWarp.

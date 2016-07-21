@@ -45,9 +45,56 @@
 \BOOKMARK [2][-]{subsection.9.13}{Logging Support}{section.9}% 45
 \BOOKMARK [1][-]{section.10}{Python CLI}{}% 46
 \BOOKMARK [2][-]{subsection.10.1}{CLI Verification}{section.10}% 47
-\BOOKMARK [1][-]{section.11}{Steps to update OW from Nemoh 2014 to Nemoh 2016}{}% 48
-\BOOKMARK [1][-]{section.12}{Practical Example}{}% 49
-\BOOKMARK [2][-]{subsection.12.1}{Mesh Generation}{section.12}% 50
-\BOOKMARK [2][-]{subsection.12.2}{Run the simulation}{section.12}% 51
-\BOOKMARK [2][-]{subsection.12.3}{Generate TEC files and run postprocessing}{section.12}% 52
-\BOOKMARK [2][-]{subsection.12.4}{Visualize the generated tec files}{section.12}% 53
+\BOOKMARK [1][-]{section.11}{Automated TestScript}{}% 48
+\BOOKMARK [2][-]{subsection.11.1}{Repository}{section.11}% 49
+\BOOKMARK [2][-]{subsection.11.2}{Dependencies}{section.11}% 50
+\BOOKMARK [2][-]{subsection.11.3}{Test 1: Converting GDF to OpenWarp Format}{section.11}% 51
+\BOOKMARK [3][-]{subsubsection.11.3.1}{Objective of Test case}{subsection.11.3}% 52
+\BOOKMARK [3][-]{subsubsection.11.3.2}{Steps to execute the test}{subsection.11.3}% 53
+\BOOKMARK [3][-]{subsubsection.11.3.3}{Output}{subsection.11.3}% 54
+\BOOKMARK [2][-]{subsection.11.4}{Test 2: Wamit Test Input and Output}{section.11}% 55
+\BOOKMARK [3][-]{subsubsection.11.4.1}{Objective of Test case}{subsection.11.4}% 56
+\BOOKMARK [3][-]{subsubsection.11.4.2}{Steps to execute the test}{subsection.11.4}% 57
+\BOOKMARK [3][-]{subsubsection.11.4.3}{Output and Comparison}{subsection.11.4}% 58
+\BOOKMARK [2][-]{subsection.11.5}{Test 3: Testing HigherOrder Implementation in OpenWarp}{section.11}% 59
+\BOOKMARK [3][-]{subsubsection.11.5.1}{Objective of Test case}{subsection.11.5}% 60
+\BOOKMARK [3][-]{subsubsection.11.5.2}{Steps to execute the test}{subsection.11.5}% 61
+\BOOKMARK [3][-]{subsubsection.11.5.3}{Output and Comparison}{subsection.11.5}% 62
+\BOOKMARK [2][-]{subsection.11.6}{Test 4: Testing the Dipoles/Thin Panels implementation in OpenWarp}{section.11}% 63
+\BOOKMARK [3][-]{subsubsection.11.6.1}{Objective of Test case}{subsection.11.6}% 64
+\BOOKMARK [3][-]{subsubsection.11.6.2}{Steps to execute the test}{subsection.11.6}% 65
+\BOOKMARK [3][-]{subsubsection.11.6.3}{Output and Comparison}{subsection.11.6}% 66
+\BOOKMARK [2][-]{subsection.11.7}{Test 5: Testing Irregular Frequency Removal in OpenWarp}{section.11}% 67
+\BOOKMARK [3][-]{subsubsection.11.7.1}{Objective of Test case}{subsection.11.7}% 68
+\BOOKMARK [3][-]{subsubsection.11.7.2}{Steps to execute the test}{subsection.11.7}% 69
+\BOOKMARK [3][-]{subsubsection.11.7.3}{Output and Comparison}{subsection.11.7}% 70
+\BOOKMARK [2][-]{subsection.11.8}{Test 6: Testing Mean Drift Forces and Yaw moment Implementation in OpenWarp}{section.11}% 71
+\BOOKMARK [3][-]{subsubsection.11.8.1}{Objective of Test case}{subsection.11.8}% 72
+\BOOKMARK [3][-]{subsubsection.11.8.2}{Steps to execute the test}{subsection.11.8}% 73
+\BOOKMARK [3][-]{subsubsection.11.8.3}{Output and Comparison}{subsection.11.8}% 74
+\BOOKMARK [2][-]{subsection.11.9}{Test 7: Computation of the Green Function using ordinary differential equation in OpenWarp}{section.11}% 75
+\BOOKMARK [3][-]{subsubsection.11.9.1}{Objective of Test case}{subsection.11.9}% 76
+\BOOKMARK [3][-]{subsubsection.11.9.2}{Steps to execute the test}{subsection.11.9}% 77
+\BOOKMARK [3][-]{subsubsection.11.9.3}{Output and Comparison}{subsection.11.9}% 78
+\BOOKMARK [2][-]{subsection.11.10}{Test 8: Testing Green Function Tabulation Implementation}{section.11}% 79
+\BOOKMARK [3][-]{subsubsection.11.10.1}{Objective of Test case}{subsection.11.10}% 80
+\BOOKMARK [3][-]{subsubsection.11.10.2}{Steps to execute the test}{subsection.11.10}% 81
+\BOOKMARK [3][-]{subsubsection.11.10.3}{Output and Comparison}{subsection.11.10}% 82
+\BOOKMARK [2][-]{subsection.11.11}{Test 9: 2Bodies}{section.11}% 83
+\BOOKMARK [3][-]{subsubsection.11.11.1}{Objective of Test case}{subsection.11.11}% 84
+\BOOKMARK [3][-]{subsubsection.11.11.2}{Steps to execute the test}{subsection.11.11}% 85
+\BOOKMARK [3][-]{subsubsection.11.11.3}{Output and Comparison}{subsection.11.11}% 86
+\BOOKMARK [2][-]{subsection.11.12}{Test 10: Cylinder}{section.11}% 87
+\BOOKMARK [3][-]{subsubsection.11.12.1}{Objective of Test case}{subsection.11.12}% 88
+\BOOKMARK [3][-]{subsubsection.11.12.2}{Steps to execute the test}{subsection.11.12}% 89
+\BOOKMARK [3][-]{subsubsection.11.12.3}{Output and Comparison}{subsection.11.12}% 90
+\BOOKMARK [2][-]{subsection.11.13}{Test 11: NonSymmetrical}{section.11}% 91
+\BOOKMARK [3][-]{subsubsection.11.13.1}{Objective of Test case}{subsection.11.13}% 92
+\BOOKMARK [3][-]{subsubsection.11.13.2}{Steps to execute the test}{subsection.11.13}% 93
+\BOOKMARK [3][-]{subsubsection.11.13.3}{Output and Comparison}{subsection.11.13}% 94
+\BOOKMARK [1][-]{section.12}{Steps to update OW from Nemoh 2014 to Nemoh 2016}{}% 95
+\BOOKMARK [1][-]{section.13}{Practical Example}{}% 96
+\BOOKMARK [2][-]{subsection.13.1}{Mesh Generation}{section.13}% 97
+\BOOKMARK [2][-]{subsection.13.2}{Run the simulation}{section.13}% 98
+\BOOKMARK [2][-]{subsection.13.3}{Generate TEC files and run postprocessing}{section.13}% 99
+\BOOKMARK [2][-]{subsection.13.4}{Visualize the generated tec files}{section.13}% 100
