@@ -606,11 +606,23 @@ class PanelMesh(object):
 
             self.vtp_mesh    = vtk.vtkPolyData()
             points  = vtk.vtkPoints()
-            polys   = vtk.vtkCellArray()
-
-            for i in range(self.points.shape[0]):
-
-                points.InsertPoint(i, self.points[i])
+	    polys   = vtk.vtkCellArray()
+	    for i in range(self.points.shape[0]):
+		
+		a = self.points[i]
+		if type(a).__module__ == np.__name__ :
+			# print "a is numpy.array"
+			a = self.points[i].astype(np.float32, copy=False)
+			
+		elif type(a) is list:
+			# print "a is list!"
+			a = [float(x) for x in a]
+			for n in range(len(a), 3):
+    				a.append(0)
+			# if list size is not 3, make it 3 
+		#print a
+		#Original Line : points.InsertPoint(i, self.points[i])
+		points.InsertPoint(i,a)
 
 
             for i in range(self.faces.shape[0]):
