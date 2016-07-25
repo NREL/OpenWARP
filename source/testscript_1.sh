@@ -1,6 +1,38 @@
 #! /bin/bash
-exec >> automated_test.log
 # [Topcoder]
+# This script consists of Test-case from 7 to 11 
+exec >> automated_test.log
+
+# I don't want to stop script when shell script returns zero
+#set -e
+# http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+INSTALL_PATH="$DIR"
+ROOT="$DIR"
+
+#cd "$INSTALL_PATH"/openwarpgui
+cd "$INSTALL_PATH"
+
+chmod +x "$INSTALL_PATH"/openwarpgui/bundled/mesh-generator/bin/nglib_mesh
+
+chmod +x "$INSTALL_PATH"/openwarpgui/bundled/paraview_linux/bin/paraview
+
+export LD_LIBRARY_PATH="$ROOT/openwarpgui/bundled/simulation/libs"
+export LDFLAGS="-L$ROOT/openwarpgui/bundled/simulation/libs"
+export PYTOHNPATH="$INSTALL_PATH"/openwarpgui
+
+mkdir -p ~/OpenWarpFiles/temp
+mkdir -p ~/OpenWarpFiles/user_data
+
+echo "Starting Test Script 1 "
+
 
 # Automated Test Script and Deployment guide #-------------------------------------------------------------------------------------
 # Test1. Created GDFMesh.py to convert .GDF files to .dat files. (for runing GDFMesh, matlab engine is required, see deployment guide).

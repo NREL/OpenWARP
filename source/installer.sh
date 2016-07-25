@@ -38,7 +38,7 @@ echo "Installing vtk"
 sudo apt-get --yes --force-yes install libvtk5-dev
 
 echo "Installing python dependencies"
-sudo apt-get --yes --force-yes install python-numpy python-scipy python-matplotlib python-h5py python-cherrypy3 python-pip ipython ipython-notebook python-pandas python-sympy python-nose
+sudo apt-get --yes --force-yes install python-numpy python-scipy python-matplotlib python-h5py python-cherrypy3 python-pip ipython ipython-notebook python-pandas python-sympy python-nose python-progressbar python-vtk
 
 
 mkdir -p /tmp/OpenWarp

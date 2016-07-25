@@ -1,11 +1,16 @@
+# [Topcoder]
+
+import sys 
+import os
+import os.path
+
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 # Load the needed modules from bemio
 from bemio.io.wamit import read
 from bemio.io.output import write_hdf5
 from bemio.utilities.hdf_utilities import combine_h5
 from bemio.utilities.hdf_utilities import create_hydro_data
-
-import sys 
-import os
 
 # .out files
 inFile = sys.argv[1]
