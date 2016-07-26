@@ -43,13 +43,13 @@ echo "------------------------"
 echo "-->Starting Test 7 -"
 echo "------------------------"
 # Workspace is automated_test/Test7/flap-meshed-quad_true/
-#python openwarpgui/openwarp_cli.py automated_test/Test7/test7_true.json
+python openwarpgui/openwarp_cli.py automated_test/Test7/test7_true.json
 echo " --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--"
 # Workspace is automated_test/Test7/flap-meshed-quad_false/
-#python openwarpgui/openwarp_cli.py automated_test/Test7/test7_false.json
+python openwarpgui/openwarp_cli.py automated_test/Test7/test7_false.json
 echo "--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  "
 # Diff the two generated files 
-#h5diff -vc automated_test/Test7/flap-meshed-quad_true/db.hdf5 automated_test/Test7/flap-meshed-quad_false/db.hdf5 >automated_test/Test7/test07.log &
+h5diff -vc automated_test/Test7/flap-meshed-quad_true/db.hdf5 automated_test/Test7/flap-meshed-quad_false/db.hdf5 >automated_test/Test7/test07.log &
 echo "--> Comparing both the outputs .."
 echo "--> H5DIFF Log at: /automated_test/Test7/test07.log"
 echo "--> Test 7 finished successfully "
@@ -62,13 +62,13 @@ echo "----------------------"
 echo "--> Starting Test 8 -"
 echo "----------------------"
 # Workspace is automated_test/Test7/flap-meshed-quad_negative/
-#python openwarpgui/openwarp_cli.py automated_test/Test8/test8_negative.json
+python openwarpgui/openwarp_cli.py automated_test/Test8/test8_negative.json
 echo "--> Testing Green function, tabulation with null values  "
 # Workspace is automated_test/Test7/flap-meshed-quad_default/
-#python openwarpgui/openwarp_cli.py automated_test/Test8/test8_default.json
+python openwarpgui/openwarp_cli.py automated_test/Test8/test8_default.json
 echo "--> Testing Green function, tabulation with default values "
 # Diff the two generated files 
-#h5diff -vc automated_test/Test8/flap-meshed-quad_negative/db.hdf5 automated_test/Test8/flap-meshed-quad_default/db.hdf5 >automated_test/Test8/test08.log &
+h5diff -vc automated_test/Test8/flap-meshed-quad_negative/db.hdf5 automated_test/Test8/flap-meshed-quad_default/db.hdf5 >automated_test/Test8/test08.log &
 echo "--> Comparing both the outputs .."
 echo "--> H5DIFF Log at: /automated_test/Test8/test08.log"
 echo "--> Test 8 finished successfully "
@@ -79,7 +79,7 @@ echo "--> Test 8 finished successfully "
 echo "----------------------"
 echo "--> Starting Test 9 -"
 echo "----------------------"
-	#python openwarpgui/openwarp_cli.py automated_test/Test9/2bodies.json
+	python openwarpgui/openwarp_cli.py automated_test/Test9/2bodies.json
 echo "--> simulation workspace at : automated_test/Test9/2bodies"
 echo "--> Test 9 finished successfully "
 
@@ -89,7 +89,7 @@ echo "--> Test 9 finished successfully "
 echo "----------------------"
 echo "--> Starting Test 10 -"
 echo "----------------------"
-	#python openwarpgui/openwarp_cli.py automated_test/Test10/cylinder.json
+	python openwarpgui/openwarp_cli.py automated_test/Test10/cylinder.json
 echo "--> simulation workspace at : automated_test/Test10/Cylinder"
 echo "--> Test 10 finished successfully"
 
