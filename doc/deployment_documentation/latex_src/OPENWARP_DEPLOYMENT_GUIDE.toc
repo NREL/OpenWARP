@@ -1,100 +1,100 @@
-\contentsline {section}{\numberline {1}INTRODUCTION}{3}{section.1}
-\contentsline {section}{\numberline {2}OVERVIEW}{3}{section.2}
-\contentsline {section}{\numberline {3}NOTATIONS}{3}{section.3}
-\contentsline {section}{\numberline {4}DEPENDENCIES}{4}{section.4}
-\contentsline {subsection}{\numberline {4.1}Windows}{4}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}OS X}{4}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Linux}{5}{subsection.4.3}
-\contentsline {section}{\numberline {5}Building from scratch}{5}{section.5}
-\contentsline {subsection}{\numberline {5.1}WINDOWS DEPLOYMENT FROM SCRATCH}{5}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}OS X DEPLOYMENT FROM SCRATCH}{7}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Linux deployment from scratch}{17}{subsection.5.3}
-\contentsline {section}{\numberline {6}Installing the pre built package}{17}{section.6}
-\contentsline {subsection}{\numberline {6.1}OS X}{17}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Windows}{18}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Linux}{18}{subsection.6.3}
-\contentsline {section}{\numberline {7}Deployment from existing package }{18}{section.7}
-\contentsline {subsection}{\numberline {7.1}Windows}{18}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{18}{subsubsection.7.1.1}
-\contentsline {subsubsection}{\numberline {7.1.2}Repackaging the installer}{19}{subsubsection.7.1.2}
-\contentsline {subsection}{\numberline {7.2}OS X}{19}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{19}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{20}{subsubsection.7.2.2}
-\contentsline {subsection}{\numberline {7.3}Linux}{20}{subsection.7.3}
-\contentsline {subsubsection}{\numberline {7.3.1}Recompiling NemohFortran and NemohPython}{20}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{20}{subsubsection.7.3.2}
-\contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{20}{subsection.7.4}
-\contentsline {section}{\numberline {8}Configuration}{21}{section.8}
-\contentsline {subsection}{\numberline {8.1}Meshing parameters}{21}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simulation parameters}{21}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Postprocessing parameters}{23}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Other and Logging parameters}{24}{subsection.8.4}
-\contentsline {section}{\numberline {9}Usage}{24}{section.9}
-\contentsline {subsection}{\numberline {9.1}Start the application}{24}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Start meshing}{25}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Execute meshing}{26}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}View the meshing results}{26}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Start the simulation}{27}{subsection.9.5}
-\contentsline {subsection}{\numberline {9.6} Execute the simulation}{29}{subsection.9.6}
-\contentsline {subsection}{\numberline {9.7}View the simulation results}{29}{subsection.9.7}
-\contentsline {subsection}{\numberline {9.8}Postprocessing}{31}{subsection.9.8}
-\contentsline {subsection}{\numberline {9.9}Generate TEC outputs}{32}{subsection.9.9}
-\contentsline {subsection}{\numberline {9.10}Postprocessing results}{33}{subsection.9.10}
-\contentsline {subsection}{\numberline {9.11}Visualize the generated TEC files}{33}{subsection.9.11}
-\contentsline {subsection}{\numberline {9.12}Getting help}{34}{subsection.9.12}
-\contentsline {subsection}{\numberline {9.13}Logging Support}{34}{subsection.9.13}
-\contentsline {section}{\numberline {10}Python CLI}{37}{section.10}
-\contentsline {subsection}{\numberline {10.1}CLI Verification}{37}{subsection.10.1}
-\contentsline {section}{\numberline {11}Automated TestScript}{38}{section.11}
-\contentsline {subsection}{\numberline {11.1}Repository}{38}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Dependencies}{38}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Test 1: Converting GDF to OpenWarp Format}{39}{subsection.11.3}
-\contentsline {subsubsection}{\numberline {11.3.1}Objective of Test case}{39}{subsubsection.11.3.1}
-\contentsline {subsubsection}{\numberline {11.3.2}Steps to execute the test}{39}{subsubsection.11.3.2}
-\contentsline {subsubsection}{\numberline {11.3.3}Output}{39}{subsubsection.11.3.3}
-\contentsline {subsection}{\numberline {11.4}Test 2: Wamit Test Input and Output}{39}{subsection.11.4}
-\contentsline {subsubsection}{\numberline {11.4.1}Objective of Test case}{39}{subsubsection.11.4.1}
-\contentsline {subsubsection}{\numberline {11.4.2}Steps to execute the test}{39}{subsubsection.11.4.2}
-\contentsline {subsubsection}{\numberline {11.4.3}Output and Comparison}{39}{subsubsection.11.4.3}
-\contentsline {subsection}{\numberline {11.5}Test 3: Testing HigherOrder Implementation in OpenWarp}{40}{subsection.11.5}
-\contentsline {subsubsection}{\numberline {11.5.1}Objective of Test case}{40}{subsubsection.11.5.1}
-\contentsline {subsubsection}{\numberline {11.5.2}Steps to execute the test}{40}{subsubsection.11.5.2}
-\contentsline {subsubsection}{\numberline {11.5.3}Output and Comparison}{40}{subsubsection.11.5.3}
-\contentsline {subsection}{\numberline {11.6}Test 4: Testing the Dipoles/Thin Panels implementation in OpenWarp}{40}{subsection.11.6}
-\contentsline {subsubsection}{\numberline {11.6.1}Objective of Test case}{40}{subsubsection.11.6.1}
-\contentsline {subsubsection}{\numberline {11.6.2}Steps to execute the test}{40}{subsubsection.11.6.2}
-\contentsline {subsubsection}{\numberline {11.6.3}Output and Comparison}{40}{subsubsection.11.6.3}
-\contentsline {subsection}{\numberline {11.7}Test 5: Testing Irregular Frequency Removal in OpenWarp}{40}{subsection.11.7}
-\contentsline {subsubsection}{\numberline {11.7.1}Objective of Test case}{40}{subsubsection.11.7.1}
-\contentsline {subsubsection}{\numberline {11.7.2}Steps to execute the test}{40}{subsubsection.11.7.2}
-\contentsline {subsubsection}{\numberline {11.7.3}Output and Comparison}{40}{subsubsection.11.7.3}
-\contentsline {subsection}{\numberline {11.8}Test 6: Testing Mean Drift Forces and Yaw moment Implementation in OpenWarp}{41}{subsection.11.8}
-\contentsline {subsubsection}{\numberline {11.8.1}Objective of Test case}{41}{subsubsection.11.8.1}
-\contentsline {subsubsection}{\numberline {11.8.2}Steps to execute the test}{41}{subsubsection.11.8.2}
-\contentsline {subsubsection}{\numberline {11.8.3}Output and Comparison}{41}{subsubsection.11.8.3}
-\contentsline {subsection}{\numberline {11.9}Test 7: Computation of the Green Function using ordinary differential equation in OpenWarp}{41}{subsection.11.9}
-\contentsline {subsubsection}{\numberline {11.9.1}Objective of Test case}{41}{subsubsection.11.9.1}
-\contentsline {subsubsection}{\numberline {11.9.2}Steps to execute the test}{41}{subsubsection.11.9.2}
-\contentsline {subsubsection}{\numberline {11.9.3}Output and Comparison}{41}{subsubsection.11.9.3}
-\contentsline {subsection}{\numberline {11.10}Test 8: Testing Green Function Tabulation Implementation}{41}{subsection.11.10}
-\contentsline {subsubsection}{\numberline {11.10.1}Objective of Test case}{41}{subsubsection.11.10.1}
-\contentsline {subsubsection}{\numberline {11.10.2}Steps to execute the test}{41}{subsubsection.11.10.2}
-\contentsline {subsubsection}{\numberline {11.10.3}Output and Comparison}{41}{subsubsection.11.10.3}
-\contentsline {subsection}{\numberline {11.11}Test 9: 2Bodies}{42}{subsection.11.11}
-\contentsline {subsubsection}{\numberline {11.11.1}Objective of Test case}{42}{subsubsection.11.11.1}
-\contentsline {subsubsection}{\numberline {11.11.2}Steps to execute the test}{42}{subsubsection.11.11.2}
-\contentsline {subsubsection}{\numberline {11.11.3}Output and Comparison}{42}{subsubsection.11.11.3}
-\contentsline {subsection}{\numberline {11.12}Test 10: Cylinder}{42}{subsection.11.12}
-\contentsline {subsubsection}{\numberline {11.12.1}Objective of Test case}{42}{subsubsection.11.12.1}
-\contentsline {subsubsection}{\numberline {11.12.2}Steps to execute the test}{42}{subsubsection.11.12.2}
-\contentsline {subsubsection}{\numberline {11.12.3}Output and Comparison}{42}{subsubsection.11.12.3}
-\contentsline {subsection}{\numberline {11.13}Test 11: NonSymmetrical}{42}{subsection.11.13}
-\contentsline {subsubsection}{\numberline {11.13.1}Objective of Test case}{42}{subsubsection.11.13.1}
-\contentsline {subsubsection}{\numberline {11.13.2}Steps to execute the test}{42}{subsubsection.11.13.2}
-\contentsline {subsubsection}{\numberline {11.13.3}Output and Comparison}{42}{subsubsection.11.13.3}
-\contentsline {section}{\numberline {12}Steps to update OW from Nemoh 2014 to Nemoh 2016}{43}{section.12}
-\contentsline {section}{\numberline {13}Practical Example}{43}{section.13}
-\contentsline {subsection}{\numberline {13.1}Mesh Generation}{43}{subsection.13.1}
-\contentsline {subsection}{\numberline {13.2}Run the simulation}{45}{subsection.13.2}
-\contentsline {subsection}{\numberline {13.3}Generate TEC files and run postprocessing}{47}{subsection.13.3}
-\contentsline {subsection}{\numberline {13.4}Visualize the generated tec files}{48}{subsection.13.4}
+\contentsline {section}{\numberline {1}INTRODUCTION}{4}{section.1}
+\contentsline {section}{\numberline {2}OVERVIEW}{4}{section.2}
+\contentsline {section}{\numberline {3}NOTATIONS}{4}{section.3}
+\contentsline {section}{\numberline {4}DEPENDENCIES}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Windows}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}OS X}{5}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Linux}{6}{subsection.4.3}
+\contentsline {section}{\numberline {5}Building from scratch}{6}{section.5}
+\contentsline {subsection}{\numberline {5.1}WINDOWS DEPLOYMENT FROM SCRATCH}{6}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}OS X DEPLOYMENT FROM SCRATCH}{8}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Linux deployment from scratch}{18}{subsection.5.3}
+\contentsline {section}{\numberline {6}Installing the pre built package}{18}{section.6}
+\contentsline {subsection}{\numberline {6.1}OS X}{18}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Windows}{19}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Linux}{19}{subsection.6.3}
+\contentsline {section}{\numberline {7}Deployment from existing package }{19}{section.7}
+\contentsline {subsection}{\numberline {7.1}Windows}{19}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{19}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Repackaging the installer}{20}{subsubsection.7.1.2}
+\contentsline {subsection}{\numberline {7.2}OS X}{20}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{20}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{21}{subsubsection.7.2.2}
+\contentsline {subsection}{\numberline {7.3}Linux}{21}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Recompiling NemohFortran and NemohPython}{21}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{21}{subsubsection.7.3.2}
+\contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{21}{subsection.7.4}
+\contentsline {section}{\numberline {8}Configuration}{22}{section.8}
+\contentsline {subsection}{\numberline {8.1}Meshing parameters}{22}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Simulation parameters}{22}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Postprocessing parameters}{24}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Other and Logging parameters}{25}{subsection.8.4}
+\contentsline {section}{\numberline {9}Usage}{25}{section.9}
+\contentsline {subsection}{\numberline {9.1}Start the application}{25}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Start meshing}{26}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Execute meshing}{27}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}View the meshing results}{27}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Start the simulation}{28}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6} Execute the simulation}{30}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.7}View the simulation results}{30}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.8}Postprocessing}{32}{subsection.9.8}
+\contentsline {subsection}{\numberline {9.9}Generate TEC outputs}{33}{subsection.9.9}
+\contentsline {subsection}{\numberline {9.10}Postprocessing results}{34}{subsection.9.10}
+\contentsline {subsection}{\numberline {9.11}Visualize the generated TEC files}{34}{subsection.9.11}
+\contentsline {subsection}{\numberline {9.12}Getting help}{35}{subsection.9.12}
+\contentsline {subsection}{\numberline {9.13}Logging Support}{35}{subsection.9.13}
+\contentsline {section}{\numberline {10}Python CLI}{38}{section.10}
+\contentsline {subsection}{\numberline {10.1}CLI Verification}{38}{subsection.10.1}
+\contentsline {section}{\numberline {11}Automated TestScript}{39}{section.11}
+\contentsline {subsection}{\numberline {11.1}Repository}{39}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Dependencies}{39}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Test 1: Converting GDF to OpenWarp Format}{40}{subsection.11.3}
+\contentsline {subsubsection}{\numberline {11.3.1}Objective of Test case}{40}{subsubsection.11.3.1}
+\contentsline {subsubsection}{\numberline {11.3.2}Steps to execute the test}{40}{subsubsection.11.3.2}
+\contentsline {subsubsection}{\numberline {11.3.3}Output}{40}{subsubsection.11.3.3}
+\contentsline {subsection}{\numberline {11.4}Test 2: Wamit Test Input and Output}{40}{subsection.11.4}
+\contentsline {subsubsection}{\numberline {11.4.1}Objective of Test case}{40}{subsubsection.11.4.1}
+\contentsline {subsubsection}{\numberline {11.4.2}Steps to execute the test}{40}{subsubsection.11.4.2}
+\contentsline {subsubsection}{\numberline {11.4.3}Output and Comparison}{40}{subsubsection.11.4.3}
+\contentsline {subsection}{\numberline {11.5}Test 3: Testing HigherOrder Implementation in OpenWarp}{41}{subsection.11.5}
+\contentsline {subsubsection}{\numberline {11.5.1}Objective of Test case}{41}{subsubsection.11.5.1}
+\contentsline {subsubsection}{\numberline {11.5.2}Steps to execute the test}{41}{subsubsection.11.5.2}
+\contentsline {subsubsection}{\numberline {11.5.3}Output and Comparison}{41}{subsubsection.11.5.3}
+\contentsline {subsection}{\numberline {11.6}Test 4: Testing the Dipoles/Thin Panels implementation in OpenWarp}{41}{subsection.11.6}
+\contentsline {subsubsection}{\numberline {11.6.1}Objective of Test case}{41}{subsubsection.11.6.1}
+\contentsline {subsubsection}{\numberline {11.6.2}Steps to execute the test}{41}{subsubsection.11.6.2}
+\contentsline {subsubsection}{\numberline {11.6.3}Output and Comparison}{41}{subsubsection.11.6.3}
+\contentsline {subsection}{\numberline {11.7}Test 5: Testing Irregular Frequency Removal in OpenWarp}{41}{subsection.11.7}
+\contentsline {subsubsection}{\numberline {11.7.1}Objective of Test case}{41}{subsubsection.11.7.1}
+\contentsline {subsubsection}{\numberline {11.7.2}Steps to execute the test}{41}{subsubsection.11.7.2}
+\contentsline {subsubsection}{\numberline {11.7.3}Output and Comparison}{41}{subsubsection.11.7.3}
+\contentsline {subsection}{\numberline {11.8}Test 6: Testing Mean Drift Forces and Yaw moment Implementation in OpenWarp}{42}{subsection.11.8}
+\contentsline {subsubsection}{\numberline {11.8.1}Objective of Test case}{42}{subsubsection.11.8.1}
+\contentsline {subsubsection}{\numberline {11.8.2}Steps to execute the test}{42}{subsubsection.11.8.2}
+\contentsline {subsubsection}{\numberline {11.8.3}Output and Comparison}{42}{subsubsection.11.8.3}
+\contentsline {subsection}{\numberline {11.9}Test 7: Computation of the Green Function using ordinary differential equation in OpenWarp}{42}{subsection.11.9}
+\contentsline {subsubsection}{\numberline {11.9.1}Objective of Test case}{42}{subsubsection.11.9.1}
+\contentsline {subsubsection}{\numberline {11.9.2}Steps to execute the test}{42}{subsubsection.11.9.2}
+\contentsline {subsubsection}{\numberline {11.9.3}Output and Comparison}{42}{subsubsection.11.9.3}
+\contentsline {subsection}{\numberline {11.10}Test 8: Testing Green Function Tabulation Implementation}{42}{subsection.11.10}
+\contentsline {subsubsection}{\numberline {11.10.1}Objective of Test case}{42}{subsubsection.11.10.1}
+\contentsline {subsubsection}{\numberline {11.10.2}Steps to execute the test}{42}{subsubsection.11.10.2}
+\contentsline {subsubsection}{\numberline {11.10.3}Output and Comparison}{42}{subsubsection.11.10.3}
+\contentsline {subsection}{\numberline {11.11}Test 9: 2Bodies}{43}{subsection.11.11}
+\contentsline {subsubsection}{\numberline {11.11.1}Objective of Test case}{43}{subsubsection.11.11.1}
+\contentsline {subsubsection}{\numberline {11.11.2}Steps to execute the test}{43}{subsubsection.11.11.2}
+\contentsline {subsubsection}{\numberline {11.11.3}Output and Comparison}{43}{subsubsection.11.11.3}
+\contentsline {subsection}{\numberline {11.12}Test 10: Cylinder}{43}{subsection.11.12}
+\contentsline {subsubsection}{\numberline {11.12.1}Objective of Test case}{43}{subsubsection.11.12.1}
+\contentsline {subsubsection}{\numberline {11.12.2}Steps to execute the test}{43}{subsubsection.11.12.2}
+\contentsline {subsubsection}{\numberline {11.12.3}Output and Comparison}{43}{subsubsection.11.12.3}
+\contentsline {subsection}{\numberline {11.13}Test 11: NonSymmetrical}{43}{subsection.11.13}
+\contentsline {subsubsection}{\numberline {11.13.1}Objective of Test case}{43}{subsubsection.11.13.1}
+\contentsline {subsubsection}{\numberline {11.13.2}Steps to execute the test}{43}{subsubsection.11.13.2}
+\contentsline {subsubsection}{\numberline {11.13.3}Output and Comparison}{43}{subsubsection.11.13.3}
+\contentsline {section}{\numberline {12}Steps to update OW from Nemoh 2014 to Nemoh 2016}{44}{section.12}
+\contentsline {section}{\numberline {13}Practical Example}{44}{section.13}
+\contentsline {subsection}{\numberline {13.1}Mesh Generation}{44}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Run the simulation}{46}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Generate TEC files and run postprocessing}{48}{subsection.13.3}
+\contentsline {subsection}{\numberline {13.4}Visualize the generated tec files}{49}{subsection.13.4}

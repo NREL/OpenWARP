@@ -1,0 +1,217 @@
+{
+  "configuration":{
+
+    "log_level": "DEBUG",
+
+    "clear_old_logs": true
+
+  },
+
+  "phase" : [],
+
+  "simulations_to_run": ["2Bodies"],
+
+  "verbosity": 1,
+
+  "simulations": {
+    "2Bodies": {
+      "simulation_dir": "automated_test/Test7/exp/2Bodies_false",
+      "environment": {
+        "fluid_mass_volumic": 1000.0,
+        "gravity": 9.81,
+        "fluid_depth": 20,
+        "wave_measurement_point": [
+          0.0,
+          0.0
+        ]
+      },
+      "floating_bodies": {
+
+        "Cube.dat": {
+          "mesh_file": "automated_test/Test7/exp/2Bodies_false/Cube.dat",
+	     "surge": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sway": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "heave": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "roll": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "pitch": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "yaw": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "force_in_x_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_y_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_z_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "moment_in_x_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "moment_in_y_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "moment_in_z_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+	  "meshing": {
+            "fineness": 0.4,
+            "grading": 0.1,
+            "maxh": 50,
+            "minh": 0.35,
+            "use_tolerance": false,
+            "tolerance": 0
+          }
+        },
+
+        "Rotated_cube.dat":{
+          "mesh_file": "automated_test/Test7/exp/2Bodies_false/Rotated_cube.dat",
+	     "surge": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sway": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "heave": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "roll": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "pitch": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "yaw": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "force_in_x_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_y_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_in_z_direction": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "moment_in_x_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "moment_in_y_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+          "moment_in_z_direction": [
+            0.0,
+            0.0,
+            -2.5
+          ],
+	  "meshing": {
+            "fineness": 0.4,
+            "grading": 0.1,
+            "maxh": 50,
+            "minh": 0.35,
+            "use_tolerance": false,
+            "tolerance": 0
+	 } 
+        }
+      },
+      "load_cases": {
+        "num_wave_frequencies": 40,
+        "min_wave_frequencies": 0.1,
+        "max_wave_frequencies": 2.0,
+        "num_wave_directions": 1,
+        "min_wave_directions": 45,
+        "max_wave_directions": 45
+      },
+      "postprocessing": {
+        "compute_irf": true,
+        "irf_time_step": 0.1,
+        "irf_duration": 10,
+        "show_pressure": false,
+        "kochin_num_directions": 0,
+        "kochin_min_directions": 0,
+        "kochin_max_directions": 180,
+        "free_surface_num_points_x": 0,
+        "free_surface_num_points_y": 2,
+        "free_surface_dimension_x": 1000,
+        "free_surface_dimension_y": 2
+      },
+      "calculation": {
+        "solver_type": 0,
+        "gmres_restart": 20,
+        "gmres_stopping": 5.0E-7,
+        "gmres_max_iterations": 100,
+        "green_tabulation_numx": 328,
+        "green_tabulation_numz": 46,
+        "green_tabulation_simpson_npoints": 251,
+        "use_ode_influence_coefficients": false,
+        "use_higher_order": false,
+        "num_panel_higher_order": 1,
+        "b_spline_order": 1,
+        "use_dipoles_implementation": false,
+        "thin_panels": [
+          -1
+        ],
+        "compute_drift_forces": false,
+        "compute_yaw_moment": false,
+        "remove_irregular_frequencies": false
+      }
+    }
+  }
+}

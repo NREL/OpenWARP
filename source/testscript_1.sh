@@ -4,7 +4,7 @@
 exec >> automated_test.log
 
 # I don't want to stop script when shell script returns zero
-#set -e
+set -e
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -59,20 +59,15 @@ python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test05.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test05a.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test06.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test07.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test08.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test09.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test09a.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test11.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test11a.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test11b.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test11c.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test13ac.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test14.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test15.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test16.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test16a.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test17.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test17a.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test17c.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test18.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test19.gdf'
@@ -80,9 +75,6 @@ python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test20.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test21.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test22.gdf'
 python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test22a.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test23.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test24.gdf'
-python automated_test/Test1/GDFtoDAT.py 'automated_test/testruns/test25.gdf'
 
 echo "--------------------------finishing Test1 ---------------------------------"
 #--------------------------------------------------------------------------------------------------------------------
@@ -90,10 +82,10 @@ echo "--------------------------starting Test2 -------------------------------"
 
 	# running Openwarpgui in background, so that I can use openwarp_cli
 	# It will open a browser.
-	source run.sh &
+	# source run.sh &
 	
 	# wait for 3 seconds 	
-	sleep 5
+	# sleep 5
 	
 	chmod u+x automated_test/testruns/openwarp/
 	#Provide filename, not extension '.out'
@@ -107,11 +99,9 @@ echo "--------------------------starting Test2 -------------------------------"
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test05a'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test06'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test07'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test08'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test09'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test09a'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test11'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test11a'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test11b'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test11c'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test12'
@@ -120,11 +110,7 @@ echo "--------------------------starting Test2 -------------------------------"
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test14'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test14a'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test15'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test16'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test16a'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test17'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test17a'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test17b'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test17c'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test18'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test19'
@@ -132,9 +118,7 @@ echo "--------------------------starting Test2 -------------------------------"
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test21'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test22'
 	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test22a'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test23'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test24'
-	python automated_test/Test2/OUTtoHDF5.py 'automated_test/testruns/out/test25'
+	
 	
 	# Create HDF5 file from recently created .dat files inside /testruns/openwarp/openwarpH5 folder.
 	# Same Configuration, different geometry ! 	
@@ -158,17 +142,13 @@ echo "--------------------------starting Test2 -------------------------------"
 	h5diff -vc automated_test/Test2/cli_results/test06/simulation/db.hdf5 automated_test/testruns/openwarp/test06.h5 >automated_test/Test2/test06.log
 
 	h5diff -vc automated_test/Test2/cli_results/test07/simulation/db.hdf5 automated_test/testruns/openwarp/test07.h5 >automated_test/Test2/test07.log
-
-	h5diff -vc automated_test/Test2/cli_results/test08/simulation/db.hdf5 automated_test/testruns/openwarp/test08.h5 >automated_test/Test2/test08.log
-
+	
 	h5diff -vc automated_test/Test2/cli_results/test09/simulation/db.hdf5 automated_test/testruns/openwarp/test09.h5 >automated_test/Test2/test09.log
 
 	h5diff -vc automated_test/Test2/cli_results/test09a/simulation/db.hdf5 automated_test/testruns/openwarp/test09a.h5 >automated_test/Test2/test09a.log
 
 	h5diff -vc automated_test/Test2/cli_results/test11/simulation/db.hdf5 automated_test/testruns/openwarp/test11.h5 >automated_test/Test2/test11.log
-
-	h5diff -vc automated_test/Test2/cli_results/test11a/simulation/db.hdf5 automated_test/testruns/openwarp/test11a.h5 >automated_test/Test2/test11a.log
-
+	
 	h5diff -vc automated_test/Test2/cli_results/test012/simulation/db.hdf5 automated_test/testruns/openwarp/test12.h5 >automated_test/Test2/test12.log
 
 	h5diff -vc automated_test/Test2/cli_results/test11b/simulation/db.hdf5 automated_test/testruns/openwarp/test11b.h5 >automated_test/Test2/test11b.log
@@ -186,17 +166,9 @@ echo "--------------------------starting Test2 -------------------------------"
 	h5diff -vc automated_test/Test2/cli_results/test14a/simulation/db.hdf5 automated_test/testruns/openwarp/test14a.h5 >automated_test/Test2/test14a.log
 
 	h5diff -vc automated_test/Test2/cli_results/test15/simulation/db.hdf5 automated_test/testruns/openwarp/test15.h5 >automated_test/Test2/test15.log
-
-	h5diff -vc automated_test/Test2/cli_results/test16/simulation/db.hdf5 automated_test/testruns/openwarp/test16.h5 >automated_test/Test2/test16.log
-
-	h5diff -vc automated_test/Test2/cli_results/test16a/simulation/db.hdf5 automated_test/testruns/openwarp/test16a.h5 >automated_test/Test2/test16a.log
-
+	
 	h5diff -vc automated_test/Test2/cli_results/test17/simulation/db.hdf5 automated_test/testruns/openwarp/test17.h5 >automated_test/Test2/test17.log
-
-	h5diff -vc automated_test/Test2/cli_results/test17a/simulation/db.hdf5 automated_test/testruns/openwarp/test17a.h5 >automated_test/Test2/test17a.log
-
-	h5diff -vc automated_test/Test2/cli_results/test17b/simulation/db.hdf5 automated_test/testruns/openwarp/test17b.h5 >automated_test/Test2/test17b.log
-
+	
 	h5diff -vc automated_test/Test2/cli_results/test17c/simulation/db.hdf5 automated_test/testruns/openwarp/test17c.h5 >automated_test/Test2/test17c.log
 
 	h5diff -vc automated_test/Test2/cli_results/test18/simulation/db.hdf5 automated_test/testruns/openwarp/test18.h5 >automated_test/Test2/test18.log
@@ -211,12 +183,7 @@ echo "--------------------------starting Test2 -------------------------------"
 	
 	h5diff -vc automated_test/Test2/cli_results/test22a/simulation/db.hdf5 automated_test/testruns/openwarp/test22a.h5 >automated_test/Test2/test22a.log
 
-	h5diff -vc automated_test/Test2/cli_results/test23/simulation/db.hdf5 automated_test/testruns/openwarp/test23.h5 >automated_test/Test2/test23.log
-
-	h5diff -vc automated_test/Test2/cli_results/test24/simulation/db.hdf5 automated_test/testruns/openwarp/test24.h5 >automated_test/Test2/test24.log
-
-	h5diff -vc automated_test/Test2/cli_results/test25/simulation/db.hdf5 automated_test/testruns/openwarp/test25.h5 >automated_test/Test2/test25.log
-
+	
 
 	WAMIT_H5 = '/automated_test/testruns/openwarp/'
 	OPENWARP_H5 = '/automated_test/testruns/openwarp/openwarpH5'

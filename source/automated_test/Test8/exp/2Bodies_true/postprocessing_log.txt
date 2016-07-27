@@ -1,0 +1,71 @@
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test9/2Bodies/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test7/exp/2Bodies_true/db.hdf5/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/results/radiationcoefficients.tec contains the radiation coefficients in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/results/diffractionforce.tec contains the diffraction forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/results/excitationforce.tec contains the excitation forces in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/results/irf.tec contains the irf in tec format.
+
+/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/results/WaveField.tec contains the wave elevation in tec format.
+
+The post processing results are saved in the hdf5 file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test8/exp/2Bodies_true/db.hdf5
