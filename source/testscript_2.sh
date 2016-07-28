@@ -65,7 +65,7 @@ python openwarpgui/openwarp_cli.py automated_test/Test8/exp/2bodies_false.json
 echo "--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  "
 
 # Diff the two generated files 
-h5diff -vc automated_test/Test8/exp/2Bodies_true/db.hdf5 automated_test/Test8/exp/2Bodies_false/db.hdf5 >automated_test/Test8/exp/test07_2bodies.log &
+h5diff -vc automated_test/Test8/exp/2Bodies_true/db.hdf5 automated_test/Test8/exp/2Bodies_false/db.hdf5 >automated_test/Test8/exp/test08_2bodies.log &
 echo "--> Comparing both the outputs .."
 echo "--> H5DIFF Log at: /automated_test/Test7/test07.log"
 echo "--> Test 7/exp finished successfully "
