@@ -3,8 +3,8 @@
 # This script consists of Test-case from 7 to 11 
 exec >> automated_test.log
 
-# I don't want to stop script when shell script returns zero
-set -e
+# to stop script when shell script returns zero
+# set -e
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -183,78 +183,24 @@ echo "--------------------------starting Test2 -------------------------------"
 	
 	h5diff -vc automated_test/Test2/cli_results/test22a/simulation/db.hdf5 automated_test/testruns/openwarp/test22a.h5 >automated_test/Test2/test22a.log
 
-	
-
-	WAMIT_H5 = '/automated_test/testruns/openwarp/'
-	OPENWARP_H5 = '/automated_test/testruns/openwarp/openwarpH5'
-	
-	# Compare hdf5 file using H5DIFF tool : 
-	#h5diff -vc ${WAMIT_H5}/test01.h5 ${OPENWARP_H5}/db_test01.h5
-	#pwd	
-	#cd automated_test/testruns/openwarp
-	#pwd
-
-	
+		
 	
 echo "---------------------------finishing Test2--------------------------------"
    
 #---------------------------------------------------------------------------------------------------------------------
 # Test3. read test3.json to that enables USE_HIGHER_ORDER ad TRUE with B_SPLINE_ORDER as 1. Later, it converts 
 echo "---------------------------Starting  Test3--------------------------------"
-	python openwarpgui/openwarp_cli.py automated_test/Test3/test3.json
+# Running Test 11
+	python openwarpgui/openwarp_cli.py automated_test/Test3/test11.json
 	
-	h5diff -vc automated_test/Test3/cli_results/test11/simulation/db.hdf5 automated_test/testruns/openwarp/test11.h5 >automated_test/Test3/test11.log
+	h5diff -vc automated_test/Test3/test11/test11/db.hdf5 automated_test/testruns/openwarp/test11.h5 >automated_test/Test3/test11.log
 
-	h5diff -vc automated_test/Test3/cli_results/test11a/simulation/db.hdf5 automated_test/testruns/openwarp/test11a.h5 >automated_test/Test3/test11a.log
+# Running Test 13
+	python openwarpgui/openwarp_cli.py automated_test/Test3/test13.json
 
-	h5diff -vc automated_test/Test3/cli_results/test012/simulation/db.hdf5 automated_test/testruns/openwarp/test12.h5 >automated_test/Test3/test12.log
+	h5diff -vc automated_test/Test3/test13/test13/db.hdf5 automated_test/testruns/openwarp/test13.h5 >automated_test/Test3/test13.log
 
-	h5diff -vc automated_test/Test3/cli_results/test11b/simulation/db.hdf5 automated_test/testruns/openwarp/test11b.h5 >automated_test/Test3/test11b.log
-
-	h5diff -vc automated_test/Test3/cli_results/test11c/simulation/db.hdf5 automated_test/testruns/openwarp/test11c.h5 >automated_test/Test3/test11c.log
 	
-	h5diff -vc automated_test/Test3/cli_results/test12/simulation/db.hdf5 automated_test/testruns/openwarp/test12.h5 >automated_test/Test3/test12.log
-
-	h5diff -vc automated_test/Test3/cli_results/test13/simulation/db.hdf5 automated_test/testruns/openwarp/test13.h5 >automated_test/Test3/test13.log
-
-	h5diff -vc automated_test/Test3/cli_results/test13a/simulation/db.hdf5 automated_test/testruns/openwarp/test13a.h5 >automated_test/Test3/test13a.log
-
-	h5diff -vc automated_test/Test3/cli_results/test14/simulation/db.hdf5 automated_test/testruns/openwarp/test14.h5 >automated_test/Test3/test14.log
-
-	h5diff -vc automated_test/Test3/cli_results/test14a/simulation/db.hdf5 automated_test/testruns/openwarp/test14a.h5 >automated_test/Test3/test14a.log
-
-	h5diff -vc automated_test/Test3/cli_results/test15/simulation/db.hdf5 automated_test/testruns/openwarp/test15.h5 >automated_test/Test3/test15.log
-
-	h5diff -vc automated_test/Test3/cli_results/test16/simulation/db.hdf5 automated_test/testruns/openwarp/test16.h5 >automated_test/Test3/test16.log
-
-	h5diff -vc automated_test/Test3/cli_results/test16a/simulation/db.hdf5 automated_test/testruns/openwarp/test16a.h5 >automated_test/Test3/test16a.log
-
-	h5diff -vc automated_test/Test3/cli_results/test17/simulation/db.hdf5 automated_test/testruns/openwarp/test17.h5 >automated_test/Test3/test17.log
-
-	h5diff -vc automated_test/Test3/cli_results/test17a/simulation/db.hdf5 automated_test/testruns/openwarp/test17a.h5 >automated_test/Test3/test17a.log
-
-	h5diff -vc automated_test/Test3/cli_results/test17b/simulation/db.hdf5 automated_test/testruns/openwarp/test17b.h5 >automated_test/Test3/test17b.log
-
-	h5diff -vc automated_test/Test3/cli_results/test17c/simulation/db.hdf5 automated_test/testruns/openwarp/test17c.h5 >automated_test/Test3/test17c.log
-
-	h5diff -vc automated_test/Test3/cli_results/test18/simulation/db.hdf5 automated_test/testruns/openwarp/test18.h5 >automated_test/Test3/test18.log
-
-	h5diff -vc automated_test/Test3/cli_results/test19/simulation/db.hdf5 automated_test/testruns/openwarp/test19.h5 >automated_test/Test3/test19.log
-
-	h5diff -vc automated_test/Test3/cli_results/test20/simulation/db.hdf5 automated_test/testruns/openwarp/test20.h5 >automated_test/Test3/test20.log
-
-	h5diff -vc automated_test/Test3/cli_results/test21/simulation/db.hdf5 automated_test/testruns/openwarp/test21.h5 >automated_test/Test3/test21.log
-
-	h5diff -vc automated_test/Test3/cli_results/test22/simulation/db.hdf5 automated_test/testruns/openwarp/test22.h5 >automated_test/Test3/test22.log
-	
-	h5diff -vc automated_test/Test3/cli_results/test22a/simulation/db.hdf5 automated_test/testruns/openwarp/test22a.h5 >automated_test/Test3/test22a.log
-
-	h5diff -vc automated_test/Test3/cli_results/test23/simulation/db.hdf5 automated_test/testruns/openwarp/test23.h5 >automated_test/Test3/test23.log
-
-	h5diff -vc automated_test/Test3/cli_results/test24/simulation/db.hdf5 automated_test/testruns/openwarp/test24.h5 >automated_test/Test3/test24.log
-
-	h5diff -vc automated_test/Test3/cli_results/test25/simulation/db.hdf5 automated_test/testruns/openwarp/test25.h5 >automated_test/Test3/test25.log
-
 #	python compare.py -args	 testruns/out/test11.out
 #	python compare.py -args	 testruns/out/test13.out	
 echo "---------------------------finishing Test3--------------------------------"
@@ -265,9 +211,7 @@ echo "---------------------------finishing Test3--------------------------------
 echo "---------------------------Starting  Test4--------------------------------"
  	 python openwarpgui/openwarp_cli.py automated_test/Test4/test4.json
 	 
-	h5diff -vc automated_test/Test4/cli_results/test21/simulation/db.hdf5 automated_test/testruns/openwarp/test21.h5 >automated_test/Test4/test21.log
-
-	h5diff -vc automated_test/Test4/cli_results/test09/simulation/db.hdf5 automated_test/testruns/openwarp/test09.h5 >automated_test/Test4/test09.log
+	h5diff -vc automated_test/Test4/cli_results/test09/db.hdf5 automated_test/testruns/openwarp/test09.h5 >automated_test/Test4/test09.log
 #	 python compare.py -args testruns/out/test9.out		 
 echo "---------------------------finishing Test4--------------------------------"
 #--------------------------------------------------------------------------------------------------
@@ -275,7 +219,7 @@ echo "---------------------------finishing Test4--------------------------------
 echo "---------------------------Starting  Test5--------------------------------"
 	  python openwarpgui/openwarp_cli.py automated_test/Test5/test5.json
 	 
-	h5diff -vc automated_test/Test5/cli_results/test02/simulation/db.hdf5 automated_test/testruns/openwarp/test02.h5 >automated_test/Test6/test02.log
+	h5diff -vc automated_test/Test5/cli_results/test02/db.hdf5 automated_test/testruns/openwarp/test02.h5 >automated_test/Test5/test02.log
 
 	
 echo "---------------------------finishing Test5--------------------------------"
@@ -285,7 +229,7 @@ echo "---------------------------Starting  Test6--------------------------------
 # 
 	  python openwarpgui/openwarp_cli.py automated_test/Test6/test6.json
 	 
-	h5diff -vc automated_test/Test6/cli_results/test01/simulation/db.hdf5 automated_test/testruns/openwarp/test01.h5 >automated_test/Test6/test01.log
+	h5diff -vc automated_test/Test6/cli_results/test01/db.hdf5 automated_test/testruns/openwarp/test01.h5 >automated_test/Test6/test01.log
 
 echo "---------------------------finishing Test6--------------------------------"
 

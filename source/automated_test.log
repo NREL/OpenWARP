@@ -2,47 +2,22 @@ Starting Test Script 1
 -------------------------starting Test1--------------------------------
 Using Bemio
 Reading mesh file: automated_test/testruns/test01.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test01.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test01.dat
 Reading mesh file: automated_test/testruns/test02.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test02.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test02.dat
 Reading mesh file: automated_test/testruns/test03.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test03.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test03.dat
 Reading mesh file: automated_test/testruns/test04.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test04.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test04.dat
 Reading mesh file: automated_test/testruns/test05.gdf
 Reading mesh file: automated_test/testruns/test05a.gdf
 Reading mesh file: automated_test/testruns/test06.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test06.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test06.dat
 Reading mesh file: automated_test/testruns/test07.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test07.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test07.dat
-Reading mesh file: automated_test/testruns/test08.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test08.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test08.dat
 Reading mesh file: automated_test/testruns/test09.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test09.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test09.dat
 Reading mesh file: automated_test/testruns/test09a.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test09a.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test09a.dat
 Reading mesh file: automated_test/testruns/test11.gdf
-Successfully read mesh file: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/test11.gdf
-Wrote NEMOH mesh to: /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/openwarp/test11.dat
-Reading mesh file: automated_test/testruns/test11a.gdf
 Reading mesh file: automated_test/testruns/test11b.gdf
 Reading mesh file: automated_test/testruns/test11c.gdf
 Reading mesh file: automated_test/testruns/test13ac.gdf
 Reading mesh file: automated_test/testruns/test14.gdf
 Reading mesh file: automated_test/testruns/test15.gdf
-Reading mesh file: automated_test/testruns/test16.gdf
-Reading mesh file: automated_test/testruns/test16a.gdf
 Reading mesh file: automated_test/testruns/test17.gdf
-Reading mesh file: automated_test/testruns/test17a.gdf
 Reading mesh file: automated_test/testruns/test17c.gdf
 Reading mesh file: automated_test/testruns/test18.gdf
 Reading mesh file: automated_test/testruns/test19.gdf
@@ -50,15 +25,8 @@ Reading mesh file: automated_test/testruns/test20.gdf
 Reading mesh file: automated_test/testruns/test21.gdf
 Reading mesh file: automated_test/testruns/test22.gdf
 Reading mesh file: automated_test/testruns/test22a.gdf
-Reading mesh file: automated_test/testruns/test23.gdf
-Reading mesh file: automated_test/testruns/test24.gdf
-Reading mesh file: automated_test/testruns/test25.gdf
 --------------------------finishing Test1 ---------------------------------
 --------------------------starting Test2 -------------------------------
-Starting OpenWarp GUI Server
-running build_ext
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
@@ -67,8 +35,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
 	Radiation IRF functions for test01 were not written.
 	Excitation IRF functions for test01 were not written.
 	Radiation state space coefficients for test01 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
@@ -77,8 +43,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
 	Radiation IRF functions for test01 were not written.
 	Excitation IRF functions for test01 were not written.
 	Radiation state space coefficients for test01 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
@@ -87,8 +51,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
 	Radiation IRF functions for test02 were not written.
 	Excitation IRF functions for test02 were not written.
 	Radiation state space coefficients for test02 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
@@ -97,8 +59,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
 	Radiation IRF functions for test03 were not written.
 	Excitation IRF functions for test03 were not written.
 	Radiation state space coefficients for test03 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
@@ -107,8 +67,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
 	Radiation IRF functions for test04 were not written.
 	Excitation IRF functions for test04 were not written.
 	Radiation state space coefficients for test04 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
@@ -120,8 +78,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
 	Radiation IRF functions for test05s were not written.
 	Excitation IRF functions for test05s were not written.
 	Radiation state space coefficients for test05s were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
@@ -133,8 +89,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
 	Radiation IRF functions for test05s were not written.
 	Excitation IRF functions for test05s were not written.
 	Radiation state space coefficients for test05s were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
@@ -143,8 +97,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
 	Radiation IRF functions for test06 were not written.
 	Excitation IRF functions for test06 were not written.
 	Radiation state space coefficients for test06 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
@@ -153,12 +105,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
 	Radiation IRF functions for test07 were not written.
 	Excitation IRF functions for test07 were not written.
 	Radiation state space coefficients for test07 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test08.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
@@ -167,8 +113,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
 	Radiation IRF functions for test09 were not written.
 	Excitation IRF functions for test09 were not written.
 	Radiation state space coefficients for test09 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
@@ -177,8 +121,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
 	Radiation IRF functions for test09 were not written.
 	Excitation IRF functions for test09 were not written.
 	Radiation state space coefficients for test09 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
@@ -187,12 +129,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
 	Radiation IRF functions for test11 were not written.
 	Excitation IRF functions for test11 were not written.
 	Radiation state space coefficients for test11 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11a.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
@@ -201,8 +137,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
 	Radiation IRF functions for test11b were not written.
 	Excitation IRF functions for test11b were not written.
 	Radiation state space coefficients for test11b were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
@@ -211,8 +145,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
 	Radiation IRF functions for test11c were not written.
 	Excitation IRF functions for test11c were not written.
 	Radiation state space coefficients for test11c were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
@@ -221,8 +153,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
 	Radiation IRF functions for test12 were not written.
 	Excitation IRF functions for test12 were not written.
 	Radiation state space coefficients for test12 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
@@ -234,8 +164,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
 	Radiation IRF functions for test13s were not written.
 	Excitation IRF functions for test13s were not written.
 	Radiation state space coefficients for test13s were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
@@ -247,8 +175,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
 	Radiation IRF functions for test13as were not written.
 	Excitation IRF functions for test13as were not written.
 	Radiation state space coefficients for test13as were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
@@ -257,8 +183,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
 	Radiation IRF functions for test14 were not written.
 	Excitation IRF functions for test14 were not written.
 	Radiation state space coefficients for test14 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
@@ -267,8 +191,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
 	Radiation IRF functions for test14 were not written.
 	Excitation IRF functions for test14 were not written.
 	Radiation state space coefficients for test14 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
@@ -277,16 +199,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
 	Radiation IRF functions for test15 were not written.
 	Excitation IRF functions for test15 were not written.
 	Radiation state space coefficients for test15 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test16.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test16a.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
@@ -295,24 +207,10 @@ Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
 	Radiation IRF functions for test17 were not written.
 	Excitation IRF functions for test17 were not written.
 	Radiation state space coefficients for test17 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17a.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17b.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
@@ -321,8 +219,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
 	Radiation IRF functions for test19 were not written.
 	Excitation IRF functions for test19 were not written.
 	Radiation state space coefficients for test19 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
@@ -331,8 +227,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
 	Radiation IRF functions for test20 were not written.
 	Excitation IRF functions for test20 were not written.
 	Radiation state space coefficients for test20 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
@@ -341,8 +235,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
 	Radiation IRF functions for test21 were not written.
 	Excitation IRF functions for test21 were not written.
 	Radiation state space coefficients for test21 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
@@ -351,8 +243,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
 	Radiation IRF functions for test22 were not written.
 	Excitation IRF functions for test22 were not written.
 	Radiation state space coefficients for test22 were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
 
 Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
 	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
@@ -361,18 +251,6 @@ Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
 	Radiation IRF functions for test22a were not written.
 	Excitation IRF functions for test22a were not written.
 	Radiation state space coefficients for test22a were not written.
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test23.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test24.out file
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client']
-['/home/binit92/Desktop/binit92/OpenWARP/source/automated_test/Test2', '/usr/lib/python2.7', '/usr/lib/python2.7/plat-x86_64-linux-gnu', '/usr/lib/python2.7/lib-tk', '/usr/lib/python2.7/lib-old', '/usr/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages', '/usr/lib/python2.7/dist-packages/PILcompat', '/usr/lib/python2.7/dist-packages/gtk-2.0', '/usr/lib/pymodules/python2.7', '/usr/lib/python2.7/dist-packages/ubuntu-sso-client', 'automated_test']
-
-Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test25.out file
 running build_ext
 Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
 
@@ -389,6 +267,1834 @@ Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/sourc
 Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
 
 Processing configuration file at automated_test/Test3/test3.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test3.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test3.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test3.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test3.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test11.json
+
+
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test13.json
+
+
+---------------------------finishing Test3--------------------------------
+---------------------------Starting  Test4--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test4/test4.json
+
+
+---------------------------finishing Test4--------------------------------
+---------------------------Starting  Test5--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test5/test5.json
+
+
+---------------------------finishing Test5--------------------------------
+---------------------------Starting  Test6--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test6/test6.json
+
+
+---------------------------finishing Test6--------------------------------
+Starting Test Script 1 
+-------------------------starting Test1--------------------------------
+Using Bemio
+Reading mesh file: automated_test/testruns/test01.gdf
+Reading mesh file: automated_test/testruns/test02.gdf
+Reading mesh file: automated_test/testruns/test03.gdf
+Reading mesh file: automated_test/testruns/test04.gdf
+Reading mesh file: automated_test/testruns/test05.gdf
+Reading mesh file: automated_test/testruns/test05a.gdf
+Reading mesh file: automated_test/testruns/test06.gdf
+Reading mesh file: automated_test/testruns/test07.gdf
+Reading mesh file: automated_test/testruns/test09.gdf
+Reading mesh file: automated_test/testruns/test09a.gdf
+Reading mesh file: automated_test/testruns/test11.gdf
+Reading mesh file: automated_test/testruns/test11b.gdf
+Reading mesh file: automated_test/testruns/test11c.gdf
+Reading mesh file: automated_test/testruns/test13ac.gdf
+Reading mesh file: automated_test/testruns/test14.gdf
+Reading mesh file: automated_test/testruns/test15.gdf
+Reading mesh file: automated_test/testruns/test17.gdf
+Reading mesh file: automated_test/testruns/test17c.gdf
+Reading mesh file: automated_test/testruns/test18.gdf
+Reading mesh file: automated_test/testruns/test19.gdf
+Reading mesh file: automated_test/testruns/test20.gdf
+Reading mesh file: automated_test/testruns/test21.gdf
+Reading mesh file: automated_test/testruns/test22.gdf
+Reading mesh file: automated_test/testruns/test22a.gdf
+--------------------------finishing Test1 ---------------------------------
+--------------------------starting Test2 -------------------------------
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test01a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test01a.h5
+	Radiation IRF functions for test01 were not written.
+	Excitation IRF functions for test01 were not written.
+	Radiation state space coefficients for test01 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test02.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test02.h5
+	Radiation IRF functions for test02 were not written.
+	Excitation IRF functions for test02 were not written.
+	Radiation state space coefficients for test02 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test03.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test03.h5
+	Radiation IRF functions for test03 were not written.
+	Excitation IRF functions for test03 were not written.
+	Radiation state space coefficients for test03 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test04.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test04.h5
+	Radiation IRF functions for test04 were not written.
+	Excitation IRF functions for test04 were not written.
+	Radiation state space coefficients for test04 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test05a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test05a.h5
+	Radiation IRF functions for test05c were not written.
+	Excitation IRF functions for test05c were not written.
+	Radiation state space coefficients for test05c were not written.
+	Radiation IRF functions for test05s were not written.
+	Excitation IRF functions for test05s were not written.
+	Radiation state space coefficients for test05s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test06.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test06.h5
+	Radiation IRF functions for test06 were not written.
+	Excitation IRF functions for test06 were not written.
+	Radiation state space coefficients for test06 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test07.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test07.h5
+	Radiation IRF functions for test07 were not written.
+	Excitation IRF functions for test07 were not written.
+	Radiation state space coefficients for test07 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test09a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test09a.h5
+	Radiation IRF functions for test09 were not written.
+	Excitation IRF functions for test09 were not written.
+	Radiation state space coefficients for test09 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11.h5
+	Radiation IRF functions for test11 were not written.
+	Excitation IRF functions for test11 were not written.
+	Radiation state space coefficients for test11 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11b.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11b.h5
+	Radiation IRF functions for test11b were not written.
+	Excitation IRF functions for test11b were not written.
+	Radiation state space coefficients for test11b were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test11c.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test11c.h5
+	Radiation IRF functions for test11c were not written.
+	Excitation IRF functions for test11c were not written.
+	Radiation state space coefficients for test11c were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test12.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test12.h5
+	Radiation IRF functions for test12 were not written.
+	Excitation IRF functions for test12 were not written.
+	Radiation state space coefficients for test12 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13.h5
+	Radiation IRF functions for test13c were not written.
+	Excitation IRF functions for test13c were not written.
+	Radiation state space coefficients for test13c were not written.
+	Radiation IRF functions for test13s were not written.
+	Excitation IRF functions for test13s were not written.
+	Radiation state space coefficients for test13s were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test13a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test13a.h5
+	Radiation IRF functions for test13ac were not written.
+	Excitation IRF functions for test13ac were not written.
+	Radiation state space coefficients for test13ac were not written.
+	Radiation IRF functions for test13as were not written.
+	Excitation IRF functions for test13as were not written.
+	Radiation state space coefficients for test13as were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test14a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test14a.h5
+	Radiation IRF functions for test14 were not written.
+	Excitation IRF functions for test14 were not written.
+	Radiation state space coefficients for test14 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test15.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test15.h5
+	Radiation IRF functions for test15 were not written.
+	Excitation IRF functions for test15 were not written.
+	Radiation state space coefficients for test15 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test17.h5
+	Radiation IRF functions for test17 were not written.
+	Excitation IRF functions for test17 were not written.
+	Radiation state space coefficients for test17 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test17c.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test18.out file
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test19.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test19.h5
+	Radiation IRF functions for test19 were not written.
+	Excitation IRF functions for test19 were not written.
+	Radiation state space coefficients for test19 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test20.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test20.h5
+	Radiation IRF functions for test20 were not written.
+	Excitation IRF functions for test20 were not written.
+	Radiation state space coefficients for test20 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test21.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test21.h5
+	Radiation IRF functions for test21 were not written.
+	Excitation IRF functions for test21 were not written.
+	Radiation state space coefficients for test21 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22.h5
+	Radiation IRF functions for test22 were not written.
+	Excitation IRF functions for test22 were not written.
+	Radiation state space coefficients for test22 were not written.
+
+Reading the WAMIT results in the /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.out file
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3sc does not exist... not reading scattering coefficients.
+	The file /home/binit92/Desktop/binit92/OpenWARP/source/automated_test/testruns/out/test22a.3fk does not exist... not reading froud krylof coefficients.
+Writing HDF5 data to automated_test/testruns/openwarp/test22a.h5
+	Radiation IRF functions for test22a were not written.
+	Excitation IRF functions for test22a were not written.
+	Radiation state space coefficients for test22a were not written.
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test2/test2.json
+
+
+---------------------------finishing Test2--------------------------------
+---------------------------Starting  Test3--------------------------------
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test11.json
+
+
+running build_ext
+Found logging configuration file at /home/binit92/Desktop/binit92/OpenWARP/source/openwarpgui/nemoh/logging.json
+
+Writing log at /home/binit92/OpenWarpFiles/logs/logs.log
+
+Processing configuration file at automated_test/Test3/test13.json
 
 
 ---------------------------finishing Test3--------------------------------
