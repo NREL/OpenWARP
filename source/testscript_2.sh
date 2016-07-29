@@ -3,8 +3,7 @@
 # This script consists of Test-case from 7 to 11 
 exec >> automated_test2.log
 
-exec >> automated_test2.log
-
+# Enable set -e to stop script in case of exception 
 #set -e
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
 SOURCE="${BASH_SOURCE[0]}"
@@ -32,46 +31,44 @@ export PYTOHNPATH="$INSTALL_PATH"/openwarpgui
 mkdir -p ~/OpenWarpFiles/temp
 mkdir -p ~/OpenWarpFiles/user_data
 
-echo "Starting Test Script 2 "
+echo "###  [Test Script 2] ###"
 
 
-
-# 
-# Test 07 
-# ---------------------------------------------------------------
 echo "------------------------"
-echo "-->Starting Test 7 -"
+echo "-->Starting Test 7-"
 echo "------------------------"
-# Workspace is automated_test/Test7/flap-meshed-quad_true/
-python openwarpgui/openwarp_cli.py automated_test/Test7/test7_true.json
+
+# Workspace is automated_test/Test7/exp/2Bodies_true/
+python openwarpgui/openwarp_cli.py automated_test/Test7/exp/2bodies_true.json
 echo " --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--"
-# Workspace is automated_test/Test7/flap-meshed-quad_false/
-python openwarpgui/openwarp_cli.py automated_test/Test7/test7_false.json
+
+# Workspace is automated_test/Test7/exp/2Bodies_false/
+python openwarpgui/openwarp_cli.py automated_test/Test7/exp/2bodies_false.json
 echo "--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  "
+
 # Diff the two generated files 
-h5diff -vc automated_test/Test7/flap-meshed-quad_true/db.hdf5 automated_test/Test7/flap-meshed-quad_false/db.hdf5 >automated_test/Test7/test07.log &
+h5diff -vc automated_test/Test7/exp/2Bodies_true/db.hdf5 automated_test/Test7/exp/2Bodies_false/db.hdf5 >automated_test/Test7/exp/test07_2bodies.log &
 echo "--> Comparing both the outputs .."
 echo "--> H5DIFF Log at: /automated_test/Test7/test07.log"
 echo "--> Test 7 finished successfully "
 
+echo "------------------------"
+echo "-->Starting Test8 "
+echo "------------------------"
 
+# Workspace is automated_test/Test8/exp/2Bodies_true/
+python openwarpgui/openwarp_cli.py automated_test/Test8/exp/2bodies_true.json
+echo " --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--"
 
-# Test 08
-# ---------------------------------------------------------------
-echo "----------------------"
-echo "--> Starting Test 8 -"
-echo "----------------------"
-# Workspace is automated_test/Test7/flap-meshed-quad_negative/
-python openwarpgui/openwarp_cli.py automated_test/Test8/test8_negative.json
-echo "--> Testing Green function, tabulation with null values  "
-# Workspace is automated_test/Test7/flap-meshed-quad_default/
-python openwarpgui/openwarp_cli.py automated_test/Test8/test8_default.json
-echo "--> Testing Green function, tabulation with default values "
+# Workspace is automated_test/Test8/2Bodies_false/
+python openwarpgui/openwarp_cli.py automated_test/Test8/exp/2bodies_false.json
+echo "--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  "
+
 # Diff the two generated files 
-h5diff -vc automated_test/Test8/flap-meshed-quad_negative/db.hdf5 automated_test/Test8/flap-meshed-quad_default/db.hdf5 >automated_test/Test8/test08.log &
+h5diff -vc automated_test/Test8/exp/2Bodies_true/db.hdf5 automated_test/Test8/exp/2Bodies_false/db.hdf5 >automated_test/Test8/exp/test08_2bodies.log &
 echo "--> Comparing both the outputs .."
-echo "--> H5DIFF Log at: /automated_test/Test8/test08.log"
-echo "--> Test 8 finished successfully "
+echo "--> H5DIFF Log at: /automated_test/Test7/test07.log"
+echo "--> Test 7/exp finished successfully "
 
 
 # Test 09

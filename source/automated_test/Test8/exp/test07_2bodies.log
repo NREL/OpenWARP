@@ -1,0 +1,497 @@
+
+file1     file2
+---------------------------------------
+    x      x    /              
+    x      x    /input         
+    x      x    /input/calculations
+    x      x    /input/calculations/bodies
+    x      x    /input/calculations/bodies/body1
+    x      x    /input/calculations/bodies/body1/env_num_panels
+    x      x    /input/calculations/bodies/body1/env_num_points
+    x      x    /input/calculations/bodies/body1/freedom_degree
+    x      x    /input/calculations/bodies/body1/generalised_forces
+    x      x    /input/calculations/bodies/body1/mesh
+    x      x    /input/calculations/bodies/body2
+    x      x    /input/calculations/bodies/body2/env_num_panels
+    x      x    /input/calculations/bodies/body2/env_num_points
+    x      x    /input/calculations/bodies/body2/freedom_degree
+    x      x    /input/calculations/bodies/body2/generalised_forces
+    x      x    /input/calculations/bodies/body2/mesh
+    x      x    /input/calculations/environment
+    x      x    /input/calculations/environment/compute_irf
+    x      x    /input/calculations/environment/fluid_depth
+    x      x    /input/calculations/environment/fluid_mass_volumic
+    x      x    /input/calculations/environment/free_surface_dimension_x
+    x      x    /input/calculations/environment/free_surface_dimension_y
+    x      x    /input/calculations/environment/free_surface_num_points_x
+    x      x    /input/calculations/environment/free_surface_num_points_y
+    x      x    /input/calculations/environment/gravity
+    x      x    /input/calculations/environment/irf_duration
+    x      x    /input/calculations/environment/irf_time_step
+    x      x    /input/calculations/environment/kochin_max_directions
+    x      x    /input/calculations/environment/kochin_min_directions
+    x      x    /input/calculations/environment/kochin_num_directions
+    x      x    /input/calculations/environment/max_wave_directions
+    x      x    /input/calculations/environment/max_wave_frequencies
+    x      x    /input/calculations/environment/min_wave_directions
+    x      x    /input/calculations/environment/min_wave_frequencies
+    x      x    /input/calculations/environment/num_wave_directions
+    x      x    /input/calculations/environment/num_wave_frequencies
+    x      x    /input/calculations/environment/show_pressure
+    x      x    /input/calculations/environment/wave_measurement_point
+    x      x    /input/solver  
+    x      x    /input/solver/b_spline_order
+    x      x    /input/solver/compute_drift_forces
+    x      x    /input/solver/compute_yaw_moment
+    x      x    /input/solver/gmres_max_iterations
+    x      x    /input/solver/gmres_restart
+    x      x    /input/solver/gmres_stopping
+    x      x    /input/solver/green_tabulation_numx
+    x      x    /input/solver/green_tabulation_numz
+    x      x    /input/solver/green_tabulation_simpson_npoints
+    x      x    /input/solver/num_panel_higher_order
+    x      x    /input/solver/remove_irregular_frequencies
+    x      x    /input/solver/solver_type
+    x      x    /input/solver/thin_panels
+    x      x    /input/solver/use_dipoles_implementation
+    x      x    /input/solver/use_higher_order
+    x      x    /input/solver/use_ode_influence_coefficients
+    x      x    /output        
+    x      x    /output/mesh   
+    x      x    /output/mesh/free_surface
+    x      x    /output/mesh/free_surface/index
+    x      x    /output/mesh/free_surface/vectors
+    x      x    /output/mesh/integration
+    x      x    /output/mesh/kochin
+    x      x    /output/mesh/l10
+    x      x    /output/mesh/l10/a
+    x      x    /output/mesh/l10/c_panel
+    x      x    /output/mesh/l10/n
+    x      x    /output/mesh/l10/param
+    x      x    /output/mesh/l10/xm
+    x      x    /output/mesh/l12
+    x      x    /output/mesh/l12/p
+    x      x    /output/mesh/l12/params
+    x      x    /output/mesh/l12/x
+    x      x    /output/normal_velocity
+    x      x    /output/normal_velocity/beta
+    x      x    /output/normal_velocity/switch_free_surface
+    x      x    /output/normal_velocity/switch_kochin
+    x      x    /output/normal_velocity/switch_potential
+    x      x    /output/normal_velocity/velocities
+    x      x    /output/normal_velocity/w
+    x      x    /results       
+    x      x    /results/added_mass
+    x      x    /results/added_mass_infinite
+    x      x    /results/case  
+    x      x    /results/case/beta
+    x      x    /results/case/force
+    x      x    /results/case/motion
+    x      x    /results/case/radiation
+    x      x    /results/case/theta
+    x      x    /results/case/w
+    x      x    /results/center_buoyancy
+    x      x    /results/drift_forces
+    x      x    /results/excitation_forces
+    x      x    /results/fk_forces
+    x      x    /results/fk_forces_raw
+    x      x    /results/forces
+    x      x    /results/free_surface_panel
+    x      x    /results/free_surface_points
+    x      x    /results/kochin
+    x      x    /results/potential
+    x      x    /results/radiation_damping
+    x      x    /results/stifness
+    x      x    /results/volume_displacement
+    x      x    /results/water_plane_area
+    x      x    /results/yaw_moment
+
+group  : </> and </>
+0 differences found
+group  : </input> and </input>
+0 differences found
+group  : </input/calculations> and </input/calculations>
+0 differences found
+group  : </input/calculations/bodies> and </input/calculations/bodies>
+0 differences found
+group  : </input/calculations/bodies/body1> and </input/calculations/bodies/body1>
+0 differences found
+dataset: </input/calculations/bodies/body1/env_num_panels> and </input/calculations/bodies/body1/env_num_panels>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/env_num_panels>> and <description of </input/calculations/bodies/body1/env_num_panels>>
+0 differences found
+dataset: </input/calculations/bodies/body1/env_num_points> and </input/calculations/bodies/body1/env_num_points>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/env_num_points>> and <description of </input/calculations/bodies/body1/env_num_points>>
+0 differences found
+dataset: </input/calculations/bodies/body1/freedom_degree> and </input/calculations/bodies/body1/freedom_degree>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/freedom_degree>> and <description of </input/calculations/bodies/body1/freedom_degree>>
+0 differences found
+dataset: </input/calculations/bodies/body1/generalised_forces> and </input/calculations/bodies/body1/generalised_forces>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/generalised_forces>> and <description of </input/calculations/bodies/body1/generalised_forces>>
+0 differences found
+dataset: </input/calculations/bodies/body1/mesh> and </input/calculations/bodies/body1/mesh>
+0 differences found
+attribute: <description of </input/calculations/bodies/body1/mesh>> and <description of </input/calculations/bodies/body1/mesh>>
+0 differences found
+group  : </input/calculations/bodies/body2> and </input/calculations/bodies/body2>
+0 differences found
+dataset: </input/calculations/bodies/body2/env_num_panels> and </input/calculations/bodies/body2/env_num_panels>
+0 differences found
+attribute: <description of </input/calculations/bodies/body2/env_num_panels>> and <description of </input/calculations/bodies/body2/env_num_panels>>
+0 differences found
+dataset: </input/calculations/bodies/body2/env_num_points> and </input/calculations/bodies/body2/env_num_points>
+0 differences found
+attribute: <description of </input/calculations/bodies/body2/env_num_points>> and <description of </input/calculations/bodies/body2/env_num_points>>
+0 differences found
+dataset: </input/calculations/bodies/body2/freedom_degree> and </input/calculations/bodies/body2/freedom_degree>
+0 differences found
+attribute: <description of </input/calculations/bodies/body2/freedom_degree>> and <description of </input/calculations/bodies/body2/freedom_degree>>
+0 differences found
+dataset: </input/calculations/bodies/body2/generalised_forces> and </input/calculations/bodies/body2/generalised_forces>
+0 differences found
+attribute: <description of </input/calculations/bodies/body2/generalised_forces>> and <description of </input/calculations/bodies/body2/generalised_forces>>
+0 differences found
+dataset: </input/calculations/bodies/body2/mesh> and </input/calculations/bodies/body2/mesh>
+0 differences found
+attribute: <description of </input/calculations/bodies/body2/mesh>> and <description of </input/calculations/bodies/body2/mesh>>
+0 differences found
+group  : </input/calculations/environment> and </input/calculations/environment>
+0 differences found
+dataset: </input/calculations/environment/compute_irf> and </input/calculations/environment/compute_irf>
+0 differences found
+attribute: <description of </input/calculations/environment/compute_irf>> and <description of </input/calculations/environment/compute_irf>>
+0 differences found
+dataset: </input/calculations/environment/fluid_depth> and </input/calculations/environment/fluid_depth>
+0 differences found
+attribute: <description of </input/calculations/environment/fluid_depth>> and <description of </input/calculations/environment/fluid_depth>>
+0 differences found
+dataset: </input/calculations/environment/fluid_mass_volumic> and </input/calculations/environment/fluid_mass_volumic>
+0 differences found
+attribute: <description of </input/calculations/environment/fluid_mass_volumic>> and <description of </input/calculations/environment/fluid_mass_volumic>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_dimension_x> and </input/calculations/environment/free_surface_dimension_x>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_dimension_x>> and <description of </input/calculations/environment/free_surface_dimension_x>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_dimension_y> and </input/calculations/environment/free_surface_dimension_y>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_dimension_y>> and <description of </input/calculations/environment/free_surface_dimension_y>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_num_points_x> and </input/calculations/environment/free_surface_num_points_x>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_num_points_x>> and <description of </input/calculations/environment/free_surface_num_points_x>>
+0 differences found
+dataset: </input/calculations/environment/free_surface_num_points_y> and </input/calculations/environment/free_surface_num_points_y>
+0 differences found
+attribute: <description of </input/calculations/environment/free_surface_num_points_y>> and <description of </input/calculations/environment/free_surface_num_points_y>>
+0 differences found
+dataset: </input/calculations/environment/gravity> and </input/calculations/environment/gravity>
+0 differences found
+attribute: <description of </input/calculations/environment/gravity>> and <description of </input/calculations/environment/gravity>>
+0 differences found
+dataset: </input/calculations/environment/irf_duration> and </input/calculations/environment/irf_duration>
+0 differences found
+attribute: <description of </input/calculations/environment/irf_duration>> and <description of </input/calculations/environment/irf_duration>>
+0 differences found
+dataset: </input/calculations/environment/irf_time_step> and </input/calculations/environment/irf_time_step>
+0 differences found
+attribute: <description of </input/calculations/environment/irf_time_step>> and <description of </input/calculations/environment/irf_time_step>>
+0 differences found
+dataset: </input/calculations/environment/kochin_max_directions> and </input/calculations/environment/kochin_max_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_max_directions>> and <description of </input/calculations/environment/kochin_max_directions>>
+0 differences found
+dataset: </input/calculations/environment/kochin_min_directions> and </input/calculations/environment/kochin_min_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_min_directions>> and <description of </input/calculations/environment/kochin_min_directions>>
+0 differences found
+dataset: </input/calculations/environment/kochin_num_directions> and </input/calculations/environment/kochin_num_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/kochin_num_directions>> and <description of </input/calculations/environment/kochin_num_directions>>
+0 differences found
+dataset: </input/calculations/environment/max_wave_directions> and </input/calculations/environment/max_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/max_wave_directions>> and <description of </input/calculations/environment/max_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/max_wave_frequencies> and </input/calculations/environment/max_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/max_wave_frequencies>> and <description of </input/calculations/environment/max_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/min_wave_directions> and </input/calculations/environment/min_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/min_wave_directions>> and <description of </input/calculations/environment/min_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/min_wave_frequencies> and </input/calculations/environment/min_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/min_wave_frequencies>> and <description of </input/calculations/environment/min_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/num_wave_directions> and </input/calculations/environment/num_wave_directions>
+0 differences found
+attribute: <description of </input/calculations/environment/num_wave_directions>> and <description of </input/calculations/environment/num_wave_directions>>
+0 differences found
+dataset: </input/calculations/environment/num_wave_frequencies> and </input/calculations/environment/num_wave_frequencies>
+0 differences found
+attribute: <description of </input/calculations/environment/num_wave_frequencies>> and <description of </input/calculations/environment/num_wave_frequencies>>
+0 differences found
+dataset: </input/calculations/environment/show_pressure> and </input/calculations/environment/show_pressure>
+0 differences found
+attribute: <description of </input/calculations/environment/show_pressure>> and <description of </input/calculations/environment/show_pressure>>
+0 differences found
+dataset: </input/calculations/environment/wave_measurement_point> and </input/calculations/environment/wave_measurement_point>
+0 differences found
+attribute: <description of </input/calculations/environment/wave_measurement_point>> and <description of </input/calculations/environment/wave_measurement_point>>
+0 differences found
+group  : </input/solver> and </input/solver>
+0 differences found
+dataset: </input/solver/b_spline_order> and </input/solver/b_spline_order>
+0 differences found
+attribute: <description of </input/solver/b_spline_order>> and <description of </input/solver/b_spline_order>>
+0 differences found
+dataset: </input/solver/compute_drift_forces> and </input/solver/compute_drift_forces>
+0 differences found
+attribute: <description of </input/solver/compute_drift_forces>> and <description of </input/solver/compute_drift_forces>>
+0 differences found
+dataset: </input/solver/compute_yaw_moment> and </input/solver/compute_yaw_moment>
+0 differences found
+attribute: <description of </input/solver/compute_yaw_moment>> and <description of </input/solver/compute_yaw_moment>>
+0 differences found
+dataset: </input/solver/gmres_max_iterations> and </input/solver/gmres_max_iterations>
+size:           [1]           [1]
+position        gmres_max_iterations gmres_max_iterations difference          
+------------------------------------------------------------
+[ 0 ]          100             0               100            
+1 differences found
+attribute: <description of </input/solver/gmres_max_iterations>> and <description of </input/solver/gmres_max_iterations>>
+0 differences found
+dataset: </input/solver/gmres_restart> and </input/solver/gmres_restart>
+0 differences found
+attribute: <description of </input/solver/gmres_restart>> and <description of </input/solver/gmres_restart>>
+0 differences found
+dataset: </input/solver/gmres_stopping> and </input/solver/gmres_stopping>
+0 differences found
+attribute: <description of </input/solver/gmres_stopping>> and <description of </input/solver/gmres_stopping>>
+0 differences found
+dataset: </input/solver/green_tabulation_numx> and </input/solver/green_tabulation_numx>
+0 differences found
+dataset: </input/solver/green_tabulation_numz> and </input/solver/green_tabulation_numz>
+0 differences found
+dataset: </input/solver/green_tabulation_simpson_npoints> and </input/solver/green_tabulation_simpson_npoints>
+0 differences found
+dataset: </input/solver/num_panel_higher_order> and </input/solver/num_panel_higher_order>
+0 differences found
+attribute: <description of </input/solver/num_panel_higher_order>> and <description of </input/solver/num_panel_higher_order>>
+0 differences found
+dataset: </input/solver/remove_irregular_frequencies> and </input/solver/remove_irregular_frequencies>
+0 differences found
+attribute: <description of </input/solver/remove_irregular_frequencies>> and <description of </input/solver/remove_irregular_frequencies>>
+0 differences found
+dataset: </input/solver/solver_type> and </input/solver/solver_type>
+0 differences found
+attribute: <description of </input/solver/solver_type>> and <description of </input/solver/solver_type>>
+0 differences found
+dataset: </input/solver/thin_panels> and </input/solver/thin_panels>
+0 differences found
+attribute: <description of </input/solver/thin_panels>> and <description of </input/solver/thin_panels>>
+0 differences found
+dataset: </input/solver/use_dipoles_implementation> and </input/solver/use_dipoles_implementation>
+0 differences found
+attribute: <description of </input/solver/use_dipoles_implementation>> and <description of </input/solver/use_dipoles_implementation>>
+0 differences found
+dataset: </input/solver/use_higher_order> and </input/solver/use_higher_order>
+0 differences found
+attribute: <description of </input/solver/use_higher_order>> and <description of </input/solver/use_higher_order>>
+0 differences found
+dataset: </input/solver/use_ode_influence_coefficients> and </input/solver/use_ode_influence_coefficients>
+0 differences found
+attribute: <description of </input/solver/use_ode_influence_coefficients>> and <description of </input/solver/use_ode_influence_coefficients>>
+0 differences found
+group  : </output> and </output>
+0 differences found
+group  : </output/mesh> and </output/mesh>
+0 differences found
+group  : </output/mesh/free_surface> and </output/mesh/free_surface>
+0 differences found
+dataset: </output/mesh/free_surface/index> and </output/mesh/free_surface/index>
+Not comparable: </output/mesh/free_surface/index> or </output/mesh/free_surface/index> is an empty dataset
+0 differences found
+attribute: <description of </output/mesh/free_surface/index>> and <description of </output/mesh/free_surface/index>>
+0 differences found
+dataset: </output/mesh/free_surface/vectors> and </output/mesh/free_surface/vectors>
+0 differences found
+attribute: <description of </output/mesh/free_surface/vectors>> and <description of </output/mesh/free_surface/vectors>>
+0 differences found
+dataset: </output/mesh/integration> and </output/mesh/integration>
+0 differences found
+attribute: <description of </output/mesh/integration>> and <description of </output/mesh/integration>>
+0 differences found
+dataset: </output/mesh/kochin> and </output/mesh/kochin>
+0 differences found
+attribute: <description of </output/mesh/kochin>> and <description of </output/mesh/kochin>>
+0 differences found
+group  : </output/mesh/l10> and </output/mesh/l10>
+0 differences found
+dataset: </output/mesh/l10/a> and </output/mesh/l10/a>
+0 differences found
+attribute: <description of </output/mesh/l10/a>> and <description of </output/mesh/l10/a>>
+0 differences found
+dataset: </output/mesh/l10/c_panel> and </output/mesh/l10/c_panel>
+0 differences found
+attribute: <description of </output/mesh/l10/c_panel>> and <description of </output/mesh/l10/c_panel>>
+0 differences found
+dataset: </output/mesh/l10/n> and </output/mesh/l10/n>
+0 differences found
+attribute: <description of </output/mesh/l10/n>> and <description of </output/mesh/l10/n>>
+0 differences found
+dataset: </output/mesh/l10/param> and </output/mesh/l10/param>
+0 differences found
+attribute: <description of </output/mesh/l10/param>> and <description of </output/mesh/l10/param>>
+0 differences found
+dataset: </output/mesh/l10/xm> and </output/mesh/l10/xm>
+0 differences found
+attribute: <description of </output/mesh/l10/xm>> and <description of </output/mesh/l10/xm>>
+0 differences found
+group  : </output/mesh/l12> and </output/mesh/l12>
+0 differences found
+dataset: </output/mesh/l12/p> and </output/mesh/l12/p>
+0 differences found
+attribute: <description of </output/mesh/l12/p>> and <description of </output/mesh/l12/p>>
+0 differences found
+dataset: </output/mesh/l12/params> and </output/mesh/l12/params>
+0 differences found
+attribute: <description of </output/mesh/l12/params>> and <description of </output/mesh/l12/params>>
+0 differences found
+dataset: </output/mesh/l12/x> and </output/mesh/l12/x>
+0 differences found
+attribute: <description of </output/mesh/l12/x>> and <description of </output/mesh/l12/x>>
+0 differences found
+group  : </output/normal_velocity> and </output/normal_velocity>
+0 differences found
+dataset: </output/normal_velocity/beta> and </output/normal_velocity/beta>
+0 differences found
+attribute: <description of </output/normal_velocity/beta>> and <description of </output/normal_velocity/beta>>
+0 differences found
+dataset: </output/normal_velocity/switch_free_surface> and </output/normal_velocity/switch_free_surface>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_free_surface>> and <description of </output/normal_velocity/switch_free_surface>>
+0 differences found
+dataset: </output/normal_velocity/switch_kochin> and </output/normal_velocity/switch_kochin>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_kochin>> and <description of </output/normal_velocity/switch_kochin>>
+0 differences found
+dataset: </output/normal_velocity/switch_potential> and </output/normal_velocity/switch_potential>
+0 differences found
+attribute: <description of </output/normal_velocity/switch_potential>> and <description of </output/normal_velocity/switch_potential>>
+0 differences found
+dataset: </output/normal_velocity/velocities> and </output/normal_velocity/velocities>
+0 differences found
+attribute: <description of </output/normal_velocity/velocities>> and <description of </output/normal_velocity/velocities>>
+0 differences found
+dataset: </output/normal_velocity/w> and </output/normal_velocity/w>
+0 differences found
+attribute: <description of </output/normal_velocity/w>> and <description of </output/normal_velocity/w>>
+0 differences found
+group  : </results> and </results>
+0 differences found
+dataset: </results/added_mass> and </results/added_mass>
+0 differences found
+attribute: <description of </results/added_mass>> and <description of </results/added_mass>>
+0 differences found
+dataset: </results/added_mass_infinite> and </results/added_mass_infinite>
+0 differences found
+attribute: <description of </results/added_mass_infinite>> and <description of </results/added_mass_infinite>>
+0 differences found
+group  : </results/case> and </results/case>
+0 differences found
+dataset: </results/case/beta> and </results/case/beta>
+0 differences found
+attribute: <description of </results/case/beta>> and <description of </results/case/beta>>
+0 differences found
+dataset: </results/case/force> and </results/case/force>
+0 differences found
+attribute: <description of </results/case/force>> and <description of </results/case/force>>
+0 differences found
+dataset: </results/case/motion> and </results/case/motion>
+0 differences found
+attribute: <description of </results/case/motion>> and <description of </results/case/motion>>
+0 differences found
+dataset: </results/case/radiation> and </results/case/radiation>
+0 differences found
+attribute: <description of </results/case/radiation>> and <description of </results/case/radiation>>
+0 differences found
+dataset: </results/case/theta> and </results/case/theta>
+0 differences found
+attribute: <description of </results/case/theta>> and <description of </results/case/theta>>
+0 differences found
+dataset: </results/case/w> and </results/case/w>
+0 differences found
+attribute: <description of </results/case/w>> and <description of </results/case/w>>
+0 differences found
+dataset: </results/center_buoyancy> and </results/center_buoyancy>
+0 differences found
+attribute: <description of </results/center_buoyancy>> and <description of </results/center_buoyancy>>
+0 differences found
+dataset: </results/drift_forces> and </results/drift_forces>
+0 differences found
+attribute: <description of </results/drift_forces>> and <description of </results/drift_forces>>
+0 differences found
+dataset: </results/excitation_forces> and </results/excitation_forces>
+0 differences found
+attribute: <description of </results/excitation_forces>> and <description of </results/excitation_forces>>
+0 differences found
+dataset: </results/fk_forces> and </results/fk_forces>
+0 differences found
+attribute: <description of </results/fk_forces>> and <description of </results/fk_forces>>
+0 differences found
+dataset: </results/fk_forces_raw> and </results/fk_forces_raw>
+0 differences found
+attribute: <description of </results/fk_forces_raw>> and <description of </results/fk_forces_raw>>
+0 differences found
+dataset: </results/forces> and </results/forces>
+0 differences found
+attribute: <description of </results/forces>> and <description of </results/forces>>
+0 differences found
+dataset: </results/free_surface_panel> and </results/free_surface_panel>
+Not comparable: </results/free_surface_panel> or </results/free_surface_panel> is an empty dataset
+0 differences found
+attribute: <description of </results/free_surface_panel>> and <description of </results/free_surface_panel>>
+0 differences found
+dataset: </results/free_surface_points> and </results/free_surface_points>
+0 differences found
+attribute: <description of </results/free_surface_points>> and <description of </results/free_surface_points>>
+0 differences found
+dataset: </results/kochin> and </results/kochin>
+0 differences found
+attribute: <description of </results/kochin>> and <description of </results/kochin>>
+0 differences found
+dataset: </results/potential> and </results/potential>
+Not comparable: </results/potential> or </results/potential> is an empty dataset
+0 differences found
+attribute: <description of </results/potential>> and <description of </results/potential>>
+0 differences found
+dataset: </results/radiation_damping> and </results/radiation_damping>
+0 differences found
+attribute: <description of </results/radiation_damping>> and <description of </results/radiation_damping>>
+0 differences found
+dataset: </results/stifness> and </results/stifness>
+0 differences found
+attribute: <description of </results/stifness>> and <description of </results/stifness>>
+0 differences found
+dataset: </results/volume_displacement> and </results/volume_displacement>
+0 differences found
+attribute: <description of </results/volume_displacement>> and <description of </results/volume_displacement>>
+0 differences found
+dataset: </results/water_plane_area> and </results/water_plane_area>
+0 differences found
+attribute: <description of </results/water_plane_area>> and <description of </results/water_plane_area>>
+0 differences found
+dataset: </results/yaw_moment> and </results/yaw_moment>
+0 differences found
+attribute: <description of </results/yaw_moment>> and <description of </results/yaw_moment>>
+0 differences found
+--------------------------------
+Some objects are not comparable
+--------------------------------
+Use -c for a list of objects without details of differences.

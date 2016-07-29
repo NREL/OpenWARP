@@ -1,6 +1,6 @@
-Starting Test Script 2 
+###  [Test Script 2] ###
 ------------------------
--->Starting Test 7 -
+-->Starting Test 7-
 ------------------------
 running build_ext
  --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
@@ -9,16 +9,16 @@ running build_ext
 --> Comparing both the outputs ..
 --> H5DIFF Log at: /automated_test/Test7/test07.log
 --> Test 7 finished successfully 
-----------------------
---> Starting Test 8 -
-----------------------
+------------------------
+-->Starting Test8 
+------------------------
 running build_ext
---> Testing Green function, tabulation with null values  
+ --> completed test7 with USE_ODE_INFLUENCE_COEFFICIENTS as true <--
 running build_ext
---> Testing Green function, tabulation with default values 
+--> completed  test7 with USE_ODE_INFLUENCE_COEFFICIENTS as false  
 --> Comparing both the outputs ..
---> H5DIFF Log at: /automated_test/Test8/test08.log
---> Test 8 finished successfully 
+--> H5DIFF Log at: /automated_test/Test7/test07.log
+--> Test 7/exp finished successfully 
 ----------------------
 --> Starting Test 9 -
 ----------------------

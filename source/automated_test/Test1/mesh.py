@@ -606,24 +606,33 @@ class PanelMesh(object):
 
             self.vtp_mesh    = vtk.vtkPolyData()
             points  = vtk.vtkPoints()
-	    polys   = vtk.vtkCellArray()
-	    for i in range(self.points.shape[0]):
+            polys   = vtk.vtkCellArray()
 		
-		a = self.points[i]
-		if type(a).__module__ == np.__name__ :
-			# print "a is numpy.array"
-			a = self.points[i].astype(np.float32, copy=False)
-			
-		elif type(a) is list:
-			# print "a is list!"
-			a = [float(x) for x in a]
-			for n in range(len(a), 3):
-    				a.append(0)
-			# if list size is not 3, make it 3 
-		#print a
-		#Original Line : points.InsertPoint(i, self.points[i])
-		points.InsertPoint(i,a)
-
+            for i in range(self.points.shape[0]):
+		x= self.points[i]
+		#print type(x)
+		# type could be either numpy.ndarray or list 
+		if type(x).__module__ == np.__name__ :
+			#print "[DEBUG:]type is ndarray, converting into float"
+			y = x.astype(np.float)
+			points.InsertPoint(i, y)		
+		
+		elif isinstance(x,list):
+			#print "[DEBUG:]type is list, converting list int float!"
+			y= [float(j) for j in x]
+			if len(y)>3:
+				#print "[DEBUG:]size of list > 3"
+				y=y[:3]
+			elif len(y)<3:
+				# Expand the list up to 10 elements with zeros.
+				for n in range(len(y), 3):
+    					y.append(0)
+							
+			points.InsertPoint(i, y)
+		
+		else :
+			points.InsertPoint(i, self.points[i])
+            
 
             for i in range(self.faces.shape[0]):
 
