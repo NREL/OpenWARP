@@ -1,8 +1,0 @@
- #Test 1
-- not using GDFMesh. m cuz of error in matlab file and complexity to use matlabengine.
-- not using runNemoh, as it codes changes to read arguments plus complexity.
-
-- using bemio's mesh.py file with little code change
-- It will create a folder named openwarp inside Wamit's test run folder that will consists all 
-  the new .gdf files 
-
