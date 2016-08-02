@@ -5,6 +5,9 @@
 *.pyc
 *.DS_Store
 *.idea
+*.log
+*.h5
+*.hdf5
 **/*.aux
 **/*.blg
 **/*.bbl
