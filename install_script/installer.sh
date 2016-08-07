@@ -2,17 +2,19 @@
 set -e
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
 SOURCE="${BASH_SOURCE[0]}"
+
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
   DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
   SOURCE="$(readlink "$SOURCE")"
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
 done
+
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+PARENTDIR="$(dirname "${DIR}")"
+INSTALL_PATH="${PARENTDIR}/source"
+ROOT="${PARENTDIR}/source"
 
-INSTALL_PATH="$DIR"
-
-ROOT="$DIR"
-
+echo "Root is" $ROOT
 echo "Installing to $ROOT"
 
 echo "Installing GFortran and gcc"
