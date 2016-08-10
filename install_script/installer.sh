@@ -73,8 +73,6 @@ if [ "$OSTYPE" = "Linux" ];then
 	cmake -DCMAKE_Fortran_COMPILER="gfortran" "$ROOT/NemohImproved/Nemoh"
 	make
 
-	cp libnemoh.so "$ROOT/openwarpgui/bundled/simulation/libs"
-
 	export LD_LIBRARY_PATH="$ROOT/openwarpgui/bundled/simulation/libs"
 	export LDFLAGS="-L$ROOT/openwarpgui/bundled/simulation/libs"
 
@@ -131,7 +129,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 	bash ./Anaconda2-4.1.1-MacOSX-x86_64.sh	
 	
 	echo "Adding Anaconda to the path"
-	export PATH=/Users/${USERNAME}/anaconda/bin:$PATH
+	export PATH=/Users/${USERNAME}/anaconda2/bin:$PATH
 
 	echo "Create new directory FORTRAN_BUILD"
 	mkdir ${FORTRAN_BUILD}
@@ -144,9 +142,10 @@ elif [ "$OSTYPE"="Darwin" ];then
 	
 	echo "Compiling Nemoh Fortran"
 	cmake -DCMAKE_FortranE_COMPILER="gfortran" $NEMOH_FORTRAN
+	make
 	
 	echo "copy libnemoh.dylib from FORTRAN_BUILD to lib/directory inside the Anaconda installation Root"
-	cp $FORTRAN_BUILD/libnemoh.dylib /Users/${USERNAME}/anaconda/lib
+	cp $FORTRAN_BUILD/libnemoh.dylib /Users/${USERNAME}/anaconda2/lib
 	
 	echo "Downloading ParaView "
 	cd ${DIR}
@@ -157,13 +156,14 @@ elif [ "$OSTYPE"="Darwin" ];then
 	bash ./ParaView-4.1.0-Darwin-64bit.dmg
 
 	echo "Copy Paraview App Folder"
+	# TODO:
 	#Mount the DMG file
-	hdiutil attach -mountpoint ${DIR} ParaView-4.1.0-Darwin-64bit.dmg
+	#hdiutil attach -mountpoint ${DIR} ParaView-4.1.0-Darwin-64bit.dmg
 	# copy the Paraview.app file
-	sudo cp ParaView-4.1.0-Darwin-64bit.app ${ROOT}/openwarpgui/bundled/
+	#sudo cp ParaView-4.1.0-Darwin-64bit.app ${ROOT}/openwarpgui/bundled/
 	
 	echo "Command to test the library path is correctly set "
-	(test -e /Users/${USERNAME}/anaconda/lib/libnemoh.dylib && echo ’Success’ ) || echo ’Error:Nemoh library not found’.
+	(test -e /Users/${USERNAME}/anaconda2/lib/libnemoh.dylib && echo ’Success’ ) || echo ’Error:Nemoh library not found’.
 	
 	echo "make sure the nglib-mesh directory is executable"
 	chmod +x ${ROOT}/openwarp/bundled/meshgenerator/build/nglib-mesh
@@ -178,6 +178,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 	sudo pip install -r ${ROOT}/openwarpgui/requirements.txt
 	
 	echo "OpenWarp Installationg Succesfully Completed"	
+	
 else
  	echo "This OS type is not supported!  "
 fi
