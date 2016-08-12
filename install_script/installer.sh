@@ -176,6 +176,8 @@ elif [ "$OSTYPE"="Darwin" ];then
 
 	echo "Installing the remaining python dependencies"
 	sudo pip install -r ${ROOT}/openwarpgui/requirements.txt
+	python ${ROOT}/openwarpgui/nemoh/setup.py cleanall
+        python ${ROOT}/openwarpgui/nemoh/setup.py build_ext --inplace
 	
 	echo "OpenWarp Installationg Succesfully Completed"	
 	
