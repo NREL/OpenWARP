@@ -38,7 +38,7 @@ if defined ProgramFiles(x86) (
     
     @echo Some 32-bit work
     SET "flag=32"
-    SET	CURL=%DIR%curl\win32
+    SET	CURL=%DIR%curl\x86
 )
 ECHO OS Architecture %FLAG%
 ECHO CURL path is: %CURL%
@@ -50,8 +50,7 @@ SET PATH=%PATH%;%CURL%
 :: Download and Install 7Zip (To extract other software during installation) only installing x86 version
 :: -------------------------------------------------------------------------
 	:7zip
-	7z 2>NUL
-	if errorlevel 0 goto 7ZInstalled
+	IF EXIST C:\Program Files\7-zip\ (goto :7ZInstalled)	
 	:: if 7zip is installed already, don't download it.
 	
 	ECHO If not installed, use 7za
@@ -187,12 +186,27 @@ SET PATH=%PATH%;%CURL%
 
 	ECHO Instally CherryPy and other requirements
 	
-	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
+	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt --upgrade
 
+	:: Remove this later on, I was getting vrvasall.bat missing 
+	:: pip install –upgrade setuptools "<-- this command is not working "
+	:: pip install setuptools --no-use-wheel --upgrade (<-- not helping )
+
+	:: psycopyg windows (need to have Git installed for it ! )
+	::pip install git+https://github.com/nwcell/psycopg2-windows.git@win64-py27#egg=psycopg2
 :: --------------------------------
 :: Install ParaView
 :: ---------------------------------
 
+
+
+:: --------------------------------
+:: Build Setup.py
+:: -------------------------------
+
+	ECHO Building setup.py 
+	python %ROOT%\nemoh\setup.py cleanall
+	python %ROOT%\nemoh\setup.py build_ext --inplace
 
 :: -------------------------------
 :: Set Path variable
