@@ -40,7 +40,12 @@ from nemoh import preprocessor
 from nemoh import postprocessor
 from nemoh import solver
 import warnings
-from capturer import CaptureOutput
+try:
+	from capturer import CaptureOutput
+except ImportError,e:
+	# failed to import experimental pty support
+	pass
+	
 import fnmatch
 import h5py
 import json
