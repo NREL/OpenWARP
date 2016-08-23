@@ -426,12 +426,11 @@ To deploy the application in OS X, perform the following step:
 						
 						If you get an error message reading "library not found for -lnemoh" or "No module named solver{\_}fortran", make sure you have correctly exported the path to Nemoh in the current terminal session as explained earlier.
 						
+						
 					
 					
-					
-					
-					
-					
+				
+			
 				
 	
 	
@@ -444,46 +443,66 @@ It is enough to run the script install.sh inside \ROOT{} while being connected t
 Only tested on Ubuntu 14.04 64 bits.
 
 
-\section{Installing the pre built package}
-\label{prebuilt}
-\sectionmark{from pre-built package}
 
-Get the OpenWarp Installer from
-\url{https://drive.google.com/folderview?id=0B56WkDEeFyNHfmRZNmcyZjNWOTFfTzZabGgxZVdsQUg3Y3d 6SXloWk8xMXo0bXhnSUVTOGM&usp=sharing}
 
-The windows one is in the Windows directory. The MAC one is in the MAC directory. Note that those two installers are outdated.
-The Linux one is in the Linux directory.
-\subsection{OS X}
 
-\begin{itemize}
-	\item Download the MAC OS X packages and right-click on it. Then select Open in the contextual menu to install it.
-\item To run the OpenWarp GUI later, go to the directory where you install it and double-click "run" or "run.sh". See section \ref{usage} of this document for more information about using the installed application.
-NB:
-If you get a cookie error open the url (http://127.0.0.0.1:8386/index.html) in private navigation
-\end{itemize}
+
+
+\section{Using Install Script}
+Install Script is used to download, extract and install all the prerequisite software using one script only. It also build native libnemoh and solver_fortran according to operating system type.
 
 \subsection{Windows}
+ installer.bat is the install script that is certified for Windows 7 x64. Always run this script as Administrator for succesfull copy operations.It brings down all the prerequistie to get started. installer.bat could be edit to add/modify new logics.
+ \begin{itemize}
+ \item 1. Determine whether 32-bit or 64-bit OS
+ \item 2. Sets 7zip and curl in the Path from local repo
+ \item 3. Download and install Anaconda 
+ \item 4. Download, Extracts and installs Mingw
+ \item 5. Download, Extracts and install  
+ \item 6. Create gFortran workspace 
+ \item 7. Build libnemoh.dll and libnemoh.dll.a
+ \item 8. Copies libnemoh.dll inside Anaconda and MinGW installation directory
+ \item 9. Copies 19 dependent libraries inside Anaconda/DLLs folder
+ \item 10. Install essential python libraries from requirement.txt
+ \item 11. Download and install Paraview
+ \item 12. Builds solver_fortran.pyd 
+ \item 13. Ready to OpenWarp.  
+ \end{itemize}
 
+\subsection{OS X}
+installer.sh is the install script that is certified in OS X 10.10. It downloads and configure all the prerequisites in following sequence. Installer.sh could be edited to add/modify new logic/url etc in the installation steps/
 \begin{itemize}
-	\item Download the Windows binary of OpenWarp and double-click on it to start the installation procedure.
- \item To run the OpenWarp GUI later go to the directory where you install it and double-click "run.bat". See section \ref{usage} of this document for more information about using the installed application.
-\item NB: OpenWarp GUI is known not to work with Internet Explorer. So you must use Chrome or Firefox with the url http://127.0.0.0.1:8386/index.html.
-If you get a cookie error open the url in private navigation
+\item 1. Checks if the OS type is Darwin
+\item 2. Installs command line tools for Xcode
+\item 3. Install HomewBrew
+\item 4. Install Curl
+\item 5. Install Gcc, Gfortran and Cmake
+\item 6. Installs Anaconda commandline installer
+\item 7. Build libnemoh.dylib
+\item 8. Download and install ParaView
+\item 9. Install python libraries from requirements.txt
+\item 10. Configure native path to libnemoh for solver_fortran.so
+\item 11. Builds solver_fortran
+\item 12. Ready to run OpenWarp.
 \end{itemize}
-
 
 \subsection{Linux}
- \label{prebuilt-linux}
+installer.sh is the install script for Linux too. It helps in downloading and installing all the prerequisites in following sequence
 \begin{itemize}
-	\item The Linux installation is a little different from other OS. You need to make sure you are connected to Internet the first time you want to install it at least.
-\item Extract the OpenWarp GUI in a folder and in a terminal run "bash installer.sh". (You can double-click to install if you extracted it to an ext4 file system). You will be asked for your sudo password. Make sure to enter it.
-\item To run the installer later on, enter the folder where you had extracted the OpenWarp and run "bash run.sh". See section \ref{usage} of this document for more information about using the installed application.
-NB:
-If you get a cookie error open the url (http://127.0.0.0.1:8386/index.html) in private navigation This is known to happen in some configuration of Firefox
+\item 1. Install Gcc and GFortran
+\item 2. Install Cmake
+\item 3. Install Blas and Lapack
+\item 4. Install nglib
+\item 5. Install OpenCascade Community Edition
+\item 6. Install HDF5-tools
+\item 7. Install VTK 
+\item 8. Install Python Dependencies 
+\item 9. Install mesh-generator nglib-mesh
+\item 10. Build native libnemoh.so
+\item 11. Export LD_Library_Path
+\item 12. Build solver_fortran.so
+\item 13. Ready to run OpenWarp
 \end{itemize}
-
-
-
 
 \section{Deployment from existing package }
 \sectionmark{from existing installer}

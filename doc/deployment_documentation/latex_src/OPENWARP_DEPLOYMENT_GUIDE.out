@@ -9,9 +9,9 @@
 \BOOKMARK [2][-]{subsection.5.1}{WINDOWS DEPLOYMENT FROM SCRATCH}{section.5}% 9
 \BOOKMARK [2][-]{subsection.5.2}{OS X DEPLOYMENT FROM SCRATCH}{section.5}% 10
 \BOOKMARK [2][-]{subsection.5.3}{Linux deployment from scratch}{section.5}% 11
-\BOOKMARK [1][-]{section.6}{Installing the pre built package}{}% 12
-\BOOKMARK [2][-]{subsection.6.1}{OS X}{section.6}% 13
-\BOOKMARK [2][-]{subsection.6.2}{Windows}{section.6}% 14
+\BOOKMARK [1][-]{section.6}{Using Install Script}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Windows}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{OS X}{section.6}% 14
 \BOOKMARK [2][-]{subsection.6.3}{Linux}{section.6}% 15
 \BOOKMARK [1][-]{section.7}{Deployment from existing package }{}% 16
 \BOOKMARK [2][-]{subsection.7.1}{Windows}{section.7}% 17
