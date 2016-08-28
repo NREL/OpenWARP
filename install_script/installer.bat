@@ -44,21 +44,14 @@ if defined ProgramFiles(x86) (
 ECHO OS Architecture %FLAG%
 ECHO CURL path is: %CURL%
 ECHO Setting curl to PATH
-SET PATH=%PATH%;%CURL%
-
+SET "PATH=%PATH%;%CURL%"
 
 :: -------------------------------------------------------------------------
 :: Use 7Zip, (To extract other software during installation)
 :: -------------------------------------------------------------------------
-	:7zip
-	IF EXIST C:\Program Files\7-zip\ (goto :7ZInstalled)	
-	:: if 7zip is installed already, don't download it.
-	
-	ECHO If not installed, use 7za
-	ECHO %DIR%7za
-	
+	:7zip	
 	ECHO "Setting Path for 7za"
-	SET PATH=%PATH%;%DIR%7za
+	SET "PATH=%PATH%;%DIR%7za"
 	goto ANACONDA
 
 	:7ZInstalled
@@ -70,73 +63,82 @@ SET PATH=%PATH%;%CURL%
 	:ANACONDA
 	
 	IF EXIST C:\Anaconda (
-	SET ANACONDA=C:\Anaconda
-	SET ANACONDASCRIPTS=C:\Anaconda\Scripts
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "ANACONDA=C:\Anaconda"
+	SET "ANACONDASCRIPTS=C:\Anaconda\Scripts"
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	goto anacondaInstalled
 	)
 		
 	IF EXIST %UserProfile%\Anaconda (
-	SET ANACONDA=%UserProfile%\Anaconda
-	SET ANACONDASCRIPTS=%UserProfile%Anaconda\Scripts
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "ANACONDA=%UserProfile%\Anaconda"
+	SET "ANACONDASCRIPTS=%UserProfile%Anaconda\Scripts"
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	goto anacondaInstalled
 	)
 	
 	ECHO Downloading Anaconda-2.1.0-Windows-x86_64
-	curl  -O https://repo.continuum.io/archive/Anaconda-2.1.0-Windows-x86_64.exe
+	ECHO %DIR%Anaconda-2.1.0-Windows-x86_64.exe
+	IF NOT EXIST %DIR%Anaconda-2.1.0-Windows-x86_64.exe (
+	curl -O https://repo.continuum.io/archive/Anaconda-2.1.0-Windows-x86_64.exe
 	
 	ECHO Installing Anaconda and registering as System's Python 
 	Anaconda-2.1.0-Windows-x86_64.exe /RegisterPython=1
-	goto MinGw
-	
+	goto :anacondaInstalled
+	)
+		
 	:anacondaInstalled
 	ECHO "Anaconda is installed already"
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	
 	
 ::-----------------------------------
 :: Download and Extract MINGW 4.8.1
 ::-----------------------------------
 	:MinGw
-	SET MINGW_ROOT=C:\mingw64\
+	SET "MINGW_ROOT=C:\mingw64\"
+	:: IF C:\mingw64\ exists, Assume mingw is already installed 
 	IF EXIST C:\mingw64\ (goto MinGwInstalled)
 	
 	ECHO Downloading MINGW 4.8.1
-	curl -O https://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.8.1/64-bit/threads-posix/sjlj/x64-4.8.1-release-posix-sjlj-rev5.7z/download
+	IF NOT EXIST %DIR%x64-4.8.1-release-posix-sjlj-rev5.7z (
+	curl -L -O https://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.8.1/64-bit/threads-posix/sjlj/x64-4.8.1-release-posix-sjlj-rev5.7z
 	
 	ECHO Extracting MINGW USING 7Z
-	7z x x64-4.8.1-release-posix-sjlj-rev5.7z -oC:\
-	
+	7za x x64-4.8.1-release-posix-sjlj-rev5.7z -oC:\
+	)
+			
 	ECHO Setting Environment Variables
-	SET PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib
+	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
 	goto cmake
 
 	:MinGwInstalled
 	ECHO MinGw is installed already 
-	SET PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib
+	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
 
 :: -----------------------------------------------
 :: Download and Install CMAKE
 :: -----------------------------------------------
 		
-	SET CMAKE=C:\CMake\bin
-	IF EXIST C:\CMake\bin (goto CMAKEInstalled)
+	SET "CMAKE=C:\cmake-2.8.12.2-win32-x86\bin"
+	:: IF CMake\bin exists, Assume Cmake is installed ! 
+	IF EXIST C:\cmake-2.8.12.2-win32-x86\bin (goto CMAKEInstalled)
 
 	ECHO Downloading CMAKE 2.8
+	IF NOT EXIST %DIR%cmake-2.8.12.2-win32-x86.zip (
 	curl -O https://cmake.org/files/v2.8/cmake-2.8.12.2-win32-x86.zip
 
 	ECHO Extracting CMAKE
-	7z x cmake-2.8.12.2-win32-x86.zip -oC:\
+	7za x cmake-2.8.12.2-win32-x86.zip -oC:\
+	)
 	
 	SET CMAKE=C:\cmake-2.8.12.2-win32-x86\bin
 	ECHO Setting Environment Variables for CMAKE
-	SET PATH=%PATH%;%CMAKE%
+	SET "PATH=%PATH%;%CMAKE%"
 	goto gfortranBuild
 
 	:CMAKEInstalled
 	ECHO CMake is installed already
-	SET PATH=%PATH%;%CMAKE%
+	SET "PATH=%PATH%;%CMAKE%"
 	ECHO PATH IS: %PATH%	
 
 :: ----------------------------------
@@ -163,16 +165,16 @@ SET PATH=%PATH%;%CURL%
 :: Copy libnemoh.dll to Anaconda/Dlls, Anaconda/Libs and MinGW/libs	
 :: --------------------------------------------------------------------
 	ECHO Copying libnemoh.dll to Anaconda\Dlls
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%DLLs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%DLLs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\DLLs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\DLLs
 	
 	ECHO Copying libnemoh.dll to Anaconda\libs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%libs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\ibnemoh.dll.a %ANACONDA%libs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\libs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\libs
 	
 	ECHO Copying libnemoh.dll to Anaconda
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %MINGW_ROOT%lib
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %MINGW_ROOT%lib
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %MINGW_ROOT%\lib
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %MINGW_ROOT%\lib
 	
 	
 :: ---------------------------------------------------------------------------
@@ -184,9 +186,10 @@ SET PATH=%PATH%;%CURL%
 	copy %PARENTDIR%install_script\dlls\liblapack.dll %MINGW_ROOT%lib% 
 	
 	ECHO Copying 19 necessary Dlls inside Anaconda\Dlls
-	xcopy /s %PARENTDIR%install_script\dlls %ANACONDA%DLLs
-
-
+	xcopy /s %PARENTDIR%install_script\dlls %ANACONDA%\DLLs
+	
+	CD %PARENTDIR%install_script
+	
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
@@ -195,17 +198,20 @@ SET PATH=%PATH%;%CURL%
 	ECHO %ROOT%
 	ECHO %ANACONDA%\Scripts\pip
 		
-	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt --upgrade
+	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
+	::%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 
 	
 :: --------------------------------
 :: Installing ParaView
 :: ---------------------------------
 	ECHO Downloading Paraview 
-	curl -L http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
+	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.exe (
+	curl -L -O http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
 
 	ECHO Installing Paraview
-	ParaView-4.1.0-Windows-64bit.exe
+	ParaView-4.1.0-Windows-64bit.exe 
+	)
 	
 	
 :: --------------------------------
@@ -225,6 +231,7 @@ SET PATH=%PATH%;%CURL%
 	ECHO "RUNNING OPENWARP"
 	CD %ROOT%
 	python main.py
+	
 	
 :endProcess
 ECHO "Ending Process !"	
