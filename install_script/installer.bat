@@ -44,16 +44,14 @@ if defined ProgramFiles(x86) (
 ECHO OS Architecture %FLAG%
 ECHO CURL path is: %CURL%
 ECHO Setting curl to PATH
-SET PATH=%PATH%;%CURL%
-
+SET "PATH=%PATH%;%CURL%"
 
 :: -------------------------------------------------------------------------
 :: Use 7Zip, (To extract other software during installation)
 :: -------------------------------------------------------------------------
-	:7zip
-	
+	:7zip	
 	ECHO "Setting Path for 7za"
-	SET PATH=%PATH%;%DIR%7za
+	SET "PATH=%PATH%;%DIR%7za"
 	goto ANACONDA
 
 	:7ZInstalled
@@ -65,16 +63,16 @@ SET PATH=%PATH%;%CURL%
 	:ANACONDA
 	
 	IF EXIST C:\Anaconda (
-	SET ANACONDA=C:\Anaconda
-	SET ANACONDASCRIPTS=C:\Anaconda\Scripts
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "ANACONDA=C:\Anaconda"
+	SET "ANACONDASCRIPTS=C:\Anaconda\Scripts"
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	goto anacondaInstalled
 	)
 		
 	IF EXIST %UserProfile%\Anaconda (
-	SET ANACONDA=%UserProfile%\Anaconda
-	SET ANACONDASCRIPTS=%UserProfile%Anaconda\Scripts
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "ANACONDA=%UserProfile%\Anaconda"
+	SET "ANACONDASCRIPTS=%UserProfile%Anaconda\Scripts"
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	goto anacondaInstalled
 	)
 	
@@ -82,22 +80,22 @@ SET PATH=%PATH%;%CURL%
 	ECHO %DIR%Anaconda-2.1.0-Windows-x86_64.exe
 	IF NOT EXIST %DIR%Anaconda-2.1.0-Windows-x86_64.exe (
 	curl -O https://repo.continuum.io/archive/Anaconda-2.1.0-Windows-x86_64.exe
-	)
 	
 	ECHO Installing Anaconda and registering as System's Python 
 	Anaconda-2.1.0-Windows-x86_64.exe /RegisterPython=1
-	goto MinGw
-	
+	goto :anacondaInstalled
+	)
+		
 	:anacondaInstalled
 	ECHO "Anaconda is installed already"
-	SET PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%
+	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	
 	
 ::-----------------------------------
 :: Download and Extract MINGW 4.8.1
 ::-----------------------------------
 	:MinGw
-	SET MINGW_ROOT=C:\mingw64\
+	SET "MINGW_ROOT=C:\mingw64\"
 	:: IF C:\mingw64\ exists, Assume mingw is already installed 
 	IF EXIST C:\mingw64\ (goto MinGwInstalled)
 	
@@ -106,21 +104,22 @@ SET PATH=%PATH%;%CURL%
 	curl -L -O https://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.8.1/64-bit/threads-posix/sjlj/x64-4.8.1-release-posix-sjlj-rev5.7z
 	
 	ECHO Extracting MINGW USING 7Z
-	7za x x64-4.8.1-release-posix-sjlj-rev5.7z -oC:\cmd
+	7za x x64-4.8.1-release-posix-sjlj-rev5.7z -oC:\
+	)
 			
 	ECHO Setting Environment Variables
-	SET PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib
+	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
 	goto cmake
 
 	:MinGwInstalled
 	ECHO MinGw is installed already 
-	SET PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib
+	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
 
 :: -----------------------------------------------
 :: Download and Install CMAKE
 :: -----------------------------------------------
 		
-	SET CMAKE=C:\cmake-2.8.12.2-win32-x86\bin
+	SET "CMAKE=C:\cmake-2.8.12.2-win32-x86\bin"
 	:: IF CMake\bin exists, Assume Cmake is installed ! 
 	IF EXIST C:\cmake-2.8.12.2-win32-x86\bin (goto CMAKEInstalled)
 
@@ -134,12 +133,12 @@ SET PATH=%PATH%;%CURL%
 	
 	SET CMAKE=C:\cmake-2.8.12.2-win32-x86\bin
 	ECHO Setting Environment Variables for CMAKE
-	SET PATH=%PATH%;%CMAKE%
+	SET "PATH=%PATH%;%CMAKE%"
 	goto gfortranBuild
 
 	:CMAKEInstalled
 	ECHO CMake is installed already
-	SET PATH=%PATH%;%CMAKE%
+	SET "PATH=%PATH%;%CMAKE%"
 	ECHO PATH IS: %PATH%	
 
 :: ----------------------------------
@@ -199,7 +198,7 @@ SET PATH=%PATH%;%CURL%
 	ECHO %ROOT%
 	ECHO %ANACONDA%\Scripts\pip
 		
-	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt --upgrade
+	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 	::%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 
 	

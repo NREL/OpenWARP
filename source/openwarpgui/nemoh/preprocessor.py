@@ -53,7 +53,12 @@ from utility import cih
 from utility import sih
 import settings
 import os
-from scipy.spatial import Delaunay
+try:
+	from scipy.spatial import Delaunay
+except ImportError,e:
+	# failed to import related library or something
+	pass
+
 import logging
 
 
