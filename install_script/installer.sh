@@ -144,7 +144,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 	cmake -DCMAKE_FortranE_COMPILER="gfortran" $NEMOH_FORTRAN
 	make
 	
-	echo "copy libnemoh.dylib from FORTRAN_BUILD to lib/directory inside the Anaconda installation Root"
+	echo "copying libnemoh.dylib from FORTRAN_BUILD to lib/directory inside the Anaconda installation Root"
 	cp $FORTRAN_BUILD/libnemoh.dylib /Users/${USERNAME}/anaconda2/lib
 	
 	echo "Downloading ParaView "
@@ -178,6 +178,11 @@ elif [ "$OSTYPE"="Darwin" ];then
 	sudo pip install -r ${ROOT}/openwarpgui/requirements.txt
 	python ${ROOT}/openwarpgui/nemoh/setup.py cleanall
         python ${ROOT}/openwarpgui/nemoh/setup.py build_ext --inplace
+	
+	# To know the currently configured path 
+	otool -L ${ROOT}/openwarpgui/nemoh/solver_fortran.so
+	# install_name_tool -change $Current $New
+	install_name_tool -change "libnemoh.dylib" "/Users/${USERNAME}/anaconda2/lib/libnemoh.dylib" ${ROOT}/openwarpgui/nemoh/solver_fortran.so
 	
 	echo "OpenWarp Installationg Succesfully Completed"	
 	
