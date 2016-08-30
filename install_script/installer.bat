@@ -71,7 +71,7 @@ SET "PATH=%PATH%;%CURL%"
 		
 	IF EXIST %UserProfile%\Anaconda (
 	SET "ANACONDA=%UserProfile%\Anaconda"
-	SET "ANACONDASCRIPTS=%UserProfile%Anaconda\Scripts"
+	SET "ANACONDASCRIPTS=%UserProfile%\Anaconda\Scripts"
 	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
 	goto anacondaInstalled
 	)
@@ -118,7 +118,7 @@ SET "PATH=%PATH%;%CURL%"
 :: -----------------------------------------------
 :: Download and Install CMAKE
 :: -----------------------------------------------
-		
+	:cmake		
 	SET "CMAKE=C:\cmake-2.8.12.2-win32-x86\bin"
 	:: IF CMake\bin exists, Assume Cmake is installed ! 
 	IF EXIST C:\cmake-2.8.12.2-win32-x86\bin (goto CMAKEInstalled)
@@ -165,6 +165,7 @@ SET "PATH=%PATH%;%CURL%"
 :: Copy libnemoh.dll to Anaconda/Dlls, Anaconda/Libs and MinGW/libs	
 :: --------------------------------------------------------------------
 	ECHO Copying libnemoh.dll to Anaconda\Dlls
+	echo %ANACONDA%\DLLs
 	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\DLLs
 	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\DLLs
 	
@@ -187,6 +188,16 @@ SET "PATH=%PATH%;%CURL%"
 	
 	ECHO Copying 19 necessary Dlls inside Anaconda\Dlls
 	xcopy /s %PARENTDIR%install_script\dlls %ANACONDA%\DLLs
+	
+	IF NOT EXIST %MINGW_ROOT%\lib\libnemoh.dll (
+	ECHO libnemoh.dll was not copied in the last step so copying it from repo
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll %ANACONDA%\DLLs
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll.a %ANACONDA%\DLLs
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll %ANACONDA%\libs
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll.a %ANACONDA%\libs
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll %MINGW_ROOT%\lib
+	copy %PARENTDIR%install_script\dlls\libnemoh.dll.a %MINGW_ROOT%\lib
+	)
 	
 	CD %PARENTDIR%install_script
 	
@@ -219,6 +230,7 @@ SET "PATH=%PATH%;%CURL%"
 :: -------------------------------
 
 	ECHO Building setup.py 
+	ECHO %ROOT%
 	python %ROOT%\nemoh\setup.py cleanall
 	python %ROOT%\nemoh\setup.py build_ext --inplace
 
