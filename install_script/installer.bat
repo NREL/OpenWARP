@@ -253,8 +253,7 @@ SET "PATH=%PATH%;%CURL%"
 	IF %ERRORLEVEL% EQU 0 (
 		ECHO error-level is zero
 		goto endprocess
-	)
-	ELSE (
+	)ELSE (
 		ECHO error-level is not zero
 		goto retry
 	)
