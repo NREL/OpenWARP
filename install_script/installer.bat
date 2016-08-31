@@ -83,7 +83,8 @@ SET "PATH=%PATH%;%CURL%"
 	
 	ECHO Installing Anaconda and registering as System's Python 
 	Anaconda-2.1.0-Windows-x86_64.exe /RegisterPython=1
-	goto :anacondaInstalled
+	
+	goto :ANACONDA
 	)
 		
 	:anacondaInstalled
