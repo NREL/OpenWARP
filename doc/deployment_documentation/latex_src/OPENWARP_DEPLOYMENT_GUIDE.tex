@@ -452,7 +452,13 @@ Only tested on Ubuntu 14.04 64 bits.
 Install Script is used to download, extract and install all the prerequisite software using one script only. It also build native libnemoh and solver_fortran according to operating system type.
 
 \subsection{Windows}
- installer.bat is the install script that is certified for Windows 7 x64. Always run this script as Administrator for succesfull copy operations.It brings down all the prerequistie to get started. installer.bat could be edit to add/modify new logics.
+ Installer.bat is the install script that is certified for Windows 7,10 server 2008 and 2012 x64 machines. Please make sure you run CMD as an administrator:
+\begin{itemize}
+\item Click Start, click All Programs, and then click Accessories
+\item Right-click Command prompt, and then click Run as administrator.
+\item If the User Account Control dialog box appears, confirm that the action ot displays is what you want, and then click Continue.
+\end{itemize}
+Installer.bat brings-down all the prerequistie to get started and configure path and dlls to get started. installer.bat could be edit to add/modify new logics.
  \begin{itemize}
  \item 1. Determine whether 32-bit or 64-bit OS
  \item 2. Sets 7zip and curl in the Path from local repo
