@@ -90,7 +90,8 @@ SET "PATH=%PATH%;%CURL%"
 	:anacondaInstalled
 	ECHO "Anaconda is installed already"
 	SET "PATH=%PATH%;%ANACONDA%;%ANACONDASCRIPTS%"
-	
+	:: Delete the installer 
+	DEL Anaconda-2.1.0-Windows-x86_64.exe /f
 	
 ::-----------------------------------
 :: Download and Extract MINGW 4.8.1
@@ -110,12 +111,14 @@ SET "PATH=%PATH%;%CURL%"
 			
 	ECHO Setting Environment Variables
 	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
+	:: Deleting the downloaded file to avoid corruption case in next run
+	DEL x64-4.8.1-release-posix-sjlj-rev5.7z /f
 	goto cmake
 
 	:MinGwInstalled
 	ECHO MinGw is installed already 
 	SET "PATH=%PATH%;%MINGW_ROOT%bin;%MINGW_ROOT%lib"
-
+	
 :: -----------------------------------------------
 :: Download and Install CMAKE
 :: -----------------------------------------------
@@ -140,6 +143,7 @@ SET "PATH=%PATH%;%CURL%"
 	:CMAKEInstalled
 	ECHO CMake is installed already
 	SET "PATH=%PATH%;%CMAKE%"
+	DEL cmake-2.8.12.2-win32-x86.zip /f
 	ECHO PATH IS: %PATH%	
 
 :: ----------------------------------
@@ -210,8 +214,8 @@ SET "PATH=%PATH%;%CURL%"
 	ECHO %ROOT%
 	ECHO %ANACONDA%\Scripts\pip
 		
+		
 	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
-	::%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 
 	
 :: --------------------------------
@@ -245,6 +249,22 @@ SET "PATH=%PATH%;%CURL%"
 	CD %ROOT%
 	python main.py
 	
+		
+	IF %ERRORLEVEL% EQU 0 (
+		ECHO error-level is zero
+		goto endprocess
+	)
+	ELSE (
+		ECHO error-level is not zero
+		goto retry
+	)
+	
+:retry
+	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
+	python %ROOT%\nemoh\setup.py cleanall
+	python %ROOT%\nemoh\setup.py build_ext --inplace
+	CD %ROOT%
+	python main.py
 	
 :endProcess
 ECHO "Ending Process !"	
