@@ -103,7 +103,7 @@ SET "PATH=%PATH%;%CURL%"
 	
 	ECHO Downloading MINGW 4.8.1
 	IF NOT EXIST %DIR%x64-4.8.1-release-posix-sjlj-rev5.7z (
-	curl -L -O https://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.8.1/64-bit/threads-posix/sjlj/x64-4.8.1-release-posix-sjlj-rev5.7z
+	curl -L -O --retry 20 --retry-max-time 6000 https://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.8.1/64-bit/threads-posix/sjlj/x64-4.8.1-release-posix-sjlj-rev5.7z
 	
 	ECHO Extracting MINGW USING 7Z
 	7za x x64-4.8.1-release-posix-sjlj-rev5.7z -oC:\
@@ -224,7 +224,7 @@ SET "PATH=%PATH%;%CURL%"
 :: ---------------------------------
 	ECHO Downloading Paraview 
 	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.exe (
-	curl -L -O --retry 20 --retry-max-time 6000 http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
+	curl -L -O  http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
 
 	ECHO Installing Paraview
 	ParaView-4.1.0-Windows-64bit.exe 
