@@ -216,6 +216,7 @@ SET "PATH=%PATH%;%CURL%"
 		
 		
 	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
+	%ANACONDA%\Scripts\pip install --upgrade numpy
 
 	
 :: --------------------------------
@@ -223,7 +224,7 @@ SET "PATH=%PATH%;%CURL%"
 :: ---------------------------------
 	ECHO Downloading Paraview 
 	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.exe (
-	curl -L -O http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
+	curl -L -O --retry 20 --retry-max-time 6000 http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
 
 	ECHO Installing Paraview
 	ParaView-4.1.0-Windows-64bit.exe 
@@ -249,21 +250,6 @@ SET "PATH=%PATH%;%CURL%"
 	CD %ROOT%
 	python main.py
 	
-		
-	IF %ERRORLEVEL% EQU 0 (
-		ECHO error-level is zero
-		goto endprocess
-	)ELSE (
-		ECHO error-level is not zero
-		goto retry
-	)
-	
-:retry
-	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
-	python %ROOT%\nemoh\setup.py cleanall
-	python %ROOT%\nemoh\setup.py build_ext --inplace
-	CD %ROOT%
-	python main.py
 	
 :endProcess
 ECHO "Ending Process !"	
