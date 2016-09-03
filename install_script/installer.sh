@@ -152,6 +152,8 @@ elif [ "$OSTYPE"="Darwin" ];then
 	# -L follows the redirect in cURL
 	curl -L http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=osx&downloadFile=ParaView-4.1.0-Darwin-64bit.dmg
 	
+	# Above failes than we can download from a dropbox location
+	curl -L -O https://www.dropbox.com/s/ocdmgl6dwzaq60l/ParaView-4.1.0-Darwin-64bit.dmg?dl=1
 	echo "Installing Parview"
 	bash ./ParaView-4.1.0-Darwin-64bit.dmg
 
