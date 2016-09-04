@@ -155,14 +155,15 @@ elif [ "$OSTYPE"="Darwin" ];then
 	# Above failes than we can download from a dropbox location
 	curl -L -o ParaView-4.1.0-Darwin-64bit.dmg  https://www.dropbox.com/s/ocdmgl6dwzaq60l/ParaView-4.1.0-Darwin-64bit.dmg?dl=1
 	echo "Installing Parview"
-	bash ./ParaView-4.1.0-Darwin-64bit.dmg
+	#bash ./ParaView-4.1.0-Darwin-64bit.dmg
 
 	echo "Copy Paraview App Folder"
 	# TODO:
 	#Mount the DMG file
-	#hdiutil attach -mountpoint ${DIR} ParaView-4.1.0-Darwin-64bit.dmg
+	hdiutil attach -mountpoint ${DIR}ParaView-4.1.0-Darwin-64bit.dmg
 	# copy the Paraview.app file
-	#sudo cp ParaView-4.1.0-Darwin-64bit.app ${ROOT}/openwarpgui/bundled/
+	# copy from disk to src/openwarpgui/bundled
+	sudo cp ParaView-4.1.0-Darwin-64bit.app ${ROOT}/openwarpgui/bundled/
 	
 	echo "Command to test the library path is correctly set "
 	(test -e /Users/${USERNAME}/anaconda2/lib/libnemoh.dylib && echo ’Success’ ) || echo ’Error:Nemoh library not found’.
