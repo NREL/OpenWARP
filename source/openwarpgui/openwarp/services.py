@@ -40,16 +40,22 @@ from nemoh import preprocessor
 from nemoh import postprocessor
 from nemoh import solver
 import warnings
+
+from msvcrt import getch
 try:
-	from capturer import CaptureOutput
+    from capturer import CaptureOutput
 except ImportError,e:
-	# failed to import experimental pty support
-	pass
-	
+    # failed to import experimental pty support
+    import contextlib
+    pass
+
+
 import fnmatch
 import h5py
 import json
+import contextlib
 
+#
 # This class represents parameters used in the meshing process.
 # This class is a subclass of "tuple", and is created using collections.namedtuple factory function.
 MeshingParameters = collections.namedtuple('MeshingParameters',
@@ -346,21 +352,19 @@ def simulate(simulation_dir, params, queue):
         }
 
         logger.debug('Start preProcessor function.')
-
         ret = run_thread(preprocessor.run_as_process, (custom_config, queue), simulation_log_path)
+        
         output = ret["log"]
         if ret["exitcode"] != 0:
             logger.error('An error happened when running the preprocessor. The exit code is ' + str(ret["exitcode"]))
-
         else:
             logger.debug('Preprocessor successfully run')
-
 
             logger.debug('End preProcessor function.')
             logger.debug('Start solver function.')
 
             ret = run_thread(solver.run_as_process, (custom_config, queue), simulation_log_path)
-
+                
             output += ret["log"]
 
             if ret["exitcode"] != 0:
@@ -441,10 +445,10 @@ def postprocess(simulation_dir, params, queue):
         }
         logger.debug('Start postProcessor function.')
         ret = run_thread(postprocessor.run_as_process, (custom_config, queue), postprocessing_log_path)
-
+        
         if ret["exitcode"] != 0:
             logger.error('An error happened when running the postprocessor. The exit code is ' + str(ret["exitcode"]))
-
+            
         else:
             logger.debug('postProcessor successfully run')
             logger.debug('End postProcessor in subprocess.')
@@ -545,19 +549,59 @@ def run_thread(func, args, log_path):
         fd: a file descriptor
     """
 
+    if os.name =='nt':
+        # CaputureOutput was throwing errors in Windows, so using following methods
+        with capture() as out:
+            p=Process(target=func, args=args)
+            p.daemon = True
+            p.start()
+            p.join()
+            output=out
+            if log_path is not None:
+                with open(log_path, 'a') as log_file:
+                    log_file.write(str(output))
+        return {"exitcode": p.exitcode, "log": output}
+    
     with CaptureOutput() as capturer:
-
-        p = Process(target=func, args=args)
-        p.daemon = True
-        p.start()
-        p.join()
-        output = capturer.get_lines()
-        if log_path is not None:
-            with open(log_path, 'a') as log_file:
-                log_file.write(capturer.get_text())
+            p = Process(target=func, args=args)
+            p.daemon = True
+            p.start()
+            p.join()
+            output = capturer.get_lines()
+            if log_path is not None:
+                with open(log_path, 'a') as log_file:
+                    log_file.write(capturer.get_text())
 
     return {"exitcode": p.exitcode, "log": output}
 
+
+def run_thread1(func, args, log_path):
+   
+    with capture() as out:
+        p=Process(target=func, args=args)
+        p.daemon = True
+        p.start()
+        p.join()
+        output=out
+        if log_path is not None:
+            with open(log_path, 'a') as log_file:
+                log_file.write(str(output))
+   
+    return {"exitcode": p.exitcode, "log": output}
+
+@contextlib.contextmanager
+def capture():
+    import sys
+    from cStringIO import StringIO
+    oldout,olderr = sys.stdout, sys.stderr
+    try:
+        out=[StringIO(), StringIO()]
+        sys.stdout,sys.stderr = out
+        yield out
+    finally:
+        sys.stdout,sys.stderr = oldout,olderr
+        out[0] = out[0].getvalue()
+        out[1] = out[1].getvalue()
 
 
 def writeline_if_not_none(fout, data):
