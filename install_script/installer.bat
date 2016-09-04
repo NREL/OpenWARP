@@ -223,20 +223,17 @@ SET "PATH=%PATH%;%CURL%"
 :: Installing ParaView
 :: ---------------------------------
 	ECHO Downloading Paraview 
-	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.exe (
-	curl -L -O  http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=win64&downloadFile=ParaView-4.1.0-Windows-64bit.exe
-	ECHO Installing Paraview
-	ParaView-4.1.0-Windows-64bit.exe
-	)
-	
 	ECHO Download Paraview from dropbox !
-	:: If above link fails to download
-	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.exe (
-	curl -L -o %DIR%ParaView-4.1.0-Windows-64bit.exe https://www.dropbox.com/s/90lsifdf9mgg08z/ParaView-4.1.0-Windows-64bit.exe?dl=1
+	:: Downloadig from dropbox as curl is throwing some issues with Parview sever
+	IF NOT EXIST %DIR%ParaView-4.1.0-Windows-64bit.zip (
+	
+	curl -L -o %DIR%ParaView-4.1.0-Windows-64bit.zip https://www.dropbox.com/s/7h6zfjhm23bizjb/ParaView-4.1.0-Windows-64bit.zip?dl=1
 	ECHO Installing Paraview
-	ParaView-4.1.0-Windows-64bit.exe
+	7za x ParaView-4.1.0-Windows-64bit.zip -o%ROOT%\bundled\
+	
 	)
-	SET "PATH=%PATH%;C:\Program Files (x86)\ParaView 4.1.0\bin"
+	::ParaView-4.1.0-Windows-64bit
+	::SET "PATH=%PATH%;C:\Program Files (x86)\ParaView 4.1.0\bin"
 	
 	
 :: --------------------------------
