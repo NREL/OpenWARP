@@ -14,19 +14,19 @@
 \contentsline {subsection}{\numberline {6.2}OS X}{19}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Linux}{20}{subsection.6.3}
 \contentsline {section}{\numberline {7}Deployment from existing package }{20}{section.7}
-\contentsline {subsection}{\numberline {7.1}Windows}{20}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{20}{subsubsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1}Windows}{21}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{21}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Repackaging the installer}{21}{subsubsection.7.1.2}
 \contentsline {subsection}{\numberline {7.2}OS X}{21}{subsection.7.2}
 \contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{21}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{21}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{22}{subsubsection.7.2.2}
 \contentsline {subsection}{\numberline {7.3}Linux}{22}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Recompiling NemohFortran and NemohPython}{22}{subsubsection.7.3.1}
 \contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{22}{subsubsection.7.3.2}
 \contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{22}{subsection.7.4}
 \contentsline {section}{\numberline {8}Configuration}{23}{section.8}
 \contentsline {subsection}{\numberline {8.1}Meshing parameters}{23}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simulation parameters}{23}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Simulation parameters}{24}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Postprocessing parameters}{25}{subsection.8.3}
 \contentsline {subsection}{\numberline {8.4}Other and Logging parameters}{26}{subsection.8.4}
 \contentsline {section}{\numberline {9}Usage}{26}{section.9}
