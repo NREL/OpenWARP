@@ -41,7 +41,6 @@ from nemoh import postprocessor
 from nemoh import solver
 import warnings
 
-from msvcrt import getch
 try:
     from capturer import CaptureOutput
 except ImportError,e:
