@@ -194,7 +194,7 @@ class WebController:
         
         try:
             temp_dir = os.path.join(TEMP_DATA_DIRECTORY, uuid.uuid1().hex)
-            os.mkdir(temp_dir)
+            os.makedirs(temp_dir)
             filepath = os.path.join(temp_dir, uploadedFile.filename)
             
             # We must use 'wb' mode here in case the uploaded file is not ascii format.
