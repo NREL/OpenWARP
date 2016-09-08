@@ -559,7 +559,9 @@ def run_thread(func, args, log_path):
             if log_path is not None:
                 with open(log_path, 'a') as log_file:
                     log_file.write(str(output))
-        return {"exitcode": p.exitcode, "log": output}
+                    
+        logs_path = os.path.dirname(USER_DATA_DIRECTORY)+"\logs\logs.log"
+        return {"exitcode": p.exitcode, "log": "Logs for  %s is at : %s \n \n" % ( func.__module__ , logs_path )}
     
     with CaptureOutput() as capturer:
             p = Process(target=func, args=args)
@@ -573,20 +575,6 @@ def run_thread(func, args, log_path):
 
     return {"exitcode": p.exitcode, "log": output}
 
-
-def run_thread1(func, args, log_path):
-   
-    with capture() as out:
-        p=Process(target=func, args=args)
-        p.daemon = True
-        p.start()
-        p.join()
-        output=out
-        if log_path is not None:
-            with open(log_path, 'a') as log_file:
-                log_file.write(str(output))
-   
-    return {"exitcode": p.exitcode, "log": output}
 
 @contextlib.contextmanager
 def capture():
