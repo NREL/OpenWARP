@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 OSTYPE=`uname`
 
@@ -178,12 +178,22 @@ elif [ "$OSTYPE"="Darwin" ];then
 	sudo easy_install pip
 
 	echo "Installing the remaining python dependencies"
+	
+		
 	sudo pip install -r ${ROOT}/openwarpgui/requirements.txt
-	python ${ROOT}/openwarpgui/nemoh/setup.py cleanall
-        python ${ROOT}/openwarpgui/nemoh/setup.py build_ext --inplace
+	easy_install pip --upgrade numpy
+	
+
+	cd ${ROOT}/openwarpgui/nemoh/
+	#sudo python setup.py cleanall
+	#sudo python setup.py build_ext --inplace
+	sudo python ${ROOT}/openwarpgui/nemoh/setup.py cleanall
+        sudo python ${ROOT}/openwarpgui/nemoh/setup.py build_ext --inplace
 	
 	# To know the currently configured path 
-	otool -L ${ROOT}/openwarpgui/nemoh/solver_fortran.so
+	sudo otool -L ${ROOT}/openwarpgui/nemoh/solver_fortran.so
+	
+	sudo chmod 777 ${ROOT}/openwarpgui/nemoh/solver_fortran.so
 	# install_name_tool -change $Current $New
 	install_name_tool -change "libnemoh.dylib" "/Users/${USERNAME}/anaconda2/lib/libnemoh.dylib" ${ROOT}/openwarpgui/nemoh/solver_fortran.so
 	
