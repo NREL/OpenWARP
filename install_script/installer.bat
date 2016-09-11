@@ -232,6 +232,9 @@ SET "PATH=%PATH%;%CURL%"
 	7za x ParaView-4.1.0-Windows-64bit.zip -o%ROOT%\bundled\
 	
 	)
+	xcopy /s %ROOT%\bundled\ParaView-4.1.0-Windows-64bit %ROOT%\bundled\paraview
+	rmdir %ROOT%\bundled\ParaView-4.1.0-Windows-64bit /s /q
+
 	::ParaView-4.1.0-Windows-64bit
 	::SET "PATH=%PATH%;C:\Program Files (x86)\ParaView 4.1.0\bin"
 	
