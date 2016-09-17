@@ -145,7 +145,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 	make
 	
 	echo "copying libnemoh.dylib from FORTRAN_BUILD to lib/directory inside the Anaconda installation Root"
-	cp $FORTRAN_BUILD/libnemoh.dylib /Users/${USERNAME}/anaconda2/lib
+	sudo cp $FORTRAN_BUILD/libnemoh.dylib /Users/${USERNAME}/anaconda2/lib
 	
 	echo "Downloading ParaView "
 	cd ${DIR}
@@ -153,7 +153,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 	curl -L http://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v4.1&type=binary&os=osx&downloadFile=ParaView-4.1.0-Darwin-64bit.dmg
 	
 	# Above failes than we can download from a dropbox location
-	curl -L -o ParaView-4.1.0-Darwin-64bit.dmg  https://www.dropbox.com/s/ocdmgl6dwzaq60l/ParaView-4.1.0-Darwin-64bit.dmg?dl=1
+	# curl -L -o ParaView-4.1.0-Darwin-64bit.dmg  https://www.dropbox.com/s/ocdmgl6dwzaq60l/ParaView-4.1.0-Darwin-64bit.dmg?dl=1
 	echo "Installing Parview"
 	#bash ./ParaView-4.1.0-Darwin-64bit.dmg
 
