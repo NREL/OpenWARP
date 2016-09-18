@@ -88,6 +88,7 @@ if [ "$OSTYPE" = "Linux" ];then
 
 	# Avoiding any problem by using the system pip and python
 	sudo /usr/bin/pip install -r "$ROOT/openwarpgui/requirements.txt"
+	sudo /usr/bin/pip install numpy --upgrade
 	/usr/bin/python setup.py cleanall
 	/usr/bin/python setup.py build_ext --inplace
 
