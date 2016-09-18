@@ -91,6 +91,10 @@ if [ "$OSTYPE" = "Linux" ];then
 	sudo /usr/bin/pip install numpy --upgrade
 	/usr/bin/python setup.py cleanall
 	/usr/bin/python setup.py build_ext --inplace
+	
+	# Downloading paraview using curl 
+	curl -L -o ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz  https://www.dropbox.com/s/coknwtj453wkulb/ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz?dl=1
+	tar -xvzf ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz -C $INSTALL_PATH/openwarpgui/bundled/paraview_linux --strip-components=1
 
 	echo "OpenWarp Installation successfully completed"
 
