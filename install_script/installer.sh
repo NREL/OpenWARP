@@ -37,7 +37,9 @@ if [ "$OSTYPE" = "Linux" ];then
 
 	echo "Installing Blas and Lapack"
 	sudo apt-get --yes --force-yes install liblapack-dev libblas-dev
-
+ 	
+	echo "Instaling atlas"
+	sudo apt-get install libatlas-base-dev libatlas3gf-base
 
 	echo "Installing nglib"
 	sudo apt-get --yes --force-yes install libnglib-4.9.13 netgen netgen-headers libnglib-dev
