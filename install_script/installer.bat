@@ -206,6 +206,11 @@ SET "PATH=%PATH%;%CURL%"
 	
 	CD %PARENTDIR%install_script
 	
+:: ------------------------------------------------
+:: Installing VCREDIST x64 , it installs MSVSCRT10.DLL
+:: ---------------------------------------------
+	%PARENTDIR%install_script\vsredistributable12\vcredist_x64.exe	
+	
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
