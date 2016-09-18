@@ -37,7 +37,9 @@ if [ "$OSTYPE" = "Linux" ];then
 
 	echo "Installing Blas and Lapack"
 	sudo apt-get --yes --force-yes install liblapack-dev libblas-dev
-
+ 	
+	echo "Instaling atlas"
+	sudo apt-get install libatlas-base-dev libatlas3gf-base
 
 	echo "Installing nglib"
 	sudo apt-get --yes --force-yes install libnglib-4.9.13 netgen netgen-headers libnglib-dev
@@ -86,8 +88,13 @@ if [ "$OSTYPE" = "Linux" ];then
 
 	# Avoiding any problem by using the system pip and python
 	sudo /usr/bin/pip install -r "$ROOT/openwarpgui/requirements.txt"
+	sudo /usr/bin/pip install numpy --upgrade
 	/usr/bin/python setup.py cleanall
 	/usr/bin/python setup.py build_ext --inplace
+	
+	# Downloading paraview using curl 
+	curl -L -o ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz  https://www.dropbox.com/s/coknwtj453wkulb/ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz?dl=1
+	tar -xvzf ParaView-4.1.0-Linux-64bit-glibc-2.3.6.tar.gz -C $INSTALL_PATH/openwarpgui/bundled/paraview_linux --strip-components=1
 
 	echo "OpenWarp Installation successfully completed"
 
