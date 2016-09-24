@@ -211,6 +211,12 @@ SET "PATH=%PATH%;%CURL%"
 :: ---------------------------------------------
 	%PARENTDIR%install_script\vsredistributable12\vcredist_x64.exe	
 	
+	
+:: ----------------------------------------------------------
+:: Installing HDF5-tools (H5DIFF are used in testscripts)
+:: ---------------------------------------------------------
+	%PARENTDIR%install_script\hdf5\HDF5-1.8.17-win64.msi
+
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
@@ -222,7 +228,11 @@ SET "PATH=%PATH%;%CURL%"
 		
 	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 	%ANACONDA%\Scripts\pip install --upgrade numpy
-
+	
+	%ANACONDA%\Scripts\pip uninstall numpy
+	%ANACONDA%\Scripts\pip uninstall scipy
+	%ANACONDA%\Scripts\pip install --upgrade pip 
+	%ANACONDA%\Scripts\pip install %DIR%numpy-1.9.2+mkl-cp27-none-win_amd64.whl
 	
 :: --------------------------------
 :: Installing ParaView
