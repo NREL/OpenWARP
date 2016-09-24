@@ -211,6 +211,15 @@ SET "PATH=%PATH%;%CURL%"
 :: ---------------------------------------------
 	%PARENTDIR%install_script\vsredistributable12\vcredist_x64.exe	
 	
+<<<<<<< HEAD
+=======
+	
+:: ----------------------------------------------------------
+:: Installing HDF5-tools (H5DIFF are used in testscripts)
+:: ---------------------------------------------------------
+	%PARENTDIR%install_script\hdf5\HDF5-1.8.17-win64.msi
+
+>>>>>>> adad6cd0157961c427283bf8ffe7555b5ed073c1
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
@@ -223,7 +232,11 @@ SET "PATH=%PATH%;%CURL%"
 	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 	%ANACONDA%\Scripts\pip install --upgrade numpy
 
+	::---- for Automated Test 2 (Bemio-Wamit)
+	%ANACONDA%\Scripts\pip install %DIR%numpy-1.9.2+mkl-cp27-none-win_amd64.whl
+	%ANACONDA%\Scripts\pip install progressbar
 	
+		
 :: --------------------------------
 :: Installing ParaView
 :: ---------------------------------
@@ -253,15 +266,15 @@ SET "PATH=%PATH%;%CURL%"
 	python %ROOT%\nemoh\setup.py cleanall
 	python %ROOT%\nemoh\setup.py build_ext --inplace
 
-	ECHO "OpenWarp Installation Steps are complete"
-
+	ECHO "OpenWarp Installation Steps are complete !"
+	ECHO "Execute run.bat for GUI and testscript.bat for CLI tests !"
 
 :: ------------------------------
 :: Execute UI
 :: ------------------------------
-	ECHO "RUNNING OPENWARP"
-	CD %ROOT%
-	python main.py
+	:: ECHO "RUNNING OPENWARP"
+	::CD %ROOT%
+	::python main.py
 	
 	
 :endProcess
