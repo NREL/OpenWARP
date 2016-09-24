@@ -211,15 +211,12 @@ SET "PATH=%PATH%;%CURL%"
 :: ---------------------------------------------
 	%PARENTDIR%install_script\vsredistributable12\vcredist_x64.exe	
 	
-<<<<<<< HEAD
-=======
 	
 :: ----------------------------------------------------------
 :: Installing HDF5-tools (H5DIFF are used in testscripts)
 :: ---------------------------------------------------------
 	%PARENTDIR%install_script\hdf5\HDF5-1.8.17-win64.msi
 
->>>>>>> adad6cd0157961c427283bf8ffe7555b5ed073c1
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
