@@ -192,6 +192,7 @@ elif [ "$OSTYPE"="Darwin" ];then
 		
 	sudo pip install -r ${ROOT}/openwarpgui/requirements.txt
 	easy_install pip --upgrade numpy
+	sudo pip install progressbar
 	
 
 	cd ${ROOT}/openwarpgui/nemoh/
