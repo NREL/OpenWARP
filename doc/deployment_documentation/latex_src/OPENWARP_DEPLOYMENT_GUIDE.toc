@@ -17,12 +17,12 @@
 \contentsline {subsection}{\numberline {7.1}Windows}{21}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Recompiling NemohFortran and NemohPython}{21}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Repackaging the installer}{21}{subsubsection.7.1.2}
-\contentsline {subsection}{\numberline {7.2}OS X}{21}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{21}{subsubsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2}OS X}{22}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Recompiling NemohFortran and NemohPython}{22}{subsubsection.7.2.1}
 \contentsline {subsubsection}{\numberline {7.2.2}Packaging the installer}{22}{subsubsection.7.2.2}
 \contentsline {subsection}{\numberline {7.3}Linux}{22}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Recompiling NemohFortran and NemohPython}{22}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{22}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2}Packaging the installer}{23}{subsubsection.7.3.2}
 \contentsline {subsection}{\numberline {7.4}General Guide about the installer build/packaging procedure}{23}{subsection.7.4}
 \contentsline {section}{\numberline {8}Configuration}{23}{section.8}
 \contentsline {subsection}{\numberline {8.1}Meshing parameters}{23}{subsection.8.1}
