@@ -215,8 +215,9 @@ SET "PATH=%PATH%;%CURL%"
 :: ----------------------------------------------------------
 :: Installing HDF5-tools (H5DIFF are used in testscripts)
 :: ---------------------------------------------------------
+	SET HDF5=C:\Program Files\HDF_Group\HDF5\1.8.17\bin
 	%PARENTDIR%install_script\hdf5\HDF5-1.8.17-win64.msi
-
+	SET "PATH=%PATH%;%HDF5%"
 :: ----------------------------------------
 :: Installing Python libraries using pip
 :: -----------------------------------------
@@ -225,7 +226,7 @@ SET "PATH=%PATH%;%CURL%"
 	ECHO %ROOT%
 	ECHO %ANACONDA%\Scripts\pip
 		
-		
+	
 	%ANACONDA%\Scripts\pip install -r %ROOT%requirements.txt
 	%ANACONDA%\Scripts\pip install --upgrade numpy
 
