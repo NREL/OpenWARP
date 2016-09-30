@@ -154,7 +154,7 @@ SET "PATH=%PATH%;%CURL%"
 	ECHO Creating new GFortran build folder 
 	RMDIR source\NemohImproved\Nemoh\gFortranBuild /S /Q
 	MKDIR source\NemohImproved\Nemoh\gFortranBuild
-	CD %PARENTDIR%source\NemohImproved\Nemoh\
+	
 			
 :: ---------------------------------------------------------------------------
 :: Copy Blas and Lapack from install_script folder to bundled/simulations/libs
@@ -176,8 +176,9 @@ SET "PATH=%PATH%;%CURL%"
 	copy %PARENTDIR%install_script\dlls\libnemoh.dll %MINGW_ROOT%\lib
 	copy %PARENTDIR%install_script\dlls\libnemoh.dll.a %MINGW_ROOT%\lib
 	)
+
+	CD %PARENTDIR%source\NemohImproved\Nemoh\	
 	
-	CD %PARENTDIR%install_script
 
 :: -----------------------------------------------
 :: Build libnemoh.dll and libnemoh.dll.a 
@@ -204,7 +205,7 @@ SET "PATH=%PATH%;%CURL%"
 	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %MINGW_ROOT%\lib
 	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %MINGW_ROOT%\lib
 	
-
+	CD %PARENTDIR%install_script
 	
 :: ------------------------------------------------
 :: Installing VCREDIST x64 , it installs MSVSCRT10.DLL
