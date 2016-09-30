@@ -244,16 +244,20 @@ def read_results(hdf5_data):
     result.theta = theta
 
     forces = hdf5_data.get(structure.H5_RESULTS_FORCES)
-    for k in range(n_integration):
-        c = 0
-        for i in range(n_w):
-            for j in range(n_beta):
-                result.diffraction_force[i, j, k] = forces[k, c]*np.exp(complex(0, 1)*forces[k, c+1])
-                c += 2
-            for j in range(n_radiation):
-                result.added_mass[i, j, k] = forces[k, c]
-                result.radiation_damping[i, j, k] = forces[k, c+1]
-                c += 2
+    if forces is None:
+        print 'DEBUG: forces is none'
+    if forces is not None:
+        print 'forces is not none '
+        for k in range(n_integration):
+            c = 0
+            for i in range(n_w):
+                for j in range(n_beta):
+                    result.diffraction_force[i, j, k] = forces[k, c]*np.exp(complex(0, 1)*forces[k, c+1])
+                    c += 2
+                for j in range(n_radiation):
+                    result.added_mass[i, j, k] = forces[k, c]
+                    result.radiation_damping[i, j, k] = forces[k, c+1]
+                    c += 2
 
     result.froudkrylov_force = hdf5_data.get(structure.H5_RESULTS_FK_FORCES_RAW)
 
