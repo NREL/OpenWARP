@@ -1,1 +1,0 @@
-from vtkFiltersCorePython import *

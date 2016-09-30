@@ -1,1 +1,0 @@
-from vtkRenderingContextOpenGLPython import *

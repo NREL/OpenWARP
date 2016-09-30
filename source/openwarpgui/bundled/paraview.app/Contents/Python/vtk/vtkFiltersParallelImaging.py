@@ -1,1 +1,0 @@
-from vtkFiltersParallelImagingPython import *

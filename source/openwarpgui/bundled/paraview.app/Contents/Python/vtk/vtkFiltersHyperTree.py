@@ -1,1 +1,0 @@
-from vtkFiltersHyperTreePython import *

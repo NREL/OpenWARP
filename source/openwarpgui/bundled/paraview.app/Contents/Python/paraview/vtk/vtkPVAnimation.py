@@ -1,1 +1,0 @@
-from vtkPVAnimationPython import *

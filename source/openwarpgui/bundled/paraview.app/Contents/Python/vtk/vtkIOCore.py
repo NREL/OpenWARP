@@ -1,1 +1,0 @@
-from vtkIOCorePython import *

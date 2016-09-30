@@ -1,1 +1,0 @@
-from vtkImagingColorPython import *

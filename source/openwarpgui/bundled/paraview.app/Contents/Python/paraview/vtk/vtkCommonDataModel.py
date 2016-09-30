@@ -1,1 +1,0 @@
-from vtkCommonDataModelPython import *
