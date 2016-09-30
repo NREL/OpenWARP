@@ -1,1 +1,0 @@
-from vtkPVCatalystPython import *

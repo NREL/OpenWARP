@@ -1,1 +1,0 @@
-from vtkInteractionImagePython import *

@@ -1,1 +1,0 @@
-from vtkFiltersAMRPython import *
