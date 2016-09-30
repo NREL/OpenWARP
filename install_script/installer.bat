@@ -155,34 +155,7 @@ SET "PATH=%PATH%;%CURL%"
 	RMDIR source\NemohImproved\Nemoh\gFortranBuild /S /Q
 	MKDIR source\NemohImproved\Nemoh\gFortranBuild
 	CD %PARENTDIR%source\NemohImproved\Nemoh\
-	goto build
-		
-
-:: -----------------------------------------------
-:: Build libnemoh.dll and libnemoh.dll.a 
-:: -----------------------------------------------
-	:build
-	cmake -DCMAKE_Fortran_COMPILER="gfortran" "%PARENTDIR%source\NemohImproved\Nemoh" -G "MinGW Makefiles"
-	mingw32-make
-	CD %PARENTDIR%
-
-:: --------------------------------------------------------------------
-:: Copy libnemoh.dll to Anaconda/Dlls, Anaconda/Libs and MinGW/libs	
-:: --------------------------------------------------------------------
-	ECHO Copying libnemoh.dll to Anaconda\Dlls
-	echo %ANACONDA%\DLLs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\DLLs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\DLLs
-	
-	ECHO Copying libnemoh.dll to Anaconda\libs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\libs
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\libs
-	
-	ECHO Copying libnemoh.dll to Anaconda
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %MINGW_ROOT%\lib
-	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %MINGW_ROOT%\lib
-	
-	
+			
 :: ---------------------------------------------------------------------------
 :: Copy Blas and Lapack from install_script folder to bundled/simulations/libs
 :: ---------------------------------------------------------------------------
@@ -205,6 +178,33 @@ SET "PATH=%PATH%;%CURL%"
 	)
 	
 	CD %PARENTDIR%install_script
+
+:: -----------------------------------------------
+:: Build libnemoh.dll and libnemoh.dll.a 
+:: -----------------------------------------------
+	cmake -DCMAKE_Fortran_COMPILER="gfortran" "%PARENTDIR%source\NemohImproved\Nemoh" -G "MinGW Makefiles"
+	mingw32-make
+	CD %PARENTDIR%
+	
+	:: to build these dlls again delete CMakeCache.txt file
+
+:: --------------------------------------------------------------------
+:: Copy libnemoh.dll to Anaconda/Dlls, Anaconda/Libs and MinGW/libs	
+:: --------------------------------------------------------------------
+	ECHO Copying libnemoh.dll to Anaconda\Dlls
+	echo %ANACONDA%\DLLs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\DLLs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\DLLs
+	
+	ECHO Copying libnemoh.dll to Anaconda\libs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %ANACONDA%\libs
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %ANACONDA%\libs
+	
+	ECHO Copying libnemoh.dll to Anaconda
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll %MINGW_ROOT%\lib
+	copy %PARENTDIR%source\NemohImproved\Nemoh\libnemoh.dll.a %MINGW_ROOT%\lib
+	
+
 	
 :: ------------------------------------------------
 :: Installing VCREDIST x64 , it installs MSVSCRT10.DLL
