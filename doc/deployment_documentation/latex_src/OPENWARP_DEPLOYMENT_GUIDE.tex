@@ -474,6 +474,8 @@ Installer.bat brings-down all the prerequistie to get started and configure path
  \item 12. Builds solver_fortran.pyd 
  \item 13. Ready to OpenWarp.  
  \end{itemize}
+To download paraview manually, download ParaView $>=4.1$  \url{http://www.paraview.org/download/} and extract it at OpenWARP/source/openwarpgui/bundled/paraview. So the folder structure would be bundled/paraview/bin, bundled/paraview/paraview_script_template.py
+  
  After the installation is done, Execute run.bat from a new command prompt to Open GUI.
  Similarly, to run automated testscripts,execute run.bat and then press Ctrl+C.Now, run testscript_1.bat or testscript_2.bat in the same terminal. Testscripts output can be logged into a file by command testscript_1.bat >> test1.log.To know more about CLI, refers OpenWARPCLIdocumentation.pdf. Not following above mentioned steps may throw errors because of environment variables missing.
  
@@ -493,6 +495,8 @@ installer.sh is the install script that is certified in OS X 10.10. It downloads
 \item 11. Builds solver_fortran
 \item 12. Ready to run OpenWarp.
 \end{itemize}
+To download Paraview manually, use ParaView $>=4.1$  \url{http://www.paraview.org/download/}. Users need to mount the .dmg file to get .app file using hdiutil tool. Once done, copy it as OpenWARP/source/openwarpgui/bundled/paraview.app to start automatically with GUI
+
 After the installation is done, Execute run.sh from the source directory to Open GUI.
  Similarly, to run automated testscripts, you can run testscript_1.sh and testscript_2.sh.It creates test output into a file named automatedtest.log To know more about CLI, refer OpenWARPCLIdocumentation.pdf
 
@@ -514,6 +518,8 @@ installer.sh is the install script for Linux too. It helps in downloading and in
 \item 12. Build solver_fortran.so
 \item 13. Ready to run OpenWarp
 \end{itemize}
+To download paraview manually, Use ParaView $>=4.1$  \url{http://www.paraview.org/download/} and extract it at OpenWARP/source/openwarpgui/bundled/paraview_linux. So the folder structure would be bundled/paraview/bin. Extracting it at this location will enable it to open directly from GUI.
+
 After the installation is done, Execute run.sh from the source directory to Open GUI.
  Similarly, to run automated testscripts, you can run testscript_1.sh an testscript_2.sh. output of these tests are into automatedtest.log file. To know more about CLI, refer OpenWARPCLIdocumentation.pdf
 
