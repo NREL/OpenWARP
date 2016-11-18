@@ -1,0 +1,3 @@
+XHINGE.DAT file for hinge coordinates of hinged body used in TEST24
+  1  5          ISX,  NSEG
+ 2.  6.  10.	XHINGE(0:NSEG)

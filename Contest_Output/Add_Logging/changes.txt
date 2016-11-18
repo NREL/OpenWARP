@@ -1,0 +1,22 @@
+Logging support was added in:
+
+source/openwarpgui/main.py
+source/openwarpgui/nemoh/preprocessor.py
+source/openwarpgui/nemoh/postprocessor.py
+source/openwarpgui/nemoh/solver.py
+source/openwarpgui/nemoh/utility.py
+source/openwarpgui/nemoh/logging.json
+source/openwarpgui/nemoh/structure.py
+
+source/openwarp/openwarp/services.py
+source/openwarpgui/openwarp/web.py
+source/openwarpgui/openwarp/settings.py
+source/openwarpgui/static/js/app.js
+source/openwarpgui/static/js/controllers.js
+source/openwarpgui/static/partials/logging.html
+source/openwarpgui/static/screens.html
+
+
+source/NemohImproved/Nemoh/Solver/NEMOH.f90
+source/NemohImproved/Nemoh/Solver/logging/logging.h
+source/NemohImproved/Nemoh/Solver/logging/flogging.F90

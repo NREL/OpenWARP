@@ -1,0 +1,3 @@
+test13as.spl -- untrimmed spheroid with interior fs for IRR=3
+ 4  2     body patch   NU NV
+ 4  2     interior fs  NU NV

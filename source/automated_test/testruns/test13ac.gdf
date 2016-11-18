@@ -1,0 +1,7 @@
+test13ac.gdf -- Cylinder, trimmed, no interior fs
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+2  -1       NPATCH  IGDEF
+2           NLINES
+1.0 2.0     RADIUS, DRAFT
+0           UNIFORM MAPPING

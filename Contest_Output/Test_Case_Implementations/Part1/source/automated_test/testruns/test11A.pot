@@ -1,0 +1,11 @@
+TEST11A.POT  Cylinder R=1, T=0.5, igdef=-1
+ -1.
+ 1           1               IRAD, IDIFF
+ 2                            NPER (array PER follows)
+8.971402 2.006403
+ 1                            NBETA (array BETA follows)
+ 0.
+ 1                            NBODY
+ test11a.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  1  1  1  1  1             IMODE(1-6)

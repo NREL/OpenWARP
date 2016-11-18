@@ -1,0 +1,11 @@
+TEST14 -- ISSC TLP (ILOWHI=1)
+ 450
+ 0         0                  IRAD, IDIFF
+ 3                            NPER (array PER follows)
+ 5. 10. 15.
+ 1                            NBETA (array BETA follows)
+ 0.
+ 1                            NBODY
+ test14.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  0  1  0  1  0             IMODE(1-6)

@@ -1,0 +1,17 @@
+*.aux
+*.blg
+*.bbl
+*.aux
+*.pyc
+*.DS_Store
+*.idea
+*.log
+*.h5
+*.hdf5
+**/*.aux
+**/*.blg
+**/*.bbl
+**/*.aux
+**/*.DS_Store
+**/*.pyc
+**/*.idea

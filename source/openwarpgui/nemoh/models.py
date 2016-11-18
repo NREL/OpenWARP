@@ -1,13 +1,20 @@
 #!/usr/bin/env python
 """
 This module defines nemoh custom types or models.
+
+Changes in version 1.1 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
+
+Changes in version 1.2 (OPENWARP - PROVIDE A COMMAND LINE INTERFACE USING PYTHON):
+    Added models for Mesh Format.
 """
 
 import numpy as np
+import os
 
-__author__ = "yedtoss"
-__copyright__ = "Copyright (C) 2014 TopCoder Inc. All rights reserved."
-__version__ = "1.0"
+__author__ = "yedtoss, TCSASSEMBLER"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.2"
 
 
 class TCase:
@@ -53,6 +60,14 @@ class TMesh:
         self.last_panel = np.zeros(n_bodies)
         self.cg = np.zeros((3, n_bodies))
 
+    def __str__(self):
+        sym_msg = 'no symmetry'
+        if self.i_sym:
+            sym_msg = 'symmetry'
+
+        return ('Mesh of ' + str(self.n_points) + ' points and ' + str(self.n_panels) + ' panels '
+                + ' with ' + sym_msg)
+
 
 class TEnvironment:
     """
@@ -69,6 +84,15 @@ class TEnvironment:
         self.depth = 0
         self.x_eff = 0
         self.y_eff = 0
+
+    def __str__(self):
+        depth_msg = 'infinite water depth'
+        if self.depth > 0:
+            depth_msg = 'water depth of ' + str(self.depth)
+        return ('Environment with ' + depth_msg + ', gravity: ' + str(self.g)
+                + ', sea water density: ' + str(self.rho)
+                + ' wave measurements points coordinate: (' + str(self.x_eff)
+                + ', ' + str(self.y_eff) + ')')
 
 
 class TResult:
@@ -103,6 +127,11 @@ class TResult:
         self.hkochin_diffraction = np.zeros((n_w, n_beta, n_theta), dtype='F')
         self.hkochin_radiation = np.zeros((n_w, n_radiation, n_theta), dtype='F')
 
+    def __str__(self):
+        return ('Result with ' + str(self.n_w) + ' number of wave frequencies '
+                + str(self.n_radiation) + ' radiations ' + str(self.n_integration) +
+                ' integrations')
+
 
 class TIRF:
     """
@@ -124,3 +153,36 @@ class TIRF:
         self.time = np.zeros((n_time, ), dtype='f')
         self.k = np.zeros((n_time, n_radiation, n_integration), dtype='f')
         self.added_mass = np.zeros((n_radiation, n_integration), dtype='f')
+
+    def __str__(self):
+        return ('IRF with ' + str(self.n_time) + ' time steps'
+                )
+
+
+class MeshFormat:
+    """
+    This class provides some static method and member for the mesh format
+    """
+    DAT = '.dat'
+    STL = '.stl'
+    IGS = '.igs'
+    STEP = '.step'
+
+    @staticmethod
+    def is_mesh_file(filename, mesh_format):
+        """
+        Check if a given file is of the expected mesh format
+        :param filename the filename
+        :param mesh_format the mesh format
+        :return True if the file is of the expected mesh format
+        """
+        return os.path.splitext(filename)[1] == mesh_format
+
+    @staticmethod
+    def is_dat_file(filename):
+        """
+        Check if a given file is of the dat mesh format
+        :param filename the filename
+        :return True if the file is of the dat mesh format
+        """
+        return MeshFormat.is_mesh_file(filename, MeshFormat.DAT)

@@ -1,0 +1,22 @@
+ test22.csf  FPSO, rectangular outer boundary
+1   ILOWHICSF
+0  1        ISX  ISY
+0   0  -2. NPATCH  ICDEF  PSZCSF   (1st two indicate this is automatic)
+  0.0  2.0    RADIUS, DRAFT of outer box (0.0 signifies outer bdry defined below
+  1   NPART
+  4   nv0
+  12.0   0.0
+  12.0   3.0
+ -12.0   3.0
+ -12.0   0.0
+
+THE FOLLOWING IS AN ALTERNATIVE CSF FILE WHICH IS NOT READ BY THE PROGRAM
+ UNLESS IT IS INTERCHANGED WITH THE FILE ABOVE.
+
+ test22.csf  FPSO, circular outer boundary
+1   ILOWHICSF
+0  1        ISX  ISY
+0   0  2. NPATCH  ICDEF  PSZCSF   (1st two indicate this is automatic)
+  12.0  2.0    RADIUS, DRAFT of outer box (0.0 signifies outer bdry defined below
+  0   NPART
+

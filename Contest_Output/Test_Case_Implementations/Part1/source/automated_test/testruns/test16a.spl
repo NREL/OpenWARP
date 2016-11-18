@@ -1,0 +1,7 @@
+TEST16A elastic barge with igdef=0 (patches defined by flat panels)
+3  3        NU NV       end
+4  4        KU KV
+5  2                    side
+4  4
+5  2                    bottom
+4  4

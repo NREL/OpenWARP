@@ -1,0 +1,780 @@
+
+file1     file2
+---------------------------------------
+    x      x    /              
+    x      x    /bem_data      
+    x      x    /bem_data/code 
+    x      x    /bem_data/output
+    x      x    /bemio_information
+    x      x    /bemio_information/version
+    x      x    /body1         
+    x      x    /body1/hydro_coeffs
+    x      x    /body1/hydro_coeffs/added_mass
+    x      x    /body1/hydro_coeffs/added_mass/all
+    x      x    /body1/hydro_coeffs/added_mass/components
+    x      x    /body1/hydro_coeffs/added_mass/components/1_1
+    x      x    /body1/hydro_coeffs/added_mass/components/1_2
+    x      x    /body1/hydro_coeffs/added_mass/components/1_3
+    x      x    /body1/hydro_coeffs/added_mass/components/1_4
+    x      x    /body1/hydro_coeffs/added_mass/components/1_5
+    x      x    /body1/hydro_coeffs/added_mass/components/1_6
+    x      x    /body1/hydro_coeffs/added_mass/components/2_1
+    x      x    /body1/hydro_coeffs/added_mass/components/2_2
+    x      x    /body1/hydro_coeffs/added_mass/components/2_3
+    x      x    /body1/hydro_coeffs/added_mass/components/2_4
+    x      x    /body1/hydro_coeffs/added_mass/components/2_5
+    x      x    /body1/hydro_coeffs/added_mass/components/2_6
+    x      x    /body1/hydro_coeffs/added_mass/components/3_1
+    x      x    /body1/hydro_coeffs/added_mass/components/3_2
+    x      x    /body1/hydro_coeffs/added_mass/components/3_3
+    x      x    /body1/hydro_coeffs/added_mass/components/3_4
+    x      x    /body1/hydro_coeffs/added_mass/components/3_5
+    x      x    /body1/hydro_coeffs/added_mass/components/3_6
+    x      x    /body1/hydro_coeffs/added_mass/components/4_1
+    x      x    /body1/hydro_coeffs/added_mass/components/4_2
+    x      x    /body1/hydro_coeffs/added_mass/components/4_3
+    x      x    /body1/hydro_coeffs/added_mass/components/4_4
+    x      x    /body1/hydro_coeffs/added_mass/components/4_5
+    x      x    /body1/hydro_coeffs/added_mass/components/4_6
+    x      x    /body1/hydro_coeffs/added_mass/components/5_1
+    x      x    /body1/hydro_coeffs/added_mass/components/5_2
+    x      x    /body1/hydro_coeffs/added_mass/components/5_3
+    x      x    /body1/hydro_coeffs/added_mass/components/5_4
+    x      x    /body1/hydro_coeffs/added_mass/components/5_5
+    x      x    /body1/hydro_coeffs/added_mass/components/5_6
+    x      x    /body1/hydro_coeffs/added_mass/components/6_1
+    x      x    /body1/hydro_coeffs/added_mass/components/6_2
+    x      x    /body1/hydro_coeffs/added_mass/components/6_3
+    x      x    /body1/hydro_coeffs/added_mass/components/6_4
+    x      x    /body1/hydro_coeffs/added_mass/components/6_5
+    x      x    /body1/hydro_coeffs/added_mass/components/6_6
+    x      x    /body1/hydro_coeffs/added_mass/inf_freq
+    x      x    /body1/hydro_coeffs/excitation
+    x      x    /body1/hydro_coeffs/excitation/components
+    x      x    /body1/hydro_coeffs/excitation/components/im
+    x      x    /body1/hydro_coeffs/excitation/components/im/1_1
+    x      x    /body1/hydro_coeffs/excitation/components/im/2_1
+    x      x    /body1/hydro_coeffs/excitation/components/im/3_1
+    x      x    /body1/hydro_coeffs/excitation/components/im/4_1
+    x      x    /body1/hydro_coeffs/excitation/components/im/5_1
+    x      x    /body1/hydro_coeffs/excitation/components/im/6_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag
+    x      x    /body1/hydro_coeffs/excitation/components/mag/1_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag/2_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag/3_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag/4_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag/5_1
+    x      x    /body1/hydro_coeffs/excitation/components/mag/6_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase
+    x      x    /body1/hydro_coeffs/excitation/components/phase/1_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase/2_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase/3_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase/4_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase/5_1
+    x      x    /body1/hydro_coeffs/excitation/components/phase/6_1
+    x      x    /body1/hydro_coeffs/excitation/components/re
+    x      x    /body1/hydro_coeffs/excitation/components/re/1_1
+    x      x    /body1/hydro_coeffs/excitation/components/re/2_1
+    x      x    /body1/hydro_coeffs/excitation/components/re/3_1
+    x      x    /body1/hydro_coeffs/excitation/components/re/4_1
+    x      x    /body1/hydro_coeffs/excitation/components/re/5_1
+    x      x    /body1/hydro_coeffs/excitation/components/re/6_1
+    x      x    /body1/hydro_coeffs/excitation/im
+    x      x    /body1/hydro_coeffs/excitation/mag
+    x      x    /body1/hydro_coeffs/excitation/phase
+    x      x    /body1/hydro_coeffs/excitation/re
+    x      x    /body1/hydro_coeffs/linear_restoring_stiffness
+    x      x    /body1/hydro_coeffs/radiation_damping
+    x      x    /body1/hydro_coeffs/radiation_damping/all
+    x      x    /body1/hydro_coeffs/radiation_damping/components
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/1_6
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/2_6
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/3_6
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/4_6
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/5_6
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_1
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_2
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_3
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_4
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_5
+    x      x    /body1/hydro_coeffs/radiation_damping/components/6_6
+    x      x    /body1/properties
+    x      x    /body1/properties/body_number
+    x      x    /body1/properties/cb
+    x      x    /body1/properties/cg
+    x      x    /body1/properties/disp_vol
+    x      x    /body1/properties/name
+    x      x    /simulation_parameters
+    x      x    /simulation_parameters/T
+    x      x    /simulation_parameters/g
+    x      x    /simulation_parameters/rho
+    x      x    /simulation_parameters/scaled
+    x      x    /simulation_parameters/w
+    x      x    /simulation_parameters/water_depth
+    x      x    /simulation_parameters/wave_dir
+
+group  : </> and </>
+0 differences found
+group  : </bem_data> and </bem_data>
+0 differences found
+dataset: </bem_data/code> and </bem_data/code>
+0 differences found
+attribute: <description of </bem_data/code>> and <description of </bem_data/code>>
+0 differences found
+dataset: </bem_data/output> and </bem_data/output>
+0 differences found
+attribute: <description of </bem_data/output>> and <description of </bem_data/output>>
+0 differences found
+group  : </bemio_information> and </bemio_information>
+0 differences found
+dataset: </bemio_information/version> and </bemio_information/version>
+0 differences found
+group  : </body1> and </body1>
+0 differences found
+group  : </body1/hydro_coeffs> and </body1/hydro_coeffs>
+0 differences found
+group  : </body1/hydro_coeffs/added_mass> and </body1/hydro_coeffs/added_mass>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/all> and </body1/hydro_coeffs/added_mass/all>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/all>> and <description of </body1/hydro_coeffs/added_mass/all>>
+0 differences found
+attribute: <units for rotational degrees of freedom of </body1/hydro_coeffs/added_mass/all>> and <units for rotational degrees of freedom of </body1/hydro_coeffs/added_mass/all>>
+0 differences found
+attribute: <units for translational degrees of freedom of </body1/hydro_coeffs/added_mass/all>> and <units for translational degrees of freedom of </body1/hydro_coeffs/added_mass/all>>
+0 differences found
+group  : </body1/hydro_coeffs/added_mass/components> and </body1/hydro_coeffs/added_mass/components>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_1> and </body1/hydro_coeffs/added_mass/components/1_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_1>> and <description of </body1/hydro_coeffs/added_mass/components/1_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_1>> and <units of </body1/hydro_coeffs/added_mass/components/1_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_2> and </body1/hydro_coeffs/added_mass/components/1_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_2>> and <description of </body1/hydro_coeffs/added_mass/components/1_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_2>> and <units of </body1/hydro_coeffs/added_mass/components/1_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_3> and </body1/hydro_coeffs/added_mass/components/1_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_3>> and <description of </body1/hydro_coeffs/added_mass/components/1_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_3>> and <units of </body1/hydro_coeffs/added_mass/components/1_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_4> and </body1/hydro_coeffs/added_mass/components/1_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_4>> and <description of </body1/hydro_coeffs/added_mass/components/1_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_4>> and <units of </body1/hydro_coeffs/added_mass/components/1_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_5> and </body1/hydro_coeffs/added_mass/components/1_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_5>> and <description of </body1/hydro_coeffs/added_mass/components/1_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_5>> and <units of </body1/hydro_coeffs/added_mass/components/1_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/1_6> and </body1/hydro_coeffs/added_mass/components/1_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/1_6>> and <description of </body1/hydro_coeffs/added_mass/components/1_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/1_6>> and <units of </body1/hydro_coeffs/added_mass/components/1_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_1> and </body1/hydro_coeffs/added_mass/components/2_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_1>> and <description of </body1/hydro_coeffs/added_mass/components/2_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_1>> and <units of </body1/hydro_coeffs/added_mass/components/2_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_2> and </body1/hydro_coeffs/added_mass/components/2_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_2>> and <description of </body1/hydro_coeffs/added_mass/components/2_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_2>> and <units of </body1/hydro_coeffs/added_mass/components/2_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_3> and </body1/hydro_coeffs/added_mass/components/2_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_3>> and <description of </body1/hydro_coeffs/added_mass/components/2_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_3>> and <units of </body1/hydro_coeffs/added_mass/components/2_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_4> and </body1/hydro_coeffs/added_mass/components/2_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_4>> and <description of </body1/hydro_coeffs/added_mass/components/2_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_4>> and <units of </body1/hydro_coeffs/added_mass/components/2_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_5> and </body1/hydro_coeffs/added_mass/components/2_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_5>> and <description of </body1/hydro_coeffs/added_mass/components/2_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_5>> and <units of </body1/hydro_coeffs/added_mass/components/2_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/2_6> and </body1/hydro_coeffs/added_mass/components/2_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/2_6>> and <description of </body1/hydro_coeffs/added_mass/components/2_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/2_6>> and <units of </body1/hydro_coeffs/added_mass/components/2_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_1> and </body1/hydro_coeffs/added_mass/components/3_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_1>> and <description of </body1/hydro_coeffs/added_mass/components/3_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_1>> and <units of </body1/hydro_coeffs/added_mass/components/3_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_2> and </body1/hydro_coeffs/added_mass/components/3_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_2>> and <description of </body1/hydro_coeffs/added_mass/components/3_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_2>> and <units of </body1/hydro_coeffs/added_mass/components/3_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_3> and </body1/hydro_coeffs/added_mass/components/3_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_3>> and <description of </body1/hydro_coeffs/added_mass/components/3_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_3>> and <units of </body1/hydro_coeffs/added_mass/components/3_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_4> and </body1/hydro_coeffs/added_mass/components/3_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_4>> and <description of </body1/hydro_coeffs/added_mass/components/3_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_4>> and <units of </body1/hydro_coeffs/added_mass/components/3_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_5> and </body1/hydro_coeffs/added_mass/components/3_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_5>> and <description of </body1/hydro_coeffs/added_mass/components/3_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_5>> and <units of </body1/hydro_coeffs/added_mass/components/3_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/3_6> and </body1/hydro_coeffs/added_mass/components/3_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/3_6>> and <description of </body1/hydro_coeffs/added_mass/components/3_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/3_6>> and <units of </body1/hydro_coeffs/added_mass/components/3_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_1> and </body1/hydro_coeffs/added_mass/components/4_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_1>> and <description of </body1/hydro_coeffs/added_mass/components/4_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_1>> and <units of </body1/hydro_coeffs/added_mass/components/4_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_2> and </body1/hydro_coeffs/added_mass/components/4_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_2>> and <description of </body1/hydro_coeffs/added_mass/components/4_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_2>> and <units of </body1/hydro_coeffs/added_mass/components/4_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_3> and </body1/hydro_coeffs/added_mass/components/4_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_3>> and <description of </body1/hydro_coeffs/added_mass/components/4_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_3>> and <units of </body1/hydro_coeffs/added_mass/components/4_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_4> and </body1/hydro_coeffs/added_mass/components/4_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_4>> and <description of </body1/hydro_coeffs/added_mass/components/4_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_4>> and <units of </body1/hydro_coeffs/added_mass/components/4_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_5> and </body1/hydro_coeffs/added_mass/components/4_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_5>> and <description of </body1/hydro_coeffs/added_mass/components/4_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_5>> and <units of </body1/hydro_coeffs/added_mass/components/4_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/4_6> and </body1/hydro_coeffs/added_mass/components/4_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/4_6>> and <description of </body1/hydro_coeffs/added_mass/components/4_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/4_6>> and <units of </body1/hydro_coeffs/added_mass/components/4_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_1> and </body1/hydro_coeffs/added_mass/components/5_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_1>> and <description of </body1/hydro_coeffs/added_mass/components/5_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_1>> and <units of </body1/hydro_coeffs/added_mass/components/5_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_2> and </body1/hydro_coeffs/added_mass/components/5_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_2>> and <description of </body1/hydro_coeffs/added_mass/components/5_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_2>> and <units of </body1/hydro_coeffs/added_mass/components/5_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_3> and </body1/hydro_coeffs/added_mass/components/5_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_3>> and <description of </body1/hydro_coeffs/added_mass/components/5_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_3>> and <units of </body1/hydro_coeffs/added_mass/components/5_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_4> and </body1/hydro_coeffs/added_mass/components/5_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_4>> and <description of </body1/hydro_coeffs/added_mass/components/5_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_4>> and <units of </body1/hydro_coeffs/added_mass/components/5_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_5> and </body1/hydro_coeffs/added_mass/components/5_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_5>> and <description of </body1/hydro_coeffs/added_mass/components/5_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_5>> and <units of </body1/hydro_coeffs/added_mass/components/5_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/5_6> and </body1/hydro_coeffs/added_mass/components/5_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/5_6>> and <description of </body1/hydro_coeffs/added_mass/components/5_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/5_6>> and <units of </body1/hydro_coeffs/added_mass/components/5_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_1> and </body1/hydro_coeffs/added_mass/components/6_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_1>> and <description of </body1/hydro_coeffs/added_mass/components/6_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_1>> and <units of </body1/hydro_coeffs/added_mass/components/6_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_2> and </body1/hydro_coeffs/added_mass/components/6_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_2>> and <description of </body1/hydro_coeffs/added_mass/components/6_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_2>> and <units of </body1/hydro_coeffs/added_mass/components/6_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_3> and </body1/hydro_coeffs/added_mass/components/6_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_3>> and <description of </body1/hydro_coeffs/added_mass/components/6_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_3>> and <units of </body1/hydro_coeffs/added_mass/components/6_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_4> and </body1/hydro_coeffs/added_mass/components/6_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_4>> and <description of </body1/hydro_coeffs/added_mass/components/6_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_4>> and <units of </body1/hydro_coeffs/added_mass/components/6_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_5> and </body1/hydro_coeffs/added_mass/components/6_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_5>> and <description of </body1/hydro_coeffs/added_mass/components/6_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_5>> and <units of </body1/hydro_coeffs/added_mass/components/6_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/components/6_6> and </body1/hydro_coeffs/added_mass/components/6_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/components/6_6>> and <description of </body1/hydro_coeffs/added_mass/components/6_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/added_mass/components/6_6>> and <units of </body1/hydro_coeffs/added_mass/components/6_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/added_mass/inf_freq> and </body1/hydro_coeffs/added_mass/inf_freq>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/added_mass/inf_freq>> and <description of </body1/hydro_coeffs/added_mass/inf_freq>>
+0 differences found
+attribute: <units for translational degrees of freedom of </body1/hydro_coeffs/added_mass/inf_freq>> and <units for translational degrees of freedom of </body1/hydro_coeffs/added_mass/inf_freq>>
+0 differences found
+group  : </body1/hydro_coeffs/excitation> and </body1/hydro_coeffs/excitation>
+0 differences found
+group  : </body1/hydro_coeffs/excitation/components> and </body1/hydro_coeffs/excitation/components>
+0 differences found
+group  : </body1/hydro_coeffs/excitation/components/im> and </body1/hydro_coeffs/excitation/components/im>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/1_1> and </body1/hydro_coeffs/excitation/components/im/1_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/2_1> and </body1/hydro_coeffs/excitation/components/im/2_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/3_1> and </body1/hydro_coeffs/excitation/components/im/3_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/4_1> and </body1/hydro_coeffs/excitation/components/im/4_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/5_1> and </body1/hydro_coeffs/excitation/components/im/5_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/im/6_1> and </body1/hydro_coeffs/excitation/components/im/6_1>
+0 differences found
+group  : </body1/hydro_coeffs/excitation/components/mag> and </body1/hydro_coeffs/excitation/components/mag>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/1_1> and </body1/hydro_coeffs/excitation/components/mag/1_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/2_1> and </body1/hydro_coeffs/excitation/components/mag/2_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/3_1> and </body1/hydro_coeffs/excitation/components/mag/3_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/4_1> and </body1/hydro_coeffs/excitation/components/mag/4_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/5_1> and </body1/hydro_coeffs/excitation/components/mag/5_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/mag/6_1> and </body1/hydro_coeffs/excitation/components/mag/6_1>
+0 differences found
+group  : </body1/hydro_coeffs/excitation/components/phase> and </body1/hydro_coeffs/excitation/components/phase>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/1_1> and </body1/hydro_coeffs/excitation/components/phase/1_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/2_1> and </body1/hydro_coeffs/excitation/components/phase/2_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/3_1> and </body1/hydro_coeffs/excitation/components/phase/3_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/4_1> and </body1/hydro_coeffs/excitation/components/phase/4_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/5_1> and </body1/hydro_coeffs/excitation/components/phase/5_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/phase/6_1> and </body1/hydro_coeffs/excitation/components/phase/6_1>
+0 differences found
+group  : </body1/hydro_coeffs/excitation/components/re> and </body1/hydro_coeffs/excitation/components/re>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/1_1> and </body1/hydro_coeffs/excitation/components/re/1_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/2_1> and </body1/hydro_coeffs/excitation/components/re/2_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/3_1> and </body1/hydro_coeffs/excitation/components/re/3_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/4_1> and </body1/hydro_coeffs/excitation/components/re/4_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/5_1> and </body1/hydro_coeffs/excitation/components/re/5_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/components/re/6_1> and </body1/hydro_coeffs/excitation/components/re/6_1>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/im> and </body1/hydro_coeffs/excitation/im>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/excitation/im>> and <description of </body1/hydro_coeffs/excitation/im>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/excitation/im>> and <units of </body1/hydro_coeffs/excitation/im>>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/mag> and </body1/hydro_coeffs/excitation/mag>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/excitation/mag>> and <description of </body1/hydro_coeffs/excitation/mag>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/excitation/mag>> and <units of </body1/hydro_coeffs/excitation/mag>>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/phase> and </body1/hydro_coeffs/excitation/phase>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/excitation/phase>> and <description of </body1/hydro_coeffs/excitation/phase>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/excitation/phase>> and <units of </body1/hydro_coeffs/excitation/phase>>
+0 differences found
+dataset: </body1/hydro_coeffs/excitation/re> and </body1/hydro_coeffs/excitation/re>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/excitation/re>> and <description of </body1/hydro_coeffs/excitation/re>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/excitation/re>> and <units of </body1/hydro_coeffs/excitation/re>>
+0 differences found
+dataset: </body1/hydro_coeffs/linear_restoring_stiffness> and </body1/hydro_coeffs/linear_restoring_stiffness>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/linear_restoring_stiffness>> and <description of </body1/hydro_coeffs/linear_restoring_stiffness>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/linear_restoring_stiffness>> and <units of </body1/hydro_coeffs/linear_restoring_stiffness>>
+0 differences found
+group  : </body1/hydro_coeffs/radiation_damping> and </body1/hydro_coeffs/radiation_damping>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/all> and </body1/hydro_coeffs/radiation_damping/all>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/all>> and <description of </body1/hydro_coeffs/radiation_damping/all>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/all>> and <units of </body1/hydro_coeffs/radiation_damping/all>>
+0 differences found
+group  : </body1/hydro_coeffs/radiation_damping/components> and </body1/hydro_coeffs/radiation_damping/components>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_1> and </body1/hydro_coeffs/radiation_damping/components/1_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_2> and </body1/hydro_coeffs/radiation_damping/components/1_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_3> and </body1/hydro_coeffs/radiation_damping/components/1_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_4> and </body1/hydro_coeffs/radiation_damping/components/1_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_5> and </body1/hydro_coeffs/radiation_damping/components/1_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/1_6> and </body1/hydro_coeffs/radiation_damping/components/1_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/1_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/1_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/1_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/1_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_1> and </body1/hydro_coeffs/radiation_damping/components/2_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_2> and </body1/hydro_coeffs/radiation_damping/components/2_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_3> and </body1/hydro_coeffs/radiation_damping/components/2_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_4> and </body1/hydro_coeffs/radiation_damping/components/2_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_5> and </body1/hydro_coeffs/radiation_damping/components/2_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/2_6> and </body1/hydro_coeffs/radiation_damping/components/2_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/2_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/2_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/2_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/2_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_1> and </body1/hydro_coeffs/radiation_damping/components/3_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_2> and </body1/hydro_coeffs/radiation_damping/components/3_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_3> and </body1/hydro_coeffs/radiation_damping/components/3_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_4> and </body1/hydro_coeffs/radiation_damping/components/3_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_5> and </body1/hydro_coeffs/radiation_damping/components/3_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/3_6> and </body1/hydro_coeffs/radiation_damping/components/3_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/3_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/3_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/3_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/3_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_1> and </body1/hydro_coeffs/radiation_damping/components/4_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_2> and </body1/hydro_coeffs/radiation_damping/components/4_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_3> and </body1/hydro_coeffs/radiation_damping/components/4_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_4> and </body1/hydro_coeffs/radiation_damping/components/4_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_5> and </body1/hydro_coeffs/radiation_damping/components/4_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/4_6> and </body1/hydro_coeffs/radiation_damping/components/4_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/4_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/4_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/4_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/4_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_1> and </body1/hydro_coeffs/radiation_damping/components/5_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_2> and </body1/hydro_coeffs/radiation_damping/components/5_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_3> and </body1/hydro_coeffs/radiation_damping/components/5_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_4> and </body1/hydro_coeffs/radiation_damping/components/5_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_5> and </body1/hydro_coeffs/radiation_damping/components/5_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/5_6> and </body1/hydro_coeffs/radiation_damping/components/5_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/5_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/5_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/5_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/5_6>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_1> and </body1/hydro_coeffs/radiation_damping/components/6_1>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_1>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_1>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_1>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_1>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_2> and </body1/hydro_coeffs/radiation_damping/components/6_2>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_2>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_2>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_2>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_2>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_3> and </body1/hydro_coeffs/radiation_damping/components/6_3>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_3>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_3>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_3>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_3>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_4> and </body1/hydro_coeffs/radiation_damping/components/6_4>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_4>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_4>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_4>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_4>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_5> and </body1/hydro_coeffs/radiation_damping/components/6_5>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_5>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_5>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_5>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_5>>
+0 differences found
+dataset: </body1/hydro_coeffs/radiation_damping/components/6_6> and </body1/hydro_coeffs/radiation_damping/components/6_6>
+0 differences found
+attribute: <description of </body1/hydro_coeffs/radiation_damping/components/6_6>> and <description of </body1/hydro_coeffs/radiation_damping/components/6_6>>
+0 differences found
+attribute: <units of </body1/hydro_coeffs/radiation_damping/components/6_6>> and <units of </body1/hydro_coeffs/radiation_damping/components/6_6>>
+0 differences found
+group  : </body1/properties> and </body1/properties>
+0 differences found
+dataset: </body1/properties/body_number> and </body1/properties/body_number>
+0 differences found
+attribute: <description of </body1/properties/body_number>> and <description of </body1/properties/body_number>>
+0 differences found
+dataset: </body1/properties/cb> and </body1/properties/cb>
+0 differences found
+attribute: <description of </body1/properties/cb>> and <description of </body1/properties/cb>>
+0 differences found
+attribute: <units of </body1/properties/cb>> and <units of </body1/properties/cb>>
+0 differences found
+dataset: </body1/properties/cg> and </body1/properties/cg>
+0 differences found
+attribute: <description of </body1/properties/cg>> and <description of </body1/properties/cg>>
+0 differences found
+attribute: <units of </body1/properties/cg>> and <units of </body1/properties/cg>>
+0 differences found
+dataset: </body1/properties/disp_vol> and </body1/properties/disp_vol>
+0 differences found
+attribute: <description of </body1/properties/disp_vol>> and <description of </body1/properties/disp_vol>>
+0 differences found
+attribute: <units of </body1/properties/disp_vol>> and <units of </body1/properties/disp_vol>>
+0 differences found
+dataset: </body1/properties/name> and </body1/properties/name>
+0 differences found
+attribute: <description of </body1/properties/name>> and <description of </body1/properties/name>>
+0 differences found
+group  : </simulation_parameters> and </simulation_parameters>
+0 differences found
+dataset: </simulation_parameters/T> and </simulation_parameters/T>
+0 differences found
+attribute: <description of </simulation_parameters/T>> and <description of </simulation_parameters/T>>
+0 differences found
+attribute: <units of </simulation_parameters/T>> and <units of </simulation_parameters/T>>
+0 differences found
+dataset: </simulation_parameters/g> and </simulation_parameters/g>
+0 differences found
+attribute: <description of </simulation_parameters/g>> and <description of </simulation_parameters/g>>
+0 differences found
+attribute: <units of </simulation_parameters/g>> and <units of </simulation_parameters/g>>
+0 differences found
+dataset: </simulation_parameters/rho> and </simulation_parameters/rho>
+0 differences found
+attribute: <description of </simulation_parameters/rho>> and <description of </simulation_parameters/rho>>
+0 differences found
+attribute: <units of </simulation_parameters/rho>> and <units of </simulation_parameters/rho>>
+0 differences found
+dataset: </simulation_parameters/scaled> and </simulation_parameters/scaled>
+0 differences found
+attribute: <description of </simulation_parameters/scaled>> and <description of </simulation_parameters/scaled>>
+0 differences found
+dataset: </simulation_parameters/w> and </simulation_parameters/w>
+0 differences found
+attribute: <description of </simulation_parameters/w>> and <description of </simulation_parameters/w>>
+0 differences found
+attribute: <units of </simulation_parameters/w>> and <units of </simulation_parameters/w>>
+0 differences found
+dataset: </simulation_parameters/water_depth> and </simulation_parameters/water_depth>
+0 differences found
+attribute: <description of </simulation_parameters/water_depth>> and <description of </simulation_parameters/water_depth>>
+0 differences found
+attribute: <units of </simulation_parameters/water_depth>> and <units of </simulation_parameters/water_depth>>
+0 differences found
+dataset: </simulation_parameters/wave_dir> and </simulation_parameters/wave_dir>
+0 differences found
+attribute: <description of </simulation_parameters/wave_dir>> and <description of </simulation_parameters/wave_dir>>
+0 differences found
+attribute: <units of </simulation_parameters/wave_dir>> and <units of </simulation_parameters/wave_dir>>
+0 differences found

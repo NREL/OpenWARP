@@ -1,0 +1,6 @@
+TEST16 elastic barge
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+3  -5       NPATCH  IGDEF
+1           NLINES
+40.0   5.0  5.0         half-length, half-beam, draft

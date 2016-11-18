@@ -1,0 +1,100 @@
+\BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
+\BOOKMARK [1][-]{section.2}{OVERVIEW}{}% 2
+\BOOKMARK [1][-]{section.3}{NOTATIONS}{}% 3
+\BOOKMARK [1][-]{section.4}{DEPENDENCIES}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Windows}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{OS X}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Linux}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{Building from scratch}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{WINDOWS DEPLOYMENT FROM SCRATCH}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{OS X DEPLOYMENT FROM SCRATCH}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Linux deployment from scratch}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Using Install Script}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Windows}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.2}{OS X}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.3}{Linux}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Deployment from existing package }{}% 16
+\BOOKMARK [2][-]{subsection.7.1}{Windows}{section.7}% 17
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Recompiling NemohFortran and NemohPython}{subsection.7.1}% 18
+\BOOKMARK [3][-]{subsubsection.7.1.2}{Repackaging the installer}{subsection.7.1}% 19
+\BOOKMARK [2][-]{subsection.7.2}{OS X}{section.7}% 20
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Recompiling NemohFortran and NemohPython}{subsection.7.2}% 21
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Packaging the installer}{subsection.7.2}% 22
+\BOOKMARK [2][-]{subsection.7.3}{Linux}{section.7}% 23
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Recompiling NemohFortran and NemohPython}{subsection.7.3}% 24
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Packaging the installer}{subsection.7.3}% 25
+\BOOKMARK [2][-]{subsection.7.4}{General Guide about the installer build/packaging procedure}{section.7}% 26
+\BOOKMARK [1][-]{section.8}{Configuration}{}% 27
+\BOOKMARK [2][-]{subsection.8.1}{Meshing parameters}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.2}{Simulation parameters}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.3}{Postprocessing parameters}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.4}{Other and Logging parameters}{section.8}% 31
+\BOOKMARK [1][-]{section.9}{Usage}{}% 32
+\BOOKMARK [2][-]{subsection.9.1}{Start the application}{section.9}% 33
+\BOOKMARK [2][-]{subsection.9.2}{Start meshing}{section.9}% 34
+\BOOKMARK [2][-]{subsection.9.3}{Execute meshing}{section.9}% 35
+\BOOKMARK [2][-]{subsection.9.4}{View the meshing results}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.5}{Start the simulation}{section.9}% 37
+\BOOKMARK [2][-]{subsection.9.6}{ Execute the simulation}{section.9}% 38
+\BOOKMARK [2][-]{subsection.9.7}{View the simulation results}{section.9}% 39
+\BOOKMARK [2][-]{subsection.9.8}{Postprocessing}{section.9}% 40
+\BOOKMARK [2][-]{subsection.9.9}{Generate TEC outputs}{section.9}% 41
+\BOOKMARK [2][-]{subsection.9.10}{Postprocessing results}{section.9}% 42
+\BOOKMARK [2][-]{subsection.9.11}{Visualize the generated TEC files}{section.9}% 43
+\BOOKMARK [2][-]{subsection.9.12}{Getting help}{section.9}% 44
+\BOOKMARK [2][-]{subsection.9.13}{Logging Support}{section.9}% 45
+\BOOKMARK [1][-]{section.10}{Python CLI}{}% 46
+\BOOKMARK [2][-]{subsection.10.1}{CLI Verification}{section.10}% 47
+\BOOKMARK [1][-]{section.11}{Automated TestScript}{}% 48
+\BOOKMARK [2][-]{subsection.11.1}{Repository}{section.11}% 49
+\BOOKMARK [2][-]{subsection.11.2}{Dependencies}{section.11}% 50
+\BOOKMARK [2][-]{subsection.11.3}{Test 1: Converting GDF to OpenWarp Format}{section.11}% 51
+\BOOKMARK [3][-]{subsubsection.11.3.1}{Objective of Test case}{subsection.11.3}% 52
+\BOOKMARK [3][-]{subsubsection.11.3.2}{Steps to execute the test}{subsection.11.3}% 53
+\BOOKMARK [3][-]{subsubsection.11.3.3}{Output}{subsection.11.3}% 54
+\BOOKMARK [2][-]{subsection.11.4}{Test 2: Wamit Test Input and Output}{section.11}% 55
+\BOOKMARK [3][-]{subsubsection.11.4.1}{Objective of Test case}{subsection.11.4}% 56
+\BOOKMARK [3][-]{subsubsection.11.4.2}{Steps to execute the test}{subsection.11.4}% 57
+\BOOKMARK [3][-]{subsubsection.11.4.3}{Output and Comparison}{subsection.11.4}% 58
+\BOOKMARK [2][-]{subsection.11.5}{Test 3: Testing HigherOrder Implementation in OpenWarp}{section.11}% 59
+\BOOKMARK [3][-]{subsubsection.11.5.1}{Objective of Test case}{subsection.11.5}% 60
+\BOOKMARK [3][-]{subsubsection.11.5.2}{Steps to execute the test}{subsection.11.5}% 61
+\BOOKMARK [3][-]{subsubsection.11.5.3}{Output and Comparison}{subsection.11.5}% 62
+\BOOKMARK [2][-]{subsection.11.6}{Test 4: Testing the Dipoles/Thin Panels implementation in OpenWarp}{section.11}% 63
+\BOOKMARK [3][-]{subsubsection.11.6.1}{Objective of Test case}{subsection.11.6}% 64
+\BOOKMARK [3][-]{subsubsection.11.6.2}{Steps to execute the test}{subsection.11.6}% 65
+\BOOKMARK [3][-]{subsubsection.11.6.3}{Output and Comparison}{subsection.11.6}% 66
+\BOOKMARK [2][-]{subsection.11.7}{Test 5: Testing Irregular Frequency Removal in OpenWarp}{section.11}% 67
+\BOOKMARK [3][-]{subsubsection.11.7.1}{Objective of Test case}{subsection.11.7}% 68
+\BOOKMARK [3][-]{subsubsection.11.7.2}{Steps to execute the test}{subsection.11.7}% 69
+\BOOKMARK [3][-]{subsubsection.11.7.3}{Output and Comparison}{subsection.11.7}% 70
+\BOOKMARK [2][-]{subsection.11.8}{Test 6: Testing Mean Drift Forces and Yaw moment Implementation in OpenWarp}{section.11}% 71
+\BOOKMARK [3][-]{subsubsection.11.8.1}{Objective of Test case}{subsection.11.8}% 72
+\BOOKMARK [3][-]{subsubsection.11.8.2}{Steps to execute the test}{subsection.11.8}% 73
+\BOOKMARK [3][-]{subsubsection.11.8.3}{Output and Comparison}{subsection.11.8}% 74
+\BOOKMARK [2][-]{subsection.11.9}{Test 7: Computation of the Green Function using ordinary differential equation in OpenWarp}{section.11}% 75
+\BOOKMARK [3][-]{subsubsection.11.9.1}{Objective of Test case}{subsection.11.9}% 76
+\BOOKMARK [3][-]{subsubsection.11.9.2}{Steps to execute the test}{subsection.11.9}% 77
+\BOOKMARK [3][-]{subsubsection.11.9.3}{Output and Comparison}{subsection.11.9}% 78
+\BOOKMARK [2][-]{subsection.11.10}{Test 8: Testing Green Function Tabulation Implementation}{section.11}% 79
+\BOOKMARK [3][-]{subsubsection.11.10.1}{Objective of Test case}{subsection.11.10}% 80
+\BOOKMARK [3][-]{subsubsection.11.10.2}{Steps to execute the test}{subsection.11.10}% 81
+\BOOKMARK [3][-]{subsubsection.11.10.3}{Output and Comparison}{subsection.11.10}% 82
+\BOOKMARK [2][-]{subsection.11.11}{Test 9: 2Bodies}{section.11}% 83
+\BOOKMARK [3][-]{subsubsection.11.11.1}{Objective of Test case}{subsection.11.11}% 84
+\BOOKMARK [3][-]{subsubsection.11.11.2}{Steps to execute the test}{subsection.11.11}% 85
+\BOOKMARK [3][-]{subsubsection.11.11.3}{Output and Comparison}{subsection.11.11}% 86
+\BOOKMARK [2][-]{subsection.11.12}{Test 10: Cylinder}{section.11}% 87
+\BOOKMARK [3][-]{subsubsection.11.12.1}{Objective of Test case}{subsection.11.12}% 88
+\BOOKMARK [3][-]{subsubsection.11.12.2}{Steps to execute the test}{subsection.11.12}% 89
+\BOOKMARK [3][-]{subsubsection.11.12.3}{Output and Comparison}{subsection.11.12}% 90
+\BOOKMARK [2][-]{subsection.11.13}{Test 11: NonSymmetrical}{section.11}% 91
+\BOOKMARK [3][-]{subsubsection.11.13.1}{Objective of Test case}{subsection.11.13}% 92
+\BOOKMARK [3][-]{subsubsection.11.13.2}{Steps to execute the test}{subsection.11.13}% 93
+\BOOKMARK [3][-]{subsubsection.11.13.3}{Output and Comparison}{subsection.11.13}% 94
+\BOOKMARK [1][-]{section.12}{Steps to update OW from Nemoh 2014 to Nemoh 2016}{}% 95
+\BOOKMARK [1][-]{section.13}{Practical Example}{}% 96
+\BOOKMARK [2][-]{subsection.13.1}{Mesh Generation}{section.13}% 97
+\BOOKMARK [2][-]{subsection.13.2}{Run the simulation}{section.13}% 98
+\BOOKMARK [2][-]{subsection.13.3}{Generate TEC files and run postprocessing}{section.13}% 99
+\BOOKMARK [2][-]{subsection.13.4}{Visualize the generated tec files}{section.13}% 100

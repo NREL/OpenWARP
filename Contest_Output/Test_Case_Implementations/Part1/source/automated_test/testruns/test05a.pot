@@ -1,0 +1,14 @@
+ TEST05a.POT -- Cylinder + spheroid, ILOWHI=0
+ -1.0       HBOT
+   0   0                          IRAD,IDIFF
+ 2          NPER
+ 1.5 2.0    PER
+ 1          NBETA
+ 90.0       Beta
+   2                          NBODY
+ test05c.gdf
+   0.0 1.25 0.0 0.0
+  1   1   1   1   1   1
+ test05s.gdf
+   0.0 -0.5 0.0 0.0
+  1   1   1   1   1   1

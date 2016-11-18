@@ -1,0 +1,11 @@
+TEST15  Semi-sub, NCOL=5, IGDEF=-10
+9  2        NU NV                 (patch 10+32 - pontoon bottom)
+32 1        NU NV                 (patch 9+32 - pontoon side)
+2  2        NU NV                 (patch 1+32 - column 3)
+2  1        NU NV                 (patch 2+32 - annulus 3)
+5  2        NU NV                 (patch 3+32 - between annulus 3&4)
+4  2        NU NV                 (patch 4+32 - column 4)
+4  1        NU NV                 (patch 5+32 - annulus 4)
+5  2        NU NV                 (patch 6+32 - between annulus 4&5)
+4  2        NU NV                 (patch 7+32 - column 5)
+4  1        NU NV                 (patch 8+32 - annulus 5)

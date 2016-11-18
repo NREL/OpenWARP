@@ -1,0 +1,394 @@
+ -----------------------------------------------------------------------
+
+                        WAMIT  Version 7.0(x64)        
+
+     Copyright (c) 1999-2011 WAMIT Incorporated                        
+     Copyright (c) 1998 Massachusetts Institute of Technology          
+
+ -----------------------------------------------------------------------
+
+     The WAMIT software performs computations of wave interactions with
+     floating or submerged vessels.  WAMIT is a registered trademark of
+     WAMIT Incorporated.  This copy of the WAMIT software is licensed to 
+
+            WAMIT INC                                       
+            822 Boylston Street, Suite 202                  
+            Chestnut Hill, MA 02467-2504                    
+            HTTP://WWW.WAMIT.COM                            
+             
+     for end use at the above location.    Release date: 14 Nov 2011
+
+ -----------------------------------------------------------------------
+
+
+ Low-order panel method  (ILOWHI=0)                                     
+                                                                        
+ Input from Geometric Data Files:                                       
+                               N=  1     test05c.gdf                    
+  Cylinder R=1 T=2 8*(6+8)                                              
+                                                                        
+                               N=  2     test05s.gdf                    
+ Spheroid, Slendernes =0.125 Halflength=2m 8*8                          
+                                                                        
+ Input from Potential Control File:      test05a.pot                    
+  TEST05a.POT -- Cylinder + spheroid, ILOWHI=0                          
+                                                                        
+                                                                        
+ POTEN run date and starting time:        15-Nov-2011  --  08:38:47     
+   Period       Time           RAD      DIFF  (max iterations)          
+    1.5000    08:38:47         12 (12)  12 (12)                         
+    2.0000    08:38:47         11 (11)  11 (10)                         
+
+ Gravity:     9.80665                Length scale:        1.00000
+ Water depth:        infinite       Water density:        1.00000
+ Logarithmic singularity index:              ILOG =     0
+ Source formulation index:                   ISOR =     1
+ Diffraction/scattering formulation index: ISCATT =     0
+ Number of blocks used in linear system:   ISOLVE =     0
+ Number of unknowns in linear system:        NEQN =   352
+ Global Symmetry:   X=0         
+
+ BODY PARAMETERS:
+
+ Body number: N=   1              Irregular frequency index: IRR = 0
+
+ Total panels:     448  Waterline panels:     32  Symmetries:  X=0,Y=0    
+ Irregular frequency index: IRR = 0
+
+ XBODY =    0.0000 YBODY =    1.2500 ZBODY =    0.0000 PHIBODY =   0.0
+ Volumes (VOLX,VOLY,VOLZ):           6.24289      6.24289      6.24289    
+ Center of Buoyancy (Xb,Yb,Zb):     0.000000     0.000000    -1.000000
+ Hydrostatic and gravitational restoring coefficients: 
+ C(3,3),C(3,4),C(3,5):   3.1214      0.22072E-06   0.0000    
+ C(4,4),C(4,5),C(4,6):               -5.4742       0.0000       0.0000    
+        C(5,5),C(5,6):                            -5.4742       0.0000    
+ Center of Gravity  (Xg,Yg,Zg):     0.000000     0.000000     0.000000
+ Radii of gyration:     1.000000     0.000000     0.000000
+                        0.000000     1.000000     0.000000
+                        0.000000     0.000000     1.000000
+
+ Body number: N=   2              Irregular frequency index: IRR = 0
+
+ Total panels:     256  Waterline panels:     32  Symmetries:  X=0,Y=0    
+ Irregular frequency index: IRR = 0
+
+ XBODY =    0.0000 YBODY =   -0.5000 ZBODY =    0.0000 PHIBODY =   0.0
+ Volumes (VOLX,VOLY,VOLZ):          0.257621     0.257621     0.257622    
+ Center of Buoyancy (Xb,Yb,Zb):     0.000000     0.000000    -0.092900
+ Hydrostatic and gravitational restoring coefficients: 
+ C(3,3),C(3,4),C(3,5):   1.5607      0.18976E-07   0.0000    
+ C(4,4),C(4,5),C(4,6):               0.11664E-03   0.0000       0.0000    
+        C(5,5),C(5,6):                             1.5118       0.0000    
+ Center of Gravity  (Xg,Yg,Zg):     0.000000     0.000000     0.000000
+ Radii of gyration:     1.000000     0.000000     0.000000
+                        0.000000     1.000000     0.000000
+                        0.000000     0.000000     1.000000
+
+
+ ------------------------------------------------------------------------
+                            Output from  WAMIT
+ ------------------------------------------------------------------------
+ FORCE run date and starting time:                15-Nov-2011 -- 08:38:47
+ ------------------------------------------------------------------------
+ I/O Filenames:  test05a.frc         test05a.p2f         test05a.out         
+  TEST05a.FRC -- Cylinder + spheroid, ILOWHI=0                           
+
+ 
+ ************************************************************************
+
+ Wave period (sec) =  1.500000E+00        Wavenumber (kL) =  1.789190E+00
+ ------------------------------------------------------------------------
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :     90
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   7.761000E-08            119
+     2   1.518878E+00            -45
+     3   2.463084E-02             73
+     4   6.989473E-01            -41
+     5   3.827643E-08            -65
+     6   1.374317E-14            -90
+     7   1.316111E-08            -12
+     8   1.049910E+00            129
+     9   6.573310E-01             74
+    10   1.289982E-08            146
+    11   6.605620E-08             -8
+    12   5.352186E-08           -143
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :     90
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   8.001533E-08            148
+     2   1.534998E+00            -45
+     3   2.416784E-02             72
+     4   7.035106E-01            -41
+     5   4.003114E-08            -31
+     6   1.877085E-14            -90
+     7   1.215809E-08            -13
+     8   1.040955E+00            129
+     9   6.594878E-01             74
+    10   1.585594E-08            137
+    11   6.614719E-08             -7
+    12   4.760935E-08           -101
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :     90
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    5.91820E-09            -28
+     2    1.24949E-01            156
+     3    2.28696E-03            126
+     4    2.12306E-02            156
+     5    9.87162E-10            152
+     6    1.98943E-15             90
+     7    3.26746E-08            146
+     8    1.00885E+00            -25
+     9    8.55952E-01             26
+    10    5.29162E-08             26
+    11    7.88343E-08            -35
+    12    6.30232E-08             44
+
+
+
+
+ HYDRODYNAMIC PRESSURE IN FLUID DOMAIN
+
+  Wave Heading (deg) :     90
+
+       x           y           z         Mod[Pf(x,y,z)]  Pha[Pf(x,y,z)]
+
+    0.00E+00    0.00E+00    0.00E+00        1.81060E+00               1
+
+
+
+
+ VELOCITY VECTOR IN FLUID DOMAIN
+
+  Wave Heading (deg) :     90
+
+     x         y         z         Mod(Vx)  Pha    Mod(Vy)  Pha    Mod(Vz)  Pha
+
+  0.00E+00  0.00E+00  0.00E+00   1.309E-07   82  1.149E+00  -33  3.205E+00    1
+
+
+
+
+ SURGE, SWAY & YAW DRIFT FORCES (Momentum Conservation)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]
+
+     1    3.09402E-08          180
+     2    6.19483E-01            0
+     6    3.61014E-08            0
+
+
+
+
+ SURGE, SWAY, HEAVE, ROLL, PITCH & YAW DRIFT FORCES (Pressure Integration)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]      Mod[F(I)]    Pha[F(I)]
+
+     1    1.49720E-07         -180
+     2    4.12736E-01            0
+     3    2.75495E-02         -180
+     4    1.86170E-01         -180    1.86161E-01         -180
+     5    1.09481E-07          180    1.09509E-07          180
+     6    9.99959E-10         -180    3.23217E-10            0
+     7    5.75057E-08         -180
+     8    8.36813E-02            0
+     9    9.99353E-01            0
+    10    5.06440E-03          180    2.35078E-03          180
+    11    3.90051E-07            0    3.94162E-07            0
+    12    6.01518E-08          177    6.29273E-08          177
+
+
+
+
+ SURGE, SWAY, HEAVE, ROLL, PITCH & YAW DRIFT FORCES (Control Surface)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]      Mod[F(I)]    Pha[F(I)]
+
+     1    4.16176E-09          180
+     2    6.53871E-01            0
+     3    7.19483E-02          180
+     4    1.43388E-01          180    1.43379E-01         -180
+     5    4.22762E-08            0    4.22481E-08            0
+     6    1.72058E-08            0    1.85290E-08            0
+     7    5.01291E-09            0
+     8    6.58369E-03            0
+     9    6.46242E-01            0
+    10    5.22123E-03            0    7.93485E-03            0
+    11    3.16945E-07            0    3.21056E-07            0
+    12    9.91148E-08          180    1.01894E-07          180
+
+
+ ************************************************************************
+
+ Wave period (sec) =  2.000000E+00        Wavenumber (kL) =  1.006420E+00
+ ------------------------------------------------------------------------
+
+
+    HASKIND EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :     90
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.495636E-07            175
+     2   3.431344E+00             13
+     3   1.995078E-01            -12
+     4   2.298542E+00             14
+     5   9.783721E-08             -5
+     6   1.699393E-14            -90
+     7   7.956799E-09            -54
+     8   4.863130E-01            139
+     9   1.330018E+00             31
+    10   6.817807E-09            156
+    11   4.279758E-08            -54
+    12   1.759702E-08           -154
+
+
+
+
+    DIFFRACTION EXCITING FORCES AND MOMENTS
+
+  Wave Heading (deg) :     90
+
+     I     Mod[Xh(I)]     Pha[Xh(I)]
+
+     1   1.277486E-07           -174
+     2   3.449615E+00             13
+     3   1.962456E-01            -12
+     4   2.307523E+00             14
+     5   8.149089E-08              6
+     6   1.286369E-14            -90
+     7   7.614187E-09            -54
+     8   4.842189E-01            139
+     9   1.328164E+00             31
+    10   7.425118E-09            164
+    11   4.259905E-08            -53
+    12   1.997057E-08           -106
+
+
+
+
+    RESPONSE AMPLITUDE OPERATORS
+
+  Wave Heading (deg) :     90
+
+     I    Mod[RAO(I)]    Pha[RAO(I)]
+
+     1    1.42807E-08             19
+     2    3.21745E-01           -161
+     3    3.93531E-02            138
+     4    8.26885E-02           -161
+     5    3.66111E-09           -162
+     6    2.89965E-15             90
+     7    4.36637E-08            113
+     8    7.26741E-01            -46
+     9    1.27224E+00             22
+    10    9.72141E-08             19
+    11    5.21838E-08            -68
+    12    3.53915E-08             37
+
+
+
+
+ HYDRODYNAMIC PRESSURE IN FLUID DOMAIN
+
+  Wave Heading (deg) :     90
+
+       x           y           z         Mod[Pf(x,y,z)]  Pha[Pf(x,y,z)]
+
+    0.00E+00    0.00E+00    0.00E+00        1.34524E+00              16
+
+
+
+
+ VELOCITY VECTOR IN FLUID DOMAIN
+
+  Wave Heading (deg) :     90
+
+     x         y         z         Mod(Vx)  Pha    Mod(Vy)  Pha    Mod(Vz)  Pha
+
+  0.00E+00  0.00E+00  0.00E+00   7.616E-08  110  4.102E-01  -86  1.334E+00   16
+
+
+
+
+ SURGE, SWAY & YAW DRIFT FORCES (Momentum Conservation)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]
+
+     1    1.12681E-08          180
+     2    2.49180E-01            0
+     6    2.56858E-08            0
+
+
+
+
+ SURGE, SWAY, HEAVE, ROLL, PITCH & YAW DRIFT FORCES (Pressure Integration)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]      Mod[F(I)]    Pha[F(I)]
+
+     1    2.52767E-07          180
+     2    2.20794E-01            0
+     3    7.42929E-02          180
+     4    1.30610E-01         -180    1.31166E-01         -180
+     5    1.07578E-08           -2    1.33379E-08           -2
+     6    1.30894E-09            0    2.97994E-09         -180
+     7    7.06633E-08            0
+     8    1.19796E-02            0
+     9    7.74266E-01            0
+    10    1.70490E-03          180    4.07249E-04          180
+    11    1.37556E-07            0    1.45301E-07            0
+    12    1.55421E-08            7    9.91939E-09           12
+
+
+
+
+ SURGE, SWAY, HEAVE, ROLL, PITCH & YAW DRIFT FORCES (Control Surface)
+
+  Wave Heading (deg) :     90        90
+
+     I      Mod[F(I)]    Pha[F(I)]      Mod[F(I)]    Pha[F(I)]
+
+     1    7.43144E-08          180
+     2    2.52111E-01            0
+     3    1.00505E-01          180
+     4    1.19765E-01          180    1.20320E-01          180
+     5    2.96366E-08            0    3.22185E-08            0
+     6    4.26295E-08          180    4.69184E-08          180
+     7    1.46400E-08            0
+     8    7.62659E-03            0
+     9    8.31834E-01            0
+    10    3.47963E-03          180    2.18198E-03          180
+    11    7.60852E-08            0    8.38303E-08            0
+    12    8.55691E-08          180    9.12677E-08          180
+
+

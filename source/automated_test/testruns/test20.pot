@@ -1,0 +1,11 @@
+single barge based on MultiSurf model (igdef=2)
+ -1.
+  1     1                     IRAD, IDIFF
+   3                          NPER (array PER follows)
+ 6. 9. 12.
+ 3                            NBETA (array BETA follows)
+ 180. 135. 90.
+ 1                            NBODY
+  test20.gdf
+ 0. 0. -4.8  0.0              XBODY
+ 1  1  1  1  1  1             IMODE(1-6)

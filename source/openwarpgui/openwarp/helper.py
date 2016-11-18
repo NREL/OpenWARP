@@ -4,11 +4,14 @@ This is module that represents the helper methods.
 
 Updated since version 1.1:
     1. Added check_path_exist(), check_is_directory() and check_is_file().
+
+Updated since version 1.2 (OpenWarp - Add Logging Functionality) :
+    Added support for logging
 """
 
-__author__ = "caoweiquan322, TCSASSEMBLER"
-__copyright__ = "Copyright (C) 2014 TopCoder Inc. All rights reserved."
-__version__ = "1.1"
+__author__ = "caoweiquan322, yedtoss"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.2"
 
 import traceback
 import os

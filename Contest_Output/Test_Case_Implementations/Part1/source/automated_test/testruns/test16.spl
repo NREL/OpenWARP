@@ -1,0 +1,9 @@
+TEST16 elastic barge
+3  3        NU NV   (end)
+4  4        KU KV
+5  2                (side)
+4  4
+5  2                (bottom)
+4  4
+            IQUO IQVO are not specified IQUADO=3 in config.wam
+            IQUI IQVI are not specified IQUADI=4 in config.wam

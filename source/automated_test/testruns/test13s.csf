@@ -1,0 +1,7 @@
+ELLIPSOID CONTROL SURFACE defined by subroutine ELLIPSOID_CS
+1   ILOWHICSF
+1  1        ISX  ISY
+2 -1003  1.0  NPATCH  IGDEF PSZCSF
+2           NLINES
+2.2 0.3 0.3    A, B, C  (semi-axes of outer control surface)
+2.0 0.25                (semi-axes of body waterline)

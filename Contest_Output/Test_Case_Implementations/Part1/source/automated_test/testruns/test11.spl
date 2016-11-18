@@ -1,0 +1,3 @@
+TEST11  cylinder R=1 T=0.5 defined by B-splines (IGDEF=1)
+4  2        NU NV (Patch 1, side   u azimuthal v vertical)
+4  2        NU NV (Parch 2, bottom u azimuthal v radial)

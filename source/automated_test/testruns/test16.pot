@@ -1,0 +1,11 @@
+TEST16 elastic barge with 8 beam modes
+ -1.
+ 0           0               IRAD, IDIFF
+ 2                            NPER (array PER follows)
+ 7. 8.
+ 1                             NBETA (array BETA follows)
+ 180.
+ 1                            NBODY
+test16.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  0  1  0  1  0             IMODE(1-6)

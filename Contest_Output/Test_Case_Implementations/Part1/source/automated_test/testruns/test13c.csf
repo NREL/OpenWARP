@@ -1,0 +1,8 @@
+test13c.csf   cylinder control surface
+1   ILOWHICSF
+1  1        ISX  ISY
+3 -1001  1. NPATCH  ICDEF  PSZCSF
+2
+1.2 2.2   1.     RADIUS, DRAFT , Inner radius
+0             uniform mapping
+

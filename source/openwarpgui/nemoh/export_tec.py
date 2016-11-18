@@ -1,16 +1,20 @@
 #!/usr/bin/env python
 """
 This module export tec format to stl, vtk and vtp
+
+Changes in version 1.1 (OpenWarp - Add Logging Functionality)
+       Added support for logging.
 """
 import settings
+import utility
 import os
 import sys
 import subprocess
 
 
 __author__ = "yedtoss"
-__copyright__ = "Copyright (C) 2014 TopCoder Inc. All rights reserved."
-__version__ = "1.0"
+__copyright__ = "Copyright (C) 2014-2016 TopCoder Inc. All rights reserved."
+__version__ = "1.1"
 
 
 def tec_to_vtp(inp, output):
@@ -69,6 +73,7 @@ def export_tec(files):
 
 
 if __name__ == '__main__':
+    utility.setup_logging(default_conf_path=settings.LOGGING_CONFIGURATION_FILE, logging_path=settings.LOG_FILE)
     export_tec(sys.argv[1:])
 
 

@@ -385,7 +385,7 @@ CONTAINS
             STOP
         ENDIF
 
-        AK0=WR**2/9.81
+        AK0=WR**2/G
         NJJ=NSYMY+1
         IJUMP=0
 

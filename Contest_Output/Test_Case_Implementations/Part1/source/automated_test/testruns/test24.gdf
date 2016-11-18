@@ -1,0 +1,8 @@
+TEST24 segmented vessel with 7 segments
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+4  -32       NPATCH  IGDEF
+3           NLINES
+7     Nsegments
+1.    Radius
+ 2. 6. 8. 10.   xseg

@@ -1,0 +1,7 @@
+TEST15  Semi-sub, NCOL=5, IGDEF=-10
+1.  9.80665  ULEN GRAV
+1   1        ISX  ISY
+10 -10       NPATCH IGDEF
+2            NLINES
+260. 20. 40. -30. -20.            XL, Y1, Y2, Z1, Z2
+60. 8. 5                          DCOL, RCOL, NCOL

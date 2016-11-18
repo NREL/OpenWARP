@@ -1,0 +1,8 @@
+TEST11 cylinder R=1 T=0.5 -- MultiSurf .ms2 input, nonuniform mapping
+1. 9.80665  ULEN GRAV
+1  1        ISX  ISY
+0  2        NPATCH  IGDEF
+3           NLINES
+TEST11C.MS2
+wetted_surfs
+0  0  0     default settings: FAST, DivMult, outward normal

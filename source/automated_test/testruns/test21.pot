@@ -1,0 +1,11 @@
+TEST21.POT  SPAR with three strakes igdef=-12 (TEST21.GDF)
+ -1.
+ 1           1               IRAD, IDIFF
+ 3                            NPER (array PER follows)
+ 0.1 0.5 1.
+ 2                            NBETA (array BETA follows)
+ 0. 120.
+ 1                            NBODY
+ test21.gdf
+ 0. 0. 0. 0.                  XBODY
+ 1  1  1  1  1  1             IMODE(1-6)

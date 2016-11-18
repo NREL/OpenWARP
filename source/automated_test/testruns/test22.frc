@@ -1,0 +1,10 @@
+TEST22.FRC fpso with 2 tanks, one field point on free surface in each tank
+   1   1   1   1   0   3   1   1   1
+ 0.000000                                    VCG
+ 1.000000      .0000000      .0000000
+ .0000000      1.000000      .0000000
+ .0000000      .0000000      1.000000        XPRDCT
+ 0                                           NBETAH
+ 2                                           NFIELD
+1  1.0 1.0 1.0
+2 -1.0 1.0 0.0

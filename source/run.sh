@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+
+OSTYPE=`uname`
+#echo ${OSTYPE}
 # http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in?page=1&tab=votes#tab-top
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -30,4 +33,13 @@ echo "Starting OpenWarp GUI Server"
 # Avoiding any problem by using the system pip and python
 # Run the main.py without sudo to avoid any problem with export
 # If it is needed to run this as sudo, then the export commands should be run as sudo too
-/usr/bin/python "$INSTALL_PATH/openwarpgui/main.py"
+if [ "$OSTYPE" = "Linux" ]; then
+	echo "Linux"
+	/usr/bin/python "$INSTALL_PATH/openwarpgui/main.py"
+elif [ "$OSTYPE" = "Darwin" ]; then
+	echo "Darwin"
+	echo $(pwd)
+	python "$INSTALL_PATH/openwarpgui/main.py"
+else
+	echo "OS not supported ! "
+fi

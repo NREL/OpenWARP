@@ -1,0 +1,7 @@
+TEST18.GDF vertical cylinder, bottom mounted
+     1.0000        9.80665     ulen, grav
+    1   1               isx,isy
+    1  -1               npatch, igdef
+    2           NLINES
+    10.0000  200.000    radius, draft
+    0                   uniform mapping

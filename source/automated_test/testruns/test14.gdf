@@ -1,0 +1,7 @@
+TEST14 -- ISSC TLP (ILOWHI=1)
+43.125  9.80665  ULEN GRAV
+1  1        ISX  ISY
+12 -9     NPATCH, IGDEF
+2           NLINES
+8.435  35.    43.125      RADIUS  DRAFT  HSPACE
+7.5    10.5               WIDTH   HEIGHT

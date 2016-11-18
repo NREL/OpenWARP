@@ -1,0 +1,11 @@
+TEST15  Semi-sub with five columns on each pontoon
+ -1.
+  0           0               IRAD, IDIFF
+ 1                           NPER (array PER follows)
+ 18.0
+ 1                           NBETA (array BETA follows)
+ 180.
+ 1                            NBODY
+ test15.gdf
+ 0. 0. 0. 0.                  XBODY
+ 0  0  1  0  1  0             IMODE(1-6)
